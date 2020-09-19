@@ -1,0 +1,53 @@
+Plant(
+		input signal cylPos5ZaxisExtend, gripperTurnRetract, gripperTurnExtend, capGripperPos5Extend, cylClampBottleExtend; 
+		output signal bottleAtPos4, gripperZAxisLowered, gripperZAxisLifted,  gripperTurnHomePos, gripperTurnFinalPos;
+		)
+->
+{
+
+	{// Gripper Z-Axis
+		while(true){
+			abort(cylPos5ZaxisExtend){
+				sustain gripperZAxisLifted;			//Gripper begins lifted.
+			}
+													
+			abort(!cylPos5ZaxisExtend){
+				sustain gripperZAxisLowered; 		//Gripper is now lowered. 
+			}
+
+		}
+	}
+	
+	||
+	
+	{// Gripper - Rotational Axis
+		while(true) {
+			abort(gripperTurnExtend){
+				sustain gripperTurnHomePos; 
+			}
+			abort(gripperTurnRetract){
+				sustrain gripperTurnFinalPos; 
+			}
+			
+		}
+		
+		
+	}
+	
+	||
+	{//Bottle Clamp
+		while(true) {
+			// Actually do not think you can model this? 
+		}
+		
+	}
+	
+	||
+	{//Cap Gripper 
+		while(true) {
+			// No model logic relating to cap gripper? 
+		}
+		
+	}
+	
+}
