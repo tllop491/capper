@@ -3,7 +3,7 @@ filler_plant(
 		// to/from controller
 		output signal bottleAtPos2;
 		output signal dosUnitEvac, dosUnitFilled;
-		output signal nozzle1Engaged, nozzle2Engaged, nozzle3Engaged, nozzle4Engaged;
+		output signal nozzle0Engaged, nozzle1Engaged, nozzle2Engaged, nozzle3Engaged;
 		
 		input signal valveInjectorOnOff, valveInletOnOff;
 		input signal dosUnitValveRetract, dosUnitValveExtend;
