@@ -1,0 +1,23 @@
+filler_plant(
+		
+		// to/from controller
+		output signal bottleAtPos2;
+		output signal dosUnitEvac, dosUnitFilled;
+		output signal nozzle1Engaged, nozzle2Engaged, nozzle3Engaged, nozzle4Engaged;
+		
+		input signal valveInjectorOnOff, valveInletOnOff;
+		input signal dosUnitValveRetract, dosUnitValveExtend;
+		input signal nozzleSelect;
+		)
+->
+{
+	while(true) {
+		abort (immediate dosUnitValveRetract) { // while not recieving valveRetract
+			sustain(dosUnitEvac);				// emit evac (bottom)
+		}
+		abort (immediate dosUnitValveExtend){	// while not recieving valveExtend
+			sustain(dosUnitFilled)				// emit filled (top)
+		}
+		// pause?
+	}
+}

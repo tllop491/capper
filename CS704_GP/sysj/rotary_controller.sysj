@@ -1,0 +1,21 @@
+// controller responsible for managing the rotary model
+// author: Nikolay Petin
+
+rotary_controller(
+		
+		input signal tableAlignedWithSensor;
+		input signal bottleAtPos5, capOnBottleAtPos1;
+		input signal readyConveyor, readyFiller, readyLidLoader, readyCapper;
+		output signal rotaryTableTrigger; // turns rotary table while signal is TRUE
+		
+		)
+->
+{
+	while(true) {
+		await (readyConveyor && readyFiller && readyLidLoader && readyCapper);
+		await (!capOnBottleAtPos1 && !bottleAtPos5);	// wait for capped bottle to be removed && wait for bottle to be cleared at the end
+		abort (tableAlignedWithSensor) { 				// immediate?
+			sustain rotaryTableTrigger;					// rotate table until aligned
+		}
+	}
+}
