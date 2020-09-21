@@ -1,4 +1,4 @@
-Plant(
+capper_plant(
 		input signal cylPos5ZaxisExtend, gripperTurnRetract, gripperTurnExtend, capGripperPos5Extend, cylClampBottleExtend; 
 		output signal bottleAtPos4, gripperZAxisLowered, gripperZAxisLifted,  gripperTurnHomePos, gripperTurnFinalPos;
 		)
@@ -14,7 +14,7 @@ Plant(
 			abort(!cylPos5ZaxisExtend){
 				sustain gripperZAxisLowered; 		//Gripper is now lowered. 
 			}
-
+			pause; 
 		}
 	}
 	
@@ -24,11 +24,13 @@ Plant(
 		while(true) {
 			abort(gripperTurnExtend){
 				sustain gripperTurnHomePos; 
+				
 			}
 			abort(gripperTurnRetract){
-				sustrain gripperTurnFinalPos; 
+				sustain gripperTurnFinalPos; 
 			}
 			
+			pause; 
 		}
 		
 		
@@ -38,6 +40,14 @@ Plant(
 	{//Bottle Clamp
 		while(true) {
 			// Actually do not think you can model this? 
+			present(cylClampBottleExtend){
+				System.out.println("CLAMPED");
+			}
+			present(!cylClampBottleExtend){
+				System.out.println("NOT CLAMPED");
+			}
+			pause; 
+			
 		}
 		
 	}
@@ -46,6 +56,14 @@ Plant(
 	{//Cap Gripper 
 		while(true) {
 			// No model logic relating to cap gripper? 
+			// Actually do not think you can model this? 
+			present(capGripperPos5Extend){
+				System.out.println("CAP GRIPPED");
+			}
+			present(!capGripperPos5Extend){
+				System.out.println("CAP NOT GRIPPED");
+			}
+			pause; 
 		}
 		
 	}

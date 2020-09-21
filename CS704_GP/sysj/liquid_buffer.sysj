@@ -1,0 +1,70 @@
+import buffer.*;
+
+liquid_buffer(input int channel producerChannel ; output int channel consumerChannel;)->
+{
+	signal bufferNotFull, bufferNotEmpty, requestData;
+	Integer signal toBuffer, fromBuffer;
+	{
+		int data = 0;
+		while(true){
+			// While the buffer is not full, receive data over the channel
+			present(bufferNotFull){
+				receive producerChannel; 
+				data = #producerChannel; 
+				emit toBuffer(data);
+
+				pause; 
+			}
+			pause;
+		}
+		pause;
+	}
+	||
+	{
+		int data = 0;
+		while(true){
+			// While the buffer is not empty, send data over the channel
+			present(bufferNotEmpty){
+
+				emit requestData; 
+				
+				pause; // Need to delay one tick
+				pause; // feedback signal
+
+				present(fromBuffer){
+					data = #fromBuffer; 
+					send consumerChannel(data);
+					pause;
+				}
+
+			}
+			pause;
+		}
+		pause;
+	}
+	||
+	{
+		// Buffing Data
+		Buffer myBuffer = new Buffer(100);
+		int data =0;
+		while(true){
+
+			present(toBuffer){
+				myBuffer.push(#toBuffer); 
+			}
+			
+			present(requestData){
+				data = ((Integer)myBuffer.pop());
+				emit fromBuffer(data);
+			}
+			
+			if(!myBuffer.isFull()){
+				emit bufferNotFull;
+			}
+			if(!myBuffer.isEmpty()){
+				emit bufferNotEmpty;
+			}
+			pause;
+		}
+	}
+}
