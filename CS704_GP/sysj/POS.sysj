@@ -1,0 +1,28 @@
+import java.io.IOException;
+
+POS(
+	input ArrayList signal liquidDataI;
+	output signal confirm;
+	output ArrayList channel liquidDataC;
+)
+->{
+	class GUI implements java.lang.Runnable {
+		public void run() {
+			try {
+				POS_GUI.main(null);
+			} catch(IOException a) {}
+			}
+		}
+	
+	new Thread(new GUI()).start();
+		
+	{
+		while(true) {
+			await(liquidDataI);
+			await(!liquidDataI);
+			System.out.println("POS RECIEVED LIQUID DATA FROM POS_GUI");
+			send liquidDataC((ArrayList)#liquidDataI);
+			System.out.println("POS SEND LIQUID DATA TO BUFFER");
+		}
+	}
+}

@@ -1,0 +1,12 @@
+<System xmlns="http://systemjtechnology.com">
+	<SubSystem Name="SS1" Local="true">
+		<ClockDomain Name="POS_CD" Class="POS">
+			<iSignal Name="liquidDataI" IP="127.0.0.1" Class="com.systemj.ipc.TCPReceiver" Port="2000" />
+			<oChannel Name="liquidDataC" To="liquid_buffer_CD.producerChannel" />
+		</ClockDomain>
+		
+		<ClockDomain Name="liquid_buffer_CD" Class="liquid_buffer">
+			<iChannel Name="producerChannel" From="POS_CD.liquidDataC"/>
+		</ClockDomain>
+	</SubSystem>
+</System>

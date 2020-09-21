@@ -1,16 +1,17 @@
 import buffer.*;
 
-liquid_buffer(input int channel producerChannel ; output int channel consumerChannel;)->
+liquid_buffer(input ArrayList channel producerChannel ; output int channel consumerChannel;)->
 {
 	signal bufferNotFull, bufferNotEmpty, requestData;
-	Integer signal toBuffer, fromBuffer;
+	Integer signal fromBuffer;
+	ArrayList signal toBuffer;
 	{
-		int data = 0;
+		ArrayList data;
 		while(true){
 			// While the buffer is not full, receive data over the channel
 			present(bufferNotFull){
 				receive producerChannel; 
-				data = #producerChannel; 
+				data = (ArrayList)#producerChannel; 
 				emit toBuffer(data);
 
 				pause; 
@@ -50,7 +51,11 @@ liquid_buffer(input int channel producerChannel ; output int channel consumerCha
 		while(true){
 
 			present(toBuffer){
-				myBuffer.push(#toBuffer); 
+				ArrayList liquidData = (ArrayList)#toBuffer;
+				myBuffer.push(liquidData.get(0));
+				myBuffer.push(liquidData.get(1));
+				myBuffer.push(liquidData.get(2));
+				myBuffer.push(liquidData.get(3));
 			}
 			
 			present(requestData){
