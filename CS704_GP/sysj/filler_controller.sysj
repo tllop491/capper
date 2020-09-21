@@ -1,64 +1,78 @@
 // controller responsible for managing the filler model
 // author: Nikolay Petin
 
+import java.util.ArrayList; 
+
 filler_controller(
 		
 		// from buffer
-		input Integer[] channel liquidData;
-		// from model
+		input ArrayList channel liquidData;
+		
+		// from rotary model
 		input signal bottleAtPos2;
+		
+		// from filler model
 		input signal dosUnitEvac, dosUnitFilled;
 		
 		// to rotary
 		output signal ready;
 		
-		// to model
+		// to filler model
 		output signal valveInjectorOnOff, valveInletOnOff;
 		output signal dosUnitValveRetract, dosUnitValveExtend;
-		output Integer signal nozzleSelect;
+		output int channel nozzleSelect;
 		
 		)
 ->
 {
-	
+	signal done;
+	int signal liquidAmount;
 	while(true) {
 		int i = 0;
-		recieve liquidData;
-		await(bottleAtPos2);					// check if bottle is at pos 2
-		abort(i == 5) {
+		receive liquidData;
+		await(bottleAtPos2);					// wait till bottle at pos 2
+		trap(T) {								
 			while(true) {
-				// how to send liquid amount?
-				nozzleSelect(i);				// select the
-				FILL_LIQUID(:dosUnitEvac, dosUnitFilled, valveInjectorOnOff, valveInletOnOff, dosUnitValveRetract, dosUnitValveExtend);
-				i++;
+				emit liquidAmount((int)#liquidData.get(i));
+				send nozzleSelect(i);		
+
+				if ((int)#liquidAmount != 0) {
+					abort(immediate dosUnitFilled) {		// wait until pressure canister is retracted (top)
+						{
+							sustain valveInjectorOnOff;		// turn on valve injector
+						}
+						||
+						{
+							sustain dosUnitValveRetract;	// retract pressure canister to top
+						}
+					}										// turn off valve injector
+					abort(immediate dosUnitEvac || done) { // wait until pressure canister is extended (bottom) or liquid filling is done
+						{
+							sustain valveInletOnOff;		// open the inlet
+							
+						}
+						||
+						{
+							sustain dosUnitValveExtend;		// force down pressure canister
+						}
+						||
+						{
+							waitl(100/2 ms);		// fill liquid for a certain time determined by liquidAmount, not sure if this is the right way to do it
+							sustain done;
+						}
+					}
+				}
+				
+				if (i == 3) {
+					exit(T);	// exit if all liquids have been filled
+				} else {
+					i++;		
+				}
+				
+				pause;			// unbound loop otherwise
 			}
 		}
 	}
 }
-
-reaction FILL_LIQUID(:	input signal dosUnitEvac, dosUnitFilled;
-						output signal valveInjectorOnOff, valveInletOnOff, dosUnitValveRetract, dosUnitValveExtend;)
-{
-	abort(dosUnitFilled) {					// wait until pressure canister is retracted (top)
-		{
-			sustain valveInjectorOnOff;		// turn on valve injector
-		}
-		||
-		{
-			sustain dosUnitValveRetract;	// retract pressure canister to top
-		}
-	}										// turn off valve injector
-	abort(dosUnitEvac) {					// wait until pressure canister is extended (bottom)
-		{
-			sustain valveInletOnOff;		// open the inlet
-			
-		}
-		||
-		{
-			sustain dosUnitValveExtend;		// force down pressure canister
-		}
-	}
-}
-
 
 

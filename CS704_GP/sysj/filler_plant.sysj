@@ -1,23 +1,76 @@
+reaction plantOperation( :	input signal valveInjectorOnOff, 
+							input signal valveInletOnOff, 
+							input signal dosUnitValveRetract, 
+							input signal dosUnitValveExtend,
+							output signal nozzleXEngaged, 
+							output signal injectorXEngaged,
+							output signal inletXEngaged, 
+							output signal dosUnitEvac, 
+							output signal dosUnitFilled)
+{
+	trap(T){
+		{	// where to exit(T)?
+			while(true) {
+				abort (immediate !dosUnitValveRetract) { // while recieving valveRetract or nothing
+					waitl(100 ms);
+					sustain dosUnitFilled;				// emit filled (top)
+				}
+				abort (immediate !dosUnitValveExtend){	// while recieving valveExtend
+					waitl(100 ms);
+					sustain dosUnitEvac;				// 	emit evac (bottom)
+				}
+				pause;
+			}
+		}
+		||
+		{	// valveInjector logic
+			while(true){present(valveInjectorOnOff){emit injectorXEngaged;} pause;}
+		}
+		||
+		{	// valveInlet logic
+			while(true){present(valveInletOnOff){emit inletXEngaged;} pause;}
+		}
+		||
+		{
+			present(dosUnitValveExtend && valveInletOnOff);
+			present(!dosUnitValveExtend && !valveInletOnOff);
+			exit(T);
+		}
+	}
+}
+
 filler_plant(
-		
-		// to/from controller
-		output signal bottleAtPos2;
 		output signal dosUnitEvac, dosUnitFilled;
 		output signal nozzle0Engaged, nozzle1Engaged, nozzle2Engaged, nozzle3Engaged;
+		output signal injector0Engaged, injector1Engaged, injector2Engaged, injector3Engaged;
+		output signal inlet0Engaged, inlet1Engaged, inlet2Engaged, inlet3Engaged;
 		
 		input signal valveInjectorOnOff, valveInletOnOff;
 		input signal dosUnitValveRetract, dosUnitValveExtend;
-		input signal nozzleSelect;
+		input int channel nozzleSelect;
 		)
 ->
 {
-	while(true) {
-		abort (immediate dosUnitValveRetract) { // while not recieving valveRetract
-			sustain(dosUnitEvac);				// emit evac (bottom)
+		while(true) {
+			receive nozzleSelect;
+			switch((int)#nozzleSelect) {
+				case 0: plantOperation(:valveInjectorOnOff,valveInletOnOff,dosUnitValveRetract,dosUnitValveExtend,
+										nozzle0Engaged,injector0Engaged,inlet0Engaged,dosUnitEvac,dosUnitFilled);
+						break;
+				
+				case 1: plantOperation(:valveInjectorOnOff,valveInletOnOff,dosUnitValveRetract,dosUnitValveExtend,
+										nozzle1Engaged,injector1Engaged,inlet1Engaged,dosUnitEvac,dosUnitFilled);
+						break;
+						
+				case 2: plantOperation(:valveInjectorOnOff,valveInletOnOff,dosUnitValveRetract,dosUnitValveExtend,
+										nozzle2Engaged,injector2Engaged,inlet2Engaged,dosUnitEvac,dosUnitFilled);
+						break;
+						
+				case 3: plantOperation(:valveInjectorOnOff,valveInletOnOff,dosUnitValveRetract,dosUnitValveExtend,
+										nozzle3Engaged,injector3Engaged,inlet3Engaged,dosUnitEvac,dosUnitFilled);
+						break;
+			}
+			pause;
 		}
-		abort (immediate dosUnitValveExtend){	// while not recieving valveExtend
-			sustain(dosUnitFilled)				// emit filled (top)
-		}
-		// pause?
-	}
+
 }
