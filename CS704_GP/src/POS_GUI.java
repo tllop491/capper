@@ -153,14 +153,19 @@ public class POS_GUI {
 			public void actionPerformed(ActionEvent arg0) {
 				try {
 					TCPSender s = new TCPSender("127.0.0.1", 2000);
-					
+					int sum = 0;
+					sum = slider.getValue() + slider_1.getValue() + slider_2.getValue() + slider_3.getValue();
 					ArrayList<Integer> single_order = new ArrayList<Integer>();
 					
-					single_order.add((Integer)slider.getValue());
-					single_order.add((Integer)slider_1.getValue());
-					single_order.add((Integer)slider_2.getValue());
-					single_order.add((Integer)slider_3.getValue());
+					System.out.print("test");
+					
+					single_order.add(Math.round(((float)slider.getValue()/sum)*100)); // to get percentage
+					single_order.add(Math.round(((float)slider_1.getValue()/sum)*100));
+					single_order.add(Math.round(((float)slider_2.getValue()/sum)*100));
+					single_order.add(Math.round(((float)slider_3.getValue()/sum)*100));
 					int order_amount = (int)spinner.getValue();
+					
+					
 					
 					for (int i = 0; i < order_amount; i++) {
 						s.emit(single_order, 50);

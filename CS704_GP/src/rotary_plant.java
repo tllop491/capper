@@ -75,48 +75,35 @@ public class rotary_plant extends ClockDomain{
                     rt_thread_5.print();//sysj\rotary_plant.sysj line: 55, column: 5
                     bottleLeftPos5.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
                     currsigs.addElement(bottleLeftPos5);
-                    System.out.println("Emitted bottleLeftPos5");
                     bottleLeftPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 57, column: 5
                     currsigs.addElement(bottleLeftPos5_GUI);
-                    System.out.println("Emitted bottleLeftPos5_GUI");
                     if(rt_thread_5.index[0] == true){//sysj\rotary_plant.sysj line: 60, column: 8
                       bottleAtPos1.setPresent();//sysj\rotary_plant.sysj line: 61, column: 5
                       currsigs.addElement(bottleAtPos1);
-                      System.out.println("Emitted bottleAtPos1");
                       bottleAtPos1c.setPresent();//sysj\rotary_plant.sysj line: 62, column: 5
                       currsigs.addElement(bottleAtPos1c);
-                      System.out.println("Emitted bottleAtPos1c");
                       bottleAtPos1_GUI.setPresent();//sysj\rotary_plant.sysj line: 63, column: 5
                       currsigs.addElement(bottleAtPos1_GUI);
-                      System.out.println("Emitted bottleAtPos1_GUI");
                       if(rt_thread_5.index[1] == true){//sysj\rotary_plant.sysj line: 66, column: 8
                         bottleAtPos2.setPresent();//sysj\rotary_plant.sysj line: 67, column: 5
                         currsigs.addElement(bottleAtPos2);
-                        System.out.println("Emitted bottleAtPos2");
                         bottleAtPos2_GUI.setPresent();//sysj\rotary_plant.sysj line: 68, column: 5
                         currsigs.addElement(bottleAtPos2_GUI);
-                        System.out.println("Emitted bottleAtPos2_GUI");
                         if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
                           bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
                           currsigs.addElement(bottleAtPos3);
-                          System.out.println("Emitted bottleAtPos3");
                           bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
                           currsigs.addElement(bottleAtPos3_GUI);
-                          System.out.println("Emitted bottleAtPos3_GUI");
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -133,10 +120,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -154,17 +139,13 @@ public class rotary_plant extends ClockDomain{
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -181,10 +162,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -203,24 +182,18 @@ public class rotary_plant extends ClockDomain{
                         if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
                           bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
                           currsigs.addElement(bottleAtPos3);
-                          System.out.println("Emitted bottleAtPos3");
                           bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
                           currsigs.addElement(bottleAtPos3_GUI);
-                          System.out.println("Emitted bottleAtPos3_GUI");
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -237,10 +210,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -258,17 +229,13 @@ public class rotary_plant extends ClockDomain{
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -285,10 +252,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -308,31 +273,23 @@ public class rotary_plant extends ClockDomain{
                       if(rt_thread_5.index[1] == true){//sysj\rotary_plant.sysj line: 66, column: 8
                         bottleAtPos2.setPresent();//sysj\rotary_plant.sysj line: 67, column: 5
                         currsigs.addElement(bottleAtPos2);
-                        System.out.println("Emitted bottleAtPos2");
                         bottleAtPos2_GUI.setPresent();//sysj\rotary_plant.sysj line: 68, column: 5
                         currsigs.addElement(bottleAtPos2_GUI);
-                        System.out.println("Emitted bottleAtPos2_GUI");
                         if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
                           bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
                           currsigs.addElement(bottleAtPos3);
-                          System.out.println("Emitted bottleAtPos3");
                           bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
                           currsigs.addElement(bottleAtPos3_GUI);
-                          System.out.println("Emitted bottleAtPos3_GUI");
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -349,10 +306,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -370,17 +325,13 @@ public class rotary_plant extends ClockDomain{
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -397,10 +348,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -419,24 +368,18 @@ public class rotary_plant extends ClockDomain{
                         if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
                           bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
                           currsigs.addElement(bottleAtPos3);
-                          System.out.println("Emitted bottleAtPos3");
                           bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
                           currsigs.addElement(bottleAtPos3_GUI);
-                          System.out.println("Emitted bottleAtPos3_GUI");
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -453,10 +396,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -474,17 +415,13 @@ public class rotary_plant extends ClockDomain{
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -501,10 +438,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -525,41 +460,30 @@ public class rotary_plant extends ClockDomain{
                     if(rt_thread_5.index[0] == true){//sysj\rotary_plant.sysj line: 60, column: 8
                       bottleAtPos1.setPresent();//sysj\rotary_plant.sysj line: 61, column: 5
                       currsigs.addElement(bottleAtPos1);
-                      System.out.println("Emitted bottleAtPos1");
                       bottleAtPos1c.setPresent();//sysj\rotary_plant.sysj line: 62, column: 5
                       currsigs.addElement(bottleAtPos1c);
-                      System.out.println("Emitted bottleAtPos1c");
                       bottleAtPos1_GUI.setPresent();//sysj\rotary_plant.sysj line: 63, column: 5
                       currsigs.addElement(bottleAtPos1_GUI);
-                      System.out.println("Emitted bottleAtPos1_GUI");
                       if(rt_thread_5.index[1] == true){//sysj\rotary_plant.sysj line: 66, column: 8
                         bottleAtPos2.setPresent();//sysj\rotary_plant.sysj line: 67, column: 5
                         currsigs.addElement(bottleAtPos2);
-                        System.out.println("Emitted bottleAtPos2");
                         bottleAtPos2_GUI.setPresent();//sysj\rotary_plant.sysj line: 68, column: 5
                         currsigs.addElement(bottleAtPos2_GUI);
-                        System.out.println("Emitted bottleAtPos2_GUI");
                         if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
                           bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
                           currsigs.addElement(bottleAtPos3);
-                          System.out.println("Emitted bottleAtPos3");
                           bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
                           currsigs.addElement(bottleAtPos3_GUI);
-                          System.out.println("Emitted bottleAtPos3_GUI");
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -576,10 +500,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -597,17 +519,13 @@ public class rotary_plant extends ClockDomain{
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -624,10 +542,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -646,24 +562,18 @@ public class rotary_plant extends ClockDomain{
                         if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
                           bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
                           currsigs.addElement(bottleAtPos3);
-                          System.out.println("Emitted bottleAtPos3");
                           bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
                           currsigs.addElement(bottleAtPos3_GUI);
-                          System.out.println("Emitted bottleAtPos3_GUI");
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -680,10 +590,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -701,17 +609,13 @@ public class rotary_plant extends ClockDomain{
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -728,10 +632,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -751,31 +653,23 @@ public class rotary_plant extends ClockDomain{
                       if(rt_thread_5.index[1] == true){//sysj\rotary_plant.sysj line: 66, column: 8
                         bottleAtPos2.setPresent();//sysj\rotary_plant.sysj line: 67, column: 5
                         currsigs.addElement(bottleAtPos2);
-                        System.out.println("Emitted bottleAtPos2");
                         bottleAtPos2_GUI.setPresent();//sysj\rotary_plant.sysj line: 68, column: 5
                         currsigs.addElement(bottleAtPos2_GUI);
-                        System.out.println("Emitted bottleAtPos2_GUI");
                         if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
                           bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
                           currsigs.addElement(bottleAtPos3);
-                          System.out.println("Emitted bottleAtPos3");
                           bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
                           currsigs.addElement(bottleAtPos3_GUI);
-                          System.out.println("Emitted bottleAtPos3_GUI");
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -792,10 +686,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -813,17 +705,13 @@ public class rotary_plant extends ClockDomain{
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -840,10 +728,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -862,24 +748,18 @@ public class rotary_plant extends ClockDomain{
                         if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
                           bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
                           currsigs.addElement(bottleAtPos3);
-                          System.out.println("Emitted bottleAtPos3");
                           bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
                           currsigs.addElement(bottleAtPos3_GUI);
-                          System.out.println("Emitted bottleAtPos3_GUI");
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -896,10 +776,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -917,17 +795,13 @@ public class rotary_plant extends ClockDomain{
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -944,10 +818,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -973,48 +845,35 @@ public class rotary_plant extends ClockDomain{
                     rt_thread_5.print();//sysj\rotary_plant.sysj line: 55, column: 5
                     bottleLeftPos5.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
                     currsigs.addElement(bottleLeftPos5);
-                    System.out.println("Emitted bottleLeftPos5");
                     bottleLeftPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 57, column: 5
                     currsigs.addElement(bottleLeftPos5_GUI);
-                    System.out.println("Emitted bottleLeftPos5_GUI");
                     if(rt_thread_5.index[0] == true){//sysj\rotary_plant.sysj line: 60, column: 8
                       bottleAtPos1.setPresent();//sysj\rotary_plant.sysj line: 61, column: 5
                       currsigs.addElement(bottleAtPos1);
-                      System.out.println("Emitted bottleAtPos1");
                       bottleAtPos1c.setPresent();//sysj\rotary_plant.sysj line: 62, column: 5
                       currsigs.addElement(bottleAtPos1c);
-                      System.out.println("Emitted bottleAtPos1c");
                       bottleAtPos1_GUI.setPresent();//sysj\rotary_plant.sysj line: 63, column: 5
                       currsigs.addElement(bottleAtPos1_GUI);
-                      System.out.println("Emitted bottleAtPos1_GUI");
                       if(rt_thread_5.index[1] == true){//sysj\rotary_plant.sysj line: 66, column: 8
                         bottleAtPos2.setPresent();//sysj\rotary_plant.sysj line: 67, column: 5
                         currsigs.addElement(bottleAtPos2);
-                        System.out.println("Emitted bottleAtPos2");
                         bottleAtPos2_GUI.setPresent();//sysj\rotary_plant.sysj line: 68, column: 5
                         currsigs.addElement(bottleAtPos2_GUI);
-                        System.out.println("Emitted bottleAtPos2_GUI");
                         if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
                           bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
                           currsigs.addElement(bottleAtPos3);
-                          System.out.println("Emitted bottleAtPos3");
                           bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
                           currsigs.addElement(bottleAtPos3_GUI);
-                          System.out.println("Emitted bottleAtPos3_GUI");
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -1031,10 +890,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -1052,17 +909,13 @@ public class rotary_plant extends ClockDomain{
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -1079,10 +932,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -1101,24 +952,18 @@ public class rotary_plant extends ClockDomain{
                         if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
                           bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
                           currsigs.addElement(bottleAtPos3);
-                          System.out.println("Emitted bottleAtPos3");
                           bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
                           currsigs.addElement(bottleAtPos3_GUI);
-                          System.out.println("Emitted bottleAtPos3_GUI");
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -1135,10 +980,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -1156,17 +999,13 @@ public class rotary_plant extends ClockDomain{
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -1183,10 +1022,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -1206,31 +1043,23 @@ public class rotary_plant extends ClockDomain{
                       if(rt_thread_5.index[1] == true){//sysj\rotary_plant.sysj line: 66, column: 8
                         bottleAtPos2.setPresent();//sysj\rotary_plant.sysj line: 67, column: 5
                         currsigs.addElement(bottleAtPos2);
-                        System.out.println("Emitted bottleAtPos2");
                         bottleAtPos2_GUI.setPresent();//sysj\rotary_plant.sysj line: 68, column: 5
                         currsigs.addElement(bottleAtPos2_GUI);
-                        System.out.println("Emitted bottleAtPos2_GUI");
                         if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
                           bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
                           currsigs.addElement(bottleAtPos3);
-                          System.out.println("Emitted bottleAtPos3");
                           bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
                           currsigs.addElement(bottleAtPos3_GUI);
-                          System.out.println("Emitted bottleAtPos3_GUI");
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -1247,10 +1076,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -1268,17 +1095,13 @@ public class rotary_plant extends ClockDomain{
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -1295,10 +1118,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -1317,24 +1138,18 @@ public class rotary_plant extends ClockDomain{
                         if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
                           bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
                           currsigs.addElement(bottleAtPos3);
-                          System.out.println("Emitted bottleAtPos3");
                           bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
                           currsigs.addElement(bottleAtPos3_GUI);
-                          System.out.println("Emitted bottleAtPos3_GUI");
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -1351,10 +1166,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -1372,17 +1185,13 @@ public class rotary_plant extends ClockDomain{
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -1399,10 +1208,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -1423,41 +1230,30 @@ public class rotary_plant extends ClockDomain{
                     if(rt_thread_5.index[0] == true){//sysj\rotary_plant.sysj line: 60, column: 8
                       bottleAtPos1.setPresent();//sysj\rotary_plant.sysj line: 61, column: 5
                       currsigs.addElement(bottleAtPos1);
-                      System.out.println("Emitted bottleAtPos1");
                       bottleAtPos1c.setPresent();//sysj\rotary_plant.sysj line: 62, column: 5
                       currsigs.addElement(bottleAtPos1c);
-                      System.out.println("Emitted bottleAtPos1c");
                       bottleAtPos1_GUI.setPresent();//sysj\rotary_plant.sysj line: 63, column: 5
                       currsigs.addElement(bottleAtPos1_GUI);
-                      System.out.println("Emitted bottleAtPos1_GUI");
                       if(rt_thread_5.index[1] == true){//sysj\rotary_plant.sysj line: 66, column: 8
                         bottleAtPos2.setPresent();//sysj\rotary_plant.sysj line: 67, column: 5
                         currsigs.addElement(bottleAtPos2);
-                        System.out.println("Emitted bottleAtPos2");
                         bottleAtPos2_GUI.setPresent();//sysj\rotary_plant.sysj line: 68, column: 5
                         currsigs.addElement(bottleAtPos2_GUI);
-                        System.out.println("Emitted bottleAtPos2_GUI");
                         if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
                           bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
                           currsigs.addElement(bottleAtPos3);
-                          System.out.println("Emitted bottleAtPos3");
                           bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
                           currsigs.addElement(bottleAtPos3_GUI);
-                          System.out.println("Emitted bottleAtPos3_GUI");
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -1474,10 +1270,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -1495,17 +1289,13 @@ public class rotary_plant extends ClockDomain{
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -1522,10 +1312,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -1544,24 +1332,18 @@ public class rotary_plant extends ClockDomain{
                         if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
                           bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
                           currsigs.addElement(bottleAtPos3);
-                          System.out.println("Emitted bottleAtPos3");
                           bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
                           currsigs.addElement(bottleAtPos3_GUI);
-                          System.out.println("Emitted bottleAtPos3_GUI");
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -1578,10 +1360,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -1599,17 +1379,13 @@ public class rotary_plant extends ClockDomain{
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -1626,10 +1402,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -1649,31 +1423,23 @@ public class rotary_plant extends ClockDomain{
                       if(rt_thread_5.index[1] == true){//sysj\rotary_plant.sysj line: 66, column: 8
                         bottleAtPos2.setPresent();//sysj\rotary_plant.sysj line: 67, column: 5
                         currsigs.addElement(bottleAtPos2);
-                        System.out.println("Emitted bottleAtPos2");
                         bottleAtPos2_GUI.setPresent();//sysj\rotary_plant.sysj line: 68, column: 5
                         currsigs.addElement(bottleAtPos2_GUI);
-                        System.out.println("Emitted bottleAtPos2_GUI");
                         if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
                           bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
                           currsigs.addElement(bottleAtPos3);
-                          System.out.println("Emitted bottleAtPos3");
                           bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
                           currsigs.addElement(bottleAtPos3_GUI);
-                          System.out.println("Emitted bottleAtPos3_GUI");
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -1690,10 +1456,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -1711,17 +1475,13 @@ public class rotary_plant extends ClockDomain{
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -1738,10 +1498,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -1760,24 +1518,18 @@ public class rotary_plant extends ClockDomain{
                         if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
                           bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
                           currsigs.addElement(bottleAtPos3);
-                          System.out.println("Emitted bottleAtPos3");
                           bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
                           currsigs.addElement(bottleAtPos3_GUI);
-                          System.out.println("Emitted bottleAtPos3_GUI");
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -1794,10 +1546,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -1815,17 +1565,13 @@ public class rotary_plant extends ClockDomain{
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -1842,10 +1588,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -1877,48 +1621,35 @@ public class rotary_plant extends ClockDomain{
                     rt_thread_5.print();//sysj\rotary_plant.sysj line: 55, column: 5
                     bottleLeftPos5.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
                     currsigs.addElement(bottleLeftPos5);
-                    System.out.println("Emitted bottleLeftPos5");
                     bottleLeftPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 57, column: 5
                     currsigs.addElement(bottleLeftPos5_GUI);
-                    System.out.println("Emitted bottleLeftPos5_GUI");
                     if(rt_thread_5.index[0] == true){//sysj\rotary_plant.sysj line: 60, column: 8
                       bottleAtPos1.setPresent();//sysj\rotary_plant.sysj line: 61, column: 5
                       currsigs.addElement(bottleAtPos1);
-                      System.out.println("Emitted bottleAtPos1");
                       bottleAtPos1c.setPresent();//sysj\rotary_plant.sysj line: 62, column: 5
                       currsigs.addElement(bottleAtPos1c);
-                      System.out.println("Emitted bottleAtPos1c");
                       bottleAtPos1_GUI.setPresent();//sysj\rotary_plant.sysj line: 63, column: 5
                       currsigs.addElement(bottleAtPos1_GUI);
-                      System.out.println("Emitted bottleAtPos1_GUI");
                       if(rt_thread_5.index[1] == true){//sysj\rotary_plant.sysj line: 66, column: 8
                         bottleAtPos2.setPresent();//sysj\rotary_plant.sysj line: 67, column: 5
                         currsigs.addElement(bottleAtPos2);
-                        System.out.println("Emitted bottleAtPos2");
                         bottleAtPos2_GUI.setPresent();//sysj\rotary_plant.sysj line: 68, column: 5
                         currsigs.addElement(bottleAtPos2_GUI);
-                        System.out.println("Emitted bottleAtPos2_GUI");
                         if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
                           bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
                           currsigs.addElement(bottleAtPos3);
-                          System.out.println("Emitted bottleAtPos3");
                           bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
                           currsigs.addElement(bottleAtPos3_GUI);
-                          System.out.println("Emitted bottleAtPos3_GUI");
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -1935,10 +1666,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -1956,17 +1685,13 @@ public class rotary_plant extends ClockDomain{
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -1983,10 +1708,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -2005,24 +1728,18 @@ public class rotary_plant extends ClockDomain{
                         if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
                           bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
                           currsigs.addElement(bottleAtPos3);
-                          System.out.println("Emitted bottleAtPos3");
                           bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
                           currsigs.addElement(bottleAtPos3_GUI);
-                          System.out.println("Emitted bottleAtPos3_GUI");
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -2039,10 +1756,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -2060,17 +1775,13 @@ public class rotary_plant extends ClockDomain{
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -2087,10 +1798,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -2110,31 +1819,23 @@ public class rotary_plant extends ClockDomain{
                       if(rt_thread_5.index[1] == true){//sysj\rotary_plant.sysj line: 66, column: 8
                         bottleAtPos2.setPresent();//sysj\rotary_plant.sysj line: 67, column: 5
                         currsigs.addElement(bottleAtPos2);
-                        System.out.println("Emitted bottleAtPos2");
                         bottleAtPos2_GUI.setPresent();//sysj\rotary_plant.sysj line: 68, column: 5
                         currsigs.addElement(bottleAtPos2_GUI);
-                        System.out.println("Emitted bottleAtPos2_GUI");
                         if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
                           bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
                           currsigs.addElement(bottleAtPos3);
-                          System.out.println("Emitted bottleAtPos3");
                           bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
                           currsigs.addElement(bottleAtPos3_GUI);
-                          System.out.println("Emitted bottleAtPos3_GUI");
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -2151,10 +1852,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -2172,17 +1871,13 @@ public class rotary_plant extends ClockDomain{
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -2199,10 +1894,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -2221,24 +1914,18 @@ public class rotary_plant extends ClockDomain{
                         if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
                           bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
                           currsigs.addElement(bottleAtPos3);
-                          System.out.println("Emitted bottleAtPos3");
                           bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
                           currsigs.addElement(bottleAtPos3_GUI);
-                          System.out.println("Emitted bottleAtPos3_GUI");
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -2255,10 +1942,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -2276,17 +1961,13 @@ public class rotary_plant extends ClockDomain{
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -2303,10 +1984,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -2327,41 +2006,30 @@ public class rotary_plant extends ClockDomain{
                     if(rt_thread_5.index[0] == true){//sysj\rotary_plant.sysj line: 60, column: 8
                       bottleAtPos1.setPresent();//sysj\rotary_plant.sysj line: 61, column: 5
                       currsigs.addElement(bottleAtPos1);
-                      System.out.println("Emitted bottleAtPos1");
                       bottleAtPos1c.setPresent();//sysj\rotary_plant.sysj line: 62, column: 5
                       currsigs.addElement(bottleAtPos1c);
-                      System.out.println("Emitted bottleAtPos1c");
                       bottleAtPos1_GUI.setPresent();//sysj\rotary_plant.sysj line: 63, column: 5
                       currsigs.addElement(bottleAtPos1_GUI);
-                      System.out.println("Emitted bottleAtPos1_GUI");
                       if(rt_thread_5.index[1] == true){//sysj\rotary_plant.sysj line: 66, column: 8
                         bottleAtPos2.setPresent();//sysj\rotary_plant.sysj line: 67, column: 5
                         currsigs.addElement(bottleAtPos2);
-                        System.out.println("Emitted bottleAtPos2");
                         bottleAtPos2_GUI.setPresent();//sysj\rotary_plant.sysj line: 68, column: 5
                         currsigs.addElement(bottleAtPos2_GUI);
-                        System.out.println("Emitted bottleAtPos2_GUI");
                         if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
                           bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
                           currsigs.addElement(bottleAtPos3);
-                          System.out.println("Emitted bottleAtPos3");
                           bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
                           currsigs.addElement(bottleAtPos3_GUI);
-                          System.out.println("Emitted bottleAtPos3_GUI");
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -2378,10 +2046,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -2399,17 +2065,13 @@ public class rotary_plant extends ClockDomain{
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -2426,10 +2088,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -2448,24 +2108,18 @@ public class rotary_plant extends ClockDomain{
                         if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
                           bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
                           currsigs.addElement(bottleAtPos3);
-                          System.out.println("Emitted bottleAtPos3");
                           bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
                           currsigs.addElement(bottleAtPos3_GUI);
-                          System.out.println("Emitted bottleAtPos3_GUI");
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -2482,10 +2136,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -2503,17 +2155,13 @@ public class rotary_plant extends ClockDomain{
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -2530,10 +2178,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -2553,31 +2199,23 @@ public class rotary_plant extends ClockDomain{
                       if(rt_thread_5.index[1] == true){//sysj\rotary_plant.sysj line: 66, column: 8
                         bottleAtPos2.setPresent();//sysj\rotary_plant.sysj line: 67, column: 5
                         currsigs.addElement(bottleAtPos2);
-                        System.out.println("Emitted bottleAtPos2");
                         bottleAtPos2_GUI.setPresent();//sysj\rotary_plant.sysj line: 68, column: 5
                         currsigs.addElement(bottleAtPos2_GUI);
-                        System.out.println("Emitted bottleAtPos2_GUI");
                         if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
                           bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
                           currsigs.addElement(bottleAtPos3);
-                          System.out.println("Emitted bottleAtPos3");
                           bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
                           currsigs.addElement(bottleAtPos3_GUI);
-                          System.out.println("Emitted bottleAtPos3_GUI");
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -2594,10 +2232,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -2615,17 +2251,13 @@ public class rotary_plant extends ClockDomain{
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -2642,10 +2274,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -2664,24 +2294,18 @@ public class rotary_plant extends ClockDomain{
                         if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
                           bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
                           currsigs.addElement(bottleAtPos3);
-                          System.out.println("Emitted bottleAtPos3");
                           bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
                           currsigs.addElement(bottleAtPos3_GUI);
-                          System.out.println("Emitted bottleAtPos3_GUI");
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -2698,10 +2322,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -2719,17 +2341,13 @@ public class rotary_plant extends ClockDomain{
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -2746,10 +2364,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -2775,48 +2391,35 @@ public class rotary_plant extends ClockDomain{
                     rt_thread_5.print();//sysj\rotary_plant.sysj line: 55, column: 5
                     bottleLeftPos5.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
                     currsigs.addElement(bottleLeftPos5);
-                    System.out.println("Emitted bottleLeftPos5");
                     bottleLeftPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 57, column: 5
                     currsigs.addElement(bottleLeftPos5_GUI);
-                    System.out.println("Emitted bottleLeftPos5_GUI");
                     if(rt_thread_5.index[0] == true){//sysj\rotary_plant.sysj line: 60, column: 8
                       bottleAtPos1.setPresent();//sysj\rotary_plant.sysj line: 61, column: 5
                       currsigs.addElement(bottleAtPos1);
-                      System.out.println("Emitted bottleAtPos1");
                       bottleAtPos1c.setPresent();//sysj\rotary_plant.sysj line: 62, column: 5
                       currsigs.addElement(bottleAtPos1c);
-                      System.out.println("Emitted bottleAtPos1c");
                       bottleAtPos1_GUI.setPresent();//sysj\rotary_plant.sysj line: 63, column: 5
                       currsigs.addElement(bottleAtPos1_GUI);
-                      System.out.println("Emitted bottleAtPos1_GUI");
                       if(rt_thread_5.index[1] == true){//sysj\rotary_plant.sysj line: 66, column: 8
                         bottleAtPos2.setPresent();//sysj\rotary_plant.sysj line: 67, column: 5
                         currsigs.addElement(bottleAtPos2);
-                        System.out.println("Emitted bottleAtPos2");
                         bottleAtPos2_GUI.setPresent();//sysj\rotary_plant.sysj line: 68, column: 5
                         currsigs.addElement(bottleAtPos2_GUI);
-                        System.out.println("Emitted bottleAtPos2_GUI");
                         if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
                           bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
                           currsigs.addElement(bottleAtPos3);
-                          System.out.println("Emitted bottleAtPos3");
                           bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
                           currsigs.addElement(bottleAtPos3_GUI);
-                          System.out.println("Emitted bottleAtPos3_GUI");
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -2833,10 +2436,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -2854,17 +2455,13 @@ public class rotary_plant extends ClockDomain{
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -2881,10 +2478,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -2903,24 +2498,18 @@ public class rotary_plant extends ClockDomain{
                         if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
                           bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
                           currsigs.addElement(bottleAtPos3);
-                          System.out.println("Emitted bottleAtPos3");
                           bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
                           currsigs.addElement(bottleAtPos3_GUI);
-                          System.out.println("Emitted bottleAtPos3_GUI");
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -2937,10 +2526,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -2958,17 +2545,13 @@ public class rotary_plant extends ClockDomain{
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -2985,10 +2568,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -3008,31 +2589,23 @@ public class rotary_plant extends ClockDomain{
                       if(rt_thread_5.index[1] == true){//sysj\rotary_plant.sysj line: 66, column: 8
                         bottleAtPos2.setPresent();//sysj\rotary_plant.sysj line: 67, column: 5
                         currsigs.addElement(bottleAtPos2);
-                        System.out.println("Emitted bottleAtPos2");
                         bottleAtPos2_GUI.setPresent();//sysj\rotary_plant.sysj line: 68, column: 5
                         currsigs.addElement(bottleAtPos2_GUI);
-                        System.out.println("Emitted bottleAtPos2_GUI");
                         if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
                           bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
                           currsigs.addElement(bottleAtPos3);
-                          System.out.println("Emitted bottleAtPos3");
                           bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
                           currsigs.addElement(bottleAtPos3_GUI);
-                          System.out.println("Emitted bottleAtPos3_GUI");
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -3049,10 +2622,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -3070,17 +2641,13 @@ public class rotary_plant extends ClockDomain{
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -3097,10 +2664,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -3119,24 +2684,18 @@ public class rotary_plant extends ClockDomain{
                         if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
                           bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
                           currsigs.addElement(bottleAtPos3);
-                          System.out.println("Emitted bottleAtPos3");
                           bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
                           currsigs.addElement(bottleAtPos3_GUI);
-                          System.out.println("Emitted bottleAtPos3_GUI");
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -3153,10 +2712,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -3174,17 +2731,13 @@ public class rotary_plant extends ClockDomain{
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -3201,10 +2754,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -3225,41 +2776,30 @@ public class rotary_plant extends ClockDomain{
                     if(rt_thread_5.index[0] == true){//sysj\rotary_plant.sysj line: 60, column: 8
                       bottleAtPos1.setPresent();//sysj\rotary_plant.sysj line: 61, column: 5
                       currsigs.addElement(bottleAtPos1);
-                      System.out.println("Emitted bottleAtPos1");
                       bottleAtPos1c.setPresent();//sysj\rotary_plant.sysj line: 62, column: 5
                       currsigs.addElement(bottleAtPos1c);
-                      System.out.println("Emitted bottleAtPos1c");
                       bottleAtPos1_GUI.setPresent();//sysj\rotary_plant.sysj line: 63, column: 5
                       currsigs.addElement(bottleAtPos1_GUI);
-                      System.out.println("Emitted bottleAtPos1_GUI");
                       if(rt_thread_5.index[1] == true){//sysj\rotary_plant.sysj line: 66, column: 8
                         bottleAtPos2.setPresent();//sysj\rotary_plant.sysj line: 67, column: 5
                         currsigs.addElement(bottleAtPos2);
-                        System.out.println("Emitted bottleAtPos2");
                         bottleAtPos2_GUI.setPresent();//sysj\rotary_plant.sysj line: 68, column: 5
                         currsigs.addElement(bottleAtPos2_GUI);
-                        System.out.println("Emitted bottleAtPos2_GUI");
                         if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
                           bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
                           currsigs.addElement(bottleAtPos3);
-                          System.out.println("Emitted bottleAtPos3");
                           bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
                           currsigs.addElement(bottleAtPos3_GUI);
-                          System.out.println("Emitted bottleAtPos3_GUI");
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -3276,10 +2816,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -3297,17 +2835,13 @@ public class rotary_plant extends ClockDomain{
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -3324,10 +2858,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -3346,24 +2878,18 @@ public class rotary_plant extends ClockDomain{
                         if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
                           bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
                           currsigs.addElement(bottleAtPos3);
-                          System.out.println("Emitted bottleAtPos3");
                           bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
                           currsigs.addElement(bottleAtPos3_GUI);
-                          System.out.println("Emitted bottleAtPos3_GUI");
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -3380,10 +2906,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -3401,17 +2925,13 @@ public class rotary_plant extends ClockDomain{
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -3428,10 +2948,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -3451,31 +2969,23 @@ public class rotary_plant extends ClockDomain{
                       if(rt_thread_5.index[1] == true){//sysj\rotary_plant.sysj line: 66, column: 8
                         bottleAtPos2.setPresent();//sysj\rotary_plant.sysj line: 67, column: 5
                         currsigs.addElement(bottleAtPos2);
-                        System.out.println("Emitted bottleAtPos2");
                         bottleAtPos2_GUI.setPresent();//sysj\rotary_plant.sysj line: 68, column: 5
                         currsigs.addElement(bottleAtPos2_GUI);
-                        System.out.println("Emitted bottleAtPos2_GUI");
                         if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
                           bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
                           currsigs.addElement(bottleAtPos3);
-                          System.out.println("Emitted bottleAtPos3");
                           bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
                           currsigs.addElement(bottleAtPos3_GUI);
-                          System.out.println("Emitted bottleAtPos3_GUI");
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -3492,10 +3002,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -3513,17 +3021,13 @@ public class rotary_plant extends ClockDomain{
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -3540,10 +3044,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -3562,24 +3064,18 @@ public class rotary_plant extends ClockDomain{
                         if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
                           bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
                           currsigs.addElement(bottleAtPos3);
-                          System.out.println("Emitted bottleAtPos3");
                           bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
                           currsigs.addElement(bottleAtPos3_GUI);
-                          System.out.println("Emitted bottleAtPos3_GUI");
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -3596,10 +3092,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -3617,17 +3111,13 @@ public class rotary_plant extends ClockDomain{
                           if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
                             bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                             currsigs.addElement(bottleAtPos4);
-                            System.out.println("Emitted bottleAtPos4");
                             bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                             currsigs.addElement(bottleAtPos4_GUI);
-                            System.out.println("Emitted bottleAtPos4_GUI");
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -3644,10 +3134,8 @@ public class rotary_plant extends ClockDomain{
                             if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
                               bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
                               currsigs.addElement(bottleAtPos5);
-                              System.out.println("Emitted bottleAtPos5");
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              System.out.println("Emitted bottleAtPos5_GUI");
                               S132083=1;
                               active[5]=1;
                               ends[5]=1;
@@ -3699,7 +3187,6 @@ public class rotary_plant extends ClockDomain{
       case 1 : 
         tableAlignedWithSensor_GUI.setPresent();//sysj\rotary_plant.sysj line: 27, column: 6
         currsigs.addElement(tableAlignedWithSensor_GUI);
-        System.out.println("Emitted tableAlignedWithSensor_GUI");
         active[4]=1;
         ends[4]=1;
         tdone[4]=1;
@@ -3719,7 +3206,6 @@ public class rotary_plant extends ClockDomain{
       case 1 : 
         tableAlignedWithSensor.setPresent();//sysj\rotary_plant.sysj line: 23, column: 6
         currsigs.addElement(tableAlignedWithSensor);
-        System.out.println("Emitted tableAlignedWithSensor");
         active[3]=1;
         ends[3]=1;
         tdone[3]=1;
@@ -3732,7 +3218,6 @@ public class rotary_plant extends ClockDomain{
         S131530=1;
     tableAlignedWithSensor_GUI.setPresent();//sysj\rotary_plant.sysj line: 27, column: 6
     currsigs.addElement(tableAlignedWithSensor_GUI);
-    System.out.println("Emitted tableAlignedWithSensor_GUI");
     active[4]=1;
     ends[4]=1;
     tdone[4]=1;
@@ -3742,7 +3227,6 @@ public class rotary_plant extends ClockDomain{
         S131525=1;
     tableAlignedWithSensor.setPresent();//sysj\rotary_plant.sysj line: 23, column: 6
     currsigs.addElement(tableAlignedWithSensor);
-    System.out.println("Emitted tableAlignedWithSensor");
     active[3]=1;
     ends[3]=1;
     tdone[3]=1;
@@ -3752,7 +3236,6 @@ public class rotary_plant extends ClockDomain{
         S131530=1;
     tableAlignedWithSensor_GUI.setPresent();//sysj\rotary_plant.sysj line: 27, column: 6
     currsigs.addElement(tableAlignedWithSensor_GUI);
-    System.out.println("Emitted tableAlignedWithSensor_GUI");
     active[4]=1;
     ends[4]=1;
     tdone[4]=1;
@@ -3762,7 +3245,6 @@ public class rotary_plant extends ClockDomain{
         S131525=1;
     tableAlignedWithSensor.setPresent();//sysj\rotary_plant.sysj line: 23, column: 6
     currsigs.addElement(tableAlignedWithSensor);
-    System.out.println("Emitted tableAlignedWithSensor");
     active[3]=1;
     ends[3]=1;
     tdone[3]=1;
@@ -3772,7 +3254,6 @@ public class rotary_plant extends ClockDomain{
         S131530=1;
     tableAlignedWithSensor_GUI.setPresent();//sysj\rotary_plant.sysj line: 27, column: 6
     currsigs.addElement(tableAlignedWithSensor_GUI);
-    System.out.println("Emitted tableAlignedWithSensor_GUI");
     active[4]=1;
     ends[4]=1;
     tdone[4]=1;
@@ -3782,7 +3263,6 @@ public class rotary_plant extends ClockDomain{
         S131525=1;
     tableAlignedWithSensor.setPresent();//sysj\rotary_plant.sysj line: 23, column: 6
     currsigs.addElement(tableAlignedWithSensor);
-    System.out.println("Emitted tableAlignedWithSensor");
     active[3]=1;
     ends[3]=1;
     tdone[3]=1;
@@ -3804,7 +3284,6 @@ public class rotary_plant extends ClockDomain{
               if(!rotaryTableTrigger.getprestatus()){//sysj\rotary_plant.sysj line: 20, column: 20
                 shift_1.setPresent();//sysj\rotary_plant.sysj line: 31, column: 4
                 currsigs.addElement(shift_1);
-                System.out.println("Emitted shift_1");
                 S131619=0;
                 active[2]=1;
                 ends[2]=1;
@@ -3852,7 +3331,6 @@ public class rotary_plant extends ClockDomain{
             if(!rotaryTableTrigger.getprestatus()){//sysj\rotary_plant.sysj line: 20, column: 20
               shift_1.setPresent();//sysj\rotary_plant.sysj line: 31, column: 4
               currsigs.addElement(shift_1);
-              System.out.println("Emitted shift_1");
               S131619=0;
               active[2]=1;
               ends[2]=1;
@@ -3943,7 +3421,6 @@ public class rotary_plant extends ClockDomain{
                   if(biggest135266 == 0){
                     shift_1.setPresent();//sysj\rotary_plant.sysj line: 31, column: 4
                     currsigs.addElement(shift_1);
-                    System.out.println("Emitted shift_1");
                     S131619=0;
                     active[2]=1;
                     ends[2]=1;

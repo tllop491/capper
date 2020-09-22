@@ -50,7 +50,7 @@ public class STATUS {
 		
 		SimpleServer s = new SimpleServer("127.0.0.12", 2000);
 		
-		s.addConsumer("STATUS", "tableAlignedWithSensor_GUI", (status, value) -> System.out.println("test"));
+		
 		
 		
 		//Headers 
@@ -76,7 +76,9 @@ public class STATUS {
 			indConveyorMotor.setForeground(Color.RED);
 			frame.getContentPane().add(indConveyorMotor, "cell 1 2,alignx center,aligny center");
 			
-			// Bottle at Pos 1 
+			s.addConsumer("STATUS", "conveyorEngaged_GUI", (status, value) ->  indConveyorMotor.setForeground(Color.GREEN));
+			
+			/*// Bottle at Pos 1 
 			
 			JLabel bottleAtPos1Label = new JLabel("bottleAtPos1");
 			bottleAtPos1Label.setForeground(Color.GRAY);
@@ -97,7 +99,7 @@ public class STATUS {
 			JLabel indbottleLeftPos5 = new JLabel("•");
 			indbottleLeftPos5.setForeground(Color.RED);
 			frame.getContentPane().add(indbottleLeftPos5, "cell 5 2");
-			
+			*/
 			
 
 			// END OF CONVEYOR

@@ -9,6 +9,6 @@
 <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.systemj.SystemJRunner"/>
 <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="CS704_GP"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-s2 sysj/_main.xml"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="sysj/POS.xml"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="CS704_GP"/>
 </launchConfiguration>

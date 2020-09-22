@@ -70,7 +70,6 @@ public class conveyor_plant extends ClockDomain{
             S6195=0;
             conveyorEngaged.setPresent();//sysj\conveyor_plant.sysj line: 11, column: 30
             currsigs.addElement(conveyorEngaged);
-            System.out.println("Emitted conveyorEngaged");
             active[2]=1;
             ends[2]=1;
             tdone[2]=1;
@@ -87,7 +86,6 @@ public class conveyor_plant extends ClockDomain{
     if(conveyorEngaged.getprestatus()){//sysj\conveyor_plant.sysj line: 17, column: 11
       conveyorEngaged_GUI.setPresent();//sysj\conveyor_plant.sysj line: 18, column: 4
       currsigs.addElement(conveyorEngaged_GUI);
-      System.out.println("Emitted conveyorEngaged_GUI");
       active[3]=1;
       ends[3]=1;
       tdone[3]=1;
@@ -105,7 +103,6 @@ public class conveyor_plant extends ClockDomain{
     S6195=0;
     conveyorEngaged.setPresent();//sysj\conveyor_plant.sysj line: 11, column: 30
     currsigs.addElement(conveyorEngaged);
-    System.out.println("Emitted conveyorEngaged");
     active[2]=1;
     ends[2]=1;
     tdone[2]=1;

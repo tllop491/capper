@@ -66,7 +66,6 @@ public class lidloader_plant extends ClockDomain{
         if(empty.getprestatus()){//sysj\lidloader_plant.sysj line: 113, column: 24
           empty_GUI.setPresent();//sysj\lidloader_plant.sysj line: 113, column: 31
           currsigs.addElement(empty_GUI);
-          System.out.println("Emitted empty_GUI");
           active[13]=1;
           ends[13]=1;
           tdone[13]=1;
@@ -93,7 +92,6 @@ public class lidloader_plant extends ClockDomain{
         if(armAtDest.getprestatus()){//sysj\lidloader_plant.sysj line: 111, column: 24
           armAtDest_GUI.setPresent();//sysj\lidloader_plant.sysj line: 111, column: 35
           currsigs.addElement(armAtDest_GUI);
-          System.out.println("Emitted armAtDest_GUI");
           active[12]=1;
           ends[12]=1;
           tdone[12]=1;
@@ -120,7 +118,6 @@ public class lidloader_plant extends ClockDomain{
         if(armAtSource.getprestatus()){//sysj\lidloader_plant.sysj line: 109, column: 24
           armAtSource_GUI.setPresent();//sysj\lidloader_plant.sysj line: 109, column: 37
           currsigs.addElement(armAtSource_GUI);
-          System.out.println("Emitted armAtSource_GUI");
           active[11]=1;
           ends[11]=1;
           tdone[11]=1;
@@ -147,7 +144,6 @@ public class lidloader_plant extends ClockDomain{
         if(WPgripped.getprestatus()){//sysj\lidloader_plant.sysj line: 107, column: 24
           WPgripped_GUI.setPresent();//sysj\lidloader_plant.sysj line: 107, column: 35
           currsigs.addElement(WPgripped_GUI);
-          System.out.println("Emitted WPgripped_GUI");
           active[10]=1;
           ends[10]=1;
           tdone[10]=1;
@@ -174,7 +170,6 @@ public class lidloader_plant extends ClockDomain{
         if(pusherExtended.getprestatus()){//sysj\lidloader_plant.sysj line: 105, column: 24
           pusherExtended_GUI.setPresent();//sysj\lidloader_plant.sysj line: 105, column: 40
           currsigs.addElement(pusherExtended_GUI);
-          System.out.println("Emitted pusherExtended_GUI");
           active[9]=1;
           ends[9]=1;
           tdone[9]=1;
@@ -201,7 +196,6 @@ public class lidloader_plant extends ClockDomain{
         if(pusherRetracted.getprestatus()){//sysj\lidloader_plant.sysj line: 103, column: 24
           pusherRetracted_GUI.setPresent();//sysj\lidloader_plant.sysj line: 103, column: 41
           currsigs.addElement(pusherRetracted_GUI);
-          System.out.println("Emitted pusherRetracted_GUI");
           active[8]=1;
           ends[8]=1;
           tdone[8]=1;
@@ -285,7 +279,6 @@ public class lidloader_plant extends ClockDomain{
             if(capcount_thread_6 == 0){//sysj\lidloader_plant.sysj line: 95, column: 8
               empty.setPresent();//sysj\lidloader_plant.sysj line: 96, column: 6
               currsigs.addElement(empty);
-              System.out.println("Emitted empty");
               active[6]=1;
               ends[6]=1;
               tdone[6]=1;
@@ -300,7 +293,6 @@ public class lidloader_plant extends ClockDomain{
             if(capcount_thread_6 == 0){//sysj\lidloader_plant.sysj line: 95, column: 8
               empty.setPresent();//sysj\lidloader_plant.sysj line: 96, column: 6
               currsigs.addElement(empty);
-              System.out.println("Emitted empty");
               active[6]=1;
               ends[6]=1;
               tdone[6]=1;
@@ -318,7 +310,6 @@ public class lidloader_plant extends ClockDomain{
             if(capcount_thread_6 == 0){//sysj\lidloader_plant.sysj line: 95, column: 8
               empty.setPresent();//sysj\lidloader_plant.sysj line: 96, column: 6
               currsigs.addElement(empty);
-              System.out.println("Emitted empty");
               active[6]=1;
               ends[6]=1;
               tdone[6]=1;
@@ -333,7 +324,6 @@ public class lidloader_plant extends ClockDomain{
             if(capcount_thread_6 == 0){//sysj\lidloader_plant.sysj line: 95, column: 8
               empty.setPresent();//sysj\lidloader_plant.sysj line: 96, column: 6
               currsigs.addElement(empty);
-              System.out.println("Emitted empty");
               active[6]=1;
               ends[6]=1;
               tdone[6]=1;
@@ -388,7 +378,6 @@ public class lidloader_plant extends ClockDomain{
                     capPos_1.setPresent();//sysj\lidloader_plant.sysj line: 75, column: 7
                     currsigs.addElement(capPos_1);
                     capPos_1.setValue(1);//sysj\lidloader_plant.sysj line: 75, column: 7
-                    System.out.println("Emitted capPos_1");
                     S128893=2;
                     active[5]=1;
                     ends[5]=1;
@@ -405,7 +394,6 @@ public class lidloader_plant extends ClockDomain{
                   if(pusherRetracted.getprestatus()){//sysj\lidloader_plant.sysj line: 76, column: 13
                     capDec_1.setPresent();//sysj\lidloader_plant.sysj line: 77, column: 7
                     currsigs.addElement(capDec_1);
-                    System.out.println("Emitted capDec_1");
                     S128893=0;
                     active[5]=1;
                     ends[5]=1;
@@ -462,7 +450,6 @@ public class lidloader_plant extends ClockDomain{
                     capPos_1.setPresent();//sysj\lidloader_plant.sysj line: 54, column: 7
                     currsigs.addElement(capPos_1);
                     capPos_1.setValue(1);//sysj\lidloader_plant.sysj line: 54, column: 7
-                    System.out.println("Emitted capPos_1");
                     S128859=1;
                     active[4]=1;
                     ends[4]=1;
@@ -478,7 +465,6 @@ public class lidloader_plant extends ClockDomain{
                 else {
                   WPgripped.setPresent();//sysj\lidloader_plant.sysj line: 51, column: 7
                   currsigs.addElement(WPgripped);
-                  System.out.println("Emitted WPgripped");
                   active[4]=1;
                   ends[4]=1;
                   tdone[4]=1;
@@ -492,11 +478,9 @@ public class lidloader_plant extends ClockDomain{
                     capPos_1.setPresent();//sysj\lidloader_plant.sysj line: 49, column: 6
                     currsigs.addElement(capPos_1);
                     capPos_1.setValue(0);//sysj\lidloader_plant.sysj line: 49, column: 6
-                    System.out.println("Emitted capPos_1");
                     S128854=0;
                     WPgripped.setPresent();//sysj\lidloader_plant.sysj line: 51, column: 7
                     currsigs.addElement(WPgripped);
-                    System.out.println("Emitted WPgripped");
                     active[4]=1;
                     ends[4]=1;
                     tdone[4]=1;
@@ -527,11 +511,9 @@ public class lidloader_plant extends ClockDomain{
                 capPos_1.setPresent();//sysj\lidloader_plant.sysj line: 49, column: 6
                 currsigs.addElement(capPos_1);
                 capPos_1.setValue(0);//sysj\lidloader_plant.sysj line: 49, column: 6
-                System.out.println("Emitted capPos_1");
                 S128854=0;
                 WPgripped.setPresent();//sysj\lidloader_plant.sysj line: 51, column: 7
                 currsigs.addElement(WPgripped);
-                System.out.println("Emitted WPgripped");
                 active[4]=1;
                 ends[4]=1;
                 tdone[4]=1;
@@ -572,7 +554,6 @@ public class lidloader_plant extends ClockDomain{
               S128817=1;
               pusherExtended.setPresent();//sysj\lidloader_plant.sysj line: 39, column: 5
               currsigs.addElement(pusherExtended);
-              System.out.println("Emitted pusherExtended");
               active[3]=1;
               ends[3]=1;
               tdone[3]=1;
@@ -580,7 +561,6 @@ public class lidloader_plant extends ClockDomain{
             else {
               pusherRetracted.setPresent();//sysj\lidloader_plant.sysj line: 35, column: 5
               currsigs.addElement(pusherRetracted);
-              System.out.println("Emitted pusherRetracted");
               active[3]=1;
               ends[3]=1;
               tdone[3]=1;
@@ -592,7 +572,6 @@ public class lidloader_plant extends ClockDomain{
               S128817=0;
               pusherRetracted.setPresent();//sysj\lidloader_plant.sysj line: 35, column: 5
               currsigs.addElement(pusherRetracted);
-              System.out.println("Emitted pusherRetracted");
               active[3]=1;
               ends[3]=1;
               tdone[3]=1;
@@ -600,7 +579,6 @@ public class lidloader_plant extends ClockDomain{
             else {
               pusherExtended.setPresent();//sysj\lidloader_plant.sysj line: 39, column: 5
               currsigs.addElement(pusherExtended);
-              System.out.println("Emitted pusherExtended");
               active[3]=1;
               ends[3]=1;
               tdone[3]=1;
@@ -628,7 +606,6 @@ public class lidloader_plant extends ClockDomain{
               S128776=1;
               armAtSource.setPresent();//sysj\lidloader_plant.sysj line: 26, column: 5
               currsigs.addElement(armAtSource);
-              System.out.println("Emitted armAtSource");
               active[2]=1;
               ends[2]=1;
               tdone[2]=1;
@@ -636,7 +613,6 @@ public class lidloader_plant extends ClockDomain{
             else {
               armAtDest.setPresent();//sysj\lidloader_plant.sysj line: 22, column: 5
               currsigs.addElement(armAtDest);
-              System.out.println("Emitted armAtDest");
               active[2]=1;
               ends[2]=1;
               tdone[2]=1;
@@ -648,7 +624,6 @@ public class lidloader_plant extends ClockDomain{
               S128776=0;
               armAtDest.setPresent();//sysj\lidloader_plant.sysj line: 22, column: 5
               currsigs.addElement(armAtDest);
-              System.out.println("Emitted armAtDest");
               active[2]=1;
               ends[2]=1;
               tdone[2]=1;
@@ -656,7 +631,6 @@ public class lidloader_plant extends ClockDomain{
             else {
               armAtSource.setPresent();//sysj\lidloader_plant.sysj line: 26, column: 5
               currsigs.addElement(armAtSource);
-              System.out.println("Emitted armAtSource");
               active[2]=1;
               ends[2]=1;
               tdone[2]=1;
@@ -674,7 +648,6 @@ public class lidloader_plant extends ClockDomain{
     if(empty.getprestatus()){//sysj\lidloader_plant.sysj line: 113, column: 24
       empty_GUI.setPresent();//sysj\lidloader_plant.sysj line: 113, column: 31
       currsigs.addElement(empty_GUI);
-      System.out.println("Emitted empty_GUI");
       active[13]=1;
       ends[13]=1;
       tdone[13]=1;
@@ -691,7 +664,6 @@ public class lidloader_plant extends ClockDomain{
     if(armAtDest.getprestatus()){//sysj\lidloader_plant.sysj line: 111, column: 24
       armAtDest_GUI.setPresent();//sysj\lidloader_plant.sysj line: 111, column: 35
       currsigs.addElement(armAtDest_GUI);
-      System.out.println("Emitted armAtDest_GUI");
       active[12]=1;
       ends[12]=1;
       tdone[12]=1;
@@ -708,7 +680,6 @@ public class lidloader_plant extends ClockDomain{
     if(armAtSource.getprestatus()){//sysj\lidloader_plant.sysj line: 109, column: 24
       armAtSource_GUI.setPresent();//sysj\lidloader_plant.sysj line: 109, column: 37
       currsigs.addElement(armAtSource_GUI);
-      System.out.println("Emitted armAtSource_GUI");
       active[11]=1;
       ends[11]=1;
       tdone[11]=1;
@@ -725,7 +696,6 @@ public class lidloader_plant extends ClockDomain{
     if(WPgripped.getprestatus()){//sysj\lidloader_plant.sysj line: 107, column: 24
       WPgripped_GUI.setPresent();//sysj\lidloader_plant.sysj line: 107, column: 35
       currsigs.addElement(WPgripped_GUI);
-      System.out.println("Emitted WPgripped_GUI");
       active[10]=1;
       ends[10]=1;
       tdone[10]=1;
@@ -742,7 +712,6 @@ public class lidloader_plant extends ClockDomain{
     if(pusherExtended.getprestatus()){//sysj\lidloader_plant.sysj line: 105, column: 24
       pusherExtended_GUI.setPresent();//sysj\lidloader_plant.sysj line: 105, column: 40
       currsigs.addElement(pusherExtended_GUI);
-      System.out.println("Emitted pusherExtended_GUI");
       active[9]=1;
       ends[9]=1;
       tdone[9]=1;
@@ -759,7 +728,6 @@ public class lidloader_plant extends ClockDomain{
     if(pusherRetracted.getprestatus()){//sysj\lidloader_plant.sysj line: 103, column: 24
       pusherRetracted_GUI.setPresent();//sysj\lidloader_plant.sysj line: 103, column: 41
       currsigs.addElement(pusherRetracted_GUI);
-      System.out.println("Emitted pusherRetracted_GUI");
       active[8]=1;
       ends[8]=1;
       tdone[8]=1;
@@ -817,7 +785,6 @@ public class lidloader_plant extends ClockDomain{
         if(capcount_thread_6 == 0){//sysj\lidloader_plant.sysj line: 95, column: 8
           empty.setPresent();//sysj\lidloader_plant.sysj line: 96, column: 6
           currsigs.addElement(empty);
-          System.out.println("Emitted empty");
           active[6]=1;
           ends[6]=1;
           tdone[6]=1;
@@ -832,7 +799,6 @@ public class lidloader_plant extends ClockDomain{
         if(capcount_thread_6 == 0){//sysj\lidloader_plant.sysj line: 95, column: 8
           empty.setPresent();//sysj\lidloader_plant.sysj line: 96, column: 6
           currsigs.addElement(empty);
-          System.out.println("Emitted empty");
           active[6]=1;
           ends[6]=1;
           tdone[6]=1;
@@ -850,7 +816,6 @@ public class lidloader_plant extends ClockDomain{
         if(capcount_thread_6 == 0){//sysj\lidloader_plant.sysj line: 95, column: 8
           empty.setPresent();//sysj\lidloader_plant.sysj line: 96, column: 6
           currsigs.addElement(empty);
-          System.out.println("Emitted empty");
           active[6]=1;
           ends[6]=1;
           tdone[6]=1;
@@ -865,7 +830,6 @@ public class lidloader_plant extends ClockDomain{
         if(capcount_thread_6 == 0){//sysj\lidloader_plant.sysj line: 95, column: 8
           empty.setPresent();//sysj\lidloader_plant.sysj line: 96, column: 6
           currsigs.addElement(empty);
-          System.out.println("Emitted empty");
           active[6]=1;
           ends[6]=1;
           tdone[6]=1;
@@ -896,11 +860,9 @@ public class lidloader_plant extends ClockDomain{
         capPos_1.setPresent();//sysj\lidloader_plant.sysj line: 49, column: 6
         currsigs.addElement(capPos_1);
         capPos_1.setValue(0);//sysj\lidloader_plant.sysj line: 49, column: 6
-        System.out.println("Emitted capPos_1");
         S128854=0;
         WPgripped.setPresent();//sysj\lidloader_plant.sysj line: 51, column: 7
         currsigs.addElement(WPgripped);
-        System.out.println("Emitted WPgripped");
         active[4]=1;
         ends[4]=1;
         tdone[4]=1;
@@ -925,7 +887,6 @@ public class lidloader_plant extends ClockDomain{
     S128817=0;
     pusherRetracted.setPresent();//sysj\lidloader_plant.sysj line: 35, column: 5
     currsigs.addElement(pusherRetracted);
-    System.out.println("Emitted pusherRetracted");
     active[3]=1;
     ends[3]=1;
     tdone[3]=1;
@@ -936,7 +897,6 @@ public class lidloader_plant extends ClockDomain{
     S128776=0;
     armAtDest.setPresent();//sysj\lidloader_plant.sysj line: 22, column: 5
     currsigs.addElement(armAtDest);
-    System.out.println("Emitted armAtDest");
     active[2]=1;
     ends[2]=1;
     tdone[2]=1;
@@ -962,7 +922,6 @@ public class lidloader_plant extends ClockDomain{
           capPos_1.setPresent();//sysj\lidloader_plant.sysj line: 18, column: 2
           currsigs.addElement(capPos_1);
           capPos_1.setValue(0);//sysj\lidloader_plant.sysj line: 18, column: 2
-          System.out.println("Emitted capPos_1");
           thread129379(tdone,ends);
           thread129380(tdone,ends);
           thread129381(tdone,ends);

@@ -175,7 +175,6 @@ public class capper_plant extends ClockDomain{
               S3772=1;
               gripperTurnFinalPos.setPresent();//sysj\capper_plant.sysj line: 31, column: 5
               currsigs.addElement(gripperTurnFinalPos);
-              System.out.println("Emitted gripperTurnFinalPos");
               active[3]=1;
               ends[3]=1;
               tdone[3]=1;
@@ -183,7 +182,6 @@ public class capper_plant extends ClockDomain{
             else {
               gripperTurnHomePos.setPresent();//sysj\capper_plant.sysj line: 27, column: 5
               currsigs.addElement(gripperTurnHomePos);
-              System.out.println("Emitted gripperTurnHomePos");
               active[3]=1;
               ends[3]=1;
               tdone[3]=1;
@@ -200,7 +198,6 @@ public class capper_plant extends ClockDomain{
             else {
               gripperTurnFinalPos.setPresent();//sysj\capper_plant.sysj line: 31, column: 5
               currsigs.addElement(gripperTurnFinalPos);
-              System.out.println("Emitted gripperTurnFinalPos");
               active[3]=1;
               ends[3]=1;
               tdone[3]=1;
@@ -212,7 +209,6 @@ public class capper_plant extends ClockDomain{
             S3772=0;
             gripperTurnHomePos.setPresent();//sysj\capper_plant.sysj line: 27, column: 5
             currsigs.addElement(gripperTurnHomePos);
-            System.out.println("Emitted gripperTurnHomePos");
             active[3]=1;
             ends[3]=1;
             tdone[3]=1;
@@ -239,7 +235,6 @@ public class capper_plant extends ClockDomain{
               S3731=1;
               gripperZAxisLowered.setPresent();//sysj\capper_plant.sysj line: 16, column: 5
               currsigs.addElement(gripperZAxisLowered);
-              System.out.println("Emitted gripperZAxisLowered");
               active[2]=1;
               ends[2]=1;
               tdone[2]=1;
@@ -247,7 +242,6 @@ public class capper_plant extends ClockDomain{
             else {
               gripperZAxisLifted.setPresent();//sysj\capper_plant.sysj line: 12, column: 5
               currsigs.addElement(gripperZAxisLifted);
-              System.out.println("Emitted gripperZAxisLifted");
               active[2]=1;
               ends[2]=1;
               tdone[2]=1;
@@ -264,7 +258,6 @@ public class capper_plant extends ClockDomain{
             else {
               gripperZAxisLowered.setPresent();//sysj\capper_plant.sysj line: 16, column: 5
               currsigs.addElement(gripperZAxisLowered);
-              System.out.println("Emitted gripperZAxisLowered");
               active[2]=1;
               ends[2]=1;
               tdone[2]=1;
@@ -276,7 +269,6 @@ public class capper_plant extends ClockDomain{
             S3731=0;
             gripperZAxisLifted.setPresent();//sysj\capper_plant.sysj line: 12, column: 5
             currsigs.addElement(gripperZAxisLifted);
-            System.out.println("Emitted gripperZAxisLifted");
             active[2]=1;
             ends[2]=1;
             tdone[2]=1;
@@ -360,7 +352,6 @@ public class capper_plant extends ClockDomain{
     S3772=0;
     gripperTurnHomePos.setPresent();//sysj\capper_plant.sysj line: 27, column: 5
     currsigs.addElement(gripperTurnHomePos);
-    System.out.println("Emitted gripperTurnHomePos");
     active[3]=1;
     ends[3]=1;
     tdone[3]=1;
@@ -371,7 +362,6 @@ public class capper_plant extends ClockDomain{
     S3731=0;
     gripperZAxisLifted.setPresent();//sysj\capper_plant.sysj line: 12, column: 5
     currsigs.addElement(gripperZAxisLifted);
-    System.out.println("Emitted gripperZAxisLifted");
     active[2]=1;
     ends[2]=1;
     tdone[2]=1;

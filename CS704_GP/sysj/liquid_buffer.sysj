@@ -8,7 +8,7 @@ liquid_buffer(
 )->
 {
 	signal bufferNotFull, bufferNotEmpty, requestData;
-	Integer signal fromBuffer;
+	ArrayList signal fromBuffer;
 	ArrayList signal toBuffer;
 	{
 		ArrayList data;
@@ -27,7 +27,7 @@ liquid_buffer(
 	}
 	||
 	{
-		int data = 0;
+		ArrayList data = new ArrayList();
 		while(true){
 			// While the buffer is not empty, send data over the channel
 			present(bufferNotEmpty){
@@ -52,12 +52,13 @@ liquid_buffer(
 	{
 		// Buffing Data
 		Buffer myBuffer = new Buffer(100);
-		int data =0;
+		ArrayList data = new ArrayList();
 		while(true){
 
 			present(toBuffer){
 				ArrayList liquidData = (ArrayList)#toBuffer;
 				myBuffer.push(liquidData);
+				
 				/*myBuffer.push(liquidData.get(0));
 				myBuffer.push(liquidData.get(1));
 				myBuffer.push(liquidData.get(2));
@@ -65,7 +66,7 @@ liquid_buffer(
 			}
 			
 			present(requestData){
-				data = ((Integer)myBuffer.pop());
+				data = ((ArrayList)myBuffer.pop());
 				emit fromBuffer(data);
 			}
 			

@@ -68,10 +68,9 @@ public class rotary_controller extends ClockDomain{
   
   public void thread131500(int [] tdone, int [] ends){
         S131351=1;
-    if((readyCapper_in.getVal() == null ? null : ((Boolean)readyCapper_in.getVal()))){//sysj\rotary_controller.sysj line: 13, column: 8
+    if((readyCapper_in.getVal() == null ? null : ((Boolean)readyCapper_in.getVal())) == Boolean.TRUE){//sysj\rotary_controller.sysj line: 13, column: 8
       rCa_1.setPresent();//sysj\rotary_controller.sysj line: 14, column: 6
       currsigs.addElement(rCa_1);
-      System.out.println("Emitted rCa_1");
       active[25]=1;
       ends[25]=1;
       tdone[25]=1;
@@ -130,10 +129,9 @@ public class rotary_controller extends ClockDomain{
         break;
       
       case 1 : 
-        if((readyCapper_in.getVal() == null ? null : ((Boolean)readyCapper_in.getVal()))){//sysj\rotary_controller.sysj line: 13, column: 8
+        if((readyCapper_in.getVal() == null ? null : ((Boolean)readyCapper_in.getVal())) == Boolean.TRUE){//sysj\rotary_controller.sysj line: 13, column: 8
           rCa_1.setPresent();//sysj\rotary_controller.sysj line: 14, column: 6
           currsigs.addElement(rCa_1);
-          System.out.println("Emitted rCa_1");
           active[25]=1;
           ends[25]=1;
           tdone[25]=1;
@@ -347,10 +345,9 @@ public class rotary_controller extends ClockDomain{
 
   public void thread131490(int [] tdone, int [] ends){
         S131249=1;
-    if((readyLidLoader_in.getVal() == null ? null : ((Boolean)readyLidLoader_in.getVal()))){//sysj\rotary_controller.sysj line: 13, column: 8
+    if((readyLidLoader_in.getVal() == null ? null : ((Boolean)readyLidLoader_in.getVal())) == Boolean.TRUE){//sysj\rotary_controller.sysj line: 13, column: 8
       rL_1.setPresent();//sysj\rotary_controller.sysj line: 14, column: 6
       currsigs.addElement(rL_1);
-      System.out.println("Emitted rL_1");
       active[20]=1;
       ends[20]=1;
       tdone[20]=1;
@@ -409,10 +406,9 @@ public class rotary_controller extends ClockDomain{
         break;
       
       case 1 : 
-        if((readyLidLoader_in.getVal() == null ? null : ((Boolean)readyLidLoader_in.getVal()))){//sysj\rotary_controller.sysj line: 13, column: 8
+        if((readyLidLoader_in.getVal() == null ? null : ((Boolean)readyLidLoader_in.getVal())) == Boolean.TRUE){//sysj\rotary_controller.sysj line: 13, column: 8
           rL_1.setPresent();//sysj\rotary_controller.sysj line: 14, column: 6
           currsigs.addElement(rL_1);
-          System.out.println("Emitted rL_1");
           active[20]=1;
           ends[20]=1;
           tdone[20]=1;
@@ -626,10 +622,9 @@ public class rotary_controller extends ClockDomain{
 
   public void thread131480(int [] tdone, int [] ends){
         S131147=1;
-    if((readyFiller_in.getVal() == null ? null : ((Boolean)readyFiller_in.getVal()))){//sysj\rotary_controller.sysj line: 13, column: 8
+    if((readyFiller_in.getVal() == null ? null : ((Boolean)readyFiller_in.getVal())) == Boolean.TRUE){//sysj\rotary_controller.sysj line: 13, column: 8
       rF_1.setPresent();//sysj\rotary_controller.sysj line: 14, column: 6
       currsigs.addElement(rF_1);
-      System.out.println("Emitted rF_1");
       active[15]=1;
       ends[15]=1;
       tdone[15]=1;
@@ -688,10 +683,9 @@ public class rotary_controller extends ClockDomain{
         break;
       
       case 1 : 
-        if((readyFiller_in.getVal() == null ? null : ((Boolean)readyFiller_in.getVal()))){//sysj\rotary_controller.sysj line: 13, column: 8
+        if((readyFiller_in.getVal() == null ? null : ((Boolean)readyFiller_in.getVal())) == Boolean.TRUE){//sysj\rotary_controller.sysj line: 13, column: 8
           rF_1.setPresent();//sysj\rotary_controller.sysj line: 14, column: 6
           currsigs.addElement(rF_1);
-          System.out.println("Emitted rF_1");
           active[15]=1;
           ends[15]=1;
           tdone[15]=1;
@@ -906,10 +900,9 @@ public class rotary_controller extends ClockDomain{
   public void thread131470(int [] tdone, int [] ends){
         S131045=1;
     S131039=0;
-    if((readyConveyor_in.getVal() == null ? null : ((Boolean)readyConveyor_in.getVal()))){//sysj\rotary_controller.sysj line: 13, column: 8
+    if((readyConveyor_in.getVal() == null ? null : ((Boolean)readyConveyor_in.getVal())) == Boolean.TRUE){//sysj\rotary_controller.sysj line: 13, column: 8
       rC_1.setPresent();//sysj\rotary_controller.sysj line: 14, column: 6
       currsigs.addElement(rC_1);
-      System.out.println("Emitted rC_1");
       S131039=1;
       active[10]=1;
       ends[10]=1;
@@ -973,10 +966,9 @@ public class rotary_controller extends ClockDomain{
         switch(S131039){
           case 0 : 
             S131039=0;
-            if((readyConveyor_in.getVal() == null ? null : ((Boolean)readyConveyor_in.getVal()))){//sysj\rotary_controller.sysj line: 13, column: 8
+            if((readyConveyor_in.getVal() == null ? null : ((Boolean)readyConveyor_in.getVal())) == Boolean.TRUE){//sysj\rotary_controller.sysj line: 13, column: 8
               rC_1.setPresent();//sysj\rotary_controller.sysj line: 14, column: 6
               currsigs.addElement(rC_1);
-              System.out.println("Emitted rC_1");
               S131039=1;
               active[10]=1;
               ends[10]=1;
@@ -993,10 +985,9 @@ public class rotary_controller extends ClockDomain{
           case 1 : 
             S131039=1;
             S131039=0;
-            if((readyConveyor_in.getVal() == null ? null : ((Boolean)readyConveyor_in.getVal()))){//sysj\rotary_controller.sysj line: 13, column: 8
+            if((readyConveyor_in.getVal() == null ? null : ((Boolean)readyConveyor_in.getVal())) == Boolean.TRUE){//sysj\rotary_controller.sysj line: 13, column: 8
               rC_1.setPresent();//sysj\rotary_controller.sysj line: 14, column: 6
               currsigs.addElement(rC_1);
-              System.out.println("Emitted rC_1");
               S131039=1;
               active[10]=1;
               ends[10]=1;
@@ -1271,7 +1262,6 @@ public class rotary_controller extends ClockDomain{
               S130989=1;
               deload.setPresent();//sysj\rotary_controller.sysj line: 61, column: 5
               currsigs.addElement(deload);
-              System.out.println("Emitted deload");
               active[4]=1;
               ends[4]=1;
               tdone[4]=1;
@@ -1293,7 +1283,6 @@ public class rotary_controller extends ClockDomain{
             else {
               deload.setPresent();//sysj\rotary_controller.sysj line: 61, column: 5
               currsigs.addElement(deload);
-              System.out.println("Emitted deload");
               active[4]=1;
               ends[4]=1;
               tdone[4]=1;
@@ -1347,7 +1336,6 @@ public class rotary_controller extends ClockDomain{
                           S130899=1;
                           load.setPresent();//sysj\rotary_controller.sysj line: 51, column: 5
                           currsigs.addElement(load);
-                          System.out.println("Emitted load");
                           active[3]=1;
                           ends[3]=1;
                           tdone[3]=1;
@@ -1373,7 +1361,6 @@ public class rotary_controller extends ClockDomain{
                         S130899=1;
                         load.setPresent();//sysj\rotary_controller.sysj line: 51, column: 5
                         currsigs.addElement(load);
-                        System.out.println("Emitted load");
                         active[3]=1;
                         ends[3]=1;
                         tdone[3]=1;
@@ -1411,7 +1398,6 @@ public class rotary_controller extends ClockDomain{
                       S130899=1;
                       load.setPresent();//sysj\rotary_controller.sysj line: 51, column: 5
                       currsigs.addElement(load);
-                      System.out.println("Emitted load");
                       active[3]=1;
                       ends[3]=1;
                       tdone[3]=1;
@@ -1443,7 +1429,6 @@ public class rotary_controller extends ClockDomain{
             else {
               load.setPresent();//sysj\rotary_controller.sysj line: 51, column: 5
               currsigs.addElement(load);
-              System.out.println("Emitted load");
               active[3]=1;
               ends[3]=1;
               tdone[3]=1;
@@ -1473,7 +1458,6 @@ public class rotary_controller extends ClockDomain{
                   S130899=1;
                   load.setPresent();//sysj\rotary_controller.sysj line: 51, column: 5
                   currsigs.addElement(load);
-                  System.out.println("Emitted load");
                   active[3]=1;
                   ends[3]=1;
                   tdone[3]=1;
@@ -1527,7 +1511,6 @@ public class rotary_controller extends ClockDomain{
               S130826=2;
               rotaryTableTrigger.setPresent();//sysj\rotary_controller.sysj line: 42, column: 5
               currsigs.addElement(rotaryTableTrigger);
-              System.out.println("Emitted rotaryTableTrigger");
               active[2]=1;
               ends[2]=1;
               tdone[2]=1;
@@ -1549,7 +1532,6 @@ public class rotary_controller extends ClockDomain{
             else {
               rotaryTableTrigger.setPresent();//sysj\rotary_controller.sysj line: 42, column: 5
               currsigs.addElement(rotaryTableTrigger);
-              System.out.println("Emitted rotaryTableTrigger");
               active[2]=1;
               ends[2]=1;
               tdone[2]=1;
@@ -1564,10 +1546,9 @@ public class rotary_controller extends ClockDomain{
 
   public void thread131454(int [] tdone, int [] ends){
         S131351=1;
-    if((readyCapper_in.getVal() == null ? null : ((Boolean)readyCapper_in.getVal()))){//sysj\rotary_controller.sysj line: 13, column: 8
+    if((readyCapper_in.getVal() == null ? null : ((Boolean)readyCapper_in.getVal())) == Boolean.TRUE){//sysj\rotary_controller.sysj line: 13, column: 8
       rCa_1.setPresent();//sysj\rotary_controller.sysj line: 14, column: 6
       currsigs.addElement(rCa_1);
-      System.out.println("Emitted rCa_1");
       active[25]=1;
       ends[25]=1;
       tdone[25]=1;
@@ -1661,10 +1642,9 @@ public class rotary_controller extends ClockDomain{
 
   public void thread131447(int [] tdone, int [] ends){
         S131249=1;
-    if((readyLidLoader_in.getVal() == null ? null : ((Boolean)readyLidLoader_in.getVal()))){//sysj\rotary_controller.sysj line: 13, column: 8
+    if((readyLidLoader_in.getVal() == null ? null : ((Boolean)readyLidLoader_in.getVal())) == Boolean.TRUE){//sysj\rotary_controller.sysj line: 13, column: 8
       rL_1.setPresent();//sysj\rotary_controller.sysj line: 14, column: 6
       currsigs.addElement(rL_1);
-      System.out.println("Emitted rL_1");
       active[20]=1;
       ends[20]=1;
       tdone[20]=1;
@@ -1758,10 +1738,9 @@ public class rotary_controller extends ClockDomain{
 
   public void thread131440(int [] tdone, int [] ends){
         S131147=1;
-    if((readyFiller_in.getVal() == null ? null : ((Boolean)readyFiller_in.getVal()))){//sysj\rotary_controller.sysj line: 13, column: 8
+    if((readyFiller_in.getVal() == null ? null : ((Boolean)readyFiller_in.getVal())) == Boolean.TRUE){//sysj\rotary_controller.sysj line: 13, column: 8
       rF_1.setPresent();//sysj\rotary_controller.sysj line: 14, column: 6
       currsigs.addElement(rF_1);
-      System.out.println("Emitted rF_1");
       active[15]=1;
       ends[15]=1;
       tdone[15]=1;
@@ -1856,10 +1835,9 @@ public class rotary_controller extends ClockDomain{
   public void thread131433(int [] tdone, int [] ends){
         S131045=1;
     S131039=0;
-    if((readyConveyor_in.getVal() == null ? null : ((Boolean)readyConveyor_in.getVal()))){//sysj\rotary_controller.sysj line: 13, column: 8
+    if((readyConveyor_in.getVal() == null ? null : ((Boolean)readyConveyor_in.getVal())) == Boolean.TRUE){//sysj\rotary_controller.sysj line: 13, column: 8
       rC_1.setPresent();//sysj\rotary_controller.sysj line: 14, column: 6
       currsigs.addElement(rC_1);
-      System.out.println("Emitted rC_1");
       S131039=1;
       active[10]=1;
       ends[10]=1;
@@ -2010,7 +1988,6 @@ public class rotary_controller extends ClockDomain{
           S130899=1;
           load.setPresent();//sysj\rotary_controller.sysj line: 51, column: 5
           currsigs.addElement(load);
-          System.out.println("Emitted load");
           active[3]=1;
           ends[3]=1;
           tdone[3]=1;

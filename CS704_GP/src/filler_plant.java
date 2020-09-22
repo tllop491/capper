@@ -90,7 +90,6 @@ public class filler_plant extends ClockDomain{
         if(valveInletOnOff.getprestatus()){//sysj\filler_plant.sysj line: 31, column: 24
           inlet3Engaged.setPresent();//sysj\filler_plant.sysj line: 31, column: 41
           currsigs.addElement(inlet3Engaged);
-          System.out.println("Emitted inlet3Engaged");
           active[24]=1;
           ends[24]=1;
           tdone[24]=1;
@@ -117,7 +116,6 @@ public class filler_plant extends ClockDomain{
         if(valveInjectorOnOff.getprestatus()){//sysj\filler_plant.sysj line: 27, column: 24
           injector3Engaged.setPresent();//sysj\filler_plant.sysj line: 27, column: 44
           currsigs.addElement(injector3Engaged);
-          System.out.println("Emitted injector3Engaged");
           active[23]=1;
           ends[23]=1;
           tdone[23]=1;
@@ -160,7 +158,6 @@ public class filler_plant extends ClockDomain{
                   S118947=1;
                   dosUnitEvac.setPresent();//sysj\filler_plant.sysj line: 20, column: 6
                   currsigs.addElement(dosUnitEvac);
-                  System.out.println("Emitted dosUnitEvac");
                   active[22]=1;
                   ends[22]=1;
                   tdone[22]=1;
@@ -181,7 +178,6 @@ public class filler_plant extends ClockDomain{
                     S118919=1;
                     dosUnitFilled.setPresent();//sysj\filler_plant.sysj line: 16, column: 6
                     currsigs.addElement(dosUnitFilled);
-                    System.out.println("Emitted dosUnitFilled");
                     active[22]=1;
                     ends[22]=1;
                     tdone[22]=1;
@@ -196,7 +192,6 @@ public class filler_plant extends ClockDomain{
                 case 1 : 
                   dosUnitFilled.setPresent();//sysj\filler_plant.sysj line: 16, column: 6
                   currsigs.addElement(dosUnitFilled);
-                  System.out.println("Emitted dosUnitFilled");
                   active[22]=1;
                   ends[22]=1;
                   tdone[22]=1;
@@ -222,7 +217,6 @@ public class filler_plant extends ClockDomain{
                     S118947=1;
                     dosUnitEvac.setPresent();//sysj\filler_plant.sysj line: 20, column: 6
                     currsigs.addElement(dosUnitEvac);
-                    System.out.println("Emitted dosUnitEvac");
                     active[22]=1;
                     ends[22]=1;
                     tdone[22]=1;
@@ -237,7 +231,6 @@ public class filler_plant extends ClockDomain{
                 case 1 : 
                   dosUnitEvac.setPresent();//sysj\filler_plant.sysj line: 20, column: 6
                   currsigs.addElement(dosUnitEvac);
-                  System.out.println("Emitted dosUnitEvac");
                   active[22]=1;
                   ends[22]=1;
                   tdone[22]=1;
@@ -267,7 +260,6 @@ public class filler_plant extends ClockDomain{
                   S118947=1;
                   dosUnitEvac.setPresent();//sysj\filler_plant.sysj line: 20, column: 6
                   currsigs.addElement(dosUnitEvac);
-                  System.out.println("Emitted dosUnitEvac");
                   active[22]=1;
                   ends[22]=1;
                   tdone[22]=1;
@@ -288,7 +280,6 @@ public class filler_plant extends ClockDomain{
                 S118919=1;
                 dosUnitFilled.setPresent();//sysj\filler_plant.sysj line: 16, column: 6
                 currsigs.addElement(dosUnitFilled);
-                System.out.println("Emitted dosUnitFilled");
                 active[22]=1;
                 ends[22]=1;
                 tdone[22]=1;
@@ -374,7 +365,6 @@ public class filler_plant extends ClockDomain{
         if(valveInletOnOff.getprestatus()){//sysj\filler_plant.sysj line: 31, column: 24
           inlet2Engaged.setPresent();//sysj\filler_plant.sysj line: 31, column: 41
           currsigs.addElement(inlet2Engaged);
-          System.out.println("Emitted inlet2Engaged");
           active[18]=1;
           ends[18]=1;
           tdone[18]=1;
@@ -401,7 +391,6 @@ public class filler_plant extends ClockDomain{
         if(valveInjectorOnOff.getprestatus()){//sysj\filler_plant.sysj line: 27, column: 24
           injector2Engaged.setPresent();//sysj\filler_plant.sysj line: 27, column: 44
           currsigs.addElement(injector2Engaged);
-          System.out.println("Emitted injector2Engaged");
           active[17]=1;
           ends[17]=1;
           tdone[17]=1;
@@ -444,7 +433,6 @@ public class filler_plant extends ClockDomain{
                   S118579=1;
                   dosUnitEvac.setPresent();//sysj\filler_plant.sysj line: 20, column: 6
                   currsigs.addElement(dosUnitEvac);
-                  System.out.println("Emitted dosUnitEvac");
                   active[16]=1;
                   ends[16]=1;
                   tdone[16]=1;
@@ -465,7 +453,6 @@ public class filler_plant extends ClockDomain{
                     S118551=1;
                     dosUnitFilled.setPresent();//sysj\filler_plant.sysj line: 16, column: 6
                     currsigs.addElement(dosUnitFilled);
-                    System.out.println("Emitted dosUnitFilled");
                     active[16]=1;
                     ends[16]=1;
                     tdone[16]=1;
@@ -480,7 +467,6 @@ public class filler_plant extends ClockDomain{
                 case 1 : 
                   dosUnitFilled.setPresent();//sysj\filler_plant.sysj line: 16, column: 6
                   currsigs.addElement(dosUnitFilled);
-                  System.out.println("Emitted dosUnitFilled");
                   active[16]=1;
                   ends[16]=1;
                   tdone[16]=1;
@@ -506,7 +492,6 @@ public class filler_plant extends ClockDomain{
                     S118579=1;
                     dosUnitEvac.setPresent();//sysj\filler_plant.sysj line: 20, column: 6
                     currsigs.addElement(dosUnitEvac);
-                    System.out.println("Emitted dosUnitEvac");
                     active[16]=1;
                     ends[16]=1;
                     tdone[16]=1;
@@ -521,7 +506,6 @@ public class filler_plant extends ClockDomain{
                 case 1 : 
                   dosUnitEvac.setPresent();//sysj\filler_plant.sysj line: 20, column: 6
                   currsigs.addElement(dosUnitEvac);
-                  System.out.println("Emitted dosUnitEvac");
                   active[16]=1;
                   ends[16]=1;
                   tdone[16]=1;
@@ -551,7 +535,6 @@ public class filler_plant extends ClockDomain{
                   S118579=1;
                   dosUnitEvac.setPresent();//sysj\filler_plant.sysj line: 20, column: 6
                   currsigs.addElement(dosUnitEvac);
-                  System.out.println("Emitted dosUnitEvac");
                   active[16]=1;
                   ends[16]=1;
                   tdone[16]=1;
@@ -572,7 +555,6 @@ public class filler_plant extends ClockDomain{
                 S118551=1;
                 dosUnitFilled.setPresent();//sysj\filler_plant.sysj line: 16, column: 6
                 currsigs.addElement(dosUnitFilled);
-                System.out.println("Emitted dosUnitFilled");
                 active[16]=1;
                 ends[16]=1;
                 tdone[16]=1;
@@ -658,7 +640,6 @@ public class filler_plant extends ClockDomain{
         if(valveInletOnOff.getprestatus()){//sysj\filler_plant.sysj line: 31, column: 24
           inlet1Engaged.setPresent();//sysj\filler_plant.sysj line: 31, column: 41
           currsigs.addElement(inlet1Engaged);
-          System.out.println("Emitted inlet1Engaged");
           active[12]=1;
           ends[12]=1;
           tdone[12]=1;
@@ -685,7 +666,6 @@ public class filler_plant extends ClockDomain{
         if(valveInjectorOnOff.getprestatus()){//sysj\filler_plant.sysj line: 27, column: 24
           injector1Engaged.setPresent();//sysj\filler_plant.sysj line: 27, column: 44
           currsigs.addElement(injector1Engaged);
-          System.out.println("Emitted injector1Engaged");
           active[11]=1;
           ends[11]=1;
           tdone[11]=1;
@@ -728,7 +708,6 @@ public class filler_plant extends ClockDomain{
                   S118211=1;
                   dosUnitEvac.setPresent();//sysj\filler_plant.sysj line: 20, column: 6
                   currsigs.addElement(dosUnitEvac);
-                  System.out.println("Emitted dosUnitEvac");
                   active[10]=1;
                   ends[10]=1;
                   tdone[10]=1;
@@ -749,7 +728,6 @@ public class filler_plant extends ClockDomain{
                     S118183=1;
                     dosUnitFilled.setPresent();//sysj\filler_plant.sysj line: 16, column: 6
                     currsigs.addElement(dosUnitFilled);
-                    System.out.println("Emitted dosUnitFilled");
                     active[10]=1;
                     ends[10]=1;
                     tdone[10]=1;
@@ -764,7 +742,6 @@ public class filler_plant extends ClockDomain{
                 case 1 : 
                   dosUnitFilled.setPresent();//sysj\filler_plant.sysj line: 16, column: 6
                   currsigs.addElement(dosUnitFilled);
-                  System.out.println("Emitted dosUnitFilled");
                   active[10]=1;
                   ends[10]=1;
                   tdone[10]=1;
@@ -790,7 +767,6 @@ public class filler_plant extends ClockDomain{
                     S118211=1;
                     dosUnitEvac.setPresent();//sysj\filler_plant.sysj line: 20, column: 6
                     currsigs.addElement(dosUnitEvac);
-                    System.out.println("Emitted dosUnitEvac");
                     active[10]=1;
                     ends[10]=1;
                     tdone[10]=1;
@@ -805,7 +781,6 @@ public class filler_plant extends ClockDomain{
                 case 1 : 
                   dosUnitEvac.setPresent();//sysj\filler_plant.sysj line: 20, column: 6
                   currsigs.addElement(dosUnitEvac);
-                  System.out.println("Emitted dosUnitEvac");
                   active[10]=1;
                   ends[10]=1;
                   tdone[10]=1;
@@ -835,7 +810,6 @@ public class filler_plant extends ClockDomain{
                   S118211=1;
                   dosUnitEvac.setPresent();//sysj\filler_plant.sysj line: 20, column: 6
                   currsigs.addElement(dosUnitEvac);
-                  System.out.println("Emitted dosUnitEvac");
                   active[10]=1;
                   ends[10]=1;
                   tdone[10]=1;
@@ -856,7 +830,6 @@ public class filler_plant extends ClockDomain{
                 S118183=1;
                 dosUnitFilled.setPresent();//sysj\filler_plant.sysj line: 16, column: 6
                 currsigs.addElement(dosUnitFilled);
-                System.out.println("Emitted dosUnitFilled");
                 active[10]=1;
                 ends[10]=1;
                 tdone[10]=1;
@@ -942,7 +915,6 @@ public class filler_plant extends ClockDomain{
         if(valveInletOnOff.getprestatus()){//sysj\filler_plant.sysj line: 31, column: 24
           inlet0Engaged.setPresent();//sysj\filler_plant.sysj line: 31, column: 41
           currsigs.addElement(inlet0Engaged);
-          System.out.println("Emitted inlet0Engaged");
           active[6]=1;
           ends[6]=1;
           tdone[6]=1;
@@ -969,7 +941,6 @@ public class filler_plant extends ClockDomain{
         if(valveInjectorOnOff.getprestatus()){//sysj\filler_plant.sysj line: 27, column: 24
           injector0Engaged.setPresent();//sysj\filler_plant.sysj line: 27, column: 44
           currsigs.addElement(injector0Engaged);
-          System.out.println("Emitted injector0Engaged");
           active[5]=1;
           ends[5]=1;
           tdone[5]=1;
@@ -1012,7 +983,6 @@ public class filler_plant extends ClockDomain{
                   S117843=1;
                   dosUnitEvac.setPresent();//sysj\filler_plant.sysj line: 20, column: 6
                   currsigs.addElement(dosUnitEvac);
-                  System.out.println("Emitted dosUnitEvac");
                   active[4]=1;
                   ends[4]=1;
                   tdone[4]=1;
@@ -1036,7 +1006,6 @@ public class filler_plant extends ClockDomain{
                         S117815=1;
                         dosUnitFilled.setPresent();//sysj\filler_plant.sysj line: 16, column: 6
                         currsigs.addElement(dosUnitFilled);
-                        System.out.println("Emitted dosUnitFilled");
                         active[4]=1;
                         ends[4]=1;
                         tdone[4]=1;
@@ -1058,7 +1027,6 @@ public class filler_plant extends ClockDomain{
                         S117815=1;
                         dosUnitFilled.setPresent();//sysj\filler_plant.sysj line: 16, column: 6
                         currsigs.addElement(dosUnitFilled);
-                        System.out.println("Emitted dosUnitFilled");
                         active[4]=1;
                         ends[4]=1;
                         tdone[4]=1;
@@ -1077,7 +1045,6 @@ public class filler_plant extends ClockDomain{
                 case 1 : 
                   dosUnitFilled.setPresent();//sysj\filler_plant.sysj line: 16, column: 6
                   currsigs.addElement(dosUnitFilled);
-                  System.out.println("Emitted dosUnitFilled");
                   active[4]=1;
                   ends[4]=1;
                   tdone[4]=1;
@@ -1103,7 +1070,6 @@ public class filler_plant extends ClockDomain{
                     S117843=1;
                     dosUnitEvac.setPresent();//sysj\filler_plant.sysj line: 20, column: 6
                     currsigs.addElement(dosUnitEvac);
-                    System.out.println("Emitted dosUnitEvac");
                     active[4]=1;
                     ends[4]=1;
                     tdone[4]=1;
@@ -1118,7 +1084,6 @@ public class filler_plant extends ClockDomain{
                 case 1 : 
                   dosUnitEvac.setPresent();//sysj\filler_plant.sysj line: 20, column: 6
                   currsigs.addElement(dosUnitEvac);
-                  System.out.println("Emitted dosUnitEvac");
                   active[4]=1;
                   ends[4]=1;
                   tdone[4]=1;
@@ -1148,7 +1113,6 @@ public class filler_plant extends ClockDomain{
                   S117843=1;
                   dosUnitEvac.setPresent();//sysj\filler_plant.sysj line: 20, column: 6
                   currsigs.addElement(dosUnitEvac);
-                  System.out.println("Emitted dosUnitEvac");
                   active[4]=1;
                   ends[4]=1;
                   tdone[4]=1;
@@ -1170,7 +1134,6 @@ public class filler_plant extends ClockDomain{
                 S117815=1;
                 dosUnitFilled.setPresent();//sysj\filler_plant.sysj line: 16, column: 6
                 currsigs.addElement(dosUnitFilled);
-                System.out.println("Emitted dosUnitFilled");
                 active[4]=1;
                 ends[4]=1;
                 tdone[4]=1;
@@ -1270,7 +1233,6 @@ public class filler_plant extends ClockDomain{
     if(valveInletOnOff.getprestatus()){//sysj\filler_plant.sysj line: 31, column: 24
       inlet3Engaged.setPresent();//sysj\filler_plant.sysj line: 31, column: 41
       currsigs.addElement(inlet3Engaged);
-      System.out.println("Emitted inlet3Engaged");
       active[24]=1;
       ends[24]=1;
       tdone[24]=1;
@@ -1287,7 +1249,6 @@ public class filler_plant extends ClockDomain{
     if(valveInjectorOnOff.getprestatus()){//sysj\filler_plant.sysj line: 27, column: 24
       injector3Engaged.setPresent();//sysj\filler_plant.sysj line: 27, column: 44
       currsigs.addElement(injector3Engaged);
-      System.out.println("Emitted injector3Engaged");
       active[23]=1;
       ends[23]=1;
       tdone[23]=1;
@@ -1319,7 +1280,6 @@ public class filler_plant extends ClockDomain{
           S118947=1;
           dosUnitEvac.setPresent();//sysj\filler_plant.sysj line: 20, column: 6
           currsigs.addElement(dosUnitEvac);
-          System.out.println("Emitted dosUnitEvac");
           active[22]=1;
           ends[22]=1;
           tdone[22]=1;
@@ -1340,7 +1300,6 @@ public class filler_plant extends ClockDomain{
         S118919=1;
         dosUnitFilled.setPresent();//sysj\filler_plant.sysj line: 16, column: 6
         currsigs.addElement(dosUnitFilled);
-        System.out.println("Emitted dosUnitFilled");
         active[22]=1;
         ends[22]=1;
         tdone[22]=1;
@@ -1424,7 +1383,6 @@ public class filler_plant extends ClockDomain{
     if(valveInletOnOff.getprestatus()){//sysj\filler_plant.sysj line: 31, column: 24
       inlet2Engaged.setPresent();//sysj\filler_plant.sysj line: 31, column: 41
       currsigs.addElement(inlet2Engaged);
-      System.out.println("Emitted inlet2Engaged");
       active[18]=1;
       ends[18]=1;
       tdone[18]=1;
@@ -1441,7 +1399,6 @@ public class filler_plant extends ClockDomain{
     if(valveInjectorOnOff.getprestatus()){//sysj\filler_plant.sysj line: 27, column: 24
       injector2Engaged.setPresent();//sysj\filler_plant.sysj line: 27, column: 44
       currsigs.addElement(injector2Engaged);
-      System.out.println("Emitted injector2Engaged");
       active[17]=1;
       ends[17]=1;
       tdone[17]=1;
@@ -1473,7 +1430,6 @@ public class filler_plant extends ClockDomain{
           S118579=1;
           dosUnitEvac.setPresent();//sysj\filler_plant.sysj line: 20, column: 6
           currsigs.addElement(dosUnitEvac);
-          System.out.println("Emitted dosUnitEvac");
           active[16]=1;
           ends[16]=1;
           tdone[16]=1;
@@ -1494,7 +1450,6 @@ public class filler_plant extends ClockDomain{
         S118551=1;
         dosUnitFilled.setPresent();//sysj\filler_plant.sysj line: 16, column: 6
         currsigs.addElement(dosUnitFilled);
-        System.out.println("Emitted dosUnitFilled");
         active[16]=1;
         ends[16]=1;
         tdone[16]=1;
@@ -1578,7 +1533,6 @@ public class filler_plant extends ClockDomain{
     if(valveInletOnOff.getprestatus()){//sysj\filler_plant.sysj line: 31, column: 24
       inlet1Engaged.setPresent();//sysj\filler_plant.sysj line: 31, column: 41
       currsigs.addElement(inlet1Engaged);
-      System.out.println("Emitted inlet1Engaged");
       active[12]=1;
       ends[12]=1;
       tdone[12]=1;
@@ -1595,7 +1549,6 @@ public class filler_plant extends ClockDomain{
     if(valveInjectorOnOff.getprestatus()){//sysj\filler_plant.sysj line: 27, column: 24
       injector1Engaged.setPresent();//sysj\filler_plant.sysj line: 27, column: 44
       currsigs.addElement(injector1Engaged);
-      System.out.println("Emitted injector1Engaged");
       active[11]=1;
       ends[11]=1;
       tdone[11]=1;
@@ -1627,7 +1580,6 @@ public class filler_plant extends ClockDomain{
           S118211=1;
           dosUnitEvac.setPresent();//sysj\filler_plant.sysj line: 20, column: 6
           currsigs.addElement(dosUnitEvac);
-          System.out.println("Emitted dosUnitEvac");
           active[10]=1;
           ends[10]=1;
           tdone[10]=1;
@@ -1648,7 +1600,6 @@ public class filler_plant extends ClockDomain{
         S118183=1;
         dosUnitFilled.setPresent();//sysj\filler_plant.sysj line: 16, column: 6
         currsigs.addElement(dosUnitFilled);
-        System.out.println("Emitted dosUnitFilled");
         active[10]=1;
         ends[10]=1;
         tdone[10]=1;
@@ -1732,7 +1683,6 @@ public class filler_plant extends ClockDomain{
     if(valveInletOnOff.getprestatus()){//sysj\filler_plant.sysj line: 31, column: 24
       inlet0Engaged.setPresent();//sysj\filler_plant.sysj line: 31, column: 41
       currsigs.addElement(inlet0Engaged);
-      System.out.println("Emitted inlet0Engaged");
       active[6]=1;
       ends[6]=1;
       tdone[6]=1;
@@ -1749,7 +1699,6 @@ public class filler_plant extends ClockDomain{
     if(valveInjectorOnOff.getprestatus()){//sysj\filler_plant.sysj line: 27, column: 24
       injector0Engaged.setPresent();//sysj\filler_plant.sysj line: 27, column: 44
       currsigs.addElement(injector0Engaged);
-      System.out.println("Emitted injector0Engaged");
       active[5]=1;
       ends[5]=1;
       tdone[5]=1;
@@ -1781,7 +1730,6 @@ public class filler_plant extends ClockDomain{
           S117843=1;
           dosUnitEvac.setPresent();//sysj\filler_plant.sysj line: 20, column: 6
           currsigs.addElement(dosUnitEvac);
-          System.out.println("Emitted dosUnitEvac");
           active[4]=1;
           ends[4]=1;
           tdone[4]=1;
@@ -1803,7 +1751,6 @@ public class filler_plant extends ClockDomain{
         S117815=1;
         dosUnitFilled.setPresent();//sysj\filler_plant.sysj line: 16, column: 6
         currsigs.addElement(dosUnitFilled);
-        System.out.println("Emitted dosUnitFilled");
         active[4]=1;
         ends[4]=1;
         tdone[4]=1;

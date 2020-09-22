@@ -57,7 +57,6 @@ public class lidloader_controller extends ClockDomain{
         else {
           vacOn.setPresent();//sysj\lidloader_controller.sysj line: 34, column: 5
           currsigs.addElement(vacOn);
-          System.out.println("Emitted vacOn");
           active[3]=1;
           ends[3]=1;
           tdone[3]=1;
@@ -89,7 +88,6 @@ public class lidloader_controller extends ClockDomain{
                 S126824=1;
                 armDest.setPresent();//sysj\lidloader_controller.sysj line: 28, column: 5
                 currsigs.addElement(armDest);
-                System.out.println("Emitted armDest");
                 active[2]=1;
                 ends[2]=1;
                 tdone[2]=1;
@@ -104,7 +102,6 @@ public class lidloader_controller extends ClockDomain{
             case 1 : 
               armDest.setPresent();//sysj\lidloader_controller.sysj line: 28, column: 5
               currsigs.addElement(armDest);
-              System.out.println("Emitted armDest");
               active[2]=1;
               ends[2]=1;
               tdone[2]=1;
@@ -121,7 +118,6 @@ public class lidloader_controller extends ClockDomain{
         S126833=1;
     vacOn.setPresent();//sysj\lidloader_controller.sysj line: 34, column: 5
     currsigs.addElement(vacOn);
-    System.out.println("Emitted vacOn");
     active[3]=1;
     ends[3]=1;
     tdone[3]=1;
@@ -314,7 +310,6 @@ public class lidloader_controller extends ClockDomain{
                           S126782=2;
                           armDest.setPresent();//sysj\lidloader_controller.sysj line: 15, column: 4
                           currsigs.addElement(armDest);
-                          System.out.println("Emitted armDest");
                           active[1]=1;
                           ends[1]=1;
                           break RUN;
@@ -361,7 +356,6 @@ public class lidloader_controller extends ClockDomain{
                                 S126782=2;
                                 armDest.setPresent();//sysj\lidloader_controller.sysj line: 15, column: 4
                                 currsigs.addElement(armDest);
-                                System.out.println("Emitted armDest");
                                 active[1]=1;
                                 ends[1]=1;
                                 break RUN;
@@ -386,7 +380,6 @@ public class lidloader_controller extends ClockDomain{
                               S126782=2;
                               armDest.setPresent();//sysj\lidloader_controller.sysj line: 15, column: 4
                               currsigs.addElement(armDest);
-                              System.out.println("Emitted armDest");
                               active[1]=1;
                               ends[1]=1;
                               break RUN;
@@ -423,7 +416,6 @@ public class lidloader_controller extends ClockDomain{
                             S126782=2;
                             armDest.setPresent();//sysj\lidloader_controller.sysj line: 15, column: 4
                             currsigs.addElement(armDest);
-                            System.out.println("Emitted armDest");
                             active[1]=1;
                             ends[1]=1;
                             break RUN;
@@ -449,7 +441,6 @@ public class lidloader_controller extends ClockDomain{
                     S126782=3;
                     pusherExtend.setPresent();//sysj\lidloader_controller.sysj line: 18, column: 4
                     currsigs.addElement(pusherExtend);
-                    System.out.println("Emitted pusherExtend");
                     active[1]=1;
                     ends[1]=1;
                     break RUN;
@@ -457,7 +448,6 @@ public class lidloader_controller extends ClockDomain{
                   else {
                     armDest.setPresent();//sysj\lidloader_controller.sysj line: 15, column: 4
                     currsigs.addElement(armDest);
-                    System.out.println("Emitted armDest");
                     active[1]=1;
                     ends[1]=1;
                     break RUN;
@@ -473,7 +463,6 @@ public class lidloader_controller extends ClockDomain{
                   else {
                     pusherExtend.setPresent();//sysj\lidloader_controller.sysj line: 18, column: 4
                     currsigs.addElement(pusherExtend);
-                    System.out.println("Emitted pusherExtend");
                     active[1]=1;
                     ends[1]=1;
                     break RUN;
@@ -484,7 +473,6 @@ public class lidloader_controller extends ClockDomain{
                     S126782=5;
                     armSource.setPresent();//sysj\lidloader_controller.sysj line: 22, column: 4
                     currsigs.addElement(armSource);
-                    System.out.println("Emitted armSource");
                     active[1]=1;
                     ends[1]=1;
                     break RUN;
@@ -516,7 +504,6 @@ public class lidloader_controller extends ClockDomain{
                   else {
                     armSource.setPresent();//sysj\lidloader_controller.sysj line: 22, column: 4
                     currsigs.addElement(armSource);
-                    System.out.println("Emitted armSource");
                     active[1]=1;
                     ends[1]=1;
                     break RUN;
@@ -550,7 +537,6 @@ public class lidloader_controller extends ClockDomain{
                     S126782=8;
                     armSource.setPresent();//sysj\lidloader_controller.sysj line: 40, column: 4
                     currsigs.addElement(armSource);
-                    System.out.println("Emitted armSource");
                     active[1]=1;
                     ends[1]=1;
                     break RUN;
@@ -602,7 +588,6 @@ public class lidloader_controller extends ClockDomain{
                   else {
                     armSource.setPresent();//sysj\lidloader_controller.sysj line: 40, column: 4
                     currsigs.addElement(armSource);
-                    System.out.println("Emitted armSource");
                     active[1]=1;
                     ends[1]=1;
                     break RUN;

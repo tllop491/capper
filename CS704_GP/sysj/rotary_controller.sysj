@@ -10,7 +10,7 @@ reaction ch_to_sig(: input Boolean channel ch_in, output signal sig_out)	// sysi
 		||
 		{
 			while(true) {
-				if(#ch_in) {
+				if(#ch_in == Boolean.TRUE) {
 					emit sig_out;
 				}
 				pause;
