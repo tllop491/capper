@@ -38,11 +38,11 @@
 			
 			<oSignal Name="tableAlignedWithSensor" Class="com.systemj.ipc.SimpleClient" To="rotary_plant_CD.tableAlignedWithSensor" IP="127.0.0.2"  Port="2000"/>
 			<oSignal Name="bottleAtPos1" Class="com.systemj.ipc.SimpleClient" To="rotary_controller_CD.bottleAtPos1" IP="127.0.0.2"  Port="2000"/>
-			<oSignal Name="bottleAtPos1_c" Class="com.systemj.ipc.SimpleClient" To="conveyor_controller_CD.bottleAtPos1_c" IP="127.0.0.4"  Port="2000"/>
+			<oSignal Name="bottleAtPos1c" Class="com.systemj.ipc.SimpleClient" To="conveyor_controller_CD.bottleAtPos1c" IP="127.0.0.4"  Port="2000"/>
 			<oSignal Name="bottleAtPos2" Class="com.systemj.ipc.SimpleClient" To="filler_controller_CD.bottleAtPos2" IP="127.0.0.6"  Port="2000"/>
 			<oSignal Name="bottleAtPos3" Class="com.systemj.ipc.SimpleClient" To="lidloader_controller_CD.bottleAtPos3" IP="127.0.0.8" Port="2000"/>
 			<oSignal Name="bottleAtPos4" Class="com.systemj.ipc.SimpleClient" To="capper_controller_CD.bottleAtPos4" IP="127.0.0.10" Port="2000"/>
-			<oSignal Name="bottleAtPos5" Class="com.systemj.ipc.SimpleClient" To="rotary_plant_CD.bottleAtPos5" IP="127.0.0.2"  Port="2000"/>
+			<oSignal Name="bottleAtPos5" Class="com.systemj.ipc.SimpleClient" To="conveyor_controller_CD.bottleAtPos5" IP="127.0.0.2"  Port="2000"/>
 			<oSignal Name="bottleLeftPos5" Class="com.systemj.ipc.SimpleClient" To="rotary_plant_CD.bottleLeftPos5" IP="127.0.0.4"  Port="2000"/>
 			
 			<oSignal Name="tableAlignedWithSensor_GUI" Class="com.systemj.ipc.SimpleClient" To="STATUS.tableAlignedWithSensor" IP="127.0.0.12" Port="2000"/>
@@ -56,11 +56,11 @@
 		
 		
 		<ClockDomain Name="conveyor_controller_CD" Class="conveyor_controller">
-			<iSignal Name="bottleAtPos1_c" Class="com.systemj.ipc.SimpleServer"  IP="127.0.0.4"  Port="2000"/>
+			<iSignal Name="bottleAtPos1c" Class="com.systemj.ipc.SimpleServer"  IP="127.0.0.4"  Port="2000"/>
 			<iSignal Name="bottleLeftPos5" Class="com.systemj.ipc.SimpleServer"  IP="127.0.0.4"  Port="2000"/> 
 			<oSignal Name="motConveyorOnOff" Class="com.systemj.ipc.SimpleClient" To="conveyor_plant_CD.motConveyorOnOff" IP="127.0.0.5"  Port="2000"/>
 			
-			<oChannel Name="conveyorReady" To="rotary_controller_CD.conveyorReady"/>
+			<oChannel Name="readyConveyor" To="rotary_controller_CD.readyConveyor"/>
 		</ClockDomain>
 		
 		
@@ -127,7 +127,7 @@
 			<oSignal Name="armSource" Class="com.systemj.ipc.SimpleClient" To="lidloader_plant_CD.armSource" IP="127.0.0.9" Port="2000"/>
 			<oSignal Name="armDest" Class="com.systemj.ipc.SimpleClient" To="lidloader_plant_CD.armDest" IP="127.0.0.9" Port="2000"/>
 			
-			<oChannel Name="readyLidloader" To="rotary_controller_CD.readyLidloader"/>
+			<oChannel Name="readyLidLoader" To="rotary_controller_CD.readyLidLoader"/>
 		</ClockDomain>
 		
 		

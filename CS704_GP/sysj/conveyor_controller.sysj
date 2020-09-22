@@ -1,6 +1,6 @@
 conveyor_controller(		
 	
-		input signal bottleAtPos1_c, bottleLeftPos5; 
+		input signal bottleAtPos1c, bottleLeftPos5; 
 		output signal motConveyorOnOff;
 		
 		output Boolean channel readyConveyor;
@@ -12,7 +12,7 @@ conveyor_controller(
 		
 		await (!bottleLeftPos5);								//Wait until there are no bottles on the far end of conveyor via signal bottleLeftPos5
 		send readyConveyor(Boolean.FALSE);
-		abort(bottleAtPos1_c) { 								// Enable the conveyor motor
+		abort(bottleAtPos1c) { 								// Enable the conveyor motor
 			sustain motConveyorOnOff; 
 		}		
 																// Check whether the bottle is arrived at position 1 via signal bottleAtPos1

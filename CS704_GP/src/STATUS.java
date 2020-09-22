@@ -48,6 +48,10 @@ public class STATUS {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(new MigLayout("", "[79.00,grow][][][][][62.00][][32.00][32.00][40.00]", "[][][][][center][][][][][]"));
 		
+		SimpleServer s = new SimpleServer("127.0.0.12", 2000);
+		
+		s.addConsumer("STATUS", "tableAlignedWithSensor_GUI", (status, value) -> System.out.println("test"));
+		
 		
 		//Headers 
 		JLabel header = new JLabel("Machine");
@@ -160,8 +164,7 @@ public class STATUS {
 		JLabel subheader5 = new JLabel("LID LOADER");
 		subheader5.setFont(new Font("Lucida Grande", Font.PLAIN, 12));
 		frame.getContentPane().add(subheader5, "cell 0 9");
-		
-		SimpleServer s = new SimpleServer("127.0.0.12", 2000);
+	
 		
 		
 		
