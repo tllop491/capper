@@ -8,8 +8,12 @@ Plant(
 
 	{// Conveyor 
 		while(true){
-			abort(motConveyorOnOff){ /*Conveyor is on  - do something!  */}
-			abort(!motConveyorOnOff){ /*Conveyor is on 0 - do something? */}
+			abort(motConveyorOnOff){ 
+				System.out.println("Conveyor On");
+			}
+			abort(!motConveyorOnOff){ 
+			System.out.println("Conveyor Off");
+			}
 													
 		}
 	}	
