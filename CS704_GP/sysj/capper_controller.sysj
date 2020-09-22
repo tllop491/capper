@@ -1,38 +1,36 @@
-Controller(		
+capper_controller(		
 	
 		input signal bottleAtPos4, gripperZAxisLowered, gripperZAxisLifted,  gripperTurnHomePos, gripperTurnFinalPos;
-		output signal cylPos5ZaxisExtend, gripperTurnRetract, gripperTurnExtend, capGripperPos5Extend, cylClampBottleExtend; 
+		output signal cylPos5ZaxisExtend, gripperTurnRetract, gripperTurnExtend, capGripperPos5Extend, cylClampBottleExtend;
+		
+		output Boolean channel readyCapper;
 		)
-->{
-
-		
+->{	
+	send readyCapper(Boolean.TRUE);
 	while(true){
-		
-		
-	await(bottleAtPos4);  									//Check if a bottle is at position 4, if not, wait until it arrives
-															
-	await(gripperZAxisLifted);								
-	abort(gripperTurnHomePos){sustain gripperTurnRetract;}
-	abort(gripperTurnFinalPos){
-		
-				sustain cylClampBottleExtend; 				//Clamp the bottle and lower the gripper
-				
-				||
-				
+		await(bottleAtPos4);  									//Check if a bottle is at position 4, if not, wait until it arrives
+		send readyCapper(Boolean.FALSE);								
+		await(gripperZAxisLifted);								
+		abort(gripperTurnHomePos){sustain gripperTurnRetract;}
+		abort(gripperTurnFinalPos){
+			{
+				sustain cylClampBottleExtend; 			//Clamp the bottle and lower the gripper
+			}
+			||
+			{
 				sustain cylPos5ZaxisExtend;	
-				
-				||
-				
+			}
+			||
+			{
 				await(gripperZAxisLowered);				// Wait until the gripper is lowered
-				
-				sustain capGripperPos5Extend;			//and grip the cap
-				
-				sustain gripperTurnExtend;				// Twist the gripper
-								
-	}											//EXIT when the Cap has been twisted on. 	
-	
-	abort(gripperTurnHomePos){sustain gripperTurnRetract;}	// Untwist the gripper
-	await(gripperZAxisLifted);								 // Raise the gripper
-															// Unclamp the bottle - automatic
+				{sustain capGripperPos5Extend;}			//and grip the cap
+				||
+				{sustain gripperTurnExtend;}			// Twist the gripper	
+			}								
+		}															//EXIT when the Cap has been twisted on. 	
+		
+		abort(gripperTurnHomePos){sustain gripperTurnRetract;}	// Untwist the gripper
+		await(gripperZAxisLifted);								// Raise the gripper
+		send readyCapper(Boolean.TRUE);									// Unclamp the bottle - automatic
 	}
 }

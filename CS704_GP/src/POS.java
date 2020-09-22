@@ -3,7 +3,7 @@ import com.systemj.ClockDomain;
 import com.systemj.Signal;
 import com.systemj.input_Channel;
 import com.systemj.output_Channel;
-import java.io.IOException;//sysj/POS.sysj line: 1, column: 1
+import java.io.IOException;//sysj\POS.sysj line: 1, column: 1
 
 public class POS extends ClockDomain{
   public POS(String name){super(name);}
@@ -13,12 +13,11 @@ public class POS extends ClockDomain{
   private char [] paused;
   private char [] suspended;
   public Signal liquidDataI = new Signal("liquidDataI", Signal.INPUT);
-  public Signal confirm = new Signal("confirm", Signal.OUTPUT);
   public output_Channel liquidDataC_o = new output_Channel();
-  private int S481 = 1;
-  private int S4 = 1;
-  private int S11 = 1;
-  private int S6 = 1;
+  private int S130817 = 1;
+  private int S130340 = 1;
+  private int S130347 = 1;
+  private int S130342 = 1;
   
   private int[] ends = new int[2];
   private int[] tdone = new int[2];
@@ -30,36 +29,36 @@ public class POS extends ClockDomain{
     }
     
     RUN: while(true){
-      switch(S481){
+      switch(S130817){
         case 0 : 
-          S481=0;
+          S130817=0;
           break RUN;
         
         case 1 : 
-          S481=2;
-          S481=2;
-          class GUI extends Object implements java.lang.Runnable {//sysj/POS.sysj line: 8, column: 3
-            public void run() {//sysj/POS.sysj line: 10, column: 21
-              try {//sysj/POS.sysj line: 11, column: 8
-                POS_GUI.main(null);//sysj/POS.sysj line: 12, column: 5
+          S130817=2;
+          S130817=2;
+          class GUI extends Object implements java.lang.Runnable {//sysj\POS.sysj line: 7, column: 3
+            public void run() {//sysj\POS.sysj line: 9, column: 21
+              try {//sysj\POS.sysj line: 10, column: 8
+                POS_GUI.main(null);//sysj\POS.sysj line: 11, column: 5
               }
-              catch (IOException a) {//sysj/POS.sysj line: 13, column: 27
+              catch (IOException a) {//sysj\POS.sysj line: 12, column: 27
               }
             }
-            GUI(){//sysj/POS.sysj line: 9, column: 42
+            GUI(){//sysj\POS.sysj line: 8, column: 42
             }
           }
-          new Thread(new GUI()).start();//sysj/POS.sysj line: 17, column: 2
-          S4=0;
+          new Thread(new GUI()).start();//sysj\POS.sysj line: 16, column: 2
+          S130340=0;
           active[1]=1;
           ends[1]=1;
           break RUN;
         
         case 2 : 
-          switch(S4){
+          switch(S130340){
             case 0 : 
-              if(liquidDataI.getprestatus()){//sysj/POS.sysj line: 21, column: 10
-                S4=1;
+              if(liquidDataI.getprestatus()){//sysj\POS.sysj line: 20, column: 10
+                S130340=1;
                 active[1]=1;
                 ends[1]=1;
                 break RUN;
@@ -71,28 +70,28 @@ public class POS extends ClockDomain{
               }
             
             case 1 : 
-              if(!liquidDataI.getprestatus()){//sysj/POS.sysj line: 22, column: 10
-                System.out.println("POS RECIEVED LIQUID DATA FROM POS_GUI");//sysj/POS.sysj line: 23, column: 4
-                S4=2;
-                S11=0;
-                if(!liquidDataC_o.isPartnerPresent() || liquidDataC_o.isPartnerPreempted()){//sysj/POS.sysj line: 24, column: 4
-                  liquidDataC_o.setREQ(false);//sysj/POS.sysj line: 24, column: 4
-                  S11=1;
+              if(!liquidDataI.getprestatus()){//sysj\POS.sysj line: 21, column: 10
+                System.out.println("POS RECIEVED LIQUID DATA FROM POS_GUI");//sysj\POS.sysj line: 22, column: 4
+                S130340=2;
+                S130347=0;
+                if(!liquidDataC_o.isPartnerPresent() || liquidDataC_o.isPartnerPreempted()){//sysj\POS.sysj line: 23, column: 4
+                  liquidDataC_o.setREQ(false);//sysj\POS.sysj line: 23, column: 4
+                  S130347=1;
                   active[1]=1;
                   ends[1]=1;
                   break RUN;
                 }
                 else {
-                  S6=0;
-                  if(liquidDataC_o.isACK()){//sysj/POS.sysj line: 24, column: 4
-                    liquidDataC_o.setVal((ArrayList)(liquidDataI.getpreval() == null ? null : ((ArrayList)liquidDataI.getpreval())));//sysj/POS.sysj line: 24, column: 4
-                    S6=1;
-                    if(!liquidDataC_o.isACK()){//sysj/POS.sysj line: 24, column: 4
-                      liquidDataC_o.setREQ(false);//sysj/POS.sysj line: 24, column: 4
+                  S130342=0;
+                  if(liquidDataC_o.isACK()){//sysj\POS.sysj line: 23, column: 4
+                    liquidDataC_o.setVal((ArrayList)(liquidDataI.getpreval() == null ? null : ((ArrayList)liquidDataI.getpreval())));//sysj\POS.sysj line: 23, column: 4
+                    S130342=1;
+                    if(!liquidDataC_o.isACK()){//sysj\POS.sysj line: 23, column: 4
+                      liquidDataC_o.setREQ(false);//sysj\POS.sysj line: 23, column: 4
                       ends[1]=2;
-                      ;//sysj/POS.sysj line: 24, column: 4
-                      System.out.println("POS SEND LIQUID DATA TO BUFFER");//sysj/POS.sysj line: 25, column: 4
-                      S4=0;
+                      ;//sysj\POS.sysj line: 23, column: 4
+                      System.out.println("POS SEND LIQUID DATA TO BUFFER");//sysj\POS.sysj line: 24, column: 4
+                      S130340=0;
                       active[1]=1;
                       ends[1]=1;
                       break RUN;
@@ -117,27 +116,27 @@ public class POS extends ClockDomain{
               }
             
             case 2 : 
-              switch(S11){
+              switch(S130347){
                 case 0 : 
-                  if(!liquidDataC_o.isPartnerPresent() || liquidDataC_o.isPartnerPreempted()){//sysj/POS.sysj line: 24, column: 4
-                    liquidDataC_o.setREQ(false);//sysj/POS.sysj line: 24, column: 4
-                    S11=1;
+                  if(!liquidDataC_o.isPartnerPresent() || liquidDataC_o.isPartnerPreempted()){//sysj\POS.sysj line: 23, column: 4
+                    liquidDataC_o.setREQ(false);//sysj\POS.sysj line: 23, column: 4
+                    S130347=1;
                     active[1]=1;
                     ends[1]=1;
                     break RUN;
                   }
                   else {
-                    switch(S6){
+                    switch(S130342){
                       case 0 : 
-                        if(liquidDataC_o.isACK()){//sysj/POS.sysj line: 24, column: 4
-                          liquidDataC_o.setVal((ArrayList)(liquidDataI.getpreval() == null ? null : ((ArrayList)liquidDataI.getpreval())));//sysj/POS.sysj line: 24, column: 4
-                          S6=1;
-                          if(!liquidDataC_o.isACK()){//sysj/POS.sysj line: 24, column: 4
-                            liquidDataC_o.setREQ(false);//sysj/POS.sysj line: 24, column: 4
+                        if(liquidDataC_o.isACK()){//sysj\POS.sysj line: 23, column: 4
+                          liquidDataC_o.setVal((ArrayList)(liquidDataI.getpreval() == null ? null : ((ArrayList)liquidDataI.getpreval())));//sysj\POS.sysj line: 23, column: 4
+                          S130342=1;
+                          if(!liquidDataC_o.isACK()){//sysj\POS.sysj line: 23, column: 4
+                            liquidDataC_o.setREQ(false);//sysj\POS.sysj line: 23, column: 4
                             ends[1]=2;
-                            ;//sysj/POS.sysj line: 24, column: 4
-                            System.out.println("POS SEND LIQUID DATA TO BUFFER");//sysj/POS.sysj line: 25, column: 4
-                            S4=0;
+                            ;//sysj\POS.sysj line: 23, column: 4
+                            System.out.println("POS SEND LIQUID DATA TO BUFFER");//sysj\POS.sysj line: 24, column: 4
+                            S130340=0;
                             active[1]=1;
                             ends[1]=1;
                             break RUN;
@@ -155,12 +154,12 @@ public class POS extends ClockDomain{
                         }
                       
                       case 1 : 
-                        if(!liquidDataC_o.isACK()){//sysj/POS.sysj line: 24, column: 4
-                          liquidDataC_o.setREQ(false);//sysj/POS.sysj line: 24, column: 4
+                        if(!liquidDataC_o.isACK()){//sysj\POS.sysj line: 23, column: 4
+                          liquidDataC_o.setREQ(false);//sysj\POS.sysj line: 23, column: 4
                           ends[1]=2;
-                          ;//sysj/POS.sysj line: 24, column: 4
-                          System.out.println("POS SEND LIQUID DATA TO BUFFER");//sysj/POS.sysj line: 25, column: 4
-                          S4=0;
+                          ;//sysj\POS.sysj line: 23, column: 4
+                          System.out.println("POS SEND LIQUID DATA TO BUFFER");//sysj\POS.sysj line: 24, column: 4
+                          S130340=0;
                           active[1]=1;
                           ends[1]=1;
                           break RUN;
@@ -176,26 +175,26 @@ public class POS extends ClockDomain{
                   break;
                 
                 case 1 : 
-                  S11=1;
-                  S11=0;
-                  if(!liquidDataC_o.isPartnerPresent() || liquidDataC_o.isPartnerPreempted()){//sysj/POS.sysj line: 24, column: 4
-                    liquidDataC_o.setREQ(false);//sysj/POS.sysj line: 24, column: 4
-                    S11=1;
+                  S130347=1;
+                  S130347=0;
+                  if(!liquidDataC_o.isPartnerPresent() || liquidDataC_o.isPartnerPreempted()){//sysj\POS.sysj line: 23, column: 4
+                    liquidDataC_o.setREQ(false);//sysj\POS.sysj line: 23, column: 4
+                    S130347=1;
                     active[1]=1;
                     ends[1]=1;
                     break RUN;
                   }
                   else {
-                    S6=0;
-                    if(liquidDataC_o.isACK()){//sysj/POS.sysj line: 24, column: 4
-                      liquidDataC_o.setVal((ArrayList)(liquidDataI.getpreval() == null ? null : ((ArrayList)liquidDataI.getpreval())));//sysj/POS.sysj line: 24, column: 4
-                      S6=1;
-                      if(!liquidDataC_o.isACK()){//sysj/POS.sysj line: 24, column: 4
-                        liquidDataC_o.setREQ(false);//sysj/POS.sysj line: 24, column: 4
+                    S130342=0;
+                    if(liquidDataC_o.isACK()){//sysj\POS.sysj line: 23, column: 4
+                      liquidDataC_o.setVal((ArrayList)(liquidDataI.getpreval() == null ? null : ((ArrayList)liquidDataI.getpreval())));//sysj\POS.sysj line: 23, column: 4
+                      S130342=1;
+                      if(!liquidDataC_o.isACK()){//sysj\POS.sysj line: 23, column: 4
+                        liquidDataC_o.setREQ(false);//sysj\POS.sysj line: 23, column: 4
                         ends[1]=2;
-                        ;//sysj/POS.sysj line: 24, column: 4
-                        System.out.println("POS SEND LIQUID DATA TO BUFFER");//sysj/POS.sysj line: 25, column: 4
-                        S4=0;
+                        ;//sysj\POS.sysj line: 23, column: 4
+                        System.out.println("POS SEND LIQUID DATA TO BUFFER");//sysj\POS.sysj line: 24, column: 4
+                        S130340=0;
                         active[1]=1;
                         ends[1]=1;
                         break RUN;
@@ -251,7 +250,6 @@ public class POS extends ClockDomain{
         runClockDomain();
       }
       liquidDataI.setpreclear();
-      confirm.setpreclear();
       int dummyint = 0;
       for(int qw=0;qw<currsigs.size();++qw){
         dummyint = ((Signal)currsigs.elementAt(qw)).getStatus() ? ((Signal)currsigs.elementAt(qw)).setprepresent() : ((Signal)currsigs.elementAt(qw)).setpreclear();
@@ -261,8 +259,6 @@ public class POS extends ClockDomain{
       dummyint = liquidDataI.getStatus() ? liquidDataI.setprepresent() : liquidDataI.setpreclear();
       liquidDataI.setpreval(liquidDataI.getValue());
       liquidDataI.setClear();
-      confirm.sethook();
-      confirm.setClear();
       liquidDataC_o.sethook();
       if(paused[1]!=0 || suspended[1]!=0 || active[1]!=1);
       else{

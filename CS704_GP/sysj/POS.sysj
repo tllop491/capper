@@ -2,7 +2,6 @@ import java.io.IOException;
 
 POS(
 	input ArrayList signal liquidDataI;
-	output signal confirm;
 	output ArrayList channel liquidDataC;
 )
 ->{

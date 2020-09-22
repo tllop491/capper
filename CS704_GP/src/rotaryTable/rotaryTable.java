@@ -1,3 +1,5 @@
+package rotaryTable;
+
 public class rotaryTable {
 	public boolean index[] = {false, false, false, false, false, false};
 	

@@ -1,21 +1,84 @@
 // controller responsible for managing the rotary model
 // author: Nikolay Petin
 
+reaction ch_to_sig(: input Boolean channel ch_in, output signal sig_out)	// sysimport doesn't let compilation
+{
+	while(true) {
+		{
+			receive ch_in;
+		}
+		||
+		{
+			while(true) {
+				if(#ch_in) {
+					emit sig_out;
+				}
+				pause;
+			} 
+		}
+	}
+}
+
 rotary_controller(
-		
 		input signal tableAlignedWithSensor;
-		input signal bottleAtPos5, capOnBottleAtPos1;
-		input signal readyConveyor, readyFiller, readyLidLoader, readyCapper;
+		input signal bottleAtPos1, bottleAtPos5;//, capOnBottleAtPos1;
+		input signal conveyorEngaged;
+		
+		input Integer channel newOrder;
+		input Boolean channel readyConveyor, readyFiller, readyLidLoader, readyCapper;
+		
 		output signal rotaryTableTrigger; // turns rotary table while signal is TRUE
+		output signal load, deload;
 		
 		)
 ->
 {
-	while(true) {
-		await (readyConveyor && readyFiller && readyLidLoader && readyCapper);
-		await (!capOnBottleAtPos1 && !bottleAtPos5);	// wait for capped bottle to be removed && wait for bottle to be cleared at the end
-		abort (tableAlignedWithSensor) { 				// immediate?
-			sustain rotaryTableTrigger;					// rotate table until aligned
+	signal rC, rF, rL, rCa;	// add ch_to_sig code
+	{
+		while(true) {
+			await (rC && rF && rL && rCa);
+			await (!bottleAtPos5);							// wait for bottle to be cleared at the end
+			abort (tableAlignedWithSensor) { 				// immediate?
+				sustain rotaryTableTrigger;					// rotate table until aligned
+			}
+		}
+	}
+	||
+	{ // loading logic
+		while(true) {
+			receive newOrder;
+			abort(bottleAtPos1) {
+				sustain load;		// sustain load until bottle is confirmed at pos 1
+			}
+			pause;
+		}
+	}
+	||
+	{ // deloading logic
+		while(true) {
+			await(bottleAtPos5 && conveyorEngaged);
+			abort(!bottleAtPos5){	// bottleLeftPos5 might be better?
+				sustain deload;		// sustain deload until bottle is confirmed to have left
+			}
+			pause;
+		}
+	}
+	||
+	{
+		{
+			ch_to_sig(:readyConveyor, rC);
+		}
+		||
+		{
+			ch_to_sig(:readyFiller, rF);
+		}
+		||
+		{
+			ch_to_sig(:readyLidLoader, rL);
+		}
+		||
+		{
+			ch_to_sig(:readyCapper, rCa);
 		}
 	}
 }

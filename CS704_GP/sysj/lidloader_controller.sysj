@@ -1,0 +1,47 @@
+lidloader_controller(
+		input signal pusherRetracted,pusherExtended,WPgripped,armAtSource,armAtDest, empty;
+		input signal bottleAtPos3;
+		output signal pusherExtend,vacOn,armSource,armDest;
+		output Boolean channel readyLidLoader;
+		
+		)
+->
+{
+	send readyLidLoader(true);	
+	while(true) {
+		await(bottleAtPos3 && !empty);
+		send readyLidLoader(false);
+		abort(armAtDest) {			// The arm swivels to the position “extended” if a new workpiece is requested (request).
+			sustain armDest;
+		}
+		abort(pusherExtended) { 	// The pusher extends and pushes a workpiece out of the magazine.
+			sustain pusherExtend;
+		}
+		await(pusherRetracted);		// The pusher retracts back once it is fully extended.
+		abort(armAtSource) {		// The arm swivels back to the position “retracted”
+			sustain armSource;
+		} 
+			
+		{
+			abort(armAtDest) {
+				await(WPgripped);	// The vacuum is switched on (wait until the workpiece is securely held, e.g. via WPgripped).
+				sustain armDest;	// The arm swivels to the position “extended”, transferring a workpiece to a pick-up zone.
+			}
+		}
+		||
+		{
+			abort(armAtDest) {
+				sustain vacOn;
+			}
+		}
+		
+		await(!WPgripped);			// The vacuum is switched off (wait until the workpiece is released, e.g. via !WPgripped).
+		abort(armAtSource) {		// The arm swivels to the position “retracted” so that the cup can be picked up by other machine.
+			sustain armSource;
+		}
+		
+		send readyLidLoader(true);
+		
+		pause;
+	}
+}

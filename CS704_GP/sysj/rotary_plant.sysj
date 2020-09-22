@@ -1,94 +1,99 @@
-import rotaryTable;
+import rotaryTable.*;
 
 rotary_plant(
 		input signal rotaryTableTrigger; // turns rotary table while signal is TRUE
 		input signal load, deload;
 		output signal tableAlignedWithSensor;
-		output signal bottleAtPos1, bottleAtPos2, bottleAtPos3, bottleAtPos4, bottleAtPos5, bottleLeftPos5;
-		output signal capOnBottleAtPos1;
+		output signal bottleAtPos1, bottleAtPos2, bottleAtPos3, bottleAtPos4, bottleAtPos5, bottleAtPos5_c, bottleLeftPos5;
 		)
 ->
 {
-	rotaryTable rotaryTable = new rotaryTable(); 	//
+	rotaryTable rt = new rotaryTable(); 	
 	{	// logic for shifting
 		while(true) {
-			await(rotaryTableTrigger)				// wait for turning signal
+			await(rotaryTableTrigger);				// wait for turning signal
 			abort(immediate !rotaryTableTrigger) {	// while its on
 				waitl(500ms);						// wait 500ms to simulate rotation
 				sustain tableAlignedWithSensor;		// send confirmation that turn is complete
 			}
 			
-			rotaryTable.print();
-			System.out.println("SHIFTING")
+			rt.print();
+			System.out.println("SHIFTING");
 			
-			rotaryTable.shift();
+			rt.shift();
 			
-			rotaryTable.print();
+			rt.print();
 		
+		}
 	}
 	|| // logic for loading/deloading
 	{
 		while(true) {
-			await(load || deload);
-			present(load){
-				rotaryTable.print();
-				System.out.println("LOADING")
-				rotaryTable.load();
-				rotaryTable.print();
-			}
-			present(deload){
-				rotaryTable.print();
-				System.out.println("DELOADING")
-				rotaryTable.deload();
-				rotaryTable.print();
-				
-				emit(bottleLeftPos5); // this should be channel, conveyor might not pick up
+			await(load);
+			rt.print();
+			System.out.println("LOADING");
+			rt.load();
+			rt.print();
+			pause;
+		}
+	}
+	||
+	{
+		while(true) {
+			await(deload);
+			rt.print();
+			System.out.println("DELOADING");
+			rt.deload();
+			rt.print();
+			emit bottleLeftPos5; // this should be channel, conveyor might not pick up
+			pause;
 		}
 	}
 	||
 	{  // emitting bottleAtPosX signals
 		{
 			while(true){
-				if (rotaryTable.index[0] == true) {
-					emit(bottleAtPos1);
-					pause;
+				if (rt.index[0] == true) {
+					emit bottleAtPos1;
 				}
+				pause;
 			}
 		}
 		||
 		{
 			while(true){
-				if (rotaryTable.index[1] == true) {
-					emit(bottleAtPos2);
-					pause;
+				if (rt.index[1] == true) {
+					emit bottleAtPos2;
 				}
+				pause;
 			}
 		}
 		||
 		{
 			while(true){
-				if (rotaryTable.index[2] == true) {
-					emit(bottleAtPos3);
-					pause;
+				if (rt.index[2] == true) {
+					emit bottleAtPos3;
 				}
+				pause;
 			}
 		}
 		||
 		{
 			while(true){
-				if (rotaryTable.index[3] == true) {
-					emit(bottleAtPos4);
-					pause;
+				if (rt.index[3] == true) {
+					emit bottleAtPos4;
 				}
+				pause;
 			}
 		}
 		||
 		{
 			while(true){
-				if (rotaryTable.index[4] == true) {
-					emit(bottleAtPos5);
-					pause;
+				if (rt.index[4] == true) {
+					emit bottleAtPos5;
+					emit bottleAtPos5_c;
 				}
+				pause;
 			}
 		}
 	}

@@ -1,0 +1,22 @@
+conveyor_plant(
+		input signal motConveyorOnOff;
+		output signal conveyorEngaged;
+		output signal conveyorEngaged_GUI;
+		)
+->
+{
+
+	{// Conveyor 
+		while(true){
+			abort(!motConveyorOnOff){ emit conveyorEngaged; pause;}		
+			pause;
+		}
+	}
+	||
+	{
+		present(conveyorEngaged){
+			emit conveyorEngaged_GUI;
+			pause;
+		}
+	}
+}

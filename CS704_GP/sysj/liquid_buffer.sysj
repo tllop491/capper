@@ -1,6 +1,11 @@
 import buffer.*;
 
-liquid_buffer(input ArrayList channel producerChannel ; output int channel consumerChannel;)->
+liquid_buffer(
+		input ArrayList channel producerChannel; 
+		output ArrayList channel consumerChannel;
+		output Boolean channel newOrder;
+
+)->
 {
 	signal bufferNotFull, bufferNotEmpty, requestData;
 	Integer signal fromBuffer;
@@ -52,10 +57,11 @@ liquid_buffer(input ArrayList channel producerChannel ; output int channel consu
 
 			present(toBuffer){
 				ArrayList liquidData = (ArrayList)#toBuffer;
-				myBuffer.push(liquidData.get(0));
+				myBuffer.push(liquidData);
+				/*myBuffer.push(liquidData.get(0));
 				myBuffer.push(liquidData.get(1));
 				myBuffer.push(liquidData.get(2));
-				myBuffer.push(liquidData.get(3));
+				myBuffer.push(liquidData.get(3));*/
 			}
 			
 			present(requestData){
@@ -71,5 +77,10 @@ liquid_buffer(input ArrayList channel producerChannel ; output int channel consu
 			}
 			pause;
 		}
+	}
+	||
+	{	// indicate to rotary that a bottle is going to be loaded
+		await(toBuffer);
+		send newOrder(Boolean.TRUE);
 	}
 }

@@ -4,6 +4,9 @@ import javax.swing.JFrame;
 import net.miginfocom.swing.MigLayout;
 import javax.swing.JLabel;
 import javax.swing.JTextPane;
+
+import com.systemj.netapi.SimpleServer;
+
 import java.awt.Font;
 import java.awt.Color;
 import javax.swing.JTextField;
@@ -64,9 +67,10 @@ public class STATUS {
 			conveyorMotorLabel.setFont(new Font("Lucida Grande", Font.PLAIN, 10));
 			frame.getContentPane().add(conveyorMotorLabel, "cell 0 2");
 			
-			JLabel indConveyorMotor = new JLabel("•");
+			JLabel indConveyorMotor = new JLabel("\u2022");
+			indConveyorMotor.setFont(new Font("Tahoma", Font.BOLD, 13));
 			indConveyorMotor.setForeground(Color.RED);
-			frame.getContentPane().add(indConveyorMotor, "cell 1 2");
+			frame.getContentPane().add(indConveyorMotor, "cell 1 2,alignx center,aligny center");
 			
 			// Bottle at Pos 1 
 			
@@ -157,6 +161,7 @@ public class STATUS {
 		subheader5.setFont(new Font("Lucida Grande", Font.PLAIN, 12));
 		frame.getContentPane().add(subheader5, "cell 0 9");
 		
+		SimpleServer s = new SimpleServer("127.0.0.12", 2000);
 		
 		
 		

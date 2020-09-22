@@ -9,7 +9,7 @@ reaction plantOperation( :	input signal valveInjectorOnOff,
 							output signal dosUnitFilled)
 {
 	trap(T){
-		{	// where to exit(T)?
+		{	
 			while(true) {
 				abort (immediate !dosUnitValveRetract) { // while recieving valveRetract or nothing
 					waitl(100 ms);
@@ -40,19 +40,20 @@ reaction plantOperation( :	input signal valveInjectorOnOff,
 }
 
 filler_plant(
+		input signal valveInjectorOnOff, valveInletOnOff;
+		input signal dosUnitValveRetract, dosUnitValveExtend;
+		input int signal nozzleSelect;
+		
 		output signal dosUnitEvac, dosUnitFilled;
 		output signal nozzle0Engaged, nozzle1Engaged, nozzle2Engaged, nozzle3Engaged;
 		output signal injector0Engaged, injector1Engaged, injector2Engaged, injector3Engaged;
 		output signal inlet0Engaged, inlet1Engaged, inlet2Engaged, inlet3Engaged;
-		
-		input signal valveInjectorOnOff, valveInletOnOff;
-		input signal dosUnitValveRetract, dosUnitValveExtend;
-		input int channel nozzleSelect;
 		)
 ->
 {
 		while(true) {
-			receive nozzleSelect;
+			await(nozzleSelect);
+			
 			switch((int)#nozzleSelect) {
 				case 0: plantOperation(:valveInjectorOnOff,valveInletOnOff,dosUnitValveRetract,dosUnitValveExtend,
 										nozzle0Engaged,injector0Engaged,inlet0Engaged,dosUnitEvac,dosUnitFilled);

@@ -1,7 +1,7 @@
 <System xmlns="http://systemjtechnology.com">
 	<SubSystem Name="SS5" Local="true">
 
-		<ClockDomain Name="liquid_buffer_CD" Class="liquidBuffer">
+		<ClockDomain Name="liquid_buffer_CD" Class="liquid_buffer">
 
 		</ClockDomain>
 		
