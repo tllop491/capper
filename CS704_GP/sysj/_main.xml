@@ -184,6 +184,14 @@
 			<oSignal Name="gripperZAxisLifted" Class="com.systemj.ipc.SimpleClient" To="capper_controller_CD.gripperZAxisLifted" IP="127.0.0.10" Port="2000"/>
 			<oSignal Name="gripperTurnHomePos" Class="com.systemj.ipc.SimpleClient" To="capper_controller_CD.gripperTurnHomePos" IP="127.0.0.10" Port="2000"/>
 			<oSignal Name="gripperTurnFinalPos" Class="com.systemj.ipc.SimpleClient" To="capper_controller_CD.gripperTurnFinalPos" IP="127.0.0.10" Port="2000"/>
+			
+			<oSignal Name="gripperZAxisLowered_GUI" Class="com.systemj.ipc.SimpleClient" To="STATUS.gripperZAxisLowered" IP="127.0.0.12" Port="2000"/>
+			<oSignal Name="gripperZAxisLifted_GUI" Class="com.systemj.ipc.SimpleClient" To="STATUS.gripperZAxisLifted" IP="127.0.0.12" Port="2000"/>
+			<oSignal Name="gripperTurnHomePos_GUI" Class="com.systemj.ipc.SimpleClient" To="STATUS.gripperTurnHomePos" IP="127.0.0.12" Port="2000"/>
+			<oSignal Name="gripperTurnFinalPos_GUI" Class="com.systemj.ipc.SimpleClient" To="STATUS.gripperTurnFinalPos" IP="127.0.0.12" Port="2000"/>
+		
+			
+		
 		</ClockDomain>
 		</Scheduler>
 	</SubSystem>

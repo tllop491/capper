@@ -2,6 +2,8 @@ capper_plant(
 		input signal cylPos5ZaxisExtend, gripperTurnRetract, gripperTurnExtend, capGripperPos5Extend, cylClampBottleExtend; 
 		
 		output signal gripperZAxisLowered, gripperZAxisLifted,  gripperTurnHomePos, gripperTurnFinalPos;
+		output signal gripperZAxisLowered_GUI, gripperZAxisLifted_GUI,  gripperTurnHomePos_GUI, gripperTurnFinalPos_GUI;
+		
 		)
 ->
 {
@@ -67,6 +69,16 @@ capper_plant(
 			pause; 
 		}
 		
+	}
+	||
+	{
+		{while(true){present(gripperZAxisLowered){emit gripperZAxisLowered_GUI;} pause;}}
+		||
+		{while(true){present(gripperZAxisLifted){emit gripperZAxisLifted_GUI;} pause;}}
+		||
+		{while(true){present(gripperTurnHomePos){emit gripperTurnHomePos_GUI;} pause;}}
+		||
+		{while(true){present(gripperTurnFinalPos){emit gripperTurnFinalPos_GUI;} pause;}}
 	}
 	
 }

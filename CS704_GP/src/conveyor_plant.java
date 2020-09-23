@@ -14,8 +14,8 @@ public class conveyor_plant extends ClockDomain{
   public Signal motConveyorOnOff = new Signal("motConveyorOnOff", Signal.INPUT);
   public Signal conveyorEngaged = new Signal("conveyorEngaged", Signal.OUTPUT);
   public Signal conveyorEngaged_GUI = new Signal("conveyorEngaged_GUI", Signal.OUTPUT);
-  private int S6523 = 1;
-  private int S6515 = 1;
+  private int S6569 = 1;
+  private int S6561 = 1;
   
   private int[] ends = new int[2];
   private int[] tdone = new int[2];
@@ -27,15 +27,15 @@ public class conveyor_plant extends ClockDomain{
     }
     
     RUN: while(true){
-      switch(S6523){
+      switch(S6569){
         case 0 : 
-          S6523=0;
+          S6569=0;
           break RUN;
         
         case 1 : 
-          S6523=2;
-          S6523=2;
-          S6515=0;
+          S6569=2;
+          S6569=2;
+          S6561=0;
           conveyorEngaged.setPresent();//sysj\conveyor_plant.sysj line: 12, column: 5
           currsigs.addElement(conveyorEngaged);
           conveyorEngaged_GUI.setPresent();//sysj\conveyor_plant.sysj line: 13, column: 5
@@ -45,24 +45,24 @@ public class conveyor_plant extends ClockDomain{
           break RUN;
         
         case 2 : 
-          switch(S6515){
+          switch(S6561){
             case 0 : 
               if(!motConveyorOnOff.getprestatus()){//sysj\conveyor_plant.sysj line: 11, column: 10
-                S6515=1;
+                S6561=1;
                 active[1]=1;
                 ends[1]=1;
                 break RUN;
               }
               else {
-                S6515=1;
+                S6561=1;
                 active[1]=1;
                 ends[1]=1;
                 break RUN;
               }
             
             case 1 : 
-              S6515=1;
-              S6515=0;
+              S6561=1;
+              S6561=0;
               conveyorEngaged.setPresent();//sysj\conveyor_plant.sysj line: 12, column: 5
               currsigs.addElement(conveyorEngaged);
               conveyorEngaged_GUI.setPresent();//sysj\conveyor_plant.sysj line: 13, column: 5
