@@ -61,7 +61,7 @@ public class POS_GUI {
 	private void initialize() {
 		frame = new JFrame();
 		frame.setResizable(false);
-		frame.setBounds(100, 100, 450, 300);
+		frame.setBounds(100, 100, 351, 285);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(new MigLayout("", "[][][grow]", "[14px][26px][26px][26px][26px][14px][20px][23px][]"));
 

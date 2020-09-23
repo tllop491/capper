@@ -1,4 +1,4 @@
-<System xmlns="http://systemjtechnology.com">
+ <System xmlns="http://systemjtechnology.com">
 
 	<SubSystem Name="SS1" Local="true">
 		<Scheduler Class="com.systemj.CyclicScheduler" Args="1000">

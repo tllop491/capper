@@ -55,9 +55,9 @@ public class STATUS {
 	private void initialize() {
 		frame = new JFrame();
 		frame.setResizable(false);
-		frame.setBounds(100, 100, 431, 625);
+		frame.setBounds(100, 100, 226, 557);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(new MigLayout("", "[122.00,grow][][left][left][left][left][][][62.00][][32.00][][40.00]", "[][][][][center][][][][][][][][][][][][][][][][][][][][][]"));
+		frame.getContentPane().setLayout(new MigLayout("", "[122.00,grow][][left][left][left][left][][]", "[][][][][center][][][][][][][][][][][][][][][][][][][][][]"));
 		
 		//Headers 
 		JLabel header = new JLabel("Plant Status");
