@@ -31,12 +31,13 @@ filler_controller(
 	while(true) {
 		int i = 0;
 		receive liquidData;
+		System.out.println("FILLER RECEIVED LIQUID DATA");
 		await(bottleAtPos2);					// wait till bottle at pos 2
 		send readyFiller(false);
 		trap(T) {								
 			while(true) {
 				emit liquidAmount((int)#liquidData.get(i));	// emitted signal value persists across ticks until it is over-written
-				emit nozzleSelect(i);		
+				emit nozzleSelect(i);						// filler_plant might not see this
 
 				if ((int)#liquidData.get(i) != 0) {
 					abort(immediate dosUnitFilled) {		// wait until pressure canister is retracted (top)
@@ -59,12 +60,12 @@ filler_controller(
 						}
 						||
 						{
-							waitl((int)#liquidAmount ms);		// fill liquid for a certain time determined by liquidAmount, not sure if this is the right way to do it
+							waitl((int)#liquidAmount ms);		// fill liquid for a certain time determined by liquidAmount
 							emit done;
 						}
 					}
 				}
-				
+				System.out.println("NOZZLE " + i + " DONE");
 				if (i == 3) {
 					exit(T);	// exit if all liquids have been filled
 				} else {

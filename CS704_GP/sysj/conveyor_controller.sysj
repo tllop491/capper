@@ -7,12 +7,15 @@ conveyor_controller(
 		)
 ->{
 
+
 	send readyConveyor(Boolean.TRUE);
 	while(true){
 		
 		await (!bottleLeftPos5);								//Wait until there are no bottles on the far end of conveyor via signal bottleLeftPos5
 		send readyConveyor(Boolean.FALSE);
+		System.out.println("CONVEYOR NOT RUNNING");
 		abort(bottleAtPos1c) { 								// Enable the conveyor motor
+			System.out.println("CONVEYOR RUNNING");
 			sustain motConveyorOnOff; 
 		}		
 																// Check whether the bottle is arrived at position 1 via signal bottleAtPos1

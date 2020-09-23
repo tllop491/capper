@@ -168,7 +168,7 @@ public class POS_GUI {
 					
 					
 					for (int i = 0; i < order_amount; i++) {
-						s.emit(single_order, 50);
+						s.emit(single_order, 1000);
 						for (int j = 0; j < 4; j++) {
 							System.out.print(single_order.get(j));  // debug
 						}

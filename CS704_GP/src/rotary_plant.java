@@ -33,21 +33,21 @@ public class rotary_plant extends ClockDomain{
   private Signal shift_1;
   private rotaryTable rt_thread_5;//sysj\rotary_plant.sysj line: 36, column: 3
   private long __start_thread_2;//sysj\rotary_plant.sysj line: 20, column: 41
-  private int S135249 = 1;
-  private int S132077 = 1;
-  private int S131619 = 1;
-  private int S131561 = 1;
-  private int S131508 = 1;
-  private int S131525 = 1;
-  private int S131530 = 1;
-  private int S135247 = 1;
-  private int S132083 = 1;
+  private int S136121 = 1;
+  private int S132949 = 1;
+  private int S132491 = 1;
+  private int S132433 = 1;
+  private int S132380 = 1;
+  private int S132397 = 1;
+  private int S132402 = 1;
+  private int S136119 = 1;
+  private int S132955 = 1;
   
   private int[] ends = new int[6];
   private int[] tdone = new int[6];
   
-  public void thread135267(int [] tdone, int [] ends){
-        switch(S135247){
+  public void thread136139(int [] tdone, int [] ends){
+        switch(S136119){
       case 0 : 
         active[5]=0;
         ends[5]=0;
@@ -55,7 +55,7 @@ public class rotary_plant extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S132083){
+        switch(S132955){
           case 0 : 
             if(load.getprestatus() || deload.getprestatus() || shift_1.getprestatus()){//sysj\rotary_plant.sysj line: 38, column: 10
               if(shift_1.getprestatus()){//sysj\rotary_plant.sysj line: 39, column: 12
@@ -104,13 +104,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -122,13 +122,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -146,13 +146,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -164,13 +164,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -194,13 +194,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -212,13 +212,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -236,13 +236,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -254,13 +254,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -290,13 +290,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -308,13 +308,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -332,13 +332,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -350,13 +350,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -380,13 +380,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -398,13 +398,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -422,13 +422,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -440,13 +440,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -484,13 +484,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -502,13 +502,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -526,13 +526,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -544,13 +544,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -574,13 +574,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -592,13 +592,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -616,13 +616,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -634,13 +634,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -670,13 +670,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -688,13 +688,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -712,13 +712,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -730,13 +730,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -760,13 +760,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -778,13 +778,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -802,13 +802,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -820,13 +820,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -874,13 +874,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -892,13 +892,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -916,13 +916,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -934,13 +934,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -964,13 +964,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -982,13 +982,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1006,13 +1006,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1024,13 +1024,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1060,13 +1060,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1078,13 +1078,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1102,13 +1102,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1120,13 +1120,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1150,13 +1150,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1168,13 +1168,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1192,13 +1192,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1210,13 +1210,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1254,13 +1254,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1272,13 +1272,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1296,13 +1296,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1314,13 +1314,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1344,13 +1344,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1362,13 +1362,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1386,13 +1386,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1404,13 +1404,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1440,13 +1440,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1458,13 +1458,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1482,13 +1482,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1500,13 +1500,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1530,13 +1530,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1548,13 +1548,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1572,13 +1572,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1590,13 +1590,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1650,13 +1650,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1668,13 +1668,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1692,13 +1692,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1710,13 +1710,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1740,13 +1740,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1758,13 +1758,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1782,13 +1782,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1800,13 +1800,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1836,13 +1836,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1854,13 +1854,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1878,13 +1878,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1896,13 +1896,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1926,13 +1926,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1944,13 +1944,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1968,13 +1968,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -1986,13 +1986,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2030,13 +2030,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2048,13 +2048,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2072,13 +2072,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2090,13 +2090,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2120,13 +2120,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2138,13 +2138,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2162,13 +2162,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2180,13 +2180,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2216,13 +2216,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2234,13 +2234,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2258,13 +2258,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2276,13 +2276,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2306,13 +2306,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2324,13 +2324,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2348,13 +2348,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2366,13 +2366,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2420,13 +2420,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2438,13 +2438,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2462,13 +2462,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2480,13 +2480,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2510,13 +2510,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2528,13 +2528,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2552,13 +2552,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2570,13 +2570,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2606,13 +2606,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2624,13 +2624,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2648,13 +2648,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2666,13 +2666,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2696,13 +2696,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2714,13 +2714,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2738,13 +2738,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2756,13 +2756,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2800,13 +2800,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2818,13 +2818,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2842,13 +2842,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2860,13 +2860,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2890,13 +2890,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2908,13 +2908,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2932,13 +2932,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2950,13 +2950,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2986,13 +2986,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -3004,13 +3004,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -3028,13 +3028,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -3046,13 +3046,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -3076,13 +3076,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -3094,13 +3094,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -3118,13 +3118,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -3136,13 +3136,13 @@ public class rotary_plant extends ClockDomain{
                               currsigs.addElement(bottleAtPos5);
                               bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
                               currsigs.addElement(bottleAtPos5_GUI);
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
                             }
                             else {
-                              S132083=1;
+                              S132955=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -3163,8 +3163,8 @@ public class rotary_plant extends ClockDomain{
             break;
           
           case 1 : 
-            S132083=1;
-            S132083=0;
+            S132955=1;
+            S132955=0;
             active[5]=1;
             ends[5]=1;
             tdone[5]=1;
@@ -3176,8 +3176,8 @@ public class rotary_plant extends ClockDomain{
     }
   }
 
-  public void thread135265(int [] tdone, int [] ends){
-        switch(S131530){
+  public void thread136137(int [] tdone, int [] ends){
+        switch(S132402){
       case 0 : 
         active[4]=0;
         ends[4]=0;
@@ -3195,8 +3195,8 @@ public class rotary_plant extends ClockDomain{
     }
   }
 
-  public void thread135264(int [] tdone, int [] ends){
-        switch(S131525){
+  public void thread136136(int [] tdone, int [] ends){
+        switch(S132397){
       case 0 : 
         active[3]=0;
         ends[3]=0;
@@ -3214,8 +3214,8 @@ public class rotary_plant extends ClockDomain{
     }
   }
 
-  public void thread135262(int [] tdone, int [] ends){
-        S131530=1;
+  public void thread136134(int [] tdone, int [] ends){
+        S132402=1;
     tableAlignedWithSensor_GUI.setPresent();//sysj\rotary_plant.sysj line: 27, column: 6
     currsigs.addElement(tableAlignedWithSensor_GUI);
     active[4]=1;
@@ -3223,8 +3223,8 @@ public class rotary_plant extends ClockDomain{
     tdone[4]=1;
   }
 
-  public void thread135261(int [] tdone, int [] ends){
-        S131525=1;
+  public void thread136133(int [] tdone, int [] ends){
+        S132397=1;
     tableAlignedWithSensor.setPresent();//sysj\rotary_plant.sysj line: 23, column: 6
     currsigs.addElement(tableAlignedWithSensor);
     active[3]=1;
@@ -3232,8 +3232,8 @@ public class rotary_plant extends ClockDomain{
     tdone[3]=1;
   }
 
-  public void thread135259(int [] tdone, int [] ends){
-        S131530=1;
+  public void thread136131(int [] tdone, int [] ends){
+        S132402=1;
     tableAlignedWithSensor_GUI.setPresent();//sysj\rotary_plant.sysj line: 27, column: 6
     currsigs.addElement(tableAlignedWithSensor_GUI);
     active[4]=1;
@@ -3241,8 +3241,8 @@ public class rotary_plant extends ClockDomain{
     tdone[4]=1;
   }
 
-  public void thread135258(int [] tdone, int [] ends){
-        S131525=1;
+  public void thread136130(int [] tdone, int [] ends){
+        S132397=1;
     tableAlignedWithSensor.setPresent();//sysj\rotary_plant.sysj line: 23, column: 6
     currsigs.addElement(tableAlignedWithSensor);
     active[3]=1;
@@ -3250,8 +3250,8 @@ public class rotary_plant extends ClockDomain{
     tdone[3]=1;
   }
 
-  public void thread135256(int [] tdone, int [] ends){
-        S131530=1;
+  public void thread136128(int [] tdone, int [] ends){
+        S132402=1;
     tableAlignedWithSensor_GUI.setPresent();//sysj\rotary_plant.sysj line: 27, column: 6
     currsigs.addElement(tableAlignedWithSensor_GUI);
     active[4]=1;
@@ -3259,8 +3259,8 @@ public class rotary_plant extends ClockDomain{
     tdone[4]=1;
   }
 
-  public void thread135255(int [] tdone, int [] ends){
-        S131525=1;
+  public void thread136127(int [] tdone, int [] ends){
+        S132397=1;
     tableAlignedWithSensor.setPresent();//sysj\rotary_plant.sysj line: 23, column: 6
     currsigs.addElement(tableAlignedWithSensor);
     active[3]=1;
@@ -3268,8 +3268,8 @@ public class rotary_plant extends ClockDomain{
     tdone[3]=1;
   }
 
-  public void thread135254(int [] tdone, int [] ends){
-        switch(S132077){
+  public void thread136126(int [] tdone, int [] ends){
+        switch(S132949){
       case 0 : 
         active[2]=0;
         ends[2]=0;
@@ -3277,43 +3277,43 @@ public class rotary_plant extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S131619){
+        switch(S132491){
           case 0 : 
             if(rotaryTableTrigger.getprestatus()){//sysj\rotary_plant.sysj line: 19, column: 10
-              S131619=1;
+              S132491=1;
               if(!rotaryTableTrigger.getprestatus()){//sysj\rotary_plant.sysj line: 20, column: 20
                 shift_1.setPresent();//sysj\rotary_plant.sysj line: 31, column: 4
                 currsigs.addElement(shift_1);
-                S131619=0;
+                S132491=0;
                 active[2]=1;
                 ends[2]=1;
                 tdone[2]=1;
               }
               else {
-                S131561=0;
+                S132433=0;
                 __start_thread_2 = com.systemj.Timer.getMs();//sysj\rotary_plant.sysj line: 20, column: 41
-                S131508=0;
+                S132380=0;
                 if(com.systemj.Timer.getMs() - __start_thread_2 >= 500){//sysj\rotary_plant.sysj line: 20, column: 41
                   ends[2]=2;
                   ;//sysj\rotary_plant.sysj line: 20, column: 41
-                  S131561=1;
-                  thread135255(tdone,ends);
-                  thread135256(tdone,ends);
-                  int biggest135257 = 0;
-                  if(ends[3]>=biggest135257){
-                    biggest135257=ends[3];
+                  S132433=1;
+                  thread136127(tdone,ends);
+                  thread136128(tdone,ends);
+                  int biggest136129 = 0;
+                  if(ends[3]>=biggest136129){
+                    biggest136129=ends[3];
                   }
-                  if(ends[4]>=biggest135257){
-                    biggest135257=ends[4];
+                  if(ends[4]>=biggest136129){
+                    biggest136129=ends[4];
                   }
-                  if(biggest135257 == 1){
+                  if(biggest136129 == 1){
                     active[2]=1;
                     ends[2]=1;
                     tdone[2]=1;
                   }
                 }
                 else {
-                  S131508=1;
+                  S132380=1;
                   active[2]=1;
                   ends[2]=1;
                   tdone[2]=1;
@@ -3331,38 +3331,38 @@ public class rotary_plant extends ClockDomain{
             if(!rotaryTableTrigger.getprestatus()){//sysj\rotary_plant.sysj line: 20, column: 20
               shift_1.setPresent();//sysj\rotary_plant.sysj line: 31, column: 4
               currsigs.addElement(shift_1);
-              S131619=0;
+              S132491=0;
               active[2]=1;
               ends[2]=1;
               tdone[2]=1;
             }
             else {
-              switch(S131561){
+              switch(S132433){
                 case 0 : 
-                  switch(S131508){
+                  switch(S132380){
                     case 0 : 
-                      S131508=0;
+                      S132380=0;
                       if(com.systemj.Timer.getMs() - __start_thread_2 >= 500){//sysj\rotary_plant.sysj line: 20, column: 41
                         ends[2]=2;
                         ;//sysj\rotary_plant.sysj line: 20, column: 41
-                        S131561=1;
-                        thread135258(tdone,ends);
-                        thread135259(tdone,ends);
-                        int biggest135260 = 0;
-                        if(ends[3]>=biggest135260){
-                          biggest135260=ends[3];
+                        S132433=1;
+                        thread136130(tdone,ends);
+                        thread136131(tdone,ends);
+                        int biggest136132 = 0;
+                        if(ends[3]>=biggest136132){
+                          biggest136132=ends[3];
                         }
-                        if(ends[4]>=biggest135260){
-                          biggest135260=ends[4];
+                        if(ends[4]>=biggest136132){
+                          biggest136132=ends[4];
                         }
-                        if(biggest135260 == 1){
+                        if(biggest136132 == 1){
                           active[2]=1;
                           ends[2]=1;
                           tdone[2]=1;
                         }
                       }
                       else {
-                        S131508=1;
+                        S132380=1;
                         active[2]=1;
                         ends[2]=1;
                         tdone[2]=1;
@@ -3370,29 +3370,29 @@ public class rotary_plant extends ClockDomain{
                       break;
                     
                     case 1 : 
-                      S131508=1;
-                      S131508=0;
+                      S132380=1;
+                      S132380=0;
                       if(com.systemj.Timer.getMs() - __start_thread_2 >= 500){//sysj\rotary_plant.sysj line: 20, column: 41
                         ends[2]=2;
                         ;//sysj\rotary_plant.sysj line: 20, column: 41
-                        S131561=1;
-                        thread135261(tdone,ends);
-                        thread135262(tdone,ends);
-                        int biggest135263 = 0;
-                        if(ends[3]>=biggest135263){
-                          biggest135263=ends[3];
+                        S132433=1;
+                        thread136133(tdone,ends);
+                        thread136134(tdone,ends);
+                        int biggest136135 = 0;
+                        if(ends[3]>=biggest136135){
+                          biggest136135=ends[3];
                         }
-                        if(ends[4]>=biggest135263){
-                          biggest135263=ends[4];
+                        if(ends[4]>=biggest136135){
+                          biggest136135=ends[4];
                         }
-                        if(biggest135263 == 1){
+                        if(biggest136135 == 1){
                           active[2]=1;
                           ends[2]=1;
                           tdone[2]=1;
                         }
                       }
                       else {
-                        S131508=1;
+                        S132380=1;
                         active[2]=1;
                         ends[2]=1;
                         tdone[2]=1;
@@ -3403,25 +3403,25 @@ public class rotary_plant extends ClockDomain{
                   break;
                 
                 case 1 : 
-                  thread135264(tdone,ends);
-                  thread135265(tdone,ends);
-                  int biggest135266 = 0;
-                  if(ends[3]>=biggest135266){
-                    biggest135266=ends[3];
+                  thread136136(tdone,ends);
+                  thread136137(tdone,ends);
+                  int biggest136138 = 0;
+                  if(ends[3]>=biggest136138){
+                    biggest136138=ends[3];
                   }
-                  if(ends[4]>=biggest135266){
-                    biggest135266=ends[4];
+                  if(ends[4]>=biggest136138){
+                    biggest136138=ends[4];
                   }
-                  if(biggest135266 == 1){
+                  if(biggest136138 == 1){
                     active[2]=1;
                     ends[2]=1;
                     tdone[2]=1;
                   }
                   //FINXME code
-                  if(biggest135266 == 0){
+                  if(biggest136138 == 0){
                     shift_1.setPresent();//sysj\rotary_plant.sysj line: 31, column: 4
                     currsigs.addElement(shift_1);
-                    S131619=0;
+                    S132491=0;
                     active[2]=1;
                     ends[2]=1;
                     tdone[2]=1;
@@ -3438,18 +3438,18 @@ public class rotary_plant extends ClockDomain{
     }
   }
 
-  public void thread135252(int [] tdone, int [] ends){
-        S135247=1;
+  public void thread136124(int [] tdone, int [] ends){
+        S136119=1;
     rt_thread_5 = new rotaryTable();//sysj\rotary_plant.sysj line: 36, column: 3
-    S132083=0;
+    S132955=0;
     active[5]=1;
     ends[5]=1;
     tdone[5]=1;
   }
 
-  public void thread135251(int [] tdone, int [] ends){
-        S132077=1;
-    S131619=0;
+  public void thread136123(int [] tdone, int [] ends){
+        S132949=1;
+    S132491=0;
     active[2]=1;
     ends[2]=1;
     tdone[2]=1;
@@ -3462,25 +3462,25 @@ public class rotary_plant extends ClockDomain{
     }
     
     RUN: while(true){
-      switch(S135249){
+      switch(S136121){
         case 0 : 
-          S135249=0;
+          S136121=0;
           break RUN;
         
         case 1 : 
-          S135249=2;
-          S135249=2;
+          S136121=2;
+          S136121=2;
           shift_1.setClear();//sysj\rotary_plant.sysj line: 16, column: 2
-          thread135251(tdone,ends);
-          thread135252(tdone,ends);
-          int biggest135253 = 0;
-          if(ends[2]>=biggest135253){
-            biggest135253=ends[2];
+          thread136123(tdone,ends);
+          thread136124(tdone,ends);
+          int biggest136125 = 0;
+          if(ends[2]>=biggest136125){
+            biggest136125=ends[2];
           }
-          if(ends[5]>=biggest135253){
-            biggest135253=ends[5];
+          if(ends[5]>=biggest136125){
+            biggest136125=ends[5];
           }
-          if(biggest135253 == 1){
+          if(biggest136125 == 1){
             active[1]=1;
             ends[1]=1;
             break RUN;
@@ -3488,26 +3488,26 @@ public class rotary_plant extends ClockDomain{
         
         case 2 : 
           shift_1.setClear();//sysj\rotary_plant.sysj line: 16, column: 2
-          thread135254(tdone,ends);
-          thread135267(tdone,ends);
-          int biggest135268 = 0;
-          if(ends[2]>=biggest135268){
-            biggest135268=ends[2];
+          thread136126(tdone,ends);
+          thread136139(tdone,ends);
+          int biggest136140 = 0;
+          if(ends[2]>=biggest136140){
+            biggest136140=ends[2];
           }
-          if(ends[5]>=biggest135268){
-            biggest135268=ends[5];
+          if(ends[5]>=biggest136140){
+            biggest136140=ends[5];
           }
-          if(biggest135268 == 1){
+          if(biggest136140 == 1){
             active[1]=1;
             ends[1]=1;
             break RUN;
           }
           //FINXME code
-          if(biggest135268 == 0){
-            S135249=0;
+          if(biggest136140 == 0){
+            S136121=0;
             active[1]=0;
             ends[1]=0;
-            S135249=0;
+            S136121=0;
             break RUN;
           }
         

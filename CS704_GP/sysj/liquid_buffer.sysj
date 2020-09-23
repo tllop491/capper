@@ -16,7 +16,9 @@ liquid_buffer(
 			// While the buffer is not full, receive data over the channel
 			present(bufferNotFull){
 				receive producerChannel; 
+				System.out.println("BUFFER RECEIVING DATA");
 				data = (ArrayList)#producerChannel; 
+				
 				emit toBuffer(data);
 
 				pause; 
@@ -38,6 +40,7 @@ liquid_buffer(
 				pause; // feedback signal
 
 				present(fromBuffer){
+					System.out.println("BUFFER SENDING DATA");
 					data = #fromBuffer; 
 					send consumerChannel(data);
 					pause;
@@ -56,6 +59,7 @@ liquid_buffer(
 		while(true){
 
 			present(toBuffer){
+				System.out.println("PUSHING TO BUFFER");
 				ArrayList liquidData = (ArrayList)#toBuffer;
 				myBuffer.push(liquidData);
 				
@@ -66,6 +70,7 @@ liquid_buffer(
 			}
 			
 			present(requestData){
+				System.out.println("POPPING FROM BUFFER");
 				data = ((ArrayList)myBuffer.pop());
 				emit fromBuffer(data);
 			}
@@ -82,6 +87,7 @@ liquid_buffer(
 	||
 	{	// indicate to rotary that a bottle is going to be loaded
 		await(toBuffer);
+		System.out.println("NEW ORDER");
 		send newOrder(Boolean.TRUE);
 	}
 }

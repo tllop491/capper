@@ -21,35 +21,35 @@ public class liquid_buffer extends ClockDomain{
   private Signal fromBuffer_1;
   private Signal toBuffer_1;
   private ArrayList data_thread_2;//sysj\liquid_buffer.sysj line: 14, column: 3
-  private ArrayList data_thread_3;//sysj\liquid_buffer.sysj line: 30, column: 3
-  private Buffer myBuffer_thread_4;//sysj\liquid_buffer.sysj line: 54, column: 3
-  private ArrayList data_thread_4;//sysj\liquid_buffer.sysj line: 55, column: 3
-  private ArrayList liquidData_thread_4;//sysj\liquid_buffer.sysj line: 59, column: 5
-  private int S130324 = 1;
-  private int S129563 = 1;
-  private int S129562 = 1;
-  private int S129436 = 1;
-  private int S129434 = 1;
-  private int S129418 = 1;
-  private int S129413 = 1;
-  private int S130135 = 1;
-  private int S130134 = 1;
-  private int S129658 = 1;
-  private int S129564 = 1;
-  private int S129609 = 1;
-  private int S129571 = 1;
-  private int S129566 = 1;
-  private int S130275 = 1;
-  private int S130322 = 1;
-  private int S130321 = 1;
-  private int S130283 = 1;
-  private int S130278 = 1;
+  private ArrayList data_thread_3;//sysj\liquid_buffer.sysj line: 32, column: 3
+  private Buffer myBuffer_thread_4;//sysj\liquid_buffer.sysj line: 57, column: 3
+  private ArrayList data_thread_4;//sysj\liquid_buffer.sysj line: 58, column: 3
+  private ArrayList liquidData_thread_4;//sysj\liquid_buffer.sysj line: 63, column: 5
+  private int S130632 = 1;
+  private int S129871 = 1;
+  private int S129870 = 1;
+  private int S129744 = 1;
+  private int S129742 = 1;
+  private int S129726 = 1;
+  private int S129721 = 1;
+  private int S130443 = 1;
+  private int S130442 = 1;
+  private int S129966 = 1;
+  private int S129872 = 1;
+  private int S129873 = 1;
+  private int S129880 = 1;
+  private int S129875 = 1;
+  private int S130583 = 1;
+  private int S130630 = 1;
+  private int S130585 = 1;
+  private int S130592 = 1;
+  private int S130587 = 1;
   
   private int[] ends = new int[6];
   private int[] tdone = new int[6];
   
-  public void thread130334(int [] tdone, int [] ends){
-        switch(S130322){
+  public void thread130642(int [] tdone, int [] ends){
+        switch(S130630){
       case 0 : 
         active[5]=0;
         ends[5]=0;
@@ -57,28 +57,29 @@ public class liquid_buffer extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S130321){
+        switch(S130585){
           case 0 : 
-            if(toBuffer_1.getprestatus()){//sysj\liquid_buffer.sysj line: 84, column: 9
-              S130321=1;
-              S130283=0;
-              if(!newOrder_o.isPartnerPresent() || newOrder_o.isPartnerPreempted()){//sysj\liquid_buffer.sysj line: 85, column: 3
-                newOrder_o.setREQ(false);//sysj\liquid_buffer.sysj line: 85, column: 3
-                S130283=1;
+            if(toBuffer_1.getprestatus()){//sysj\liquid_buffer.sysj line: 89, column: 9
+              System.out.println("NEW ORDER");//sysj\liquid_buffer.sysj line: 90, column: 3
+              S130585=1;
+              S130592=0;
+              if(!newOrder_o.isPartnerPresent() || newOrder_o.isPartnerPreempted()){//sysj\liquid_buffer.sysj line: 91, column: 3
+                newOrder_o.setREQ(false);//sysj\liquid_buffer.sysj line: 91, column: 3
+                S130592=1;
                 active[5]=1;
                 ends[5]=1;
                 tdone[5]=1;
               }
               else {
-                S130278=0;
-                if(newOrder_o.isACK()){//sysj\liquid_buffer.sysj line: 85, column: 3
-                  newOrder_o.setVal(Boolean.TRUE);//sysj\liquid_buffer.sysj line: 85, column: 3
-                  S130278=1;
-                  if(!newOrder_o.isACK()){//sysj\liquid_buffer.sysj line: 85, column: 3
-                    newOrder_o.setREQ(false);//sysj\liquid_buffer.sysj line: 85, column: 3
+                S130587=0;
+                if(newOrder_o.isACK()){//sysj\liquid_buffer.sysj line: 91, column: 3
+                  newOrder_o.setVal(Boolean.TRUE);//sysj\liquid_buffer.sysj line: 91, column: 3
+                  S130587=1;
+                  if(!newOrder_o.isACK()){//sysj\liquid_buffer.sysj line: 91, column: 3
+                    newOrder_o.setREQ(false);//sysj\liquid_buffer.sysj line: 91, column: 3
                     ends[5]=2;
-                    ;//sysj\liquid_buffer.sysj line: 85, column: 3
-                    S130322=0;
+                    ;//sysj\liquid_buffer.sysj line: 91, column: 3
+                    S130630=0;
                     active[5]=0;
                     ends[5]=0;
                     tdone[5]=1;
@@ -104,26 +105,26 @@ public class liquid_buffer extends ClockDomain{
             break;
           
           case 1 : 
-            switch(S130283){
+            switch(S130592){
               case 0 : 
-                if(!newOrder_o.isPartnerPresent() || newOrder_o.isPartnerPreempted()){//sysj\liquid_buffer.sysj line: 85, column: 3
-                  newOrder_o.setREQ(false);//sysj\liquid_buffer.sysj line: 85, column: 3
-                  S130283=1;
+                if(!newOrder_o.isPartnerPresent() || newOrder_o.isPartnerPreempted()){//sysj\liquid_buffer.sysj line: 91, column: 3
+                  newOrder_o.setREQ(false);//sysj\liquid_buffer.sysj line: 91, column: 3
+                  S130592=1;
                   active[5]=1;
                   ends[5]=1;
                   tdone[5]=1;
                 }
                 else {
-                  switch(S130278){
+                  switch(S130587){
                     case 0 : 
-                      if(newOrder_o.isACK()){//sysj\liquid_buffer.sysj line: 85, column: 3
-                        newOrder_o.setVal(Boolean.TRUE);//sysj\liquid_buffer.sysj line: 85, column: 3
-                        S130278=1;
-                        if(!newOrder_o.isACK()){//sysj\liquid_buffer.sysj line: 85, column: 3
-                          newOrder_o.setREQ(false);//sysj\liquid_buffer.sysj line: 85, column: 3
+                      if(newOrder_o.isACK()){//sysj\liquid_buffer.sysj line: 91, column: 3
+                        newOrder_o.setVal(Boolean.TRUE);//sysj\liquid_buffer.sysj line: 91, column: 3
+                        S130587=1;
+                        if(!newOrder_o.isACK()){//sysj\liquid_buffer.sysj line: 91, column: 3
+                          newOrder_o.setREQ(false);//sysj\liquid_buffer.sysj line: 91, column: 3
                           ends[5]=2;
-                          ;//sysj\liquid_buffer.sysj line: 85, column: 3
-                          S130322=0;
+                          ;//sysj\liquid_buffer.sysj line: 91, column: 3
+                          S130630=0;
                           active[5]=0;
                           ends[5]=0;
                           tdone[5]=1;
@@ -142,11 +143,11 @@ public class liquid_buffer extends ClockDomain{
                       break;
                     
                     case 1 : 
-                      if(!newOrder_o.isACK()){//sysj\liquid_buffer.sysj line: 85, column: 3
-                        newOrder_o.setREQ(false);//sysj\liquid_buffer.sysj line: 85, column: 3
+                      if(!newOrder_o.isACK()){//sysj\liquid_buffer.sysj line: 91, column: 3
+                        newOrder_o.setREQ(false);//sysj\liquid_buffer.sysj line: 91, column: 3
                         ends[5]=2;
-                        ;//sysj\liquid_buffer.sysj line: 85, column: 3
-                        S130322=0;
+                        ;//sysj\liquid_buffer.sysj line: 91, column: 3
+                        S130630=0;
                         active[5]=0;
                         ends[5]=0;
                         tdone[5]=1;
@@ -163,25 +164,25 @@ public class liquid_buffer extends ClockDomain{
                 break;
               
               case 1 : 
-                S130283=1;
-                S130283=0;
-                if(!newOrder_o.isPartnerPresent() || newOrder_o.isPartnerPreempted()){//sysj\liquid_buffer.sysj line: 85, column: 3
-                  newOrder_o.setREQ(false);//sysj\liquid_buffer.sysj line: 85, column: 3
-                  S130283=1;
+                S130592=1;
+                S130592=0;
+                if(!newOrder_o.isPartnerPresent() || newOrder_o.isPartnerPreempted()){//sysj\liquid_buffer.sysj line: 91, column: 3
+                  newOrder_o.setREQ(false);//sysj\liquid_buffer.sysj line: 91, column: 3
+                  S130592=1;
                   active[5]=1;
                   ends[5]=1;
                   tdone[5]=1;
                 }
                 else {
-                  S130278=0;
-                  if(newOrder_o.isACK()){//sysj\liquid_buffer.sysj line: 85, column: 3
-                    newOrder_o.setVal(Boolean.TRUE);//sysj\liquid_buffer.sysj line: 85, column: 3
-                    S130278=1;
-                    if(!newOrder_o.isACK()){//sysj\liquid_buffer.sysj line: 85, column: 3
-                      newOrder_o.setREQ(false);//sysj\liquid_buffer.sysj line: 85, column: 3
+                  S130587=0;
+                  if(newOrder_o.isACK()){//sysj\liquid_buffer.sysj line: 91, column: 3
+                    newOrder_o.setVal(Boolean.TRUE);//sysj\liquid_buffer.sysj line: 91, column: 3
+                    S130587=1;
+                    if(!newOrder_o.isACK()){//sysj\liquid_buffer.sysj line: 91, column: 3
+                      newOrder_o.setREQ(false);//sysj\liquid_buffer.sysj line: 91, column: 3
                       ends[5]=2;
-                      ;//sysj\liquid_buffer.sysj line: 85, column: 3
-                      S130322=0;
+                      ;//sysj\liquid_buffer.sysj line: 91, column: 3
+                      S130630=0;
                       active[5]=0;
                       ends[5]=0;
                       tdone[5]=1;
@@ -209,8 +210,8 @@ public class liquid_buffer extends ClockDomain{
     }
   }
 
-  public void thread130333(int [] tdone, int [] ends){
-        switch(S130275){
+  public void thread130641(int [] tdone, int [] ends){
+        switch(S130583){
       case 0 : 
         active[4]=0;
         ends[4]=0;
@@ -218,19 +219,21 @@ public class liquid_buffer extends ClockDomain{
         break;
       
       case 1 : 
-        if(toBuffer_1.getprestatus()){//sysj\liquid_buffer.sysj line: 58, column: 12
-          liquidData_thread_4 = (ArrayList)(toBuffer_1.getpreval() == null ? null : ((ArrayList)toBuffer_1.getpreval()));//sysj\liquid_buffer.sysj line: 59, column: 5
-          myBuffer_thread_4.push(liquidData_thread_4);//sysj\liquid_buffer.sysj line: 60, column: 5
-          if(requestData_1.getprestatus()){//sysj\liquid_buffer.sysj line: 68, column: 12
-            data_thread_4 = ((ArrayList)myBuffer_thread_4.pop());//sysj\liquid_buffer.sysj line: 69, column: 5
-            fromBuffer_1.setPresent();//sysj\liquid_buffer.sysj line: 70, column: 5
+        if(toBuffer_1.getprestatus()){//sysj\liquid_buffer.sysj line: 61, column: 12
+          System.out.println("PUSHING TO BUFFER");//sysj\liquid_buffer.sysj line: 62, column: 5
+          liquidData_thread_4 = (ArrayList)(toBuffer_1.getpreval() == null ? null : ((ArrayList)toBuffer_1.getpreval()));//sysj\liquid_buffer.sysj line: 63, column: 5
+          myBuffer_thread_4.push(liquidData_thread_4);//sysj\liquid_buffer.sysj line: 64, column: 5
+          if(requestData_1.getprestatus()){//sysj\liquid_buffer.sysj line: 72, column: 12
+            System.out.println("POPPING FROM BUFFER");//sysj\liquid_buffer.sysj line: 73, column: 5
+            data_thread_4 = ((ArrayList)myBuffer_thread_4.pop());//sysj\liquid_buffer.sysj line: 74, column: 5
+            fromBuffer_1.setPresent();//sysj\liquid_buffer.sysj line: 75, column: 5
             currsigs.addElement(fromBuffer_1);
-            fromBuffer_1.setValue(data_thread_4);//sysj\liquid_buffer.sysj line: 70, column: 5
-            if(!myBuffer_thread_4.isFull()){//sysj\liquid_buffer.sysj line: 73, column: 7
-              bufferNotFull_1.setPresent();//sysj\liquid_buffer.sysj line: 74, column: 5
+            fromBuffer_1.setValue(data_thread_4);//sysj\liquid_buffer.sysj line: 75, column: 5
+            if(!myBuffer_thread_4.isFull()){//sysj\liquid_buffer.sysj line: 78, column: 7
+              bufferNotFull_1.setPresent();//sysj\liquid_buffer.sysj line: 79, column: 5
               currsigs.addElement(bufferNotFull_1);
-              if(!myBuffer_thread_4.isEmpty()){//sysj\liquid_buffer.sysj line: 76, column: 7
-                bufferNotEmpty_1.setPresent();//sysj\liquid_buffer.sysj line: 77, column: 5
+              if(!myBuffer_thread_4.isEmpty()){//sysj\liquid_buffer.sysj line: 81, column: 7
+                bufferNotEmpty_1.setPresent();//sysj\liquid_buffer.sysj line: 82, column: 5
                 currsigs.addElement(bufferNotEmpty_1);
                 active[4]=1;
                 ends[4]=1;
@@ -243,8 +246,8 @@ public class liquid_buffer extends ClockDomain{
               }
             }
             else {
-              if(!myBuffer_thread_4.isEmpty()){//sysj\liquid_buffer.sysj line: 76, column: 7
-                bufferNotEmpty_1.setPresent();//sysj\liquid_buffer.sysj line: 77, column: 5
+              if(!myBuffer_thread_4.isEmpty()){//sysj\liquid_buffer.sysj line: 81, column: 7
+                bufferNotEmpty_1.setPresent();//sysj\liquid_buffer.sysj line: 82, column: 5
                 currsigs.addElement(bufferNotEmpty_1);
                 active[4]=1;
                 ends[4]=1;
@@ -258,11 +261,11 @@ public class liquid_buffer extends ClockDomain{
             }
           }
           else {
-            if(!myBuffer_thread_4.isFull()){//sysj\liquid_buffer.sysj line: 73, column: 7
-              bufferNotFull_1.setPresent();//sysj\liquid_buffer.sysj line: 74, column: 5
+            if(!myBuffer_thread_4.isFull()){//sysj\liquid_buffer.sysj line: 78, column: 7
+              bufferNotFull_1.setPresent();//sysj\liquid_buffer.sysj line: 79, column: 5
               currsigs.addElement(bufferNotFull_1);
-              if(!myBuffer_thread_4.isEmpty()){//sysj\liquid_buffer.sysj line: 76, column: 7
-                bufferNotEmpty_1.setPresent();//sysj\liquid_buffer.sysj line: 77, column: 5
+              if(!myBuffer_thread_4.isEmpty()){//sysj\liquid_buffer.sysj line: 81, column: 7
+                bufferNotEmpty_1.setPresent();//sysj\liquid_buffer.sysj line: 82, column: 5
                 currsigs.addElement(bufferNotEmpty_1);
                 active[4]=1;
                 ends[4]=1;
@@ -275,8 +278,8 @@ public class liquid_buffer extends ClockDomain{
               }
             }
             else {
-              if(!myBuffer_thread_4.isEmpty()){//sysj\liquid_buffer.sysj line: 76, column: 7
-                bufferNotEmpty_1.setPresent();//sysj\liquid_buffer.sysj line: 77, column: 5
+              if(!myBuffer_thread_4.isEmpty()){//sysj\liquid_buffer.sysj line: 81, column: 7
+                bufferNotEmpty_1.setPresent();//sysj\liquid_buffer.sysj line: 82, column: 5
                 currsigs.addElement(bufferNotEmpty_1);
                 active[4]=1;
                 ends[4]=1;
@@ -291,16 +294,17 @@ public class liquid_buffer extends ClockDomain{
           }
         }
         else {
-          if(requestData_1.getprestatus()){//sysj\liquid_buffer.sysj line: 68, column: 12
-            data_thread_4 = ((ArrayList)myBuffer_thread_4.pop());//sysj\liquid_buffer.sysj line: 69, column: 5
-            fromBuffer_1.setPresent();//sysj\liquid_buffer.sysj line: 70, column: 5
+          if(requestData_1.getprestatus()){//sysj\liquid_buffer.sysj line: 72, column: 12
+            System.out.println("POPPING FROM BUFFER");//sysj\liquid_buffer.sysj line: 73, column: 5
+            data_thread_4 = ((ArrayList)myBuffer_thread_4.pop());//sysj\liquid_buffer.sysj line: 74, column: 5
+            fromBuffer_1.setPresent();//sysj\liquid_buffer.sysj line: 75, column: 5
             currsigs.addElement(fromBuffer_1);
-            fromBuffer_1.setValue(data_thread_4);//sysj\liquid_buffer.sysj line: 70, column: 5
-            if(!myBuffer_thread_4.isFull()){//sysj\liquid_buffer.sysj line: 73, column: 7
-              bufferNotFull_1.setPresent();//sysj\liquid_buffer.sysj line: 74, column: 5
+            fromBuffer_1.setValue(data_thread_4);//sysj\liquid_buffer.sysj line: 75, column: 5
+            if(!myBuffer_thread_4.isFull()){//sysj\liquid_buffer.sysj line: 78, column: 7
+              bufferNotFull_1.setPresent();//sysj\liquid_buffer.sysj line: 79, column: 5
               currsigs.addElement(bufferNotFull_1);
-              if(!myBuffer_thread_4.isEmpty()){//sysj\liquid_buffer.sysj line: 76, column: 7
-                bufferNotEmpty_1.setPresent();//sysj\liquid_buffer.sysj line: 77, column: 5
+              if(!myBuffer_thread_4.isEmpty()){//sysj\liquid_buffer.sysj line: 81, column: 7
+                bufferNotEmpty_1.setPresent();//sysj\liquid_buffer.sysj line: 82, column: 5
                 currsigs.addElement(bufferNotEmpty_1);
                 active[4]=1;
                 ends[4]=1;
@@ -313,8 +317,8 @@ public class liquid_buffer extends ClockDomain{
               }
             }
             else {
-              if(!myBuffer_thread_4.isEmpty()){//sysj\liquid_buffer.sysj line: 76, column: 7
-                bufferNotEmpty_1.setPresent();//sysj\liquid_buffer.sysj line: 77, column: 5
+              if(!myBuffer_thread_4.isEmpty()){//sysj\liquid_buffer.sysj line: 81, column: 7
+                bufferNotEmpty_1.setPresent();//sysj\liquid_buffer.sysj line: 82, column: 5
                 currsigs.addElement(bufferNotEmpty_1);
                 active[4]=1;
                 ends[4]=1;
@@ -328,11 +332,11 @@ public class liquid_buffer extends ClockDomain{
             }
           }
           else {
-            if(!myBuffer_thread_4.isFull()){//sysj\liquid_buffer.sysj line: 73, column: 7
-              bufferNotFull_1.setPresent();//sysj\liquid_buffer.sysj line: 74, column: 5
+            if(!myBuffer_thread_4.isFull()){//sysj\liquid_buffer.sysj line: 78, column: 7
+              bufferNotFull_1.setPresent();//sysj\liquid_buffer.sysj line: 79, column: 5
               currsigs.addElement(bufferNotFull_1);
-              if(!myBuffer_thread_4.isEmpty()){//sysj\liquid_buffer.sysj line: 76, column: 7
-                bufferNotEmpty_1.setPresent();//sysj\liquid_buffer.sysj line: 77, column: 5
+              if(!myBuffer_thread_4.isEmpty()){//sysj\liquid_buffer.sysj line: 81, column: 7
+                bufferNotEmpty_1.setPresent();//sysj\liquid_buffer.sysj line: 82, column: 5
                 currsigs.addElement(bufferNotEmpty_1);
                 active[4]=1;
                 ends[4]=1;
@@ -345,8 +349,8 @@ public class liquid_buffer extends ClockDomain{
               }
             }
             else {
-              if(!myBuffer_thread_4.isEmpty()){//sysj\liquid_buffer.sysj line: 76, column: 7
-                bufferNotEmpty_1.setPresent();//sysj\liquid_buffer.sysj line: 77, column: 5
+              if(!myBuffer_thread_4.isEmpty()){//sysj\liquid_buffer.sysj line: 81, column: 7
+                bufferNotEmpty_1.setPresent();//sysj\liquid_buffer.sysj line: 82, column: 5
                 currsigs.addElement(bufferNotEmpty_1);
                 active[4]=1;
                 ends[4]=1;
@@ -365,8 +369,8 @@ public class liquid_buffer extends ClockDomain{
     }
   }
 
-  public void thread130332(int [] tdone, int [] ends){
-        switch(S130135){
+  public void thread130640(int [] tdone, int [] ends){
+        switch(S130443){
       case 0 : 
         active[3]=0;
         ends[3]=0;
@@ -374,43 +378,44 @@ public class liquid_buffer extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S130134){
+        switch(S130442){
           case 0 : 
-            switch(S129658){
+            switch(S129966){
               case 0 : 
-                switch(S129564){
+                switch(S129872){
                   case 0 : 
-                    S129564=0;
-                    S129564=1;
+                    S129872=0;
+                    S129872=1;
                     active[3]=1;
                     ends[3]=1;
                     tdone[3]=1;
                     break;
                   
                   case 1 : 
-                    S129564=1;
-                    S129564=2;
-                    if(fromBuffer_1.getprestatus()){//sysj\liquid_buffer.sysj line: 40, column: 13
-                      data_thread_3 = (fromBuffer_1.getpreval() == null ? null : ((ArrayList)fromBuffer_1.getpreval()));//sysj\liquid_buffer.sysj line: 41, column: 6
-                      S129609=0;
-                      S129571=0;
-                      if(!consumerChannel_o.isPartnerPresent() || consumerChannel_o.isPartnerPreempted()){//sysj\liquid_buffer.sysj line: 42, column: 6
-                        consumerChannel_o.setREQ(false);//sysj\liquid_buffer.sysj line: 42, column: 6
-                        S129571=1;
+                    S129872=1;
+                    S129872=2;
+                    if(fromBuffer_1.getprestatus()){//sysj\liquid_buffer.sysj line: 42, column: 13
+                      System.out.println("BUFFER SENDING DATA");//sysj\liquid_buffer.sysj line: 43, column: 6
+                      data_thread_3 = (fromBuffer_1.getpreval() == null ? null : ((ArrayList)fromBuffer_1.getpreval()));//sysj\liquid_buffer.sysj line: 44, column: 6
+                      S129873=0;
+                      S129880=0;
+                      if(!consumerChannel_o.isPartnerPresent() || consumerChannel_o.isPartnerPreempted()){//sysj\liquid_buffer.sysj line: 45, column: 6
+                        consumerChannel_o.setREQ(false);//sysj\liquid_buffer.sysj line: 45, column: 6
+                        S129880=1;
                         active[3]=1;
                         ends[3]=1;
                         tdone[3]=1;
                       }
                       else {
-                        S129566=0;
-                        if(consumerChannel_o.isACK()){//sysj\liquid_buffer.sysj line: 42, column: 6
-                          consumerChannel_o.setVal(data_thread_3);//sysj\liquid_buffer.sysj line: 42, column: 6
-                          S129566=1;
-                          if(!consumerChannel_o.isACK()){//sysj\liquid_buffer.sysj line: 42, column: 6
-                            consumerChannel_o.setREQ(false);//sysj\liquid_buffer.sysj line: 42, column: 6
+                        S129875=0;
+                        if(consumerChannel_o.isACK()){//sysj\liquid_buffer.sysj line: 45, column: 6
+                          consumerChannel_o.setVal(data_thread_3);//sysj\liquid_buffer.sysj line: 45, column: 6
+                          S129875=1;
+                          if(!consumerChannel_o.isACK()){//sysj\liquid_buffer.sysj line: 45, column: 6
+                            consumerChannel_o.setREQ(false);//sysj\liquid_buffer.sysj line: 45, column: 6
                             ends[3]=2;
-                            ;//sysj\liquid_buffer.sysj line: 42, column: 6
-                            S129609=1;
+                            ;//sysj\liquid_buffer.sysj line: 45, column: 6
+                            S129873=1;
                             active[3]=1;
                             ends[3]=1;
                             tdone[3]=1;
@@ -429,7 +434,7 @@ public class liquid_buffer extends ClockDomain{
                       }
                     }
                     else {
-                      S129658=1;
+                      S129966=1;
                       active[3]=1;
                       ends[3]=1;
                       tdone[3]=1;
@@ -437,28 +442,28 @@ public class liquid_buffer extends ClockDomain{
                     break;
                   
                   case 2 : 
-                    switch(S129609){
+                    switch(S129873){
                       case 0 : 
-                        switch(S129571){
+                        switch(S129880){
                           case 0 : 
-                            if(!consumerChannel_o.isPartnerPresent() || consumerChannel_o.isPartnerPreempted()){//sysj\liquid_buffer.sysj line: 42, column: 6
-                              consumerChannel_o.setREQ(false);//sysj\liquid_buffer.sysj line: 42, column: 6
-                              S129571=1;
+                            if(!consumerChannel_o.isPartnerPresent() || consumerChannel_o.isPartnerPreempted()){//sysj\liquid_buffer.sysj line: 45, column: 6
+                              consumerChannel_o.setREQ(false);//sysj\liquid_buffer.sysj line: 45, column: 6
+                              S129880=1;
                               active[3]=1;
                               ends[3]=1;
                               tdone[3]=1;
                             }
                             else {
-                              switch(S129566){
+                              switch(S129875){
                                 case 0 : 
-                                  if(consumerChannel_o.isACK()){//sysj\liquid_buffer.sysj line: 42, column: 6
-                                    consumerChannel_o.setVal(data_thread_3);//sysj\liquid_buffer.sysj line: 42, column: 6
-                                    S129566=1;
-                                    if(!consumerChannel_o.isACK()){//sysj\liquid_buffer.sysj line: 42, column: 6
-                                      consumerChannel_o.setREQ(false);//sysj\liquid_buffer.sysj line: 42, column: 6
+                                  if(consumerChannel_o.isACK()){//sysj\liquid_buffer.sysj line: 45, column: 6
+                                    consumerChannel_o.setVal(data_thread_3);//sysj\liquid_buffer.sysj line: 45, column: 6
+                                    S129875=1;
+                                    if(!consumerChannel_o.isACK()){//sysj\liquid_buffer.sysj line: 45, column: 6
+                                      consumerChannel_o.setREQ(false);//sysj\liquid_buffer.sysj line: 45, column: 6
                                       ends[3]=2;
-                                      ;//sysj\liquid_buffer.sysj line: 42, column: 6
-                                      S129609=1;
+                                      ;//sysj\liquid_buffer.sysj line: 45, column: 6
+                                      S129873=1;
                                       active[3]=1;
                                       ends[3]=1;
                                       tdone[3]=1;
@@ -477,11 +482,11 @@ public class liquid_buffer extends ClockDomain{
                                   break;
                                 
                                 case 1 : 
-                                  if(!consumerChannel_o.isACK()){//sysj\liquid_buffer.sysj line: 42, column: 6
-                                    consumerChannel_o.setREQ(false);//sysj\liquid_buffer.sysj line: 42, column: 6
+                                  if(!consumerChannel_o.isACK()){//sysj\liquid_buffer.sysj line: 45, column: 6
+                                    consumerChannel_o.setREQ(false);//sysj\liquid_buffer.sysj line: 45, column: 6
                                     ends[3]=2;
-                                    ;//sysj\liquid_buffer.sysj line: 42, column: 6
-                                    S129609=1;
+                                    ;//sysj\liquid_buffer.sysj line: 45, column: 6
+                                    S129873=1;
                                     active[3]=1;
                                     ends[3]=1;
                                     tdone[3]=1;
@@ -498,25 +503,25 @@ public class liquid_buffer extends ClockDomain{
                             break;
                           
                           case 1 : 
-                            S129571=1;
-                            S129571=0;
-                            if(!consumerChannel_o.isPartnerPresent() || consumerChannel_o.isPartnerPreempted()){//sysj\liquid_buffer.sysj line: 42, column: 6
-                              consumerChannel_o.setREQ(false);//sysj\liquid_buffer.sysj line: 42, column: 6
-                              S129571=1;
+                            S129880=1;
+                            S129880=0;
+                            if(!consumerChannel_o.isPartnerPresent() || consumerChannel_o.isPartnerPreempted()){//sysj\liquid_buffer.sysj line: 45, column: 6
+                              consumerChannel_o.setREQ(false);//sysj\liquid_buffer.sysj line: 45, column: 6
+                              S129880=1;
                               active[3]=1;
                               ends[3]=1;
                               tdone[3]=1;
                             }
                             else {
-                              S129566=0;
-                              if(consumerChannel_o.isACK()){//sysj\liquid_buffer.sysj line: 42, column: 6
-                                consumerChannel_o.setVal(data_thread_3);//sysj\liquid_buffer.sysj line: 42, column: 6
-                                S129566=1;
-                                if(!consumerChannel_o.isACK()){//sysj\liquid_buffer.sysj line: 42, column: 6
-                                  consumerChannel_o.setREQ(false);//sysj\liquid_buffer.sysj line: 42, column: 6
+                              S129875=0;
+                              if(consumerChannel_o.isACK()){//sysj\liquid_buffer.sysj line: 45, column: 6
+                                consumerChannel_o.setVal(data_thread_3);//sysj\liquid_buffer.sysj line: 45, column: 6
+                                S129875=1;
+                                if(!consumerChannel_o.isACK()){//sysj\liquid_buffer.sysj line: 45, column: 6
+                                  consumerChannel_o.setREQ(false);//sysj\liquid_buffer.sysj line: 45, column: 6
                                   ends[3]=2;
-                                  ;//sysj\liquid_buffer.sysj line: 42, column: 6
-                                  S129609=1;
+                                  ;//sysj\liquid_buffer.sysj line: 45, column: 6
+                                  S129873=1;
                                   active[3]=1;
                                   ends[3]=1;
                                   tdone[3]=1;
@@ -539,8 +544,8 @@ public class liquid_buffer extends ClockDomain{
                         break;
                       
                       case 1 : 
-                        S129609=1;
-                        S129658=1;
+                        S129873=1;
+                        S129966=1;
                         active[3]=1;
                         ends[3]=1;
                         tdone[3]=1;
@@ -553,18 +558,18 @@ public class liquid_buffer extends ClockDomain{
                 break;
               
               case 1 : 
-                S129658=1;
-                S129658=0;
-                if(bufferNotEmpty_1.getprestatus()){//sysj\liquid_buffer.sysj line: 33, column: 12
-                  requestData_1.setPresent();//sysj\liquid_buffer.sysj line: 35, column: 5
+                S129966=1;
+                S129966=0;
+                if(bufferNotEmpty_1.getprestatus()){//sysj\liquid_buffer.sysj line: 35, column: 12
+                  requestData_1.setPresent();//sysj\liquid_buffer.sysj line: 37, column: 5
                   currsigs.addElement(requestData_1);
-                  S129564=0;
+                  S129872=0;
                   active[3]=1;
                   ends[3]=1;
                   tdone[3]=1;
                 }
                 else {
-                  S129658=1;
+                  S129966=1;
                   active[3]=1;
                   ends[3]=1;
                   tdone[3]=1;
@@ -575,8 +580,8 @@ public class liquid_buffer extends ClockDomain{
             break;
           
           case 1 : 
-            S130134=1;
-            S130135=0;
+            S130442=1;
+            S130443=0;
             active[3]=0;
             ends[3]=0;
             tdone[3]=1;
@@ -588,8 +593,8 @@ public class liquid_buffer extends ClockDomain{
     }
   }
 
-  public void thread130331(int [] tdone, int [] ends){
-        switch(S129563){
+  public void thread130639(int [] tdone, int [] ends){
+        switch(S129871){
       case 0 : 
         active[2]=0;
         ends[2]=0;
@@ -597,36 +602,37 @@ public class liquid_buffer extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S129562){
+        switch(S129870){
           case 0 : 
-            switch(S129436){
+            switch(S129744){
               case 0 : 
-                switch(S129434){
+                switch(S129742){
                   case 0 : 
-                    switch(S129418){
+                    switch(S129726){
                       case 0 : 
                         if(!producerChannel_in.isPartnerPresent() || producerChannel_in.isPartnerPreempted()){//sysj\liquid_buffer.sysj line: 18, column: 5
                           producerChannel_in.setACK(false);//sysj\liquid_buffer.sysj line: 18, column: 5
-                          S129418=1;
+                          S129726=1;
                           active[2]=1;
                           ends[2]=1;
                           tdone[2]=1;
                         }
                         else {
-                          switch(S129413){
+                          switch(S129721){
                             case 0 : 
                               if(!producerChannel_in.isREQ()){//sysj\liquid_buffer.sysj line: 18, column: 5
                                 producerChannel_in.setACK(true);//sysj\liquid_buffer.sysj line: 18, column: 5
-                                S129413=1;
+                                S129721=1;
                                 if(producerChannel_in.isREQ()){//sysj\liquid_buffer.sysj line: 18, column: 5
                                   producerChannel_in.setACK(false);//sysj\liquid_buffer.sysj line: 18, column: 5
                                   ends[2]=2;
                                   ;//sysj\liquid_buffer.sysj line: 18, column: 5
-                                  data_thread_2 = (ArrayList)(producerChannel_in.getVal() == null ? null : ((ArrayList)producerChannel_in.getVal()));//sysj\liquid_buffer.sysj line: 19, column: 5
-                                  toBuffer_1.setPresent();//sysj\liquid_buffer.sysj line: 20, column: 5
+                                  System.out.println("BUFFER RECEIVING DATA");//sysj\liquid_buffer.sysj line: 19, column: 5
+                                  data_thread_2 = (ArrayList)(producerChannel_in.getVal() == null ? null : ((ArrayList)producerChannel_in.getVal()));//sysj\liquid_buffer.sysj line: 20, column: 5
+                                  toBuffer_1.setPresent();//sysj\liquid_buffer.sysj line: 22, column: 5
                                   currsigs.addElement(toBuffer_1);
-                                  toBuffer_1.setValue(data_thread_2);//sysj\liquid_buffer.sysj line: 20, column: 5
-                                  S129434=1;
+                                  toBuffer_1.setValue(data_thread_2);//sysj\liquid_buffer.sysj line: 22, column: 5
+                                  S129742=1;
                                   active[2]=1;
                                   ends[2]=1;
                                   tdone[2]=1;
@@ -649,11 +655,12 @@ public class liquid_buffer extends ClockDomain{
                                 producerChannel_in.setACK(false);//sysj\liquid_buffer.sysj line: 18, column: 5
                                 ends[2]=2;
                                 ;//sysj\liquid_buffer.sysj line: 18, column: 5
-                                data_thread_2 = (ArrayList)(producerChannel_in.getVal() == null ? null : ((ArrayList)producerChannel_in.getVal()));//sysj\liquid_buffer.sysj line: 19, column: 5
-                                toBuffer_1.setPresent();//sysj\liquid_buffer.sysj line: 20, column: 5
+                                System.out.println("BUFFER RECEIVING DATA");//sysj\liquid_buffer.sysj line: 19, column: 5
+                                data_thread_2 = (ArrayList)(producerChannel_in.getVal() == null ? null : ((ArrayList)producerChannel_in.getVal()));//sysj\liquid_buffer.sysj line: 20, column: 5
+                                toBuffer_1.setPresent();//sysj\liquid_buffer.sysj line: 22, column: 5
                                 currsigs.addElement(toBuffer_1);
-                                toBuffer_1.setValue(data_thread_2);//sysj\liquid_buffer.sysj line: 20, column: 5
-                                S129434=1;
+                                toBuffer_1.setValue(data_thread_2);//sysj\liquid_buffer.sysj line: 22, column: 5
+                                S129742=1;
                                 active[2]=1;
                                 ends[2]=1;
                                 tdone[2]=1;
@@ -670,29 +677,30 @@ public class liquid_buffer extends ClockDomain{
                         break;
                       
                       case 1 : 
-                        S129418=1;
-                        S129418=0;
+                        S129726=1;
+                        S129726=0;
                         if(!producerChannel_in.isPartnerPresent() || producerChannel_in.isPartnerPreempted()){//sysj\liquid_buffer.sysj line: 18, column: 5
                           producerChannel_in.setACK(false);//sysj\liquid_buffer.sysj line: 18, column: 5
-                          S129418=1;
+                          S129726=1;
                           active[2]=1;
                           ends[2]=1;
                           tdone[2]=1;
                         }
                         else {
-                          S129413=0;
+                          S129721=0;
                           if(!producerChannel_in.isREQ()){//sysj\liquid_buffer.sysj line: 18, column: 5
                             producerChannel_in.setACK(true);//sysj\liquid_buffer.sysj line: 18, column: 5
-                            S129413=1;
+                            S129721=1;
                             if(producerChannel_in.isREQ()){//sysj\liquid_buffer.sysj line: 18, column: 5
                               producerChannel_in.setACK(false);//sysj\liquid_buffer.sysj line: 18, column: 5
                               ends[2]=2;
                               ;//sysj\liquid_buffer.sysj line: 18, column: 5
-                              data_thread_2 = (ArrayList)(producerChannel_in.getVal() == null ? null : ((ArrayList)producerChannel_in.getVal()));//sysj\liquid_buffer.sysj line: 19, column: 5
-                              toBuffer_1.setPresent();//sysj\liquid_buffer.sysj line: 20, column: 5
+                              System.out.println("BUFFER RECEIVING DATA");//sysj\liquid_buffer.sysj line: 19, column: 5
+                              data_thread_2 = (ArrayList)(producerChannel_in.getVal() == null ? null : ((ArrayList)producerChannel_in.getVal()));//sysj\liquid_buffer.sysj line: 20, column: 5
+                              toBuffer_1.setPresent();//sysj\liquid_buffer.sysj line: 22, column: 5
                               currsigs.addElement(toBuffer_1);
-                              toBuffer_1.setValue(data_thread_2);//sysj\liquid_buffer.sysj line: 20, column: 5
-                              S129434=1;
+                              toBuffer_1.setValue(data_thread_2);//sysj\liquid_buffer.sysj line: 22, column: 5
+                              S129742=1;
                               active[2]=1;
                               ends[2]=1;
                               tdone[2]=1;
@@ -715,8 +723,8 @@ public class liquid_buffer extends ClockDomain{
                     break;
                   
                   case 1 : 
-                    S129434=1;
-                    S129436=1;
+                    S129742=1;
+                    S129744=1;
                     active[2]=1;
                     ends[2]=1;
                     tdone[2]=1;
@@ -726,32 +734,33 @@ public class liquid_buffer extends ClockDomain{
                 break;
               
               case 1 : 
-                S129436=1;
-                S129436=0;
+                S129744=1;
+                S129744=0;
                 if(bufferNotFull_1.getprestatus()){//sysj\liquid_buffer.sysj line: 17, column: 12
-                  S129434=0;
-                  S129418=0;
+                  S129742=0;
+                  S129726=0;
                   if(!producerChannel_in.isPartnerPresent() || producerChannel_in.isPartnerPreempted()){//sysj\liquid_buffer.sysj line: 18, column: 5
                     producerChannel_in.setACK(false);//sysj\liquid_buffer.sysj line: 18, column: 5
-                    S129418=1;
+                    S129726=1;
                     active[2]=1;
                     ends[2]=1;
                     tdone[2]=1;
                   }
                   else {
-                    S129413=0;
+                    S129721=0;
                     if(!producerChannel_in.isREQ()){//sysj\liquid_buffer.sysj line: 18, column: 5
                       producerChannel_in.setACK(true);//sysj\liquid_buffer.sysj line: 18, column: 5
-                      S129413=1;
+                      S129721=1;
                       if(producerChannel_in.isREQ()){//sysj\liquid_buffer.sysj line: 18, column: 5
                         producerChannel_in.setACK(false);//sysj\liquid_buffer.sysj line: 18, column: 5
                         ends[2]=2;
                         ;//sysj\liquid_buffer.sysj line: 18, column: 5
-                        data_thread_2 = (ArrayList)(producerChannel_in.getVal() == null ? null : ((ArrayList)producerChannel_in.getVal()));//sysj\liquid_buffer.sysj line: 19, column: 5
-                        toBuffer_1.setPresent();//sysj\liquid_buffer.sysj line: 20, column: 5
+                        System.out.println("BUFFER RECEIVING DATA");//sysj\liquid_buffer.sysj line: 19, column: 5
+                        data_thread_2 = (ArrayList)(producerChannel_in.getVal() == null ? null : ((ArrayList)producerChannel_in.getVal()));//sysj\liquid_buffer.sysj line: 20, column: 5
+                        toBuffer_1.setPresent();//sysj\liquid_buffer.sysj line: 22, column: 5
                         currsigs.addElement(toBuffer_1);
-                        toBuffer_1.setValue(data_thread_2);//sysj\liquid_buffer.sysj line: 20, column: 5
-                        S129434=1;
+                        toBuffer_1.setValue(data_thread_2);//sysj\liquid_buffer.sysj line: 22, column: 5
+                        S129742=1;
                         active[2]=1;
                         ends[2]=1;
                         tdone[2]=1;
@@ -770,7 +779,7 @@ public class liquid_buffer extends ClockDomain{
                   }
                 }
                 else {
-                  S129436=1;
+                  S129744=1;
                   active[2]=1;
                   ends[2]=1;
                   tdone[2]=1;
@@ -781,8 +790,8 @@ public class liquid_buffer extends ClockDomain{
             break;
           
           case 1 : 
-            S129562=1;
-            S129563=0;
+            S129870=1;
+            S129871=0;
             active[2]=0;
             ends[2]=0;
             tdone[2]=1;
@@ -794,31 +803,33 @@ public class liquid_buffer extends ClockDomain{
     }
   }
 
-  public void thread130329(int [] tdone, int [] ends){
-        S130322=1;
-    S130321=0;
+  public void thread130637(int [] tdone, int [] ends){
+        S130630=1;
+    S130585=0;
     active[5]=1;
     ends[5]=1;
     tdone[5]=1;
   }
 
-  public void thread130328(int [] tdone, int [] ends){
-        S130275=1;
-    myBuffer_thread_4 = new Buffer(100);//sysj\liquid_buffer.sysj line: 54, column: 3
-    data_thread_4 = new ArrayList();//sysj\liquid_buffer.sysj line: 55, column: 3
-    if(toBuffer_1.getprestatus()){//sysj\liquid_buffer.sysj line: 58, column: 12
-      liquidData_thread_4 = (ArrayList)(toBuffer_1.getpreval() == null ? null : ((ArrayList)toBuffer_1.getpreval()));//sysj\liquid_buffer.sysj line: 59, column: 5
-      myBuffer_thread_4.push(liquidData_thread_4);//sysj\liquid_buffer.sysj line: 60, column: 5
-      if(requestData_1.getprestatus()){//sysj\liquid_buffer.sysj line: 68, column: 12
-        data_thread_4 = ((ArrayList)myBuffer_thread_4.pop());//sysj\liquid_buffer.sysj line: 69, column: 5
-        fromBuffer_1.setPresent();//sysj\liquid_buffer.sysj line: 70, column: 5
+  public void thread130636(int [] tdone, int [] ends){
+        S130583=1;
+    myBuffer_thread_4 = new Buffer(100);//sysj\liquid_buffer.sysj line: 57, column: 3
+    data_thread_4 = new ArrayList();//sysj\liquid_buffer.sysj line: 58, column: 3
+    if(toBuffer_1.getprestatus()){//sysj\liquid_buffer.sysj line: 61, column: 12
+      System.out.println("PUSHING TO BUFFER");//sysj\liquid_buffer.sysj line: 62, column: 5
+      liquidData_thread_4 = (ArrayList)(toBuffer_1.getpreval() == null ? null : ((ArrayList)toBuffer_1.getpreval()));//sysj\liquid_buffer.sysj line: 63, column: 5
+      myBuffer_thread_4.push(liquidData_thread_4);//sysj\liquid_buffer.sysj line: 64, column: 5
+      if(requestData_1.getprestatus()){//sysj\liquid_buffer.sysj line: 72, column: 12
+        System.out.println("POPPING FROM BUFFER");//sysj\liquid_buffer.sysj line: 73, column: 5
+        data_thread_4 = ((ArrayList)myBuffer_thread_4.pop());//sysj\liquid_buffer.sysj line: 74, column: 5
+        fromBuffer_1.setPresent();//sysj\liquid_buffer.sysj line: 75, column: 5
         currsigs.addElement(fromBuffer_1);
-        fromBuffer_1.setValue(data_thread_4);//sysj\liquid_buffer.sysj line: 70, column: 5
-        if(!myBuffer_thread_4.isFull()){//sysj\liquid_buffer.sysj line: 73, column: 7
-          bufferNotFull_1.setPresent();//sysj\liquid_buffer.sysj line: 74, column: 5
+        fromBuffer_1.setValue(data_thread_4);//sysj\liquid_buffer.sysj line: 75, column: 5
+        if(!myBuffer_thread_4.isFull()){//sysj\liquid_buffer.sysj line: 78, column: 7
+          bufferNotFull_1.setPresent();//sysj\liquid_buffer.sysj line: 79, column: 5
           currsigs.addElement(bufferNotFull_1);
-          if(!myBuffer_thread_4.isEmpty()){//sysj\liquid_buffer.sysj line: 76, column: 7
-            bufferNotEmpty_1.setPresent();//sysj\liquid_buffer.sysj line: 77, column: 5
+          if(!myBuffer_thread_4.isEmpty()){//sysj\liquid_buffer.sysj line: 81, column: 7
+            bufferNotEmpty_1.setPresent();//sysj\liquid_buffer.sysj line: 82, column: 5
             currsigs.addElement(bufferNotEmpty_1);
             active[4]=1;
             ends[4]=1;
@@ -831,8 +842,8 @@ public class liquid_buffer extends ClockDomain{
           }
         }
         else {
-          if(!myBuffer_thread_4.isEmpty()){//sysj\liquid_buffer.sysj line: 76, column: 7
-            bufferNotEmpty_1.setPresent();//sysj\liquid_buffer.sysj line: 77, column: 5
+          if(!myBuffer_thread_4.isEmpty()){//sysj\liquid_buffer.sysj line: 81, column: 7
+            bufferNotEmpty_1.setPresent();//sysj\liquid_buffer.sysj line: 82, column: 5
             currsigs.addElement(bufferNotEmpty_1);
             active[4]=1;
             ends[4]=1;
@@ -846,11 +857,11 @@ public class liquid_buffer extends ClockDomain{
         }
       }
       else {
-        if(!myBuffer_thread_4.isFull()){//sysj\liquid_buffer.sysj line: 73, column: 7
-          bufferNotFull_1.setPresent();//sysj\liquid_buffer.sysj line: 74, column: 5
+        if(!myBuffer_thread_4.isFull()){//sysj\liquid_buffer.sysj line: 78, column: 7
+          bufferNotFull_1.setPresent();//sysj\liquid_buffer.sysj line: 79, column: 5
           currsigs.addElement(bufferNotFull_1);
-          if(!myBuffer_thread_4.isEmpty()){//sysj\liquid_buffer.sysj line: 76, column: 7
-            bufferNotEmpty_1.setPresent();//sysj\liquid_buffer.sysj line: 77, column: 5
+          if(!myBuffer_thread_4.isEmpty()){//sysj\liquid_buffer.sysj line: 81, column: 7
+            bufferNotEmpty_1.setPresent();//sysj\liquid_buffer.sysj line: 82, column: 5
             currsigs.addElement(bufferNotEmpty_1);
             active[4]=1;
             ends[4]=1;
@@ -863,8 +874,8 @@ public class liquid_buffer extends ClockDomain{
           }
         }
         else {
-          if(!myBuffer_thread_4.isEmpty()){//sysj\liquid_buffer.sysj line: 76, column: 7
-            bufferNotEmpty_1.setPresent();//sysj\liquid_buffer.sysj line: 77, column: 5
+          if(!myBuffer_thread_4.isEmpty()){//sysj\liquid_buffer.sysj line: 81, column: 7
+            bufferNotEmpty_1.setPresent();//sysj\liquid_buffer.sysj line: 82, column: 5
             currsigs.addElement(bufferNotEmpty_1);
             active[4]=1;
             ends[4]=1;
@@ -879,16 +890,17 @@ public class liquid_buffer extends ClockDomain{
       }
     }
     else {
-      if(requestData_1.getprestatus()){//sysj\liquid_buffer.sysj line: 68, column: 12
-        data_thread_4 = ((ArrayList)myBuffer_thread_4.pop());//sysj\liquid_buffer.sysj line: 69, column: 5
-        fromBuffer_1.setPresent();//sysj\liquid_buffer.sysj line: 70, column: 5
+      if(requestData_1.getprestatus()){//sysj\liquid_buffer.sysj line: 72, column: 12
+        System.out.println("POPPING FROM BUFFER");//sysj\liquid_buffer.sysj line: 73, column: 5
+        data_thread_4 = ((ArrayList)myBuffer_thread_4.pop());//sysj\liquid_buffer.sysj line: 74, column: 5
+        fromBuffer_1.setPresent();//sysj\liquid_buffer.sysj line: 75, column: 5
         currsigs.addElement(fromBuffer_1);
-        fromBuffer_1.setValue(data_thread_4);//sysj\liquid_buffer.sysj line: 70, column: 5
-        if(!myBuffer_thread_4.isFull()){//sysj\liquid_buffer.sysj line: 73, column: 7
-          bufferNotFull_1.setPresent();//sysj\liquid_buffer.sysj line: 74, column: 5
+        fromBuffer_1.setValue(data_thread_4);//sysj\liquid_buffer.sysj line: 75, column: 5
+        if(!myBuffer_thread_4.isFull()){//sysj\liquid_buffer.sysj line: 78, column: 7
+          bufferNotFull_1.setPresent();//sysj\liquid_buffer.sysj line: 79, column: 5
           currsigs.addElement(bufferNotFull_1);
-          if(!myBuffer_thread_4.isEmpty()){//sysj\liquid_buffer.sysj line: 76, column: 7
-            bufferNotEmpty_1.setPresent();//sysj\liquid_buffer.sysj line: 77, column: 5
+          if(!myBuffer_thread_4.isEmpty()){//sysj\liquid_buffer.sysj line: 81, column: 7
+            bufferNotEmpty_1.setPresent();//sysj\liquid_buffer.sysj line: 82, column: 5
             currsigs.addElement(bufferNotEmpty_1);
             active[4]=1;
             ends[4]=1;
@@ -901,8 +913,8 @@ public class liquid_buffer extends ClockDomain{
           }
         }
         else {
-          if(!myBuffer_thread_4.isEmpty()){//sysj\liquid_buffer.sysj line: 76, column: 7
-            bufferNotEmpty_1.setPresent();//sysj\liquid_buffer.sysj line: 77, column: 5
+          if(!myBuffer_thread_4.isEmpty()){//sysj\liquid_buffer.sysj line: 81, column: 7
+            bufferNotEmpty_1.setPresent();//sysj\liquid_buffer.sysj line: 82, column: 5
             currsigs.addElement(bufferNotEmpty_1);
             active[4]=1;
             ends[4]=1;
@@ -916,11 +928,11 @@ public class liquid_buffer extends ClockDomain{
         }
       }
       else {
-        if(!myBuffer_thread_4.isFull()){//sysj\liquid_buffer.sysj line: 73, column: 7
-          bufferNotFull_1.setPresent();//sysj\liquid_buffer.sysj line: 74, column: 5
+        if(!myBuffer_thread_4.isFull()){//sysj\liquid_buffer.sysj line: 78, column: 7
+          bufferNotFull_1.setPresent();//sysj\liquid_buffer.sysj line: 79, column: 5
           currsigs.addElement(bufferNotFull_1);
-          if(!myBuffer_thread_4.isEmpty()){//sysj\liquid_buffer.sysj line: 76, column: 7
-            bufferNotEmpty_1.setPresent();//sysj\liquid_buffer.sysj line: 77, column: 5
+          if(!myBuffer_thread_4.isEmpty()){//sysj\liquid_buffer.sysj line: 81, column: 7
+            bufferNotEmpty_1.setPresent();//sysj\liquid_buffer.sysj line: 82, column: 5
             currsigs.addElement(bufferNotEmpty_1);
             active[4]=1;
             ends[4]=1;
@@ -933,8 +945,8 @@ public class liquid_buffer extends ClockDomain{
           }
         }
         else {
-          if(!myBuffer_thread_4.isEmpty()){//sysj\liquid_buffer.sysj line: 76, column: 7
-            bufferNotEmpty_1.setPresent();//sysj\liquid_buffer.sysj line: 77, column: 5
+          if(!myBuffer_thread_4.isEmpty()){//sysj\liquid_buffer.sysj line: 81, column: 7
+            bufferNotEmpty_1.setPresent();//sysj\liquid_buffer.sysj line: 82, column: 5
             currsigs.addElement(bufferNotEmpty_1);
             active[4]=1;
             ends[4]=1;
@@ -950,55 +962,56 @@ public class liquid_buffer extends ClockDomain{
     }
   }
 
-  public void thread130327(int [] tdone, int [] ends){
-        S130135=1;
-    data_thread_3 = new ArrayList();//sysj\liquid_buffer.sysj line: 30, column: 3
-    S130134=0;
-    S129658=0;
-    if(bufferNotEmpty_1.getprestatus()){//sysj\liquid_buffer.sysj line: 33, column: 12
-      requestData_1.setPresent();//sysj\liquid_buffer.sysj line: 35, column: 5
+  public void thread130635(int [] tdone, int [] ends){
+        S130443=1;
+    data_thread_3 = new ArrayList();//sysj\liquid_buffer.sysj line: 32, column: 3
+    S130442=0;
+    S129966=0;
+    if(bufferNotEmpty_1.getprestatus()){//sysj\liquid_buffer.sysj line: 35, column: 12
+      requestData_1.setPresent();//sysj\liquid_buffer.sysj line: 37, column: 5
       currsigs.addElement(requestData_1);
-      S129564=0;
+      S129872=0;
       active[3]=1;
       ends[3]=1;
       tdone[3]=1;
     }
     else {
-      S129658=1;
+      S129966=1;
       active[3]=1;
       ends[3]=1;
       tdone[3]=1;
     }
   }
 
-  public void thread130326(int [] tdone, int [] ends){
-        S129563=1;
-        S129562=0;
-    S129436=0;
+  public void thread130634(int [] tdone, int [] ends){
+        S129871=1;
+        S129870=0;
+    S129744=0;
     if(bufferNotFull_1.getprestatus()){//sysj\liquid_buffer.sysj line: 17, column: 12
-      S129434=0;
-      S129418=0;
+      S129742=0;
+      S129726=0;
       if(!producerChannel_in.isPartnerPresent() || producerChannel_in.isPartnerPreempted()){//sysj\liquid_buffer.sysj line: 18, column: 5
         producerChannel_in.setACK(false);//sysj\liquid_buffer.sysj line: 18, column: 5
-        S129418=1;
+        S129726=1;
         active[2]=1;
         ends[2]=1;
         tdone[2]=1;
       }
       else {
-        S129413=0;
+        S129721=0;
         if(!producerChannel_in.isREQ()){//sysj\liquid_buffer.sysj line: 18, column: 5
           producerChannel_in.setACK(true);//sysj\liquid_buffer.sysj line: 18, column: 5
-          S129413=1;
+          S129721=1;
           if(producerChannel_in.isREQ()){//sysj\liquid_buffer.sysj line: 18, column: 5
             producerChannel_in.setACK(false);//sysj\liquid_buffer.sysj line: 18, column: 5
             ends[2]=2;
             ;//sysj\liquid_buffer.sysj line: 18, column: 5
-            data_thread_2 = (ArrayList)(producerChannel_in.getVal() == null ? null : ((ArrayList)producerChannel_in.getVal()));//sysj\liquid_buffer.sysj line: 19, column: 5
-            toBuffer_1.setPresent();//sysj\liquid_buffer.sysj line: 20, column: 5
+            System.out.println("BUFFER RECEIVING DATA");//sysj\liquid_buffer.sysj line: 19, column: 5
+            data_thread_2 = (ArrayList)(producerChannel_in.getVal() == null ? null : ((ArrayList)producerChannel_in.getVal()));//sysj\liquid_buffer.sysj line: 20, column: 5
+            toBuffer_1.setPresent();//sysj\liquid_buffer.sysj line: 22, column: 5
             currsigs.addElement(toBuffer_1);
-            toBuffer_1.setValue(data_thread_2);//sysj\liquid_buffer.sysj line: 20, column: 5
-            S129434=1;
+            toBuffer_1.setValue(data_thread_2);//sysj\liquid_buffer.sysj line: 22, column: 5
+            S129742=1;
             active[2]=1;
             ends[2]=1;
             tdone[2]=1;
@@ -1017,7 +1030,7 @@ public class liquid_buffer extends ClockDomain{
       }
     }
     else {
-      S129436=1;
+      S129744=1;
       active[2]=1;
       ends[2]=1;
       tdone[2]=1;
@@ -1031,37 +1044,37 @@ public class liquid_buffer extends ClockDomain{
     }
     
     RUN: while(true){
-      switch(S130324){
+      switch(S130632){
         case 0 : 
-          S130324=0;
+          S130632=0;
           break RUN;
         
         case 1 : 
-          S130324=2;
-          S130324=2;
+          S130632=2;
+          S130632=2;
           bufferNotFull_1.setClear();//sysj\liquid_buffer.sysj line: 10, column: 2
           bufferNotEmpty_1.setClear();//sysj\liquid_buffer.sysj line: 10, column: 2
           requestData_1.setClear();//sysj\liquid_buffer.sysj line: 10, column: 2
           fromBuffer_1.setClear();//sysj\liquid_buffer.sysj line: 11, column: 2
           toBuffer_1.setClear();//sysj\liquid_buffer.sysj line: 12, column: 2
-          thread130326(tdone,ends);
-          thread130327(tdone,ends);
-          thread130328(tdone,ends);
-          thread130329(tdone,ends);
-          int biggest130330 = 0;
-          if(ends[2]>=biggest130330){
-            biggest130330=ends[2];
+          thread130634(tdone,ends);
+          thread130635(tdone,ends);
+          thread130636(tdone,ends);
+          thread130637(tdone,ends);
+          int biggest130638 = 0;
+          if(ends[2]>=biggest130638){
+            biggest130638=ends[2];
           }
-          if(ends[3]>=biggest130330){
-            biggest130330=ends[3];
+          if(ends[3]>=biggest130638){
+            biggest130638=ends[3];
           }
-          if(ends[4]>=biggest130330){
-            biggest130330=ends[4];
+          if(ends[4]>=biggest130638){
+            biggest130638=ends[4];
           }
-          if(ends[5]>=biggest130330){
-            biggest130330=ends[5];
+          if(ends[5]>=biggest130638){
+            biggest130638=ends[5];
           }
-          if(biggest130330 == 1){
+          if(biggest130638 == 1){
             active[1]=1;
             ends[1]=1;
             break RUN;
@@ -1073,34 +1086,34 @@ public class liquid_buffer extends ClockDomain{
           requestData_1.setClear();//sysj\liquid_buffer.sysj line: 10, column: 2
           fromBuffer_1.setClear();//sysj\liquid_buffer.sysj line: 11, column: 2
           toBuffer_1.setClear();//sysj\liquid_buffer.sysj line: 12, column: 2
-          thread130331(tdone,ends);
-          thread130332(tdone,ends);
-          thread130333(tdone,ends);
-          thread130334(tdone,ends);
-          int biggest130335 = 0;
-          if(ends[2]>=biggest130335){
-            biggest130335=ends[2];
+          thread130639(tdone,ends);
+          thread130640(tdone,ends);
+          thread130641(tdone,ends);
+          thread130642(tdone,ends);
+          int biggest130643 = 0;
+          if(ends[2]>=biggest130643){
+            biggest130643=ends[2];
           }
-          if(ends[3]>=biggest130335){
-            biggest130335=ends[3];
+          if(ends[3]>=biggest130643){
+            biggest130643=ends[3];
           }
-          if(ends[4]>=biggest130335){
-            biggest130335=ends[4];
+          if(ends[4]>=biggest130643){
+            biggest130643=ends[4];
           }
-          if(ends[5]>=biggest130335){
-            biggest130335=ends[5];
+          if(ends[5]>=biggest130643){
+            biggest130643=ends[5];
           }
-          if(biggest130335 == 1){
+          if(biggest130643 == 1){
             active[1]=1;
             ends[1]=1;
             break RUN;
           }
           //FINXME code
-          if(biggest130335 == 0){
-            S130324=0;
+          if(biggest130643 == 0){
+            S130632=0;
             active[1]=0;
             ends[1]=0;
-            S130324=0;
+            S130632=0;
             break RUN;
           }
         

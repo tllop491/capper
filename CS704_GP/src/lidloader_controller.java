@@ -23,24 +23,24 @@ public class lidloader_controller extends ClockDomain{
   public Signal armSource = new Signal("armSource", Signal.OUTPUT);
   public Signal armDest = new Signal("armDest", Signal.OUTPUT);
   public output_Channel readyLidLoader_o = new output_Channel();
-  private int S128754 = 1;
-  private int S128753 = 1;
-  private int S126721 = 1;
-  private int S126716 = 1;
-  private int S126782 = 1;
-  private int S126744 = 1;
-  private int S126739 = 1;
-  private int S126827 = 1;
-  private int S126824 = 1;
-  private int S126833 = 1;
-  private int S126867 = 1;
-  private int S126862 = 1;
+  private int S129062 = 1;
+  private int S129061 = 1;
+  private int S127029 = 1;
+  private int S127024 = 1;
+  private int S127090 = 1;
+  private int S127052 = 1;
+  private int S127047 = 1;
+  private int S127135 = 1;
+  private int S127132 = 1;
+  private int S127141 = 1;
+  private int S127175 = 1;
+  private int S127170 = 1;
   
   private int[] ends = new int[4];
   private int[] tdone = new int[4];
   
-  public void thread128760(int [] tdone, int [] ends){
-        switch(S126833){
+  public void thread129068(int [] tdone, int [] ends){
+        switch(S127141){
       case 0 : 
         active[3]=0;
         ends[3]=0;
@@ -49,7 +49,7 @@ public class lidloader_controller extends ClockDomain{
       
       case 1 : 
         if(armAtDest.getprestatus()){//sysj\lidloader_controller.sysj line: 33, column: 10
-          S126833=0;
+          S127141=0;
           active[3]=0;
           ends[3]=0;
           tdone[3]=1;
@@ -66,8 +66,8 @@ public class lidloader_controller extends ClockDomain{
     }
   }
 
-  public void thread128759(int [] tdone, int [] ends){
-        switch(S126827){
+  public void thread129067(int [] tdone, int [] ends){
+        switch(S127135){
       case 0 : 
         active[2]=0;
         ends[2]=0;
@@ -76,16 +76,16 @@ public class lidloader_controller extends ClockDomain{
       
       case 1 : 
         if(armAtDest.getprestatus()){//sysj\lidloader_controller.sysj line: 26, column: 10
-          S126827=0;
+          S127135=0;
           active[2]=0;
           ends[2]=0;
           tdone[2]=1;
         }
         else {
-          switch(S126824){
+          switch(S127132){
             case 0 : 
               if(WPgripped.getprestatus()){//sysj\lidloader_controller.sysj line: 27, column: 11
-                S126824=1;
+                S127132=1;
                 armDest.setPresent();//sysj\lidloader_controller.sysj line: 28, column: 5
                 currsigs.addElement(armDest);
                 active[2]=1;
@@ -114,8 +114,8 @@ public class lidloader_controller extends ClockDomain{
     }
   }
 
-  public void thread128757(int [] tdone, int [] ends){
-        S126833=1;
+  public void thread129065(int [] tdone, int [] ends){
+        S127141=1;
     vacOn.setPresent();//sysj\lidloader_controller.sysj line: 34, column: 5
     currsigs.addElement(vacOn);
     active[3]=1;
@@ -123,9 +123,9 @@ public class lidloader_controller extends ClockDomain{
     tdone[3]=1;
   }
 
-  public void thread128756(int [] tdone, int [] ends){
-        S126827=1;
-    S126824=0;
+  public void thread129064(int [] tdone, int [] ends){
+        S127135=1;
+    S127132=0;
     active[2]=1;
     ends[2]=1;
     tdone[2]=1;
@@ -138,34 +138,34 @@ public class lidloader_controller extends ClockDomain{
     }
     
     RUN: while(true){
-      switch(S128754){
+      switch(S129062){
         case 0 : 
-          S128754=0;
+          S129062=0;
           break RUN;
         
         case 1 : 
-          S128754=2;
-          S128754=2;
-          S128753=0;
-          S126721=0;
+          S129062=2;
+          S129062=2;
+          S129061=0;
+          S127029=0;
           if(!readyLidLoader_o.isPartnerPresent() || readyLidLoader_o.isPartnerPreempted()){//sysj\lidloader_controller.sysj line: 10, column: 2
             readyLidLoader_o.setREQ(false);//sysj\lidloader_controller.sysj line: 10, column: 2
-            S126721=1;
+            S127029=1;
             active[1]=1;
             ends[1]=1;
             break RUN;
           }
           else {
-            S126716=0;
+            S127024=0;
             if(readyLidLoader_o.isACK()){//sysj\lidloader_controller.sysj line: 10, column: 2
               readyLidLoader_o.setVal(true);//sysj\lidloader_controller.sysj line: 10, column: 2
-              S126716=1;
+              S127024=1;
               if(!readyLidLoader_o.isACK()){//sysj\lidloader_controller.sysj line: 10, column: 2
                 readyLidLoader_o.setREQ(false);//sysj\lidloader_controller.sysj line: 10, column: 2
                 ends[1]=2;
                 ;//sysj\lidloader_controller.sysj line: 10, column: 2
-                S128753=1;
-                S126782=0;
+                S129061=1;
+                S127090=0;
                 active[1]=1;
                 ends[1]=1;
                 break RUN;
@@ -184,29 +184,29 @@ public class lidloader_controller extends ClockDomain{
           }
         
         case 2 : 
-          switch(S128753){
+          switch(S129061){
             case 0 : 
-              switch(S126721){
+              switch(S127029){
                 case 0 : 
                   if(!readyLidLoader_o.isPartnerPresent() || readyLidLoader_o.isPartnerPreempted()){//sysj\lidloader_controller.sysj line: 10, column: 2
                     readyLidLoader_o.setREQ(false);//sysj\lidloader_controller.sysj line: 10, column: 2
-                    S126721=1;
+                    S127029=1;
                     active[1]=1;
                     ends[1]=1;
                     break RUN;
                   }
                   else {
-                    switch(S126716){
+                    switch(S127024){
                       case 0 : 
                         if(readyLidLoader_o.isACK()){//sysj\lidloader_controller.sysj line: 10, column: 2
                           readyLidLoader_o.setVal(true);//sysj\lidloader_controller.sysj line: 10, column: 2
-                          S126716=1;
+                          S127024=1;
                           if(!readyLidLoader_o.isACK()){//sysj\lidloader_controller.sysj line: 10, column: 2
                             readyLidLoader_o.setREQ(false);//sysj\lidloader_controller.sysj line: 10, column: 2
                             ends[1]=2;
                             ;//sysj\lidloader_controller.sysj line: 10, column: 2
-                            S128753=1;
-                            S126782=0;
+                            S129061=1;
+                            S127090=0;
                             active[1]=1;
                             ends[1]=1;
                             break RUN;
@@ -228,8 +228,8 @@ public class lidloader_controller extends ClockDomain{
                           readyLidLoader_o.setREQ(false);//sysj\lidloader_controller.sysj line: 10, column: 2
                           ends[1]=2;
                           ;//sysj\lidloader_controller.sysj line: 10, column: 2
-                          S128753=1;
-                          S126782=0;
+                          S129061=1;
+                          S127090=0;
                           active[1]=1;
                           ends[1]=1;
                           break RUN;
@@ -245,26 +245,26 @@ public class lidloader_controller extends ClockDomain{
                   break;
                 
                 case 1 : 
-                  S126721=1;
-                  S126721=0;
+                  S127029=1;
+                  S127029=0;
                   if(!readyLidLoader_o.isPartnerPresent() || readyLidLoader_o.isPartnerPreempted()){//sysj\lidloader_controller.sysj line: 10, column: 2
                     readyLidLoader_o.setREQ(false);//sysj\lidloader_controller.sysj line: 10, column: 2
-                    S126721=1;
+                    S127029=1;
                     active[1]=1;
                     ends[1]=1;
                     break RUN;
                   }
                   else {
-                    S126716=0;
+                    S127024=0;
                     if(readyLidLoader_o.isACK()){//sysj\lidloader_controller.sysj line: 10, column: 2
                       readyLidLoader_o.setVal(true);//sysj\lidloader_controller.sysj line: 10, column: 2
-                      S126716=1;
+                      S127024=1;
                       if(!readyLidLoader_o.isACK()){//sysj\lidloader_controller.sysj line: 10, column: 2
                         readyLidLoader_o.setREQ(false);//sysj\lidloader_controller.sysj line: 10, column: 2
                         ends[1]=2;
                         ;//sysj\lidloader_controller.sysj line: 10, column: 2
-                        S128753=1;
-                        S126782=0;
+                        S129061=1;
+                        S127090=0;
                         active[1]=1;
                         ends[1]=1;
                         break RUN;
@@ -286,28 +286,28 @@ public class lidloader_controller extends ClockDomain{
               break;
             
             case 1 : 
-              switch(S126782){
+              switch(S127090){
                 case 0 : 
                   if(bottleAtPos3.getprestatus() && !empty.getprestatus()){//sysj\lidloader_controller.sysj line: 12, column: 9
-                    S126782=1;
-                    S126744=0;
+                    S127090=1;
+                    S127052=0;
                     if(!readyLidLoader_o.isPartnerPresent() || readyLidLoader_o.isPartnerPreempted()){//sysj\lidloader_controller.sysj line: 13, column: 3
                       readyLidLoader_o.setREQ(false);//sysj\lidloader_controller.sysj line: 13, column: 3
-                      S126744=1;
+                      S127052=1;
                       active[1]=1;
                       ends[1]=1;
                       break RUN;
                     }
                     else {
-                      S126739=0;
+                      S127047=0;
                       if(readyLidLoader_o.isACK()){//sysj\lidloader_controller.sysj line: 13, column: 3
                         readyLidLoader_o.setVal(false);//sysj\lidloader_controller.sysj line: 13, column: 3
-                        S126739=1;
+                        S127047=1;
                         if(!readyLidLoader_o.isACK()){//sysj\lidloader_controller.sysj line: 13, column: 3
                           readyLidLoader_o.setREQ(false);//sysj\lidloader_controller.sysj line: 13, column: 3
                           ends[1]=2;
                           ;//sysj\lidloader_controller.sysj line: 13, column: 3
-                          S126782=2;
+                          S127090=2;
                           armDest.setPresent();//sysj\lidloader_controller.sysj line: 15, column: 4
                           currsigs.addElement(armDest);
                           active[1]=1;
@@ -334,26 +334,26 @@ public class lidloader_controller extends ClockDomain{
                   }
                 
                 case 1 : 
-                  switch(S126744){
+                  switch(S127052){
                     case 0 : 
                       if(!readyLidLoader_o.isPartnerPresent() || readyLidLoader_o.isPartnerPreempted()){//sysj\lidloader_controller.sysj line: 13, column: 3
                         readyLidLoader_o.setREQ(false);//sysj\lidloader_controller.sysj line: 13, column: 3
-                        S126744=1;
+                        S127052=1;
                         active[1]=1;
                         ends[1]=1;
                         break RUN;
                       }
                       else {
-                        switch(S126739){
+                        switch(S127047){
                           case 0 : 
                             if(readyLidLoader_o.isACK()){//sysj\lidloader_controller.sysj line: 13, column: 3
                               readyLidLoader_o.setVal(false);//sysj\lidloader_controller.sysj line: 13, column: 3
-                              S126739=1;
+                              S127047=1;
                               if(!readyLidLoader_o.isACK()){//sysj\lidloader_controller.sysj line: 13, column: 3
                                 readyLidLoader_o.setREQ(false);//sysj\lidloader_controller.sysj line: 13, column: 3
                                 ends[1]=2;
                                 ;//sysj\lidloader_controller.sysj line: 13, column: 3
-                                S126782=2;
+                                S127090=2;
                                 armDest.setPresent();//sysj\lidloader_controller.sysj line: 15, column: 4
                                 currsigs.addElement(armDest);
                                 active[1]=1;
@@ -377,7 +377,7 @@ public class lidloader_controller extends ClockDomain{
                               readyLidLoader_o.setREQ(false);//sysj\lidloader_controller.sysj line: 13, column: 3
                               ends[1]=2;
                               ;//sysj\lidloader_controller.sysj line: 13, column: 3
-                              S126782=2;
+                              S127090=2;
                               armDest.setPresent();//sysj\lidloader_controller.sysj line: 15, column: 4
                               currsigs.addElement(armDest);
                               active[1]=1;
@@ -395,25 +395,25 @@ public class lidloader_controller extends ClockDomain{
                       break;
                     
                     case 1 : 
-                      S126744=1;
-                      S126744=0;
+                      S127052=1;
+                      S127052=0;
                       if(!readyLidLoader_o.isPartnerPresent() || readyLidLoader_o.isPartnerPreempted()){//sysj\lidloader_controller.sysj line: 13, column: 3
                         readyLidLoader_o.setREQ(false);//sysj\lidloader_controller.sysj line: 13, column: 3
-                        S126744=1;
+                        S127052=1;
                         active[1]=1;
                         ends[1]=1;
                         break RUN;
                       }
                       else {
-                        S126739=0;
+                        S127047=0;
                         if(readyLidLoader_o.isACK()){//sysj\lidloader_controller.sysj line: 13, column: 3
                           readyLidLoader_o.setVal(false);//sysj\lidloader_controller.sysj line: 13, column: 3
-                          S126739=1;
+                          S127047=1;
                           if(!readyLidLoader_o.isACK()){//sysj\lidloader_controller.sysj line: 13, column: 3
                             readyLidLoader_o.setREQ(false);//sysj\lidloader_controller.sysj line: 13, column: 3
                             ends[1]=2;
                             ;//sysj\lidloader_controller.sysj line: 13, column: 3
-                            S126782=2;
+                            S127090=2;
                             armDest.setPresent();//sysj\lidloader_controller.sysj line: 15, column: 4
                             currsigs.addElement(armDest);
                             active[1]=1;
@@ -438,7 +438,7 @@ public class lidloader_controller extends ClockDomain{
                 
                 case 2 : 
                   if(armAtDest.getprestatus()){//sysj\lidloader_controller.sysj line: 14, column: 9
-                    S126782=3;
+                    S127090=3;
                     pusherExtend.setPresent();//sysj\lidloader_controller.sysj line: 18, column: 4
                     currsigs.addElement(pusherExtend);
                     active[1]=1;
@@ -455,7 +455,7 @@ public class lidloader_controller extends ClockDomain{
                 
                 case 3 : 
                   if(pusherExtended.getprestatus()){//sysj\lidloader_controller.sysj line: 17, column: 9
-                    S126782=4;
+                    S127090=4;
                     active[1]=1;
                     ends[1]=1;
                     break RUN;
@@ -470,7 +470,7 @@ public class lidloader_controller extends ClockDomain{
                 
                 case 4 : 
                   if(pusherRetracted.getprestatus()){//sysj\lidloader_controller.sysj line: 20, column: 9
-                    S126782=5;
+                    S127090=5;
                     armSource.setPresent();//sysj\lidloader_controller.sysj line: 22, column: 4
                     currsigs.addElement(armSource);
                     active[1]=1;
@@ -485,17 +485,17 @@ public class lidloader_controller extends ClockDomain{
                 
                 case 5 : 
                   if(armAtSource.getprestatus()){//sysj\lidloader_controller.sysj line: 21, column: 9
-                    S126782=6;
-                    thread128756(tdone,ends);
-                    thread128757(tdone,ends);
-                    int biggest128758 = 0;
-                    if(ends[2]>=biggest128758){
-                      biggest128758=ends[2];
+                    S127090=6;
+                    thread129064(tdone,ends);
+                    thread129065(tdone,ends);
+                    int biggest129066 = 0;
+                    if(ends[2]>=biggest129066){
+                      biggest129066=ends[2];
                     }
-                    if(ends[3]>=biggest128758){
-                      biggest128758=ends[3];
+                    if(ends[3]>=biggest129066){
+                      biggest129066=ends[3];
                     }
-                    if(biggest128758 == 1){
+                    if(biggest129066 == 1){
                       active[1]=1;
                       ends[1]=1;
                       break RUN;
@@ -510,23 +510,23 @@ public class lidloader_controller extends ClockDomain{
                   }
                 
                 case 6 : 
-                  thread128759(tdone,ends);
-                  thread128760(tdone,ends);
-                  int biggest128761 = 0;
-                  if(ends[2]>=biggest128761){
-                    biggest128761=ends[2];
+                  thread129067(tdone,ends);
+                  thread129068(tdone,ends);
+                  int biggest129069 = 0;
+                  if(ends[2]>=biggest129069){
+                    biggest129069=ends[2];
                   }
-                  if(ends[3]>=biggest128761){
-                    biggest128761=ends[3];
+                  if(ends[3]>=biggest129069){
+                    biggest129069=ends[3];
                   }
-                  if(biggest128761 == 1){
+                  if(biggest129069 == 1){
                     active[1]=1;
                     ends[1]=1;
                     break RUN;
                   }
                   //FINXME code
-                  if(biggest128761 == 0){
-                    S126782=7;
+                  if(biggest129069 == 0){
+                    S127090=7;
                     active[1]=1;
                     ends[1]=1;
                     break RUN;
@@ -534,7 +534,7 @@ public class lidloader_controller extends ClockDomain{
                 
                 case 7 : 
                   if(!WPgripped.getprestatus()){//sysj\lidloader_controller.sysj line: 38, column: 9
-                    S126782=8;
+                    S127090=8;
                     armSource.setPresent();//sysj\lidloader_controller.sysj line: 40, column: 4
                     currsigs.addElement(armSource);
                     active[1]=1;
@@ -549,25 +549,25 @@ public class lidloader_controller extends ClockDomain{
                 
                 case 8 : 
                   if(armAtSource.getprestatus()){//sysj\lidloader_controller.sysj line: 39, column: 9
-                    S126782=9;
-                    S126867=0;
+                    S127090=9;
+                    S127175=0;
                     if(!readyLidLoader_o.isPartnerPresent() || readyLidLoader_o.isPartnerPreempted()){//sysj\lidloader_controller.sysj line: 43, column: 3
                       readyLidLoader_o.setREQ(false);//sysj\lidloader_controller.sysj line: 43, column: 3
-                      S126867=1;
+                      S127175=1;
                       active[1]=1;
                       ends[1]=1;
                       break RUN;
                     }
                     else {
-                      S126862=0;
+                      S127170=0;
                       if(readyLidLoader_o.isACK()){//sysj\lidloader_controller.sysj line: 43, column: 3
                         readyLidLoader_o.setVal(true);//sysj\lidloader_controller.sysj line: 43, column: 3
-                        S126862=1;
+                        S127170=1;
                         if(!readyLidLoader_o.isACK()){//sysj\lidloader_controller.sysj line: 43, column: 3
                           readyLidLoader_o.setREQ(false);//sysj\lidloader_controller.sysj line: 43, column: 3
                           ends[1]=2;
                           ;//sysj\lidloader_controller.sysj line: 43, column: 3
-                          S126782=10;
+                          S127090=10;
                           active[1]=1;
                           ends[1]=1;
                           break RUN;
@@ -594,26 +594,26 @@ public class lidloader_controller extends ClockDomain{
                   }
                 
                 case 9 : 
-                  switch(S126867){
+                  switch(S127175){
                     case 0 : 
                       if(!readyLidLoader_o.isPartnerPresent() || readyLidLoader_o.isPartnerPreempted()){//sysj\lidloader_controller.sysj line: 43, column: 3
                         readyLidLoader_o.setREQ(false);//sysj\lidloader_controller.sysj line: 43, column: 3
-                        S126867=1;
+                        S127175=1;
                         active[1]=1;
                         ends[1]=1;
                         break RUN;
                       }
                       else {
-                        switch(S126862){
+                        switch(S127170){
                           case 0 : 
                             if(readyLidLoader_o.isACK()){//sysj\lidloader_controller.sysj line: 43, column: 3
                               readyLidLoader_o.setVal(true);//sysj\lidloader_controller.sysj line: 43, column: 3
-                              S126862=1;
+                              S127170=1;
                               if(!readyLidLoader_o.isACK()){//sysj\lidloader_controller.sysj line: 43, column: 3
                                 readyLidLoader_o.setREQ(false);//sysj\lidloader_controller.sysj line: 43, column: 3
                                 ends[1]=2;
                                 ;//sysj\lidloader_controller.sysj line: 43, column: 3
-                                S126782=10;
+                                S127090=10;
                                 active[1]=1;
                                 ends[1]=1;
                                 break RUN;
@@ -635,7 +635,7 @@ public class lidloader_controller extends ClockDomain{
                               readyLidLoader_o.setREQ(false);//sysj\lidloader_controller.sysj line: 43, column: 3
                               ends[1]=2;
                               ;//sysj\lidloader_controller.sysj line: 43, column: 3
-                              S126782=10;
+                              S127090=10;
                               active[1]=1;
                               ends[1]=1;
                               break RUN;
@@ -651,25 +651,25 @@ public class lidloader_controller extends ClockDomain{
                       break;
                     
                     case 1 : 
-                      S126867=1;
-                      S126867=0;
+                      S127175=1;
+                      S127175=0;
                       if(!readyLidLoader_o.isPartnerPresent() || readyLidLoader_o.isPartnerPreempted()){//sysj\lidloader_controller.sysj line: 43, column: 3
                         readyLidLoader_o.setREQ(false);//sysj\lidloader_controller.sysj line: 43, column: 3
-                        S126867=1;
+                        S127175=1;
                         active[1]=1;
                         ends[1]=1;
                         break RUN;
                       }
                       else {
-                        S126862=0;
+                        S127170=0;
                         if(readyLidLoader_o.isACK()){//sysj\lidloader_controller.sysj line: 43, column: 3
                           readyLidLoader_o.setVal(true);//sysj\lidloader_controller.sysj line: 43, column: 3
-                          S126862=1;
+                          S127170=1;
                           if(!readyLidLoader_o.isACK()){//sysj\lidloader_controller.sysj line: 43, column: 3
                             readyLidLoader_o.setREQ(false);//sysj\lidloader_controller.sysj line: 43, column: 3
                             ends[1]=2;
                             ;//sysj\lidloader_controller.sysj line: 43, column: 3
-                            S126782=10;
+                            S127090=10;
                             active[1]=1;
                             ends[1]=1;
                             break RUN;
@@ -691,8 +691,8 @@ public class lidloader_controller extends ClockDomain{
                   break;
                 
                 case 10 : 
-                  S126782=10;
-                  S126782=0;
+                  S127090=10;
+                  S127090=0;
                   active[1]=1;
                   ends[1]=1;
                   break RUN;

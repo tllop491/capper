@@ -14,100 +14,12 @@ public class conveyor_plant extends ClockDomain{
   public Signal motConveyorOnOff = new Signal("motConveyorOnOff", Signal.INPUT);
   public Signal conveyorEngaged = new Signal("conveyorEngaged", Signal.OUTPUT);
   public Signal conveyorEngaged_GUI = new Signal("conveyorEngaged_GUI", Signal.OUTPUT);
-  private int S6209 = 1;
-  private int S6203 = 1;
-  private int S6195 = 1;
-  private int S6207 = 1;
+  private int S6523 = 1;
+  private int S6515 = 1;
   
-  private int[] ends = new int[4];
-  private int[] tdone = new int[4];
+  private int[] ends = new int[2];
+  private int[] tdone = new int[2];
   
-  public void thread6215(int [] tdone, int [] ends){
-        switch(S6207){
-      case 0 : 
-        active[3]=0;
-        ends[3]=0;
-        tdone[3]=1;
-        break;
-      
-      case 1 : 
-        S6207=0;
-        active[3]=0;
-        ends[3]=0;
-        tdone[3]=1;
-        break;
-      
-    }
-  }
-
-  public void thread6214(int [] tdone, int [] ends){
-        switch(S6203){
-      case 0 : 
-        active[2]=0;
-        ends[2]=0;
-        tdone[2]=1;
-        break;
-      
-      case 1 : 
-        switch(S6195){
-          case 0 : 
-            if(!motConveyorOnOff.getprestatus()){//sysj\conveyor_plant.sysj line: 11, column: 10
-              S6195=1;
-              active[2]=1;
-              ends[2]=1;
-              tdone[2]=1;
-            }
-            else {
-              S6195=1;
-              active[2]=1;
-              ends[2]=1;
-              tdone[2]=1;
-            }
-            break;
-          
-          case 1 : 
-            S6195=1;
-            S6195=0;
-            conveyorEngaged.setPresent();//sysj\conveyor_plant.sysj line: 11, column: 30
-            currsigs.addElement(conveyorEngaged);
-            active[2]=1;
-            ends[2]=1;
-            tdone[2]=1;
-            break;
-          
-        }
-        break;
-      
-    }
-  }
-
-  public void thread6212(int [] tdone, int [] ends){
-        S6207=1;
-    if(conveyorEngaged.getprestatus()){//sysj\conveyor_plant.sysj line: 17, column: 11
-      conveyorEngaged_GUI.setPresent();//sysj\conveyor_plant.sysj line: 18, column: 4
-      currsigs.addElement(conveyorEngaged_GUI);
-      active[3]=1;
-      ends[3]=1;
-      tdone[3]=1;
-    }
-    else {
-      S6207=0;
-      active[3]=0;
-      ends[3]=0;
-      tdone[3]=1;
-    }
-  }
-
-  public void thread6211(int [] tdone, int [] ends){
-        S6203=1;
-    S6195=0;
-    conveyorEngaged.setPresent();//sysj\conveyor_plant.sysj line: 11, column: 30
-    currsigs.addElement(conveyorEngaged);
-    active[2]=1;
-    ends[2]=1;
-    tdone[2]=1;
-  }
-
   public void runClockDomain(){
     for(int i=0;i<ends.length;i++){
       ends[i] = 0;
@@ -115,51 +27,50 @@ public class conveyor_plant extends ClockDomain{
     }
     
     RUN: while(true){
-      switch(S6209){
+      switch(S6523){
         case 0 : 
-          S6209=0;
+          S6523=0;
           break RUN;
         
         case 1 : 
-          S6209=2;
-          S6209=2;
-          thread6211(tdone,ends);
-          thread6212(tdone,ends);
-          int biggest6213 = 0;
-          if(ends[2]>=biggest6213){
-            biggest6213=ends[2];
-          }
-          if(ends[3]>=biggest6213){
-            biggest6213=ends[3];
-          }
-          if(biggest6213 == 1){
-            active[1]=1;
-            ends[1]=1;
-            break RUN;
-          }
+          S6523=2;
+          S6523=2;
+          S6515=0;
+          conveyorEngaged.setPresent();//sysj\conveyor_plant.sysj line: 12, column: 5
+          currsigs.addElement(conveyorEngaged);
+          conveyorEngaged_GUI.setPresent();//sysj\conveyor_plant.sysj line: 13, column: 5
+          currsigs.addElement(conveyorEngaged_GUI);
+          active[1]=1;
+          ends[1]=1;
+          break RUN;
         
         case 2 : 
-          thread6214(tdone,ends);
-          thread6215(tdone,ends);
-          int biggest6216 = 0;
-          if(ends[2]>=biggest6216){
-            biggest6216=ends[2];
-          }
-          if(ends[3]>=biggest6216){
-            biggest6216=ends[3];
-          }
-          if(biggest6216 == 1){
-            active[1]=1;
-            ends[1]=1;
-            break RUN;
-          }
-          //FINXME code
-          if(biggest6216 == 0){
-            S6209=0;
-            active[1]=0;
-            ends[1]=0;
-            S6209=0;
-            break RUN;
+          switch(S6515){
+            case 0 : 
+              if(!motConveyorOnOff.getprestatus()){//sysj\conveyor_plant.sysj line: 11, column: 10
+                S6515=1;
+                active[1]=1;
+                ends[1]=1;
+                break RUN;
+              }
+              else {
+                S6515=1;
+                active[1]=1;
+                ends[1]=1;
+                break RUN;
+              }
+            
+            case 1 : 
+              S6515=1;
+              S6515=0;
+              conveyorEngaged.setPresent();//sysj\conveyor_plant.sysj line: 12, column: 5
+              currsigs.addElement(conveyorEngaged);
+              conveyorEngaged_GUI.setPresent();//sysj\conveyor_plant.sysj line: 13, column: 5
+              currsigs.addElement(conveyorEngaged_GUI);
+              active[1]=1;
+              ends[1]=1;
+              break RUN;
+            
           }
         
       }
@@ -167,9 +78,9 @@ public class conveyor_plant extends ClockDomain{
   }
 
   public void init(){
-    char [] active1 = {1, 1, 1, 1};
-    char [] paused1 = {0, 0, 0, 0};
-    char [] suspended1 = {0, 0, 0, 0};
+    char [] active1 = {1, 1};
+    char [] paused1 = {0, 0};
+    char [] suspended1 = {0, 0};
     paused = paused1;
     active = active1;
     suspended = suspended1;

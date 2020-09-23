@@ -8,15 +8,13 @@ conveyor_plant(
 
 	{// Conveyor 
 		while(true){
-			abort(!motConveyorOnOff){ emit conveyorEngaged; pause;}		
+			abort(!motConveyorOnOff){ 
+				emit conveyorEngaged; 
+				emit conveyorEngaged_GUI;
+				pause;
+				}		
 			pause;
 		}
 	}
-	||
-	{
-		present(conveyorEngaged){
-			emit conveyorEngaged_GUI;
-			pause;
-		}
-	}
+
 }

@@ -5,7 +5,10 @@ reaction ch_to_sig(: input Boolean channel ch_in, output signal sig_out)	// sysi
 {
 	while(true) {
 		{
-			receive ch_in;
+			while(true) {
+				receive ch_in;
+				pause;
+			}
 		}
 		||
 		{
@@ -39,6 +42,7 @@ rotary_controller(
 			await (rC && rF && rL && rCa);
 			await (!bottleAtPos5);							// wait for bottle to be cleared at the end
 			abort (tableAlignedWithSensor) { 				// immediate?
+				
 				sustain rotaryTableTrigger;					// rotate table until aligned
 			}
 		}
@@ -47,6 +51,7 @@ rotary_controller(
 	{ // loading logic
 		while(true) {
 			receive newOrder;
+			
 			abort(bottleAtPos1) {
 				sustain load;		// sustain load until bottle is confirmed at pos 1
 			}

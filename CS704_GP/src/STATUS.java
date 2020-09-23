@@ -30,6 +30,14 @@ public class STATUS {
 			}
 		});
 	}
+	
+	public void setStatus(JLabel dot, boolean status) {
+		if(status) {
+			dot.setForeground(Color.GREEN); 
+		} else {
+			dot.setForeground(Color.RED); 
+		}
+	}
 
 	/**
 	 * Create the application.
@@ -76,7 +84,7 @@ public class STATUS {
 			indConveyorMotor.setForeground(Color.RED);
 			frame.getContentPane().add(indConveyorMotor, "cell 1 2,alignx center,aligny center");
 			
-			s.addConsumer("STATUS", "conveyorEngaged_GUI", (status, value) ->  indConveyorMotor.setForeground(Color.GREEN));
+			s.addConsumer("STATUS", "conveyorEngaged", (status, value) -> setStatus(indConveyorMotor, status));
 			
 			/*// Bottle at Pos 1 
 			
