@@ -1,3 +1,5 @@
+// Unit for managing the rotary plant
+
 import rotaryTable.*;
 
 rotary_plant(
@@ -31,25 +33,27 @@ rotary_plant(
 		rotaryTable rt = new rotaryTable();
 		while(true) {
 			present(shift){
-				rt.print();
+				rt.print();									//rotational table printing index array
 				System.out.println("SHIFTING");
-				rt.shift();
+				rt.shift();									//rotational table printing index shift
 				rt.print();
 			}
 			present(load){
-				rt.print();
+				rt.print();									
 				System.out.println("LOADING");
-				rt.load();
+				rt.load();									//rotational table load at first index
 				rt.print();
 			}
 			present(deload){
 				rt.print();
 				System.out.println("DELOADING");
-				rt.deload();
+				rt.deload();								//rotational table remove last index 
 				rt.print();
 				emit bottleLeftPos5;
 				emit bottleLeftPos5_GUI;
 			}
+			
+			// Photoeye sensor logic for emitting bottleAtPosX signals
 			
 			if (rt.index[0] == true) {
 				emit bottleAtPos1;

@@ -1,3 +1,5 @@
+// Plant unit for managing the capper model
+
 capper_plant(
 		input signal cylPos5ZaxisExtend, gripperTurnRetract, gripperTurnExtend, capGripperPos5Extend, cylClampBottleExtend; 
 		
@@ -8,7 +10,7 @@ capper_plant(
 ->
 {
 
-	{// Gripper Z-Axis
+	{// Gripper Z-Axis - Movement of the Gripper unit
 		while(true){
 			abort(cylPos5ZaxisExtend){
 				sustain gripperZAxisLifted;			//Gripper begins lifted.
@@ -23,14 +25,14 @@ capper_plant(
 	
 	||
 	
-	{// Gripper - Rotational Axis
+	{// Cap Gripper - Rotational Axis
 		while(true) {
 			abort(gripperTurnExtend){
-				sustain gripperTurnHomePos; 
+				sustain gripperTurnHomePos; 		//Gripper at original position unless requested to turn to final pos
 				
 			}
 			abort(gripperTurnRetract){
-				sustain gripperTurnFinalPos; 
+				sustain gripperTurnFinalPos;		 //Gripper at original position unless requested to return to home positon
 			}
 			
 			pause; 
@@ -40,9 +42,8 @@ capper_plant(
 	}
 	
 	||
-	{//Bottle Clamp
+	{	//Bottle Clamp 
 		while(true) {
-			// Actually do not think you can model this? 
 			present(cylClampBottleExtend){
 				//System.out.println("CLAMPED");
 			}
@@ -56,10 +57,8 @@ capper_plant(
 	}
 	
 	||
-	{//Cap Gripper 
+	{	//Cap Gripper 
 		while(true) {
-			// No model logic relating to cap gripper? 
-			// Actually do not think you can model this? 
 			present(capGripperPos5Extend){
 				//System.out.println("CAP GRIPPED");
 			}
@@ -71,7 +70,7 @@ capper_plant(
 		
 	}
 	||
-	{
+	{	//GUI Signals
 		{while(true){present(gripperZAxisLowered){emit gripperZAxisLowered_GUI;} pause;}}
 		||
 		{while(true){present(gripperZAxisLifted){emit gripperZAxisLifted_GUI;} pause;}}

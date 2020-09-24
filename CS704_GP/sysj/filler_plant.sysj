@@ -1,3 +1,6 @@
+// Unit for managing the filler plant
+
+
 reaction plantOperation( :	input signal valveInjectorOnOff, 
 							input signal valveInletOnOff, 
 							input signal dosUnitValveRetract, 
@@ -54,7 +57,7 @@ filler_plant(
 		output signal inlet0Engaged, inlet1Engaged, inlet2Engaged, inlet3Engaged;
 		)
 ->
-{
+{	// 4 - Way Nozzle selection using plantOperation named reaction
 		while(true) {
 			await(nozzleSelect);
 			

@@ -21,8 +21,12 @@ POS(
 		while(true) {
 			await(liquidDataI);
 			await(!liquidDataI);	// wait until falling edge
+
+			//Debug Outputs
 			System.out.println("POS RECIEVED LIQUID DATA FROM POS_GUI");
 			System.out.println("POS SEND LIQUID DATA TO BUFFER");
+
+			//Channel output of liquid data to buffer
 			send liquidDataC((ArrayList)#liquidDataI);
 			
 		}

@@ -1,3 +1,6 @@
+// Unit for managing the conveyor plant
+
+
 conveyor_plant(
 		input signal motConveyorOnOff;
 		output signal conveyorEngaged;
@@ -9,11 +12,11 @@ conveyor_plant(
 	while(true){
 		abort(!motConveyorOnOff){ 
 			{
-				sustain conveyorEngaged; 
+				sustain conveyorEngaged; 	// Communcation to the rotary_controller
 			}
 			||
-			{
-				sustain conveyorEngaged_GUI;
+			{	//Gui Signals 
+				sustain conveyorEngaged_GUI;	
 			}		
 		}
 	}

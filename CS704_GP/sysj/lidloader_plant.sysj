@@ -1,3 +1,5 @@
+// Unit for managing the lidloader plant
+
 lidloader_plant(
 		input signal pusherExtend,vacOn,armSource,armDest;
 		input signal refill;	// from technician gui? //enable
@@ -6,30 +8,22 @@ lidloader_plant(
 		)
 ->	
 {
-	/*class GUI implements java.lang.Runnable {
-		public void run() {
-			org.compsys704.CapLoader.main(null);
-		}
-	}
-	new Thread(new GUI()).start();*/
-
 	signal capDec;
 	int signal capPos;
 	emit capPos(0);
-	{// Arm
+	{	// Arm
 		while(true){
 			abort(armSource ){ //&& enable
 				sustain armAtDest;
 			}
-			//await(!enable);
+			
 			abort(armDest){ // && enable
 				sustain armAtSource;
 			}
-			//await(!enable);
 		}
 	}
 	||
-	{// Pusher
+	{	// Pusher
 		while(true){
 			abort(pusherExtend){ // && enable
 				sustain pusherRetracted;
@@ -42,7 +36,7 @@ lidloader_plant(
 		}
 	}
 	||
-	{// Vacuum
+	{	// Vacuum
 		while(true){
 			present(vacOn && armAtSource){
 				if((Integer)#capPos == 1){
