@@ -5,16 +5,16 @@ conveyor_plant(
 		)
 ->
 {
-
-	{// Conveyor 
-		while(true){
-			abort(!motConveyorOnOff){ 
-				emit conveyorEngaged; 
-				emit conveyorEngaged_GUI;
-				pause;
-				}		
-			pause;
+	// Conveyor 
+	while(true){
+		abort(!motConveyorOnOff){ 
+			{
+				sustain conveyorEngaged; 
+			}
+			||
+			{
+				sustain conveyorEngaged_GUI;
+			}		
 		}
 	}
-
 }

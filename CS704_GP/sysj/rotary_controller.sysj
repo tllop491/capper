@@ -26,6 +26,7 @@ rotary_controller(
 		input signal tableAlignedWithSensor;
 		input signal bottleAtPos1, bottleAtPos5;//, capOnBottleAtPos1;
 		input signal conveyorEngaged;
+		input signal rotaryEmpty;
 		
 		input Integer channel newOrder;
 		input Boolean channel readyConveyor, readyFiller, readyLidLoader, readyCapper;
@@ -36,13 +37,12 @@ rotary_controller(
 		)
 ->
 {
-	signal rC, rF, rL, rCa;	// add ch_to_sig code
+	signal rC, rF, rL, rCa;	// ready signals
 	{
 		while(true) {
 			await (rC && rF && rL && rCa);
-			await (!bottleAtPos5);							// wait for bottle to be cleared at the end
-			abort (tableAlignedWithSensor) { 				// immediate?
-				
+			await (!rotaryEmpty && !bottleAtPos5);	// only rotate when there is at least one bottle on the table except for pos 5
+			abort (immediate tableAlignedWithSensor) { 				
 				sustain rotaryTableTrigger;					// rotate table until aligned
 			}
 		}
@@ -51,9 +51,8 @@ rotary_controller(
 	{ // loading logic
 		while(true) {
 			receive newOrder;
-			
 			abort(bottleAtPos1) {
-				sustain load;		// sustain load until bottle is confirmed at pos 1
+				sustain load;						// sustain load until bottle is confirmed at pos 1
 			}
 			pause;
 		}
@@ -62,8 +61,8 @@ rotary_controller(
 	{ // deloading logic
 		while(true) {
 			await(bottleAtPos5 && conveyorEngaged);
-			abort(!bottleAtPos5){	// bottleLeftPos5 might be better?
-				sustain deload;		// sustain deload until bottle is confirmed to have left
+			abort(!bottleAtPos5){					
+				sustain deload;						// sustain deload until bottle is confirmed to have left
 			}
 			pause;
 		}

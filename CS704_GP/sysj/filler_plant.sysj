@@ -11,7 +11,7 @@ reaction plantOperation( :	input signal valveInjectorOnOff,
 	trap(T){
 		{	
 			while(true) {
-				abort (immediate !dosUnitValveRetract) { // while recieving valveRetract or nothing
+				abort (immediate !dosUnitValveRetract) { // while recieving valveRetract
 					waitl(100 ms);
 					sustain dosUnitFilled;				// emit filled (top)
 				}

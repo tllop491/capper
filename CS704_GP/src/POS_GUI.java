@@ -154,10 +154,9 @@ public class POS_GUI {
 				try {
 					TCPSender s = new TCPSender("127.0.0.1", 2000);
 					int sum = 0;
-					sum = slider.getValue() + slider_1.getValue() + slider_2.getValue() + slider_3.getValue();
 					ArrayList<Integer> single_order = new ArrayList<Integer>();
 					
-					System.out.print("test");
+					sum = slider.getValue() + slider_1.getValue() + slider_2.getValue() + slider_3.getValue();
 					
 					single_order.add(Math.round(((float)slider.getValue()/sum)*100)); // to get percentage
 					single_order.add(Math.round(((float)slider_1.getValue()/sum)*100));

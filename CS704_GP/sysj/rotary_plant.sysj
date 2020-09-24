@@ -8,7 +8,7 @@ rotary_plant(
 		
 		output signal tableAlignedWithSensor_GUI;
 		output signal bottleAtPos1_GUI, bottleAtPos2_GUI, bottleAtPos3_GUI, bottleAtPos4_GUI, bottleAtPos5_GUI, bottleLeftPos5_GUI;
-		
+		output signal empty;
 		)
 ->
 {	
@@ -16,47 +16,20 @@ rotary_plant(
 	signal shift;
 	{	// logic for shifting
 		while(true) {
-			await(rotaryTableTrigger);				// wait for turning signal
-			abort(immediate !rotaryTableTrigger) {	// while its on
-				waitl(500ms);						// wait 500ms to simulate rotation
-				{
-					sustain tableAlignedWithSensor;		// send confirmation that turn is complete
-				}
-				||
-				{
-					sustain tableAlignedWithSensor_GUI;
-				}
-				
-			}
-			emit shift;
+		await(rotaryTableTrigger);						// wait for turning signal
+		abort(immediate !rotaryTableTrigger) {			// while its on
+			waitl(500ms);								// wait 500ms to simulate rotation
+			{sustain tableAlignedWithSensor;}			// send confirmation that turn is complete
+			||
+			{sustain tableAlignedWithSensor_GUI;}
 		}
+		emit shift;
+	}
 	}
 	|| // logic for loading/deloading and displaying bottleAtPos
 	{
 		rotaryTable rt = new rotaryTable();
 		while(true) {
-			await(load || deload || shift);
-			present(shift){
-				rt.print();
-				System.out.println("SHIFTING");
-				rt.shift();
-				rt.print();
-			}
-			present(load){
-				rt.print();
-				System.out.println("LOADING");
-				rt.load();
-				rt.print();
-			}
-			present(deload){
-				rt.print();
-				System.out.println("DELOADING");
-				rt.deload();
-				rt.print();
-				emit bottleLeftPos5; // this should be channel, conveyor might not pick up
-				emit bottleLeftPos5_GUI;
-			}
-			
 			if (rt.index[0] == true) {
 				emit bottleAtPos1;
 				emit bottleAtPos1c;
@@ -81,6 +54,39 @@ rotary_plant(
 			if (rt.index[4] == true) {
 				emit bottleAtPos5;
 				emit bottleAtPos5_GUI;
+			}
+			pause;
+			await(load || deload || shift);
+			present(shift){
+				rt.print();
+				System.out.println("SHIFTING");
+				rt.shift();
+				rt.print();
+			}
+			present(load){
+				rt.print();
+				System.out.println("LOADING");
+				rt.load();
+				rt.print();
+			}
+			present(deload){
+				rt.print();
+				System.out.println("DELOADING");
+				rt.deload();
+				rt.print();
+				emit bottleLeftPos5;
+				emit bottleLeftPos5_GUI;
+			}
+			
+			
+			pause;
+		}
+	}
+	||
+	{
+		while(true) {
+			present(!bottleAtPos1 && !bottleAtPos1c && !bottleAtPos2 && !bottleAtPos3 && !bottleAtPos4 && !bottleAtPos5) {
+				emit empty;
 			}
 			pause;
 		}

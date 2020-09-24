@@ -30,24 +30,52 @@ public class rotary_plant extends ClockDomain{
   public Signal bottleAtPos4_GUI = new Signal("bottleAtPos4_GUI", Signal.OUTPUT);
   public Signal bottleAtPos5_GUI = new Signal("bottleAtPos5_GUI", Signal.OUTPUT);
   public Signal bottleLeftPos5_GUI = new Signal("bottleLeftPos5_GUI", Signal.OUTPUT);
+  public Signal empty = new Signal("empty", Signal.OUTPUT);
   private Signal shift_1;
-  private rotaryTable rt_thread_5;//sysj\rotary_plant.sysj line: 36, column: 3
-  private long __start_thread_2;//sysj\rotary_plant.sysj line: 20, column: 41
-  private int S136167 = 1;
-  private int S132995 = 1;
-  private int S132537 = 1;
-  private int S132479 = 1;
-  private int S132426 = 1;
-  private int S132443 = 1;
-  private int S132448 = 1;
-  private int S136165 = 1;
-  private int S133001 = 1;
+  private rotaryTable rt_thread_5;//sysj\rotary_plant.sysj line: 31, column: 3
+  private long __start_thread_2;//sysj\rotary_plant.sysj line: 20, column: 40
+  private int S131063 = 1;
+  private int S130493 = 1;
+  private int S130035 = 1;
+  private int S129977 = 1;
+  private int S129924 = 1;
+  private int S129941 = 1;
+  private int S129946 = 1;
+  private int S131053 = 1;
+  private int S130502 = 1;
+  private int S131061 = 1;
   
-  private int[] ends = new int[6];
-  private int[] tdone = new int[6];
+  private int[] ends = new int[7];
+  private int[] tdone = new int[7];
   
-  public void thread136185(int [] tdone, int [] ends){
-        switch(S136165){
+  public void thread131083(int [] tdone, int [] ends){
+        switch(S131061){
+      case 0 : 
+        active[6]=0;
+        ends[6]=0;
+        tdone[6]=1;
+        break;
+      
+      case 1 : 
+        if(!bottleAtPos1.getprestatus() && !bottleAtPos1c.getprestatus() && !bottleAtPos2.getprestatus() && !bottleAtPos3.getprestatus() && !bottleAtPos4.getprestatus() && !bottleAtPos5.getprestatus()){//sysj\rotary_plant.sysj line: 88, column: 12
+          empty.setPresent();//sysj\rotary_plant.sysj line: 89, column: 5
+          currsigs.addElement(empty);
+          active[6]=1;
+          ends[6]=1;
+          tdone[6]=1;
+        }
+        else {
+          active[6]=1;
+          ends[6]=1;
+          tdone[6]=1;
+        }
+        break;
+      
+    }
+  }
+
+  public void thread131082(int [] tdone, int [] ends){
+        switch(S131053){
       case 0 : 
         active[5]=0;
         ends[5]=0;
@@ -55,3102 +83,118 @@ public class rotary_plant extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S133001){
+        switch(S130502){
           case 0 : 
-            if(load.getprestatus() || deload.getprestatus() || shift_1.getprestatus()){//sysj\rotary_plant.sysj line: 38, column: 10
-              if(shift_1.getprestatus()){//sysj\rotary_plant.sysj line: 39, column: 12
-                rt_thread_5.print();//sysj\rotary_plant.sysj line: 40, column: 5
-                System.out.println("SHIFTING");//sysj\rotary_plant.sysj line: 41, column: 5
-                rt_thread_5.shift();//sysj\rotary_plant.sysj line: 42, column: 5
-                rt_thread_5.print();//sysj\rotary_plant.sysj line: 43, column: 5
-                if(load.getprestatus()){//sysj\rotary_plant.sysj line: 45, column: 12
-                  rt_thread_5.print();//sysj\rotary_plant.sysj line: 46, column: 5
-                  System.out.println("LOADING");//sysj\rotary_plant.sysj line: 47, column: 5
-                  rt_thread_5.load();//sysj\rotary_plant.sysj line: 48, column: 5
-                  rt_thread_5.print();//sysj\rotary_plant.sysj line: 49, column: 5
-                  if(deload.getprestatus()){//sysj\rotary_plant.sysj line: 51, column: 12
-                    rt_thread_5.print();//sysj\rotary_plant.sysj line: 52, column: 5
-                    System.out.println("DELOADING");//sysj\rotary_plant.sysj line: 53, column: 5
-                    rt_thread_5.deload();//sysj\rotary_plant.sysj line: 54, column: 5
-                    rt_thread_5.print();//sysj\rotary_plant.sysj line: 55, column: 5
-                    bottleLeftPos5.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
+            S130502=0;
+            S130502=1;
+            active[5]=1;
+            ends[5]=1;
+            tdone[5]=1;
+            break;
+          
+          case 1 : 
+            if(load.getprestatus() || deload.getprestatus() || shift_1.getprestatus()){//sysj\rotary_plant.sysj line: 59, column: 10
+              if(shift_1.getprestatus()){//sysj\rotary_plant.sysj line: 60, column: 12
+                rt_thread_5.print();//sysj\rotary_plant.sysj line: 61, column: 5
+                System.out.println("SHIFTING");//sysj\rotary_plant.sysj line: 62, column: 5
+                rt_thread_5.shift();//sysj\rotary_plant.sysj line: 63, column: 5
+                rt_thread_5.print();//sysj\rotary_plant.sysj line: 64, column: 5
+                if(load.getprestatus()){//sysj\rotary_plant.sysj line: 66, column: 12
+                  rt_thread_5.print();//sysj\rotary_plant.sysj line: 67, column: 5
+                  System.out.println("LOADING");//sysj\rotary_plant.sysj line: 68, column: 5
+                  rt_thread_5.load();//sysj\rotary_plant.sysj line: 69, column: 5
+                  rt_thread_5.print();//sysj\rotary_plant.sysj line: 70, column: 5
+                  if(deload.getprestatus()){//sysj\rotary_plant.sysj line: 72, column: 12
+                    rt_thread_5.print();//sysj\rotary_plant.sysj line: 73, column: 5
+                    System.out.println("DELOADING");//sysj\rotary_plant.sysj line: 74, column: 5
+                    rt_thread_5.deload();//sysj\rotary_plant.sysj line: 75, column: 5
+                    rt_thread_5.print();//sysj\rotary_plant.sysj line: 76, column: 5
+                    bottleLeftPos5.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                     currsigs.addElement(bottleLeftPos5);
-                    bottleLeftPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 57, column: 5
+                    bottleLeftPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                     currsigs.addElement(bottleLeftPos5_GUI);
-                    if(rt_thread_5.index[0] == true){//sysj\rotary_plant.sysj line: 60, column: 8
-                      bottleAtPos1.setPresent();//sysj\rotary_plant.sysj line: 61, column: 5
-                      currsigs.addElement(bottleAtPos1);
-                      bottleAtPos1c.setPresent();//sysj\rotary_plant.sysj line: 62, column: 5
-                      currsigs.addElement(bottleAtPos1c);
-                      bottleAtPos1_GUI.setPresent();//sysj\rotary_plant.sysj line: 63, column: 5
-                      currsigs.addElement(bottleAtPos1_GUI);
-                      if(rt_thread_5.index[1] == true){//sysj\rotary_plant.sysj line: 66, column: 8
-                        bottleAtPos2.setPresent();//sysj\rotary_plant.sysj line: 67, column: 5
-                        currsigs.addElement(bottleAtPos2);
-                        bottleAtPos2_GUI.setPresent();//sysj\rotary_plant.sysj line: 68, column: 5
-                        currsigs.addElement(bottleAtPos2_GUI);
-                        if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
-                          bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
-                          currsigs.addElement(bottleAtPos3);
-                          bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
-                          currsigs.addElement(bottleAtPos3_GUI);
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                        else {
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                      }
-                      else {
-                        if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
-                          bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
-                          currsigs.addElement(bottleAtPos3);
-                          bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
-                          currsigs.addElement(bottleAtPos3_GUI);
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                        else {
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                      }
-                    }
-                    else {
-                      if(rt_thread_5.index[1] == true){//sysj\rotary_plant.sysj line: 66, column: 8
-                        bottleAtPos2.setPresent();//sysj\rotary_plant.sysj line: 67, column: 5
-                        currsigs.addElement(bottleAtPos2);
-                        bottleAtPos2_GUI.setPresent();//sysj\rotary_plant.sysj line: 68, column: 5
-                        currsigs.addElement(bottleAtPos2_GUI);
-                        if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
-                          bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
-                          currsigs.addElement(bottleAtPos3);
-                          bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
-                          currsigs.addElement(bottleAtPos3_GUI);
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                        else {
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                      }
-                      else {
-                        if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
-                          bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
-                          currsigs.addElement(bottleAtPos3);
-                          bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
-                          currsigs.addElement(bottleAtPos3_GUI);
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                        else {
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                      }
-                    }
+                    S130502=2;
+                    active[5]=1;
+                    ends[5]=1;
+                    tdone[5]=1;
                   }
                   else {
-                    if(rt_thread_5.index[0] == true){//sysj\rotary_plant.sysj line: 60, column: 8
-                      bottleAtPos1.setPresent();//sysj\rotary_plant.sysj line: 61, column: 5
-                      currsigs.addElement(bottleAtPos1);
-                      bottleAtPos1c.setPresent();//sysj\rotary_plant.sysj line: 62, column: 5
-                      currsigs.addElement(bottleAtPos1c);
-                      bottleAtPos1_GUI.setPresent();//sysj\rotary_plant.sysj line: 63, column: 5
-                      currsigs.addElement(bottleAtPos1_GUI);
-                      if(rt_thread_5.index[1] == true){//sysj\rotary_plant.sysj line: 66, column: 8
-                        bottleAtPos2.setPresent();//sysj\rotary_plant.sysj line: 67, column: 5
-                        currsigs.addElement(bottleAtPos2);
-                        bottleAtPos2_GUI.setPresent();//sysj\rotary_plant.sysj line: 68, column: 5
-                        currsigs.addElement(bottleAtPos2_GUI);
-                        if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
-                          bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
-                          currsigs.addElement(bottleAtPos3);
-                          bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
-                          currsigs.addElement(bottleAtPos3_GUI);
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                        else {
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                      }
-                      else {
-                        if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
-                          bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
-                          currsigs.addElement(bottleAtPos3);
-                          bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
-                          currsigs.addElement(bottleAtPos3_GUI);
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                        else {
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                      }
-                    }
-                    else {
-                      if(rt_thread_5.index[1] == true){//sysj\rotary_plant.sysj line: 66, column: 8
-                        bottleAtPos2.setPresent();//sysj\rotary_plant.sysj line: 67, column: 5
-                        currsigs.addElement(bottleAtPos2);
-                        bottleAtPos2_GUI.setPresent();//sysj\rotary_plant.sysj line: 68, column: 5
-                        currsigs.addElement(bottleAtPos2_GUI);
-                        if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
-                          bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
-                          currsigs.addElement(bottleAtPos3);
-                          bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
-                          currsigs.addElement(bottleAtPos3_GUI);
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                        else {
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                      }
-                      else {
-                        if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
-                          bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
-                          currsigs.addElement(bottleAtPos3);
-                          bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
-                          currsigs.addElement(bottleAtPos3_GUI);
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                        else {
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                      }
-                    }
+                    S130502=2;
+                    active[5]=1;
+                    ends[5]=1;
+                    tdone[5]=1;
                   }
                 }
                 else {
-                  if(deload.getprestatus()){//sysj\rotary_plant.sysj line: 51, column: 12
-                    rt_thread_5.print();//sysj\rotary_plant.sysj line: 52, column: 5
-                    System.out.println("DELOADING");//sysj\rotary_plant.sysj line: 53, column: 5
-                    rt_thread_5.deload();//sysj\rotary_plant.sysj line: 54, column: 5
-                    rt_thread_5.print();//sysj\rotary_plant.sysj line: 55, column: 5
-                    bottleLeftPos5.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
+                  if(deload.getprestatus()){//sysj\rotary_plant.sysj line: 72, column: 12
+                    rt_thread_5.print();//sysj\rotary_plant.sysj line: 73, column: 5
+                    System.out.println("DELOADING");//sysj\rotary_plant.sysj line: 74, column: 5
+                    rt_thread_5.deload();//sysj\rotary_plant.sysj line: 75, column: 5
+                    rt_thread_5.print();//sysj\rotary_plant.sysj line: 76, column: 5
+                    bottleLeftPos5.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                     currsigs.addElement(bottleLeftPos5);
-                    bottleLeftPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 57, column: 5
+                    bottleLeftPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                     currsigs.addElement(bottleLeftPos5_GUI);
-                    if(rt_thread_5.index[0] == true){//sysj\rotary_plant.sysj line: 60, column: 8
-                      bottleAtPos1.setPresent();//sysj\rotary_plant.sysj line: 61, column: 5
-                      currsigs.addElement(bottleAtPos1);
-                      bottleAtPos1c.setPresent();//sysj\rotary_plant.sysj line: 62, column: 5
-                      currsigs.addElement(bottleAtPos1c);
-                      bottleAtPos1_GUI.setPresent();//sysj\rotary_plant.sysj line: 63, column: 5
-                      currsigs.addElement(bottleAtPos1_GUI);
-                      if(rt_thread_5.index[1] == true){//sysj\rotary_plant.sysj line: 66, column: 8
-                        bottleAtPos2.setPresent();//sysj\rotary_plant.sysj line: 67, column: 5
-                        currsigs.addElement(bottleAtPos2);
-                        bottleAtPos2_GUI.setPresent();//sysj\rotary_plant.sysj line: 68, column: 5
-                        currsigs.addElement(bottleAtPos2_GUI);
-                        if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
-                          bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
-                          currsigs.addElement(bottleAtPos3);
-                          bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
-                          currsigs.addElement(bottleAtPos3_GUI);
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                        else {
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                      }
-                      else {
-                        if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
-                          bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
-                          currsigs.addElement(bottleAtPos3);
-                          bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
-                          currsigs.addElement(bottleAtPos3_GUI);
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                        else {
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                      }
-                    }
-                    else {
-                      if(rt_thread_5.index[1] == true){//sysj\rotary_plant.sysj line: 66, column: 8
-                        bottleAtPos2.setPresent();//sysj\rotary_plant.sysj line: 67, column: 5
-                        currsigs.addElement(bottleAtPos2);
-                        bottleAtPos2_GUI.setPresent();//sysj\rotary_plant.sysj line: 68, column: 5
-                        currsigs.addElement(bottleAtPos2_GUI);
-                        if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
-                          bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
-                          currsigs.addElement(bottleAtPos3);
-                          bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
-                          currsigs.addElement(bottleAtPos3_GUI);
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                        else {
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                      }
-                      else {
-                        if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
-                          bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
-                          currsigs.addElement(bottleAtPos3);
-                          bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
-                          currsigs.addElement(bottleAtPos3_GUI);
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                        else {
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                      }
-                    }
+                    S130502=2;
+                    active[5]=1;
+                    ends[5]=1;
+                    tdone[5]=1;
                   }
                   else {
-                    if(rt_thread_5.index[0] == true){//sysj\rotary_plant.sysj line: 60, column: 8
-                      bottleAtPos1.setPresent();//sysj\rotary_plant.sysj line: 61, column: 5
-                      currsigs.addElement(bottleAtPos1);
-                      bottleAtPos1c.setPresent();//sysj\rotary_plant.sysj line: 62, column: 5
-                      currsigs.addElement(bottleAtPos1c);
-                      bottleAtPos1_GUI.setPresent();//sysj\rotary_plant.sysj line: 63, column: 5
-                      currsigs.addElement(bottleAtPos1_GUI);
-                      if(rt_thread_5.index[1] == true){//sysj\rotary_plant.sysj line: 66, column: 8
-                        bottleAtPos2.setPresent();//sysj\rotary_plant.sysj line: 67, column: 5
-                        currsigs.addElement(bottleAtPos2);
-                        bottleAtPos2_GUI.setPresent();//sysj\rotary_plant.sysj line: 68, column: 5
-                        currsigs.addElement(bottleAtPos2_GUI);
-                        if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
-                          bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
-                          currsigs.addElement(bottleAtPos3);
-                          bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
-                          currsigs.addElement(bottleAtPos3_GUI);
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                        else {
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                      }
-                      else {
-                        if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
-                          bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
-                          currsigs.addElement(bottleAtPos3);
-                          bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
-                          currsigs.addElement(bottleAtPos3_GUI);
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                        else {
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                      }
-                    }
-                    else {
-                      if(rt_thread_5.index[1] == true){//sysj\rotary_plant.sysj line: 66, column: 8
-                        bottleAtPos2.setPresent();//sysj\rotary_plant.sysj line: 67, column: 5
-                        currsigs.addElement(bottleAtPos2);
-                        bottleAtPos2_GUI.setPresent();//sysj\rotary_plant.sysj line: 68, column: 5
-                        currsigs.addElement(bottleAtPos2_GUI);
-                        if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
-                          bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
-                          currsigs.addElement(bottleAtPos3);
-                          bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
-                          currsigs.addElement(bottleAtPos3_GUI);
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                        else {
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                      }
-                      else {
-                        if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
-                          bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
-                          currsigs.addElement(bottleAtPos3);
-                          bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
-                          currsigs.addElement(bottleAtPos3_GUI);
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                        else {
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                      }
-                    }
+                    S130502=2;
+                    active[5]=1;
+                    ends[5]=1;
+                    tdone[5]=1;
                   }
                 }
               }
               else {
-                if(load.getprestatus()){//sysj\rotary_plant.sysj line: 45, column: 12
-                  rt_thread_5.print();//sysj\rotary_plant.sysj line: 46, column: 5
-                  System.out.println("LOADING");//sysj\rotary_plant.sysj line: 47, column: 5
-                  rt_thread_5.load();//sysj\rotary_plant.sysj line: 48, column: 5
-                  rt_thread_5.print();//sysj\rotary_plant.sysj line: 49, column: 5
-                  if(deload.getprestatus()){//sysj\rotary_plant.sysj line: 51, column: 12
-                    rt_thread_5.print();//sysj\rotary_plant.sysj line: 52, column: 5
-                    System.out.println("DELOADING");//sysj\rotary_plant.sysj line: 53, column: 5
-                    rt_thread_5.deload();//sysj\rotary_plant.sysj line: 54, column: 5
-                    rt_thread_5.print();//sysj\rotary_plant.sysj line: 55, column: 5
-                    bottleLeftPos5.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
+                if(load.getprestatus()){//sysj\rotary_plant.sysj line: 66, column: 12
+                  rt_thread_5.print();//sysj\rotary_plant.sysj line: 67, column: 5
+                  System.out.println("LOADING");//sysj\rotary_plant.sysj line: 68, column: 5
+                  rt_thread_5.load();//sysj\rotary_plant.sysj line: 69, column: 5
+                  rt_thread_5.print();//sysj\rotary_plant.sysj line: 70, column: 5
+                  if(deload.getprestatus()){//sysj\rotary_plant.sysj line: 72, column: 12
+                    rt_thread_5.print();//sysj\rotary_plant.sysj line: 73, column: 5
+                    System.out.println("DELOADING");//sysj\rotary_plant.sysj line: 74, column: 5
+                    rt_thread_5.deload();//sysj\rotary_plant.sysj line: 75, column: 5
+                    rt_thread_5.print();//sysj\rotary_plant.sysj line: 76, column: 5
+                    bottleLeftPos5.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                     currsigs.addElement(bottleLeftPos5);
-                    bottleLeftPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 57, column: 5
+                    bottleLeftPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                     currsigs.addElement(bottleLeftPos5_GUI);
-                    if(rt_thread_5.index[0] == true){//sysj\rotary_plant.sysj line: 60, column: 8
-                      bottleAtPos1.setPresent();//sysj\rotary_plant.sysj line: 61, column: 5
-                      currsigs.addElement(bottleAtPos1);
-                      bottleAtPos1c.setPresent();//sysj\rotary_plant.sysj line: 62, column: 5
-                      currsigs.addElement(bottleAtPos1c);
-                      bottleAtPos1_GUI.setPresent();//sysj\rotary_plant.sysj line: 63, column: 5
-                      currsigs.addElement(bottleAtPos1_GUI);
-                      if(rt_thread_5.index[1] == true){//sysj\rotary_plant.sysj line: 66, column: 8
-                        bottleAtPos2.setPresent();//sysj\rotary_plant.sysj line: 67, column: 5
-                        currsigs.addElement(bottleAtPos2);
-                        bottleAtPos2_GUI.setPresent();//sysj\rotary_plant.sysj line: 68, column: 5
-                        currsigs.addElement(bottleAtPos2_GUI);
-                        if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
-                          bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
-                          currsigs.addElement(bottleAtPos3);
-                          bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
-                          currsigs.addElement(bottleAtPos3_GUI);
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                        else {
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                      }
-                      else {
-                        if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
-                          bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
-                          currsigs.addElement(bottleAtPos3);
-                          bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
-                          currsigs.addElement(bottleAtPos3_GUI);
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                        else {
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                      }
-                    }
-                    else {
-                      if(rt_thread_5.index[1] == true){//sysj\rotary_plant.sysj line: 66, column: 8
-                        bottleAtPos2.setPresent();//sysj\rotary_plant.sysj line: 67, column: 5
-                        currsigs.addElement(bottleAtPos2);
-                        bottleAtPos2_GUI.setPresent();//sysj\rotary_plant.sysj line: 68, column: 5
-                        currsigs.addElement(bottleAtPos2_GUI);
-                        if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
-                          bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
-                          currsigs.addElement(bottleAtPos3);
-                          bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
-                          currsigs.addElement(bottleAtPos3_GUI);
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                        else {
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                      }
-                      else {
-                        if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
-                          bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
-                          currsigs.addElement(bottleAtPos3);
-                          bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
-                          currsigs.addElement(bottleAtPos3_GUI);
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                        else {
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                      }
-                    }
+                    S130502=2;
+                    active[5]=1;
+                    ends[5]=1;
+                    tdone[5]=1;
                   }
                   else {
-                    if(rt_thread_5.index[0] == true){//sysj\rotary_plant.sysj line: 60, column: 8
-                      bottleAtPos1.setPresent();//sysj\rotary_plant.sysj line: 61, column: 5
-                      currsigs.addElement(bottleAtPos1);
-                      bottleAtPos1c.setPresent();//sysj\rotary_plant.sysj line: 62, column: 5
-                      currsigs.addElement(bottleAtPos1c);
-                      bottleAtPos1_GUI.setPresent();//sysj\rotary_plant.sysj line: 63, column: 5
-                      currsigs.addElement(bottleAtPos1_GUI);
-                      if(rt_thread_5.index[1] == true){//sysj\rotary_plant.sysj line: 66, column: 8
-                        bottleAtPos2.setPresent();//sysj\rotary_plant.sysj line: 67, column: 5
-                        currsigs.addElement(bottleAtPos2);
-                        bottleAtPos2_GUI.setPresent();//sysj\rotary_plant.sysj line: 68, column: 5
-                        currsigs.addElement(bottleAtPos2_GUI);
-                        if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
-                          bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
-                          currsigs.addElement(bottleAtPos3);
-                          bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
-                          currsigs.addElement(bottleAtPos3_GUI);
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                        else {
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                      }
-                      else {
-                        if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
-                          bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
-                          currsigs.addElement(bottleAtPos3);
-                          bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
-                          currsigs.addElement(bottleAtPos3_GUI);
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                        else {
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                      }
-                    }
-                    else {
-                      if(rt_thread_5.index[1] == true){//sysj\rotary_plant.sysj line: 66, column: 8
-                        bottleAtPos2.setPresent();//sysj\rotary_plant.sysj line: 67, column: 5
-                        currsigs.addElement(bottleAtPos2);
-                        bottleAtPos2_GUI.setPresent();//sysj\rotary_plant.sysj line: 68, column: 5
-                        currsigs.addElement(bottleAtPos2_GUI);
-                        if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
-                          bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
-                          currsigs.addElement(bottleAtPos3);
-                          bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
-                          currsigs.addElement(bottleAtPos3_GUI);
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                        else {
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                      }
-                      else {
-                        if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
-                          bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
-                          currsigs.addElement(bottleAtPos3);
-                          bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
-                          currsigs.addElement(bottleAtPos3_GUI);
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                        else {
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                      }
-                    }
+                    S130502=2;
+                    active[5]=1;
+                    ends[5]=1;
+                    tdone[5]=1;
                   }
                 }
                 else {
-                  if(deload.getprestatus()){//sysj\rotary_plant.sysj line: 51, column: 12
-                    rt_thread_5.print();//sysj\rotary_plant.sysj line: 52, column: 5
-                    System.out.println("DELOADING");//sysj\rotary_plant.sysj line: 53, column: 5
-                    rt_thread_5.deload();//sysj\rotary_plant.sysj line: 54, column: 5
-                    rt_thread_5.print();//sysj\rotary_plant.sysj line: 55, column: 5
-                    bottleLeftPos5.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
+                  if(deload.getprestatus()){//sysj\rotary_plant.sysj line: 72, column: 12
+                    rt_thread_5.print();//sysj\rotary_plant.sysj line: 73, column: 5
+                    System.out.println("DELOADING");//sysj\rotary_plant.sysj line: 74, column: 5
+                    rt_thread_5.deload();//sysj\rotary_plant.sysj line: 75, column: 5
+                    rt_thread_5.print();//sysj\rotary_plant.sysj line: 76, column: 5
+                    bottleLeftPos5.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
                     currsigs.addElement(bottleLeftPos5);
-                    bottleLeftPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 57, column: 5
+                    bottleLeftPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
                     currsigs.addElement(bottleLeftPos5_GUI);
-                    if(rt_thread_5.index[0] == true){//sysj\rotary_plant.sysj line: 60, column: 8
-                      bottleAtPos1.setPresent();//sysj\rotary_plant.sysj line: 61, column: 5
-                      currsigs.addElement(bottleAtPos1);
-                      bottleAtPos1c.setPresent();//sysj\rotary_plant.sysj line: 62, column: 5
-                      currsigs.addElement(bottleAtPos1c);
-                      bottleAtPos1_GUI.setPresent();//sysj\rotary_plant.sysj line: 63, column: 5
-                      currsigs.addElement(bottleAtPos1_GUI);
-                      if(rt_thread_5.index[1] == true){//sysj\rotary_plant.sysj line: 66, column: 8
-                        bottleAtPos2.setPresent();//sysj\rotary_plant.sysj line: 67, column: 5
-                        currsigs.addElement(bottleAtPos2);
-                        bottleAtPos2_GUI.setPresent();//sysj\rotary_plant.sysj line: 68, column: 5
-                        currsigs.addElement(bottleAtPos2_GUI);
-                        if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
-                          bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
-                          currsigs.addElement(bottleAtPos3);
-                          bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
-                          currsigs.addElement(bottleAtPos3_GUI);
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                        else {
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                      }
-                      else {
-                        if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
-                          bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
-                          currsigs.addElement(bottleAtPos3);
-                          bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
-                          currsigs.addElement(bottleAtPos3_GUI);
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                        else {
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                      }
-                    }
-                    else {
-                      if(rt_thread_5.index[1] == true){//sysj\rotary_plant.sysj line: 66, column: 8
-                        bottleAtPos2.setPresent();//sysj\rotary_plant.sysj line: 67, column: 5
-                        currsigs.addElement(bottleAtPos2);
-                        bottleAtPos2_GUI.setPresent();//sysj\rotary_plant.sysj line: 68, column: 5
-                        currsigs.addElement(bottleAtPos2_GUI);
-                        if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
-                          bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
-                          currsigs.addElement(bottleAtPos3);
-                          bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
-                          currsigs.addElement(bottleAtPos3_GUI);
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                        else {
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                      }
-                      else {
-                        if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
-                          bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
-                          currsigs.addElement(bottleAtPos3);
-                          bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
-                          currsigs.addElement(bottleAtPos3_GUI);
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                        else {
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                      }
-                    }
+                    S130502=2;
+                    active[5]=1;
+                    ends[5]=1;
+                    tdone[5]=1;
                   }
                   else {
-                    if(rt_thread_5.index[0] == true){//sysj\rotary_plant.sysj line: 60, column: 8
-                      bottleAtPos1.setPresent();//sysj\rotary_plant.sysj line: 61, column: 5
-                      currsigs.addElement(bottleAtPos1);
-                      bottleAtPos1c.setPresent();//sysj\rotary_plant.sysj line: 62, column: 5
-                      currsigs.addElement(bottleAtPos1c);
-                      bottleAtPos1_GUI.setPresent();//sysj\rotary_plant.sysj line: 63, column: 5
-                      currsigs.addElement(bottleAtPos1_GUI);
-                      if(rt_thread_5.index[1] == true){//sysj\rotary_plant.sysj line: 66, column: 8
-                        bottleAtPos2.setPresent();//sysj\rotary_plant.sysj line: 67, column: 5
-                        currsigs.addElement(bottleAtPos2);
-                        bottleAtPos2_GUI.setPresent();//sysj\rotary_plant.sysj line: 68, column: 5
-                        currsigs.addElement(bottleAtPos2_GUI);
-                        if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
-                          bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
-                          currsigs.addElement(bottleAtPos3);
-                          bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
-                          currsigs.addElement(bottleAtPos3_GUI);
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                        else {
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                      }
-                      else {
-                        if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
-                          bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
-                          currsigs.addElement(bottleAtPos3);
-                          bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
-                          currsigs.addElement(bottleAtPos3_GUI);
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                        else {
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                      }
-                    }
-                    else {
-                      if(rt_thread_5.index[1] == true){//sysj\rotary_plant.sysj line: 66, column: 8
-                        bottleAtPos2.setPresent();//sysj\rotary_plant.sysj line: 67, column: 5
-                        currsigs.addElement(bottleAtPos2);
-                        bottleAtPos2_GUI.setPresent();//sysj\rotary_plant.sysj line: 68, column: 5
-                        currsigs.addElement(bottleAtPos2_GUI);
-                        if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
-                          bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
-                          currsigs.addElement(bottleAtPos3);
-                          bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
-                          currsigs.addElement(bottleAtPos3_GUI);
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                        else {
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                      }
-                      else {
-                        if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 71, column: 8
-                          bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 72, column: 5
-                          currsigs.addElement(bottleAtPos3);
-                          bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 73, column: 5
-                          currsigs.addElement(bottleAtPos3_GUI);
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                        else {
-                          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 76, column: 8
-                            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 77, column: 5
-                            currsigs.addElement(bottleAtPos4);
-                            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 78, column: 5
-                            currsigs.addElement(bottleAtPos4_GUI);
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                          else {
-                            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 81, column: 8
-                              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 82, column: 5
-                              currsigs.addElement(bottleAtPos5);
-                              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 83, column: 5
-                              currsigs.addElement(bottleAtPos5_GUI);
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                            else {
-                              S133001=1;
-                              active[5]=1;
-                              ends[5]=1;
-                              tdone[5]=1;
-                            }
-                          }
-                        }
-                      }
-                    }
+                    S130502=2;
+                    active[5]=1;
+                    ends[5]=1;
+                    tdone[5]=1;
                   }
                 }
               }
@@ -3162,12 +206,386 @@ public class rotary_plant extends ClockDomain{
             }
             break;
           
-          case 1 : 
-            S133001=1;
-            S133001=0;
-            active[5]=1;
-            ends[5]=1;
-            tdone[5]=1;
+          case 2 : 
+            S130502=2;
+            if(rt_thread_5.index[0] == true){//sysj\rotary_plant.sysj line: 33, column: 8
+              bottleAtPos1.setPresent();//sysj\rotary_plant.sysj line: 34, column: 5
+              currsigs.addElement(bottleAtPos1);
+              bottleAtPos1c.setPresent();//sysj\rotary_plant.sysj line: 35, column: 5
+              currsigs.addElement(bottleAtPos1c);
+              bottleAtPos1_GUI.setPresent();//sysj\rotary_plant.sysj line: 36, column: 5
+              currsigs.addElement(bottleAtPos1_GUI);
+              if(rt_thread_5.index[1] == true){//sysj\rotary_plant.sysj line: 39, column: 8
+                bottleAtPos2.setPresent();//sysj\rotary_plant.sysj line: 40, column: 5
+                currsigs.addElement(bottleAtPos2);
+                bottleAtPos2_GUI.setPresent();//sysj\rotary_plant.sysj line: 41, column: 5
+                currsigs.addElement(bottleAtPos2_GUI);
+                if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 44, column: 8
+                  bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 45, column: 5
+                  currsigs.addElement(bottleAtPos3);
+                  bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 46, column: 5
+                  currsigs.addElement(bottleAtPos3_GUI);
+                  if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 49, column: 8
+                    bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 50, column: 5
+                    currsigs.addElement(bottleAtPos4);
+                    bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 51, column: 5
+                    currsigs.addElement(bottleAtPos4_GUI);
+                    if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 54, column: 8
+                      bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 55, column: 5
+                      currsigs.addElement(bottleAtPos5);
+                      bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
+                      currsigs.addElement(bottleAtPos5_GUI);
+                      S130502=0;
+                      active[5]=1;
+                      ends[5]=1;
+                      tdone[5]=1;
+                    }
+                    else {
+                      S130502=0;
+                      active[5]=1;
+                      ends[5]=1;
+                      tdone[5]=1;
+                    }
+                  }
+                  else {
+                    if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 54, column: 8
+                      bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 55, column: 5
+                      currsigs.addElement(bottleAtPos5);
+                      bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
+                      currsigs.addElement(bottleAtPos5_GUI);
+                      S130502=0;
+                      active[5]=1;
+                      ends[5]=1;
+                      tdone[5]=1;
+                    }
+                    else {
+                      S130502=0;
+                      active[5]=1;
+                      ends[5]=1;
+                      tdone[5]=1;
+                    }
+                  }
+                }
+                else {
+                  if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 49, column: 8
+                    bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 50, column: 5
+                    currsigs.addElement(bottleAtPos4);
+                    bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 51, column: 5
+                    currsigs.addElement(bottleAtPos4_GUI);
+                    if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 54, column: 8
+                      bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 55, column: 5
+                      currsigs.addElement(bottleAtPos5);
+                      bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
+                      currsigs.addElement(bottleAtPos5_GUI);
+                      S130502=0;
+                      active[5]=1;
+                      ends[5]=1;
+                      tdone[5]=1;
+                    }
+                    else {
+                      S130502=0;
+                      active[5]=1;
+                      ends[5]=1;
+                      tdone[5]=1;
+                    }
+                  }
+                  else {
+                    if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 54, column: 8
+                      bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 55, column: 5
+                      currsigs.addElement(bottleAtPos5);
+                      bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
+                      currsigs.addElement(bottleAtPos5_GUI);
+                      S130502=0;
+                      active[5]=1;
+                      ends[5]=1;
+                      tdone[5]=1;
+                    }
+                    else {
+                      S130502=0;
+                      active[5]=1;
+                      ends[5]=1;
+                      tdone[5]=1;
+                    }
+                  }
+                }
+              }
+              else {
+                if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 44, column: 8
+                  bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 45, column: 5
+                  currsigs.addElement(bottleAtPos3);
+                  bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 46, column: 5
+                  currsigs.addElement(bottleAtPos3_GUI);
+                  if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 49, column: 8
+                    bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 50, column: 5
+                    currsigs.addElement(bottleAtPos4);
+                    bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 51, column: 5
+                    currsigs.addElement(bottleAtPos4_GUI);
+                    if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 54, column: 8
+                      bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 55, column: 5
+                      currsigs.addElement(bottleAtPos5);
+                      bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
+                      currsigs.addElement(bottleAtPos5_GUI);
+                      S130502=0;
+                      active[5]=1;
+                      ends[5]=1;
+                      tdone[5]=1;
+                    }
+                    else {
+                      S130502=0;
+                      active[5]=1;
+                      ends[5]=1;
+                      tdone[5]=1;
+                    }
+                  }
+                  else {
+                    if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 54, column: 8
+                      bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 55, column: 5
+                      currsigs.addElement(bottleAtPos5);
+                      bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
+                      currsigs.addElement(bottleAtPos5_GUI);
+                      S130502=0;
+                      active[5]=1;
+                      ends[5]=1;
+                      tdone[5]=1;
+                    }
+                    else {
+                      S130502=0;
+                      active[5]=1;
+                      ends[5]=1;
+                      tdone[5]=1;
+                    }
+                  }
+                }
+                else {
+                  if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 49, column: 8
+                    bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 50, column: 5
+                    currsigs.addElement(bottleAtPos4);
+                    bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 51, column: 5
+                    currsigs.addElement(bottleAtPos4_GUI);
+                    if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 54, column: 8
+                      bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 55, column: 5
+                      currsigs.addElement(bottleAtPos5);
+                      bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
+                      currsigs.addElement(bottleAtPos5_GUI);
+                      S130502=0;
+                      active[5]=1;
+                      ends[5]=1;
+                      tdone[5]=1;
+                    }
+                    else {
+                      S130502=0;
+                      active[5]=1;
+                      ends[5]=1;
+                      tdone[5]=1;
+                    }
+                  }
+                  else {
+                    if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 54, column: 8
+                      bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 55, column: 5
+                      currsigs.addElement(bottleAtPos5);
+                      bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
+                      currsigs.addElement(bottleAtPos5_GUI);
+                      S130502=0;
+                      active[5]=1;
+                      ends[5]=1;
+                      tdone[5]=1;
+                    }
+                    else {
+                      S130502=0;
+                      active[5]=1;
+                      ends[5]=1;
+                      tdone[5]=1;
+                    }
+                  }
+                }
+              }
+            }
+            else {
+              if(rt_thread_5.index[1] == true){//sysj\rotary_plant.sysj line: 39, column: 8
+                bottleAtPos2.setPresent();//sysj\rotary_plant.sysj line: 40, column: 5
+                currsigs.addElement(bottleAtPos2);
+                bottleAtPos2_GUI.setPresent();//sysj\rotary_plant.sysj line: 41, column: 5
+                currsigs.addElement(bottleAtPos2_GUI);
+                if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 44, column: 8
+                  bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 45, column: 5
+                  currsigs.addElement(bottleAtPos3);
+                  bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 46, column: 5
+                  currsigs.addElement(bottleAtPos3_GUI);
+                  if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 49, column: 8
+                    bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 50, column: 5
+                    currsigs.addElement(bottleAtPos4);
+                    bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 51, column: 5
+                    currsigs.addElement(bottleAtPos4_GUI);
+                    if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 54, column: 8
+                      bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 55, column: 5
+                      currsigs.addElement(bottleAtPos5);
+                      bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
+                      currsigs.addElement(bottleAtPos5_GUI);
+                      S130502=0;
+                      active[5]=1;
+                      ends[5]=1;
+                      tdone[5]=1;
+                    }
+                    else {
+                      S130502=0;
+                      active[5]=1;
+                      ends[5]=1;
+                      tdone[5]=1;
+                    }
+                  }
+                  else {
+                    if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 54, column: 8
+                      bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 55, column: 5
+                      currsigs.addElement(bottleAtPos5);
+                      bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
+                      currsigs.addElement(bottleAtPos5_GUI);
+                      S130502=0;
+                      active[5]=1;
+                      ends[5]=1;
+                      tdone[5]=1;
+                    }
+                    else {
+                      S130502=0;
+                      active[5]=1;
+                      ends[5]=1;
+                      tdone[5]=1;
+                    }
+                  }
+                }
+                else {
+                  if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 49, column: 8
+                    bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 50, column: 5
+                    currsigs.addElement(bottleAtPos4);
+                    bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 51, column: 5
+                    currsigs.addElement(bottleAtPos4_GUI);
+                    if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 54, column: 8
+                      bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 55, column: 5
+                      currsigs.addElement(bottleAtPos5);
+                      bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
+                      currsigs.addElement(bottleAtPos5_GUI);
+                      S130502=0;
+                      active[5]=1;
+                      ends[5]=1;
+                      tdone[5]=1;
+                    }
+                    else {
+                      S130502=0;
+                      active[5]=1;
+                      ends[5]=1;
+                      tdone[5]=1;
+                    }
+                  }
+                  else {
+                    if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 54, column: 8
+                      bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 55, column: 5
+                      currsigs.addElement(bottleAtPos5);
+                      bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
+                      currsigs.addElement(bottleAtPos5_GUI);
+                      S130502=0;
+                      active[5]=1;
+                      ends[5]=1;
+                      tdone[5]=1;
+                    }
+                    else {
+                      S130502=0;
+                      active[5]=1;
+                      ends[5]=1;
+                      tdone[5]=1;
+                    }
+                  }
+                }
+              }
+              else {
+                if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 44, column: 8
+                  bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 45, column: 5
+                  currsigs.addElement(bottleAtPos3);
+                  bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 46, column: 5
+                  currsigs.addElement(bottleAtPos3_GUI);
+                  if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 49, column: 8
+                    bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 50, column: 5
+                    currsigs.addElement(bottleAtPos4);
+                    bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 51, column: 5
+                    currsigs.addElement(bottleAtPos4_GUI);
+                    if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 54, column: 8
+                      bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 55, column: 5
+                      currsigs.addElement(bottleAtPos5);
+                      bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
+                      currsigs.addElement(bottleAtPos5_GUI);
+                      S130502=0;
+                      active[5]=1;
+                      ends[5]=1;
+                      tdone[5]=1;
+                    }
+                    else {
+                      S130502=0;
+                      active[5]=1;
+                      ends[5]=1;
+                      tdone[5]=1;
+                    }
+                  }
+                  else {
+                    if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 54, column: 8
+                      bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 55, column: 5
+                      currsigs.addElement(bottleAtPos5);
+                      bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
+                      currsigs.addElement(bottleAtPos5_GUI);
+                      S130502=0;
+                      active[5]=1;
+                      ends[5]=1;
+                      tdone[5]=1;
+                    }
+                    else {
+                      S130502=0;
+                      active[5]=1;
+                      ends[5]=1;
+                      tdone[5]=1;
+                    }
+                  }
+                }
+                else {
+                  if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 49, column: 8
+                    bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 50, column: 5
+                    currsigs.addElement(bottleAtPos4);
+                    bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 51, column: 5
+                    currsigs.addElement(bottleAtPos4_GUI);
+                    if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 54, column: 8
+                      bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 55, column: 5
+                      currsigs.addElement(bottleAtPos5);
+                      bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
+                      currsigs.addElement(bottleAtPos5_GUI);
+                      S130502=0;
+                      active[5]=1;
+                      ends[5]=1;
+                      tdone[5]=1;
+                    }
+                    else {
+                      S130502=0;
+                      active[5]=1;
+                      ends[5]=1;
+                      tdone[5]=1;
+                    }
+                  }
+                  else {
+                    if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 54, column: 8
+                      bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 55, column: 5
+                      currsigs.addElement(bottleAtPos5);
+                      bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
+                      currsigs.addElement(bottleAtPos5_GUI);
+                      S130502=0;
+                      active[5]=1;
+                      ends[5]=1;
+                      tdone[5]=1;
+                    }
+                    else {
+                      S130502=0;
+                      active[5]=1;
+                      ends[5]=1;
+                      tdone[5]=1;
+                    }
+                  }
+                }
+              }
+            }
             break;
           
         }
@@ -3176,8 +594,8 @@ public class rotary_plant extends ClockDomain{
     }
   }
 
-  public void thread136183(int [] tdone, int [] ends){
-        switch(S132448){
+  public void thread131080(int [] tdone, int [] ends){
+        switch(S129946){
       case 0 : 
         active[4]=0;
         ends[4]=0;
@@ -3185,7 +603,7 @@ public class rotary_plant extends ClockDomain{
         break;
       
       case 1 : 
-        tableAlignedWithSensor_GUI.setPresent();//sysj\rotary_plant.sysj line: 27, column: 6
+        tableAlignedWithSensor_GUI.setPresent();//sysj\rotary_plant.sysj line: 24, column: 5
         currsigs.addElement(tableAlignedWithSensor_GUI);
         active[4]=1;
         ends[4]=1;
@@ -3195,8 +613,8 @@ public class rotary_plant extends ClockDomain{
     }
   }
 
-  public void thread136182(int [] tdone, int [] ends){
-        switch(S132443){
+  public void thread131079(int [] tdone, int [] ends){
+        switch(S129941){
       case 0 : 
         active[3]=0;
         ends[3]=0;
@@ -3204,7 +622,7 @@ public class rotary_plant extends ClockDomain{
         break;
       
       case 1 : 
-        tableAlignedWithSensor.setPresent();//sysj\rotary_plant.sysj line: 23, column: 6
+        tableAlignedWithSensor.setPresent();//sysj\rotary_plant.sysj line: 22, column: 5
         currsigs.addElement(tableAlignedWithSensor);
         active[3]=1;
         ends[3]=1;
@@ -3214,62 +632,62 @@ public class rotary_plant extends ClockDomain{
     }
   }
 
-  public void thread136180(int [] tdone, int [] ends){
-        S132448=1;
-    tableAlignedWithSensor_GUI.setPresent();//sysj\rotary_plant.sysj line: 27, column: 6
+  public void thread131077(int [] tdone, int [] ends){
+        S129946=1;
+    tableAlignedWithSensor_GUI.setPresent();//sysj\rotary_plant.sysj line: 24, column: 5
     currsigs.addElement(tableAlignedWithSensor_GUI);
     active[4]=1;
     ends[4]=1;
     tdone[4]=1;
   }
 
-  public void thread136179(int [] tdone, int [] ends){
-        S132443=1;
-    tableAlignedWithSensor.setPresent();//sysj\rotary_plant.sysj line: 23, column: 6
+  public void thread131076(int [] tdone, int [] ends){
+        S129941=1;
+    tableAlignedWithSensor.setPresent();//sysj\rotary_plant.sysj line: 22, column: 5
     currsigs.addElement(tableAlignedWithSensor);
     active[3]=1;
     ends[3]=1;
     tdone[3]=1;
   }
 
-  public void thread136177(int [] tdone, int [] ends){
-        S132448=1;
-    tableAlignedWithSensor_GUI.setPresent();//sysj\rotary_plant.sysj line: 27, column: 6
+  public void thread131074(int [] tdone, int [] ends){
+        S129946=1;
+    tableAlignedWithSensor_GUI.setPresent();//sysj\rotary_plant.sysj line: 24, column: 5
     currsigs.addElement(tableAlignedWithSensor_GUI);
     active[4]=1;
     ends[4]=1;
     tdone[4]=1;
   }
 
-  public void thread136176(int [] tdone, int [] ends){
-        S132443=1;
-    tableAlignedWithSensor.setPresent();//sysj\rotary_plant.sysj line: 23, column: 6
+  public void thread131073(int [] tdone, int [] ends){
+        S129941=1;
+    tableAlignedWithSensor.setPresent();//sysj\rotary_plant.sysj line: 22, column: 5
     currsigs.addElement(tableAlignedWithSensor);
     active[3]=1;
     ends[3]=1;
     tdone[3]=1;
   }
 
-  public void thread136174(int [] tdone, int [] ends){
-        S132448=1;
-    tableAlignedWithSensor_GUI.setPresent();//sysj\rotary_plant.sysj line: 27, column: 6
+  public void thread131071(int [] tdone, int [] ends){
+        S129946=1;
+    tableAlignedWithSensor_GUI.setPresent();//sysj\rotary_plant.sysj line: 24, column: 5
     currsigs.addElement(tableAlignedWithSensor_GUI);
     active[4]=1;
     ends[4]=1;
     tdone[4]=1;
   }
 
-  public void thread136173(int [] tdone, int [] ends){
-        S132443=1;
-    tableAlignedWithSensor.setPresent();//sysj\rotary_plant.sysj line: 23, column: 6
+  public void thread131070(int [] tdone, int [] ends){
+        S129941=1;
+    tableAlignedWithSensor.setPresent();//sysj\rotary_plant.sysj line: 22, column: 5
     currsigs.addElement(tableAlignedWithSensor);
     active[3]=1;
     ends[3]=1;
     tdone[3]=1;
   }
 
-  public void thread136172(int [] tdone, int [] ends){
-        switch(S132995){
+  public void thread131069(int [] tdone, int [] ends){
+        switch(S130493){
       case 0 : 
         active[2]=0;
         ends[2]=0;
@@ -3277,43 +695,43 @@ public class rotary_plant extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S132537){
+        switch(S130035){
           case 0 : 
-            if(rotaryTableTrigger.getprestatus()){//sysj\rotary_plant.sysj line: 19, column: 10
-              S132537=1;
-              if(!rotaryTableTrigger.getprestatus()){//sysj\rotary_plant.sysj line: 20, column: 20
-                shift_1.setPresent();//sysj\rotary_plant.sysj line: 31, column: 4
+            if(rotaryTableTrigger.getprestatus()){//sysj\rotary_plant.sysj line: 19, column: 9
+              S130035=1;
+              if(!rotaryTableTrigger.getprestatus()){//sysj\rotary_plant.sysj line: 20, column: 19
+                shift_1.setPresent();//sysj\rotary_plant.sysj line: 26, column: 3
                 currsigs.addElement(shift_1);
-                S132537=0;
+                S130035=0;
                 active[2]=1;
                 ends[2]=1;
                 tdone[2]=1;
               }
               else {
-                S132479=0;
-                __start_thread_2 = com.systemj.Timer.getMs();//sysj\rotary_plant.sysj line: 20, column: 41
-                S132426=0;
-                if(com.systemj.Timer.getMs() - __start_thread_2 >= 500){//sysj\rotary_plant.sysj line: 20, column: 41
+                S129977=0;
+                __start_thread_2 = com.systemj.Timer.getMs();//sysj\rotary_plant.sysj line: 20, column: 40
+                S129924=0;
+                if(com.systemj.Timer.getMs() - __start_thread_2 >= 500){//sysj\rotary_plant.sysj line: 20, column: 40
                   ends[2]=2;
-                  ;//sysj\rotary_plant.sysj line: 20, column: 41
-                  S132479=1;
-                  thread136173(tdone,ends);
-                  thread136174(tdone,ends);
-                  int biggest136175 = 0;
-                  if(ends[3]>=biggest136175){
-                    biggest136175=ends[3];
+                  ;//sysj\rotary_plant.sysj line: 20, column: 40
+                  S129977=1;
+                  thread131070(tdone,ends);
+                  thread131071(tdone,ends);
+                  int biggest131072 = 0;
+                  if(ends[3]>=biggest131072){
+                    biggest131072=ends[3];
                   }
-                  if(ends[4]>=biggest136175){
-                    biggest136175=ends[4];
+                  if(ends[4]>=biggest131072){
+                    biggest131072=ends[4];
                   }
-                  if(biggest136175 == 1){
+                  if(biggest131072 == 1){
                     active[2]=1;
                     ends[2]=1;
                     tdone[2]=1;
                   }
                 }
                 else {
-                  S132426=1;
+                  S129924=1;
                   active[2]=1;
                   ends[2]=1;
                   tdone[2]=1;
@@ -3328,41 +746,41 @@ public class rotary_plant extends ClockDomain{
             break;
           
           case 1 : 
-            if(!rotaryTableTrigger.getprestatus()){//sysj\rotary_plant.sysj line: 20, column: 20
-              shift_1.setPresent();//sysj\rotary_plant.sysj line: 31, column: 4
+            if(!rotaryTableTrigger.getprestatus()){//sysj\rotary_plant.sysj line: 20, column: 19
+              shift_1.setPresent();//sysj\rotary_plant.sysj line: 26, column: 3
               currsigs.addElement(shift_1);
-              S132537=0;
+              S130035=0;
               active[2]=1;
               ends[2]=1;
               tdone[2]=1;
             }
             else {
-              switch(S132479){
+              switch(S129977){
                 case 0 : 
-                  switch(S132426){
+                  switch(S129924){
                     case 0 : 
-                      S132426=0;
-                      if(com.systemj.Timer.getMs() - __start_thread_2 >= 500){//sysj\rotary_plant.sysj line: 20, column: 41
+                      S129924=0;
+                      if(com.systemj.Timer.getMs() - __start_thread_2 >= 500){//sysj\rotary_plant.sysj line: 20, column: 40
                         ends[2]=2;
-                        ;//sysj\rotary_plant.sysj line: 20, column: 41
-                        S132479=1;
-                        thread136176(tdone,ends);
-                        thread136177(tdone,ends);
-                        int biggest136178 = 0;
-                        if(ends[3]>=biggest136178){
-                          biggest136178=ends[3];
+                        ;//sysj\rotary_plant.sysj line: 20, column: 40
+                        S129977=1;
+                        thread131073(tdone,ends);
+                        thread131074(tdone,ends);
+                        int biggest131075 = 0;
+                        if(ends[3]>=biggest131075){
+                          biggest131075=ends[3];
                         }
-                        if(ends[4]>=biggest136178){
-                          biggest136178=ends[4];
+                        if(ends[4]>=biggest131075){
+                          biggest131075=ends[4];
                         }
-                        if(biggest136178 == 1){
+                        if(biggest131075 == 1){
                           active[2]=1;
                           ends[2]=1;
                           tdone[2]=1;
                         }
                       }
                       else {
-                        S132426=1;
+                        S129924=1;
                         active[2]=1;
                         ends[2]=1;
                         tdone[2]=1;
@@ -3370,29 +788,29 @@ public class rotary_plant extends ClockDomain{
                       break;
                     
                     case 1 : 
-                      S132426=1;
-                      S132426=0;
-                      if(com.systemj.Timer.getMs() - __start_thread_2 >= 500){//sysj\rotary_plant.sysj line: 20, column: 41
+                      S129924=1;
+                      S129924=0;
+                      if(com.systemj.Timer.getMs() - __start_thread_2 >= 500){//sysj\rotary_plant.sysj line: 20, column: 40
                         ends[2]=2;
-                        ;//sysj\rotary_plant.sysj line: 20, column: 41
-                        S132479=1;
-                        thread136179(tdone,ends);
-                        thread136180(tdone,ends);
-                        int biggest136181 = 0;
-                        if(ends[3]>=biggest136181){
-                          biggest136181=ends[3];
+                        ;//sysj\rotary_plant.sysj line: 20, column: 40
+                        S129977=1;
+                        thread131076(tdone,ends);
+                        thread131077(tdone,ends);
+                        int biggest131078 = 0;
+                        if(ends[3]>=biggest131078){
+                          biggest131078=ends[3];
                         }
-                        if(ends[4]>=biggest136181){
-                          biggest136181=ends[4];
+                        if(ends[4]>=biggest131078){
+                          biggest131078=ends[4];
                         }
-                        if(biggest136181 == 1){
+                        if(biggest131078 == 1){
                           active[2]=1;
                           ends[2]=1;
                           tdone[2]=1;
                         }
                       }
                       else {
-                        S132426=1;
+                        S129924=1;
                         active[2]=1;
                         ends[2]=1;
                         tdone[2]=1;
@@ -3403,25 +821,25 @@ public class rotary_plant extends ClockDomain{
                   break;
                 
                 case 1 : 
-                  thread136182(tdone,ends);
-                  thread136183(tdone,ends);
-                  int biggest136184 = 0;
-                  if(ends[3]>=biggest136184){
-                    biggest136184=ends[3];
+                  thread131079(tdone,ends);
+                  thread131080(tdone,ends);
+                  int biggest131081 = 0;
+                  if(ends[3]>=biggest131081){
+                    biggest131081=ends[3];
                   }
-                  if(ends[4]>=biggest136184){
-                    biggest136184=ends[4];
+                  if(ends[4]>=biggest131081){
+                    biggest131081=ends[4];
                   }
-                  if(biggest136184 == 1){
+                  if(biggest131081 == 1){
                     active[2]=1;
                     ends[2]=1;
                     tdone[2]=1;
                   }
                   //FINXME code
-                  if(biggest136184 == 0){
-                    shift_1.setPresent();//sysj\rotary_plant.sysj line: 31, column: 4
+                  if(biggest131081 == 0){
+                    shift_1.setPresent();//sysj\rotary_plant.sysj line: 26, column: 3
                     currsigs.addElement(shift_1);
-                    S132537=0;
+                    S130035=0;
                     active[2]=1;
                     ends[2]=1;
                     tdone[2]=1;
@@ -3438,18 +856,408 @@ public class rotary_plant extends ClockDomain{
     }
   }
 
-  public void thread136170(int [] tdone, int [] ends){
-        S136165=1;
-    rt_thread_5 = new rotaryTable();//sysj\rotary_plant.sysj line: 36, column: 3
-    S133001=0;
-    active[5]=1;
-    ends[5]=1;
-    tdone[5]=1;
+  public void thread131067(int [] tdone, int [] ends){
+        S131061=1;
+    if(!bottleAtPos1.getprestatus() && !bottleAtPos1c.getprestatus() && !bottleAtPos2.getprestatus() && !bottleAtPos3.getprestatus() && !bottleAtPos4.getprestatus() && !bottleAtPos5.getprestatus()){//sysj\rotary_plant.sysj line: 88, column: 12
+      empty.setPresent();//sysj\rotary_plant.sysj line: 89, column: 5
+      currsigs.addElement(empty);
+      active[6]=1;
+      ends[6]=1;
+      tdone[6]=1;
+    }
+    else {
+      active[6]=1;
+      ends[6]=1;
+      tdone[6]=1;
+    }
   }
 
-  public void thread136169(int [] tdone, int [] ends){
-        S132995=1;
-    S132537=0;
+  public void thread131066(int [] tdone, int [] ends){
+        S131053=1;
+    rt_thread_5 = new rotaryTable();//sysj\rotary_plant.sysj line: 31, column: 3
+    if(rt_thread_5.index[0] == true){//sysj\rotary_plant.sysj line: 33, column: 8
+      bottleAtPos1.setPresent();//sysj\rotary_plant.sysj line: 34, column: 5
+      currsigs.addElement(bottleAtPos1);
+      bottleAtPos1c.setPresent();//sysj\rotary_plant.sysj line: 35, column: 5
+      currsigs.addElement(bottleAtPos1c);
+      bottleAtPos1_GUI.setPresent();//sysj\rotary_plant.sysj line: 36, column: 5
+      currsigs.addElement(bottleAtPos1_GUI);
+      if(rt_thread_5.index[1] == true){//sysj\rotary_plant.sysj line: 39, column: 8
+        bottleAtPos2.setPresent();//sysj\rotary_plant.sysj line: 40, column: 5
+        currsigs.addElement(bottleAtPos2);
+        bottleAtPos2_GUI.setPresent();//sysj\rotary_plant.sysj line: 41, column: 5
+        currsigs.addElement(bottleAtPos2_GUI);
+        if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 44, column: 8
+          bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 45, column: 5
+          currsigs.addElement(bottleAtPos3);
+          bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 46, column: 5
+          currsigs.addElement(bottleAtPos3_GUI);
+          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 49, column: 8
+            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 50, column: 5
+            currsigs.addElement(bottleAtPos4);
+            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 51, column: 5
+            currsigs.addElement(bottleAtPos4_GUI);
+            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 54, column: 8
+              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 55, column: 5
+              currsigs.addElement(bottleAtPos5);
+              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
+              currsigs.addElement(bottleAtPos5_GUI);
+              S130502=0;
+              active[5]=1;
+              ends[5]=1;
+              tdone[5]=1;
+            }
+            else {
+              S130502=0;
+              active[5]=1;
+              ends[5]=1;
+              tdone[5]=1;
+            }
+          }
+          else {
+            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 54, column: 8
+              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 55, column: 5
+              currsigs.addElement(bottleAtPos5);
+              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
+              currsigs.addElement(bottleAtPos5_GUI);
+              S130502=0;
+              active[5]=1;
+              ends[5]=1;
+              tdone[5]=1;
+            }
+            else {
+              S130502=0;
+              active[5]=1;
+              ends[5]=1;
+              tdone[5]=1;
+            }
+          }
+        }
+        else {
+          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 49, column: 8
+            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 50, column: 5
+            currsigs.addElement(bottleAtPos4);
+            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 51, column: 5
+            currsigs.addElement(bottleAtPos4_GUI);
+            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 54, column: 8
+              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 55, column: 5
+              currsigs.addElement(bottleAtPos5);
+              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
+              currsigs.addElement(bottleAtPos5_GUI);
+              S130502=0;
+              active[5]=1;
+              ends[5]=1;
+              tdone[5]=1;
+            }
+            else {
+              S130502=0;
+              active[5]=1;
+              ends[5]=1;
+              tdone[5]=1;
+            }
+          }
+          else {
+            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 54, column: 8
+              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 55, column: 5
+              currsigs.addElement(bottleAtPos5);
+              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
+              currsigs.addElement(bottleAtPos5_GUI);
+              S130502=0;
+              active[5]=1;
+              ends[5]=1;
+              tdone[5]=1;
+            }
+            else {
+              S130502=0;
+              active[5]=1;
+              ends[5]=1;
+              tdone[5]=1;
+            }
+          }
+        }
+      }
+      else {
+        if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 44, column: 8
+          bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 45, column: 5
+          currsigs.addElement(bottleAtPos3);
+          bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 46, column: 5
+          currsigs.addElement(bottleAtPos3_GUI);
+          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 49, column: 8
+            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 50, column: 5
+            currsigs.addElement(bottleAtPos4);
+            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 51, column: 5
+            currsigs.addElement(bottleAtPos4_GUI);
+            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 54, column: 8
+              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 55, column: 5
+              currsigs.addElement(bottleAtPos5);
+              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
+              currsigs.addElement(bottleAtPos5_GUI);
+              S130502=0;
+              active[5]=1;
+              ends[5]=1;
+              tdone[5]=1;
+            }
+            else {
+              S130502=0;
+              active[5]=1;
+              ends[5]=1;
+              tdone[5]=1;
+            }
+          }
+          else {
+            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 54, column: 8
+              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 55, column: 5
+              currsigs.addElement(bottleAtPos5);
+              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
+              currsigs.addElement(bottleAtPos5_GUI);
+              S130502=0;
+              active[5]=1;
+              ends[5]=1;
+              tdone[5]=1;
+            }
+            else {
+              S130502=0;
+              active[5]=1;
+              ends[5]=1;
+              tdone[5]=1;
+            }
+          }
+        }
+        else {
+          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 49, column: 8
+            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 50, column: 5
+            currsigs.addElement(bottleAtPos4);
+            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 51, column: 5
+            currsigs.addElement(bottleAtPos4_GUI);
+            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 54, column: 8
+              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 55, column: 5
+              currsigs.addElement(bottleAtPos5);
+              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
+              currsigs.addElement(bottleAtPos5_GUI);
+              S130502=0;
+              active[5]=1;
+              ends[5]=1;
+              tdone[5]=1;
+            }
+            else {
+              S130502=0;
+              active[5]=1;
+              ends[5]=1;
+              tdone[5]=1;
+            }
+          }
+          else {
+            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 54, column: 8
+              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 55, column: 5
+              currsigs.addElement(bottleAtPos5);
+              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
+              currsigs.addElement(bottleAtPos5_GUI);
+              S130502=0;
+              active[5]=1;
+              ends[5]=1;
+              tdone[5]=1;
+            }
+            else {
+              S130502=0;
+              active[5]=1;
+              ends[5]=1;
+              tdone[5]=1;
+            }
+          }
+        }
+      }
+    }
+    else {
+      if(rt_thread_5.index[1] == true){//sysj\rotary_plant.sysj line: 39, column: 8
+        bottleAtPos2.setPresent();//sysj\rotary_plant.sysj line: 40, column: 5
+        currsigs.addElement(bottleAtPos2);
+        bottleAtPos2_GUI.setPresent();//sysj\rotary_plant.sysj line: 41, column: 5
+        currsigs.addElement(bottleAtPos2_GUI);
+        if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 44, column: 8
+          bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 45, column: 5
+          currsigs.addElement(bottleAtPos3);
+          bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 46, column: 5
+          currsigs.addElement(bottleAtPos3_GUI);
+          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 49, column: 8
+            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 50, column: 5
+            currsigs.addElement(bottleAtPos4);
+            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 51, column: 5
+            currsigs.addElement(bottleAtPos4_GUI);
+            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 54, column: 8
+              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 55, column: 5
+              currsigs.addElement(bottleAtPos5);
+              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
+              currsigs.addElement(bottleAtPos5_GUI);
+              S130502=0;
+              active[5]=1;
+              ends[5]=1;
+              tdone[5]=1;
+            }
+            else {
+              S130502=0;
+              active[5]=1;
+              ends[5]=1;
+              tdone[5]=1;
+            }
+          }
+          else {
+            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 54, column: 8
+              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 55, column: 5
+              currsigs.addElement(bottleAtPos5);
+              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
+              currsigs.addElement(bottleAtPos5_GUI);
+              S130502=0;
+              active[5]=1;
+              ends[5]=1;
+              tdone[5]=1;
+            }
+            else {
+              S130502=0;
+              active[5]=1;
+              ends[5]=1;
+              tdone[5]=1;
+            }
+          }
+        }
+        else {
+          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 49, column: 8
+            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 50, column: 5
+            currsigs.addElement(bottleAtPos4);
+            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 51, column: 5
+            currsigs.addElement(bottleAtPos4_GUI);
+            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 54, column: 8
+              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 55, column: 5
+              currsigs.addElement(bottleAtPos5);
+              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
+              currsigs.addElement(bottleAtPos5_GUI);
+              S130502=0;
+              active[5]=1;
+              ends[5]=1;
+              tdone[5]=1;
+            }
+            else {
+              S130502=0;
+              active[5]=1;
+              ends[5]=1;
+              tdone[5]=1;
+            }
+          }
+          else {
+            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 54, column: 8
+              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 55, column: 5
+              currsigs.addElement(bottleAtPos5);
+              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
+              currsigs.addElement(bottleAtPos5_GUI);
+              S130502=0;
+              active[5]=1;
+              ends[5]=1;
+              tdone[5]=1;
+            }
+            else {
+              S130502=0;
+              active[5]=1;
+              ends[5]=1;
+              tdone[5]=1;
+            }
+          }
+        }
+      }
+      else {
+        if(rt_thread_5.index[2] == true){//sysj\rotary_plant.sysj line: 44, column: 8
+          bottleAtPos3.setPresent();//sysj\rotary_plant.sysj line: 45, column: 5
+          currsigs.addElement(bottleAtPos3);
+          bottleAtPos3_GUI.setPresent();//sysj\rotary_plant.sysj line: 46, column: 5
+          currsigs.addElement(bottleAtPos3_GUI);
+          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 49, column: 8
+            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 50, column: 5
+            currsigs.addElement(bottleAtPos4);
+            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 51, column: 5
+            currsigs.addElement(bottleAtPos4_GUI);
+            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 54, column: 8
+              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 55, column: 5
+              currsigs.addElement(bottleAtPos5);
+              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
+              currsigs.addElement(bottleAtPos5_GUI);
+              S130502=0;
+              active[5]=1;
+              ends[5]=1;
+              tdone[5]=1;
+            }
+            else {
+              S130502=0;
+              active[5]=1;
+              ends[5]=1;
+              tdone[5]=1;
+            }
+          }
+          else {
+            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 54, column: 8
+              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 55, column: 5
+              currsigs.addElement(bottleAtPos5);
+              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
+              currsigs.addElement(bottleAtPos5_GUI);
+              S130502=0;
+              active[5]=1;
+              ends[5]=1;
+              tdone[5]=1;
+            }
+            else {
+              S130502=0;
+              active[5]=1;
+              ends[5]=1;
+              tdone[5]=1;
+            }
+          }
+        }
+        else {
+          if(rt_thread_5.index[3] == true){//sysj\rotary_plant.sysj line: 49, column: 8
+            bottleAtPos4.setPresent();//sysj\rotary_plant.sysj line: 50, column: 5
+            currsigs.addElement(bottleAtPos4);
+            bottleAtPos4_GUI.setPresent();//sysj\rotary_plant.sysj line: 51, column: 5
+            currsigs.addElement(bottleAtPos4_GUI);
+            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 54, column: 8
+              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 55, column: 5
+              currsigs.addElement(bottleAtPos5);
+              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
+              currsigs.addElement(bottleAtPos5_GUI);
+              S130502=0;
+              active[5]=1;
+              ends[5]=1;
+              tdone[5]=1;
+            }
+            else {
+              S130502=0;
+              active[5]=1;
+              ends[5]=1;
+              tdone[5]=1;
+            }
+          }
+          else {
+            if(rt_thread_5.index[4] == true){//sysj\rotary_plant.sysj line: 54, column: 8
+              bottleAtPos5.setPresent();//sysj\rotary_plant.sysj line: 55, column: 5
+              currsigs.addElement(bottleAtPos5);
+              bottleAtPos5_GUI.setPresent();//sysj\rotary_plant.sysj line: 56, column: 5
+              currsigs.addElement(bottleAtPos5_GUI);
+              S130502=0;
+              active[5]=1;
+              ends[5]=1;
+              tdone[5]=1;
+            }
+            else {
+              S130502=0;
+              active[5]=1;
+              ends[5]=1;
+              tdone[5]=1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  public void thread131065(int [] tdone, int [] ends){
+        S130493=1;
+    S130035=0;
     active[2]=1;
     ends[2]=1;
     tdone[2]=1;
@@ -3462,25 +1270,29 @@ public class rotary_plant extends ClockDomain{
     }
     
     RUN: while(true){
-      switch(S136167){
+      switch(S131063){
         case 0 : 
-          S136167=0;
+          S131063=0;
           break RUN;
         
         case 1 : 
-          S136167=2;
-          S136167=2;
+          S131063=2;
+          S131063=2;
           shift_1.setClear();//sysj\rotary_plant.sysj line: 16, column: 2
-          thread136169(tdone,ends);
-          thread136170(tdone,ends);
-          int biggest136171 = 0;
-          if(ends[2]>=biggest136171){
-            biggest136171=ends[2];
+          thread131065(tdone,ends);
+          thread131066(tdone,ends);
+          thread131067(tdone,ends);
+          int biggest131068 = 0;
+          if(ends[2]>=biggest131068){
+            biggest131068=ends[2];
           }
-          if(ends[5]>=biggest136171){
-            biggest136171=ends[5];
+          if(ends[5]>=biggest131068){
+            biggest131068=ends[5];
           }
-          if(biggest136171 == 1){
+          if(ends[6]>=biggest131068){
+            biggest131068=ends[6];
+          }
+          if(biggest131068 == 1){
             active[1]=1;
             ends[1]=1;
             break RUN;
@@ -3488,26 +1300,30 @@ public class rotary_plant extends ClockDomain{
         
         case 2 : 
           shift_1.setClear();//sysj\rotary_plant.sysj line: 16, column: 2
-          thread136172(tdone,ends);
-          thread136185(tdone,ends);
-          int biggest136186 = 0;
-          if(ends[2]>=biggest136186){
-            biggest136186=ends[2];
+          thread131069(tdone,ends);
+          thread131082(tdone,ends);
+          thread131083(tdone,ends);
+          int biggest131084 = 0;
+          if(ends[2]>=biggest131084){
+            biggest131084=ends[2];
           }
-          if(ends[5]>=biggest136186){
-            biggest136186=ends[5];
+          if(ends[5]>=biggest131084){
+            biggest131084=ends[5];
           }
-          if(biggest136186 == 1){
+          if(ends[6]>=biggest131084){
+            biggest131084=ends[6];
+          }
+          if(biggest131084 == 1){
             active[1]=1;
             ends[1]=1;
             break RUN;
           }
           //FINXME code
-          if(biggest136186 == 0){
-            S136167=0;
+          if(biggest131084 == 0){
+            S131063=0;
             active[1]=0;
             ends[1]=0;
-            S136167=0;
+            S131063=0;
             break RUN;
           }
         
@@ -3516,9 +1332,9 @@ public class rotary_plant extends ClockDomain{
   }
 
   public void init(){
-    char [] active1 = {1, 1, 1, 1, 1, 1};
-    char [] paused1 = {0, 0, 0, 0, 0, 0};
-    char [] suspended1 = {0, 0, 0, 0, 0, 0};
+    char [] active1 = {1, 1, 1, 1, 1, 1, 1};
+    char [] paused1 = {0, 0, 0, 0, 0, 0, 0};
+    char [] suspended1 = {0, 0, 0, 0, 0, 0, 0};
     paused = paused1;
     active = active1;
     suspended = suspended1;
@@ -3563,6 +1379,7 @@ public class rotary_plant extends ClockDomain{
       bottleAtPos4_GUI.setpreclear();
       bottleAtPos5_GUI.setpreclear();
       bottleLeftPos5_GUI.setpreclear();
+      empty.setpreclear();
       shift_1.setpreclear();
       int dummyint = 0;
       for(int qw=0;qw<currsigs.size();++qw){
@@ -3609,6 +1426,8 @@ public class rotary_plant extends ClockDomain{
       bottleAtPos5_GUI.setClear();
       bottleLeftPos5_GUI.sethook();
       bottleLeftPos5_GUI.setClear();
+      empty.sethook();
+      empty.setClear();
       shift_1.setClear();
       if(paused[1]!=0 || suspended[1]!=0 || active[1]!=1);
       else{

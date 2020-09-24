@@ -8,6 +8,7 @@ import javax.swing.JTextPane;
 import com.systemj.netapi.SimpleServer;
 
 import java.awt.Font;
+import java.io.IOException;
 import java.awt.Color;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
@@ -33,6 +34,8 @@ public class STATUS {
 	}
 	
 	public void setStatus(JLabel dot, boolean status) {
+			System.out.println("SETTING");
+	
 		if(status) {
 			dot.setForeground(Color.GREEN); 
 		} else {
@@ -42,8 +45,9 @@ public class STATUS {
 
 	/**
 	 * Create the application.
+	 * @throws IOException 
 	 */
-	public STATUS() {
+	public STATUS() throws IOException {
 		initialize();
 		
 		
@@ -51,11 +55,12 @@ public class STATUS {
 
 	/**
 	 * Initialize the contents of the frame.
+	 * @throws IOException 
 	 */
-	private void initialize() {
+	private void initialize() throws IOException {
 		frame = new JFrame();
 		frame.setResizable(false);
-		frame.setBounds(100, 100, 226, 557);
+		frame.setBounds(100, 100, 227, 570);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(new MigLayout("", "[122.00,grow][][left][left][left][left][][]", "[][][][][center][][][][][][][][][][][][][][][][][][][][][]"));
 		
@@ -386,12 +391,12 @@ public class STATUS {
 		indGripperTurnFinalPos.setFont(new Font("Tahoma", Font.BOLD, 13));
 		frame.getContentPane().add(indGripperTurnFinalPos, "cell 1 25,alignx center");
 	
-		SimpleServer s = new SimpleServer("127.0.0.12", 2000);
+		SimpleServer s = new SimpleServer("127.0.0.12", 2001);
 		
 		s.addConsumer("STATUS", "conveyorEngaged", (status, value) -> setStatus(indConveyorMotor, status));
 		
 		s.addConsumer("STATUS", "tableAlignedWithSensor", (status, value) -> setStatus(indConveyorMotor, status));
-		s.addConsumer("STATUS", "bottleAtPos1", (status, value) -> setStatus(indBottleAtPos1, status));
+		/*s.addConsumer("STATUS", "bottleAtPos1", (status, value) -> setStatus(indBottleAtPos1, status));
 		s.addConsumer("STATUS", "bottleAtPos2", (status, value) -> setStatus(indBottleAtPos2, status));
 		s.addConsumer("STATUS", "bottleAtPos3", (status, value) -> setStatus(indBottleAtPos3, status));
 		s.addConsumer("STATUS", "bottleAtPos4", (status, value) -> setStatus(indBottleAtPos4, status));
@@ -423,8 +428,9 @@ public class STATUS {
 		s.addConsumer("STATUS", "gripperZAxisLowered", (status, value) -> setStatus(indGripperZAxisLowered, status));
 		s.addConsumer("STATUS", "gripperZAxisLifted", (status, value) -> setStatus(indGripperZAxisLifted, status));
 		s.addConsumer("STATUS", "gripperTurnHomePos", (status, value) -> setStatus(indGripperTurnHomePos, status));
-		s.addConsumer("STATUS", "gripperTurnFinalPos", (status, value) -> setStatus(indGripperTurnFinalPos, status));
+		s.addConsumer("STATUS", "gripperTurnFinalPos", (status, value) -> setStatus(indGripperTurnFinalPos, status));*/
 
+		//s.close();
 	}
 
 }

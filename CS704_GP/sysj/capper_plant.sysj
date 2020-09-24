@@ -44,10 +44,10 @@ capper_plant(
 		while(true) {
 			// Actually do not think you can model this? 
 			present(cylClampBottleExtend){
-				System.out.println("CLAMPED");
+				//System.out.println("CLAMPED");
 			}
 			present(!cylClampBottleExtend){
-				System.out.println("NOT CLAMPED");
+				//System.out.println("NOT CLAMPED");
 			}
 			pause; 
 			
@@ -61,10 +61,10 @@ capper_plant(
 			// No model logic relating to cap gripper? 
 			// Actually do not think you can model this? 
 			present(capGripperPos5Extend){
-				System.out.println("CAP GRIPPED");
+				//System.out.println("CAP GRIPPED");
 			}
 			present(!capGripperPos5Extend){
-				System.out.println("CAP NOT GRIPPED");
+				//System.out.println("CAP NOT GRIPPED");
 			}
 			pause; 
 		}

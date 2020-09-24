@@ -198,9 +198,7 @@ public class capper_plant extends ClockDomain{
       
       case 1 : 
         if(capGripperPos5Extend.getprestatus()){//sysj\capper_plant.sysj line: 63, column: 12
-          System.out.println("CAP GRIPPED");//sysj\capper_plant.sysj line: 64, column: 5
           if(!capGripperPos5Extend.getprestatus()){//sysj\capper_plant.sysj line: 66, column: 12
-            System.out.println("CAP NOT GRIPPED");//sysj\capper_plant.sysj line: 67, column: 5
             active[5]=1;
             ends[5]=1;
             tdone[5]=1;
@@ -213,7 +211,6 @@ public class capper_plant extends ClockDomain{
         }
         else {
           if(!capGripperPos5Extend.getprestatus()){//sysj\capper_plant.sysj line: 66, column: 12
-            System.out.println("CAP NOT GRIPPED");//sysj\capper_plant.sysj line: 67, column: 5
             active[5]=1;
             ends[5]=1;
             tdone[5]=1;
@@ -242,9 +239,7 @@ public class capper_plant extends ClockDomain{
           case 0 : 
             S3805=0;
             if(cylClampBottleExtend.getprestatus()){//sysj\capper_plant.sysj line: 46, column: 12
-              System.out.println("CLAMPED");//sysj\capper_plant.sysj line: 47, column: 5
               if(!cylClampBottleExtend.getprestatus()){//sysj\capper_plant.sysj line: 49, column: 12
-                System.out.println("NOT CLAMPED");//sysj\capper_plant.sysj line: 50, column: 5
                 S3805=1;
                 active[4]=1;
                 ends[4]=1;
@@ -259,7 +254,6 @@ public class capper_plant extends ClockDomain{
             }
             else {
               if(!cylClampBottleExtend.getprestatus()){//sysj\capper_plant.sysj line: 49, column: 12
-                System.out.println("NOT CLAMPED");//sysj\capper_plant.sysj line: 50, column: 5
                 S3805=1;
                 active[4]=1;
                 ends[4]=1;
@@ -278,9 +272,7 @@ public class capper_plant extends ClockDomain{
             S3805=1;
             S3805=0;
             if(cylClampBottleExtend.getprestatus()){//sysj\capper_plant.sysj line: 46, column: 12
-              System.out.println("CLAMPED");//sysj\capper_plant.sysj line: 47, column: 5
               if(!cylClampBottleExtend.getprestatus()){//sysj\capper_plant.sysj line: 49, column: 12
-                System.out.println("NOT CLAMPED");//sysj\capper_plant.sysj line: 50, column: 5
                 S3805=1;
                 active[4]=1;
                 ends[4]=1;
@@ -295,7 +287,6 @@ public class capper_plant extends ClockDomain{
             }
             else {
               if(!cylClampBottleExtend.getprestatus()){//sysj\capper_plant.sysj line: 49, column: 12
-                System.out.println("NOT CLAMPED");//sysj\capper_plant.sysj line: 50, column: 5
                 S3805=1;
                 active[4]=1;
                 ends[4]=1;
@@ -529,9 +520,7 @@ public class capper_plant extends ClockDomain{
   public void thread3875(int [] tdone, int [] ends){
         S3834=1;
     if(capGripperPos5Extend.getprestatus()){//sysj\capper_plant.sysj line: 63, column: 12
-      System.out.println("CAP GRIPPED");//sysj\capper_plant.sysj line: 64, column: 5
       if(!capGripperPos5Extend.getprestatus()){//sysj\capper_plant.sysj line: 66, column: 12
-        System.out.println("CAP NOT GRIPPED");//sysj\capper_plant.sysj line: 67, column: 5
         active[5]=1;
         ends[5]=1;
         tdone[5]=1;
@@ -544,7 +533,6 @@ public class capper_plant extends ClockDomain{
     }
     else {
       if(!capGripperPos5Extend.getprestatus()){//sysj\capper_plant.sysj line: 66, column: 12
-        System.out.println("CAP NOT GRIPPED");//sysj\capper_plant.sysj line: 67, column: 5
         active[5]=1;
         ends[5]=1;
         tdone[5]=1;
@@ -561,9 +549,7 @@ public class capper_plant extends ClockDomain{
         S3817=1;
     S3805=0;
     if(cylClampBottleExtend.getprestatus()){//sysj\capper_plant.sysj line: 46, column: 12
-      System.out.println("CLAMPED");//sysj\capper_plant.sysj line: 47, column: 5
       if(!cylClampBottleExtend.getprestatus()){//sysj\capper_plant.sysj line: 49, column: 12
-        System.out.println("NOT CLAMPED");//sysj\capper_plant.sysj line: 50, column: 5
         S3805=1;
         active[4]=1;
         ends[4]=1;
@@ -578,7 +564,6 @@ public class capper_plant extends ClockDomain{
     }
     else {
       if(!cylClampBottleExtend.getprestatus()){//sysj\capper_plant.sysj line: 49, column: 12
-        System.out.println("NOT CLAMPED");//sysj\capper_plant.sysj line: 50, column: 5
         S3805=1;
         active[4]=1;
         ends[4]=1;

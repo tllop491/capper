@@ -20,8 +20,9 @@ POS(
 			await(liquidDataI);
 			await(!liquidDataI);
 			System.out.println("POS RECIEVED LIQUID DATA FROM POS_GUI");
-			send liquidDataC((ArrayList)#liquidDataI);
 			System.out.println("POS SEND LIQUID DATA TO BUFFER");
+			send liquidDataC((ArrayList)#liquidDataI);
+			
 		}
 	}
 }
