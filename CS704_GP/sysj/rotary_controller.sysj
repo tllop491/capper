@@ -1,6 +1,7 @@
 // controller responsible for managing the rotary model
 // author: Nikolay Petin
 
+// named reaction for converting the ready channel signals to regular signals
 reaction ch_to_sig(: input Boolean channel ch_in, output signal sig_out)	// sysimport doesn't let compilation
 {
 	{
@@ -21,15 +22,22 @@ reaction ch_to_sig(: input Boolean channel ch_in, output signal sig_out)	// sysi
 }
 
 rotary_controller(
+		// from model
 		input signal tableAlignedWithSensor;
 		input signal bottleAtPos1, bottleAtPos5;
-		input signal conveyorEngaged;
 		input signal rotaryEmpty;
 		
+		// from conveyor
+		input signal conveyorEngaged;
+
+		// from buffer
 		input Integer channel newOrder;
+		
+		// from component controllers
 		input Boolean channel readyConveyor, readyFiller, readyLidLoader, readyCapper;
 		
-		output signal rotaryTableTrigger; // turns rotary table while signal is TRUE
+		// to model
+		output signal rotaryTableTrigger; 
 		output signal load, deload;
 		
 		)
@@ -41,7 +49,7 @@ rotary_controller(
 			await (rC && rF && rL && rCa);
 			await (!rotaryEmpty && !bottleAtPos5);	// only rotate when there is at least one bottle on the table except for pos 5
 			abort (immediate tableAlignedWithSensor) { 				
-				sustain rotaryTableTrigger;					// rotate table until aligned
+				sustain rotaryTableTrigger;					// rotate table until aligned as indicated by tableAlignedWithSensor
 			}
 		}
 	}
@@ -49,10 +57,10 @@ rotary_controller(
 	{ // loading logic
 		while(true) {
 			receive newOrder;
-			emit load;
+			emit load;	
 			//abort(immediate bottleAtPos1) {
-			//	sustain load;						// sustain load until bottle is confirmed at pos 1
-			//}
+			//	sustain load;						// sustain load until bottle is confirmed at pos 1, this approach resulted in the rotary table loading 5 times
+			//}										// although emitting is not safe for cross CD communication, this is the only thing that worked
 			pause;
 		}
 	}

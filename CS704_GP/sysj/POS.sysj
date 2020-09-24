@@ -1,3 +1,5 @@
+// POS system for converting signals from GUI to channels for buffer
+
 import java.io.IOException;
 
 POS(
@@ -18,7 +20,7 @@ POS(
 	{
 		while(true) {
 			await(liquidDataI);
-			await(!liquidDataI);
+			await(!liquidDataI);	// wait until falling edge
 			System.out.println("POS RECIEVED LIQUID DATA FROM POS_GUI");
 			System.out.println("POS SEND LIQUID DATA TO BUFFER");
 			send liquidDataC((ArrayList)#liquidDataI);

@@ -62,11 +62,6 @@ liquid_buffer(
 				System.out.println("PUSHING TO BUFFER");
 				ArrayList liquidData = (ArrayList)#toBuffer;
 				myBuffer.push(liquidData);
-				
-				/*myBuffer.push(liquidData.get(0));
-				myBuffer.push(liquidData.get(1));
-				myBuffer.push(liquidData.get(2));
-				myBuffer.push(liquidData.get(3));*/
 			}
 			
 			present(requestData){

@@ -1,3 +1,5 @@
+//control unit for lid loading model
+
 lidloader_controller(
 		input signal pusherRetracted,pusherExtended,WPgripped,armAtSource,armAtDest, empty;
 		input signal bottleAtPos3;
@@ -7,10 +9,10 @@ lidloader_controller(
 		)
 ->
 {
-	send readyLidLoader(true);	
+	send readyLidLoader(Boolean.True);	
 	while(true) {
 		await(bottleAtPos3 && !empty);
-		send readyLidLoader(false);
+		send readyLidLoader(Boolean.False);
 		abort(armAtDest) {			// The arm swivels to the position “extended” if a new workpiece is requested (request).
 			sustain armDest;
 		}
@@ -40,7 +42,7 @@ lidloader_controller(
 			sustain armSource;
 		}
 		
-		send readyLidLoader(true);
+		send readyLidLoader(Boolean.True);
 		
 		pause;
 	}
