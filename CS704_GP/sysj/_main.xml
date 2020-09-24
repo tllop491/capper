@@ -1,7 +1,7 @@
  <System xmlns="http://systemjtechnology.com">
 
 	<SubSystem Name="SS1" Local="true">
-		<Scheduler Class="com.systemj.CyclicScheduler" Args="50">
+		<Scheduler Class="com.systemj.CyclicScheduler" Args="1000">
 		<ClockDomain Name="POS_CD" Class="POS">
 			<iSignal Name="liquidDataI" Class="com.systemj.ipc.TCPReceiver" IP="127.0.0.1"  Port="2000" />
 			<oChannel Name="liquidDataC" To="liquid_buffer_CD.producerChannel" />

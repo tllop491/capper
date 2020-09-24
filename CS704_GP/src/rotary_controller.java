@@ -28,87 +28,90 @@ public class rotary_controller extends ClockDomain{
   private Signal rF_1;
   private Signal rL_1;
   private Signal rCa_1;
-  private int S1180 = 1;
-  private int S53 = 1;
-  private int S7 = 1;
-  private int S172 = 1;
-  private int S92 = 1;
-  private int S60 = 1;
-  private int S55 = 1;
-  private int S204 = 1;
-  private int S182 = 1;
-  private int S1178 = 1;
-  private int S447 = 1;
-  private int S445 = 1;
-  private int S277 = 1;
-  private int S229 = 1;
-  private int S213 = 1;
-  private int S208 = 1;
-  private int S285 = 1;
-  private int S279 = 1;
-  private int S690 = 1;
-  private int S688 = 1;
-  private int S520 = 1;
-  private int S472 = 1;
-  private int S456 = 1;
-  private int S451 = 1;
-  private int S528 = 1;
-  private int S933 = 1;
-  private int S931 = 1;
-  private int S763 = 1;
-  private int S715 = 1;
-  private int S699 = 1;
-  private int S694 = 1;
-  private int S771 = 1;
-  private int S1176 = 1;
-  private int S1174 = 1;
-  private int S1006 = 1;
-  private int S958 = 1;
-  private int S942 = 1;
-  private int S937 = 1;
-  private int S1014 = 1;
+  private int S161851 = 1;
+  private int S161336 = 1;
+  private int S161290 = 1;
+  private int S161407 = 1;
+  private int S161359 = 1;
+  private int S161343 = 1;
+  private int S161338 = 1;
+  private int S161439 = 1;
+  private int S161417 = 1;
+  private int S161849 = 1;
+  private int S161541 = 1;
+  private int S161539 = 1;
+  private int S161473 = 1;
+  private int S161465 = 1;
+  private int S161464 = 1;
+  private int S161448 = 1;
+  private int S161443 = 1;
+  private int S161471 = 1;
+  private int S161643 = 1;
+  private int S161641 = 1;
+  private int S161575 = 1;
+  private int S161567 = 1;
+  private int S161566 = 1;
+  private int S161550 = 1;
+  private int S161545 = 1;
+  private int S161573 = 1;
+  private int S161745 = 1;
+  private int S161743 = 1;
+  private int S161677 = 1;
+  private int S161669 = 1;
+  private int S161668 = 1;
+  private int S161652 = 1;
+  private int S161647 = 1;
+  private int S161675 = 1;
+  private int S161847 = 1;
+  private int S161845 = 1;
+  private int S161779 = 1;
+  private int S161771 = 1;
+  private int S161770 = 1;
+  private int S161754 = 1;
+  private int S161749 = 1;
+  private int S161777 = 1;
   
   private int[] ends = new int[26];
   private int[] tdone = new int[26];
   
-  public void thread1257(int [] tdone, int [] ends){
-        S1014=1;
-    if((readyCapper_in.getVal() == null ? null : ((Boolean)readyCapper_in.getVal())) == Boolean.TRUE){//sysj/rotary_controller.sysj line: 16, column: 8
-      rCa_1.setPresent();//sysj/rotary_controller.sysj line: 17, column: 6
+  public void thread161928(int [] tdone, int [] ends){
+        S161777=1;
+    if((readyCapper_in.getVal() == null ? null : ((Boolean)readyCapper_in.getVal())) == Boolean.TRUE){//sysj\rotary_controller.sysj line: 10, column: 12
+      rCa_1.setPresent();//sysj\rotary_controller.sysj line: 10, column: 35
       currsigs.addElement(rCa_1);
-      System.out.println("Emitted rCa_1");
       active[25]=1;
       ends[25]=1;
       tdone[25]=1;
     }
     else {
-      active[25]=1;
-      ends[25]=1;
+      S161777=0;
+      active[25]=0;
+      ends[25]=0;
       tdone[25]=1;
     }
   }
 
-  public void thread1256(int [] tdone, int [] ends){
-        S1006=1;
-    S958=0;
-    S942=0;
-    if(!readyCapper_in.isPartnerPresent() || readyCapper_in.isPartnerPreempted()){//sysj/rotary_controller.sysj line: 9, column: 5
-      readyCapper_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
-      S942=1;
+  public void thread161927(int [] tdone, int [] ends){
+        S161771=1;
+    S161770=0;
+    S161754=0;
+    if(!readyCapper_in.isPartnerPresent() || readyCapper_in.isPartnerPreempted()){//sysj\rotary_controller.sysj line: 8, column: 8
+      readyCapper_in.setACK(false);//sysj\rotary_controller.sysj line: 8, column: 8
+      S161754=1;
       active[24]=1;
       ends[24]=1;
       tdone[24]=1;
     }
     else {
-      S937=0;
-      if(!readyCapper_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-        readyCapper_in.setACK(true);//sysj/rotary_controller.sysj line: 9, column: 5
-        S937=1;
-        if(readyCapper_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-          readyCapper_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
+      S161749=0;
+      if(!readyCapper_in.isREQ()){//sysj\rotary_controller.sysj line: 8, column: 8
+        readyCapper_in.setACK(true);//sysj\rotary_controller.sysj line: 8, column: 8
+        S161749=1;
+        if(readyCapper_in.isREQ()){//sysj\rotary_controller.sysj line: 8, column: 8
+          readyCapper_in.setACK(false);//sysj\rotary_controller.sysj line: 8, column: 8
           ends[24]=2;
-          ;//sysj/rotary_controller.sysj line: 9, column: 5
-          S958=1;
+          ;//sysj\rotary_controller.sysj line: 8, column: 8
+          S161770=1;
           active[24]=1;
           ends[24]=1;
           tdone[24]=1;
@@ -127,8 +130,8 @@ public class rotary_controller extends ClockDomain{
     }
   }
 
-  public void thread1254(int [] tdone, int [] ends){
-        switch(S1014){
+  public void thread161925(int [] tdone, int [] ends){
+        switch(S161777){
       case 0 : 
         active[25]=0;
         ends[25]=0;
@@ -136,26 +139,18 @@ public class rotary_controller extends ClockDomain{
         break;
       
       case 1 : 
-        if((readyCapper_in.getVal() == null ? null : ((Boolean)readyCapper_in.getVal())) == Boolean.TRUE){//sysj/rotary_controller.sysj line: 16, column: 8
-          rCa_1.setPresent();//sysj/rotary_controller.sysj line: 17, column: 6
-          currsigs.addElement(rCa_1);
-          System.out.println("Emitted rCa_1");
-          active[25]=1;
-          ends[25]=1;
-          tdone[25]=1;
-        }
-        else {
-          active[25]=1;
-          ends[25]=1;
-          tdone[25]=1;
-        }
+        rCa_1.setPresent();//sysj\rotary_controller.sysj line: 10, column: 35
+        currsigs.addElement(rCa_1);
+        active[25]=1;
+        ends[25]=1;
+        tdone[25]=1;
         break;
       
     }
   }
 
-  public void thread1253(int [] tdone, int [] ends){
-        switch(S1006){
+  public void thread161924(int [] tdone, int [] ends){
+        switch(S161771){
       case 0 : 
         active[24]=0;
         ends[24]=0;
@@ -163,28 +158,28 @@ public class rotary_controller extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S958){
+        switch(S161770){
           case 0 : 
-            switch(S942){
+            switch(S161754){
               case 0 : 
-                if(!readyCapper_in.isPartnerPresent() || readyCapper_in.isPartnerPreempted()){//sysj/rotary_controller.sysj line: 9, column: 5
-                  readyCapper_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
-                  S942=1;
+                if(!readyCapper_in.isPartnerPresent() || readyCapper_in.isPartnerPreempted()){//sysj\rotary_controller.sysj line: 8, column: 8
+                  readyCapper_in.setACK(false);//sysj\rotary_controller.sysj line: 8, column: 8
+                  S161754=1;
                   active[24]=1;
                   ends[24]=1;
                   tdone[24]=1;
                 }
                 else {
-                  switch(S937){
+                  switch(S161749){
                     case 0 : 
-                      if(!readyCapper_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-                        readyCapper_in.setACK(true);//sysj/rotary_controller.sysj line: 9, column: 5
-                        S937=1;
-                        if(readyCapper_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-                          readyCapper_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
+                      if(!readyCapper_in.isREQ()){//sysj\rotary_controller.sysj line: 8, column: 8
+                        readyCapper_in.setACK(true);//sysj\rotary_controller.sysj line: 8, column: 8
+                        S161749=1;
+                        if(readyCapper_in.isREQ()){//sysj\rotary_controller.sysj line: 8, column: 8
+                          readyCapper_in.setACK(false);//sysj\rotary_controller.sysj line: 8, column: 8
                           ends[24]=2;
-                          ;//sysj/rotary_controller.sysj line: 9, column: 5
-                          S958=1;
+                          ;//sysj\rotary_controller.sysj line: 8, column: 8
+                          S161770=1;
                           active[24]=1;
                           ends[24]=1;
                           tdone[24]=1;
@@ -203,11 +198,11 @@ public class rotary_controller extends ClockDomain{
                       break;
                     
                     case 1 : 
-                      if(readyCapper_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-                        readyCapper_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
+                      if(readyCapper_in.isREQ()){//sysj\rotary_controller.sysj line: 8, column: 8
+                        readyCapper_in.setACK(false);//sysj\rotary_controller.sysj line: 8, column: 8
                         ends[24]=2;
-                        ;//sysj/rotary_controller.sysj line: 9, column: 5
-                        S958=1;
+                        ;//sysj\rotary_controller.sysj line: 8, column: 8
+                        S161770=1;
                         active[24]=1;
                         ends[24]=1;
                         tdone[24]=1;
@@ -224,25 +219,25 @@ public class rotary_controller extends ClockDomain{
                 break;
               
               case 1 : 
-                S942=1;
-                S942=0;
-                if(!readyCapper_in.isPartnerPresent() || readyCapper_in.isPartnerPreempted()){//sysj/rotary_controller.sysj line: 9, column: 5
-                  readyCapper_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
-                  S942=1;
+                S161754=1;
+                S161754=0;
+                if(!readyCapper_in.isPartnerPresent() || readyCapper_in.isPartnerPreempted()){//sysj\rotary_controller.sysj line: 8, column: 8
+                  readyCapper_in.setACK(false);//sysj\rotary_controller.sysj line: 8, column: 8
+                  S161754=1;
                   active[24]=1;
                   ends[24]=1;
                   tdone[24]=1;
                 }
                 else {
-                  S937=0;
-                  if(!readyCapper_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-                    readyCapper_in.setACK(true);//sysj/rotary_controller.sysj line: 9, column: 5
-                    S937=1;
-                    if(readyCapper_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-                      readyCapper_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
+                  S161749=0;
+                  if(!readyCapper_in.isREQ()){//sysj\rotary_controller.sysj line: 8, column: 8
+                    readyCapper_in.setACK(true);//sysj\rotary_controller.sysj line: 8, column: 8
+                    S161749=1;
+                    if(readyCapper_in.isREQ()){//sysj\rotary_controller.sysj line: 8, column: 8
+                      readyCapper_in.setACK(false);//sysj\rotary_controller.sysj line: 8, column: 8
                       ends[24]=2;
-                      ;//sysj/rotary_controller.sysj line: 9, column: 5
-                      S958=1;
+                      ;//sysj\rotary_controller.sysj line: 8, column: 8
+                      S161770=1;
                       active[24]=1;
                       ends[24]=1;
                       tdone[24]=1;
@@ -265,41 +260,84 @@ public class rotary_controller extends ClockDomain{
             break;
           
           case 1 : 
-            S958=1;
-            S958=0;
-            S942=0;
-            if(!readyCapper_in.isPartnerPresent() || readyCapper_in.isPartnerPreempted()){//sysj/rotary_controller.sysj line: 9, column: 5
-              readyCapper_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
-              S942=1;
-              active[24]=1;
-              ends[24]=1;
-              tdone[24]=1;
+            S161770=1;
+            S161770=2;
+            active[24]=1;
+            ends[24]=1;
+            tdone[24]=1;
+            break;
+          
+          case 2 : 
+            S161770=2;
+            readyCapper_in.setPreempted();//sysj\rotary_controller.sysj line: 8, column: 37
+            ends[24]=2;
+            tdone[24]=1;
+            break;
+          
+        }
+        break;
+      
+    }
+  }
+
+  public void thread161923(int [] tdone, int [] ends){
+        switch(S161845){
+      case 0 : 
+        active[23]=0;
+        ends[23]=0;
+        tdone[23]=1;
+        break;
+      
+      case 1 : 
+        switch(S161779){
+          case 0 : 
+            thread161924(tdone,ends);
+            thread161925(tdone,ends);
+            int biggest161926 = 0;
+            if(ends[24]>=biggest161926){
+              biggest161926=ends[24];
             }
-            else {
-              S937=0;
-              if(!readyCapper_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-                readyCapper_in.setACK(true);//sysj/rotary_controller.sysj line: 9, column: 5
-                S937=1;
-                if(readyCapper_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-                  readyCapper_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
-                  ends[24]=2;
-                  ;//sysj/rotary_controller.sysj line: 9, column: 5
-                  S958=1;
-                  active[24]=1;
-                  ends[24]=1;
-                  tdone[24]=1;
-                }
-                else {
-                  active[24]=1;
-                  ends[24]=1;
-                  tdone[24]=1;
-                }
-              }
-              else {
-                active[24]=1;
-                ends[24]=1;
-                tdone[24]=1;
-              }
+            if(ends[25]>=biggest161926){
+              biggest161926=ends[25];
+            }
+            if(biggest161926 == 1){
+              active[23]=1;
+              ends[23]=1;
+              tdone[23]=1;
+            }
+            if(biggest161926 == 2){
+              ends[23]=2;
+              ;//sysj\rotary_controller.sysj line: 7, column: 6
+              S161779=1;
+              active[23]=1;
+              ends[23]=1;
+              tdone[23]=1;
+            }
+            //FINXME code
+            if(biggest161926 == 0){
+              S161779=1;
+              active[23]=1;
+              ends[23]=1;
+              tdone[23]=1;
+            }
+            break;
+          
+          case 1 : 
+            S161779=1;
+            S161779=0;
+            thread161927(tdone,ends);
+            thread161928(tdone,ends);
+            int biggest161929 = 0;
+            if(ends[24]>=biggest161929){
+              biggest161929=ends[24];
+            }
+            if(ends[25]>=biggest161929){
+              biggest161929=ends[25];
+            }
+            if(biggest161929 == 1){
+              active[23]=1;
+              ends[23]=1;
+              tdone[23]=1;
             }
             break;
           
@@ -309,59 +347,14 @@ public class rotary_controller extends ClockDomain{
     }
   }
 
-  public void thread1252(int [] tdone, int [] ends){
-        switch(S1174){
-      case 0 : 
-        active[23]=0;
-        ends[23]=0;
-        tdone[23]=1;
-        break;
-      
-      case 1 : 
-        thread1253(tdone,ends);
-        thread1254(tdone,ends);
-        int biggest1255 = 0;
-        if(ends[24]>=biggest1255){
-          biggest1255=ends[24];
-        }
-        if(ends[25]>=biggest1255){
-          biggest1255=ends[25];
-        }
-        if(biggest1255 == 1){
-          active[23]=1;
-          ends[23]=1;
-          tdone[23]=1;
-        }
-        //FINXME code
-        if(biggest1255 == 0){
-          thread1256(tdone,ends);
-          thread1257(tdone,ends);
-          int biggest1258 = 0;
-          if(ends[24]>=biggest1258){
-            biggest1258=ends[24];
-          }
-          if(ends[25]>=biggest1258){
-            biggest1258=ends[25];
-          }
-          if(biggest1258 == 1){
-            active[23]=1;
-            ends[23]=1;
-            tdone[23]=1;
-          }
-        }
-        break;
-      
-    }
-  }
-
-  public void thread1251(int [] tdone, int [] ends){
+  public void thread161922(int [] tdone, int [] ends){
         active[22]=0;
     ends[22]=0;
     tdone[22]=1;
   }
 
-  public void thread1250(int [] tdone, int [] ends){
-        switch(S1176){
+  public void thread161921(int [] tdone, int [] ends){
+        switch(S161847){
       case 0 : 
         active[21]=0;
         ends[21]=0;
@@ -369,23 +362,23 @@ public class rotary_controller extends ClockDomain{
         break;
       
       case 1 : 
-        thread1251(tdone,ends);
-        thread1252(tdone,ends);
-        int biggest1259 = 0;
-        if(ends[22]>=biggest1259){
-          biggest1259=ends[22];
+        thread161922(tdone,ends);
+        thread161923(tdone,ends);
+        int biggest161930 = 0;
+        if(ends[22]>=biggest161930){
+          biggest161930=ends[22];
         }
-        if(ends[23]>=biggest1259){
-          biggest1259=ends[23];
+        if(ends[23]>=biggest161930){
+          biggest161930=ends[23];
         }
-        if(biggest1259 == 1){
+        if(biggest161930 == 1){
           active[21]=1;
           ends[21]=1;
           tdone[21]=1;
         }
         //FINXME code
-        if(biggest1259 == 0){
-          S1176=0;
+        if(biggest161930 == 0){
+          S161847=0;
           active[21]=0;
           ends[21]=0;
           tdone[21]=1;
@@ -395,44 +388,44 @@ public class rotary_controller extends ClockDomain{
     }
   }
 
-  public void thread1247(int [] tdone, int [] ends){
-        S771=1;
-    if((readyLidLoader_in.getVal() == null ? null : ((Boolean)readyLidLoader_in.getVal())) == Boolean.TRUE){//sysj/rotary_controller.sysj line: 16, column: 8
-      rL_1.setPresent();//sysj/rotary_controller.sysj line: 17, column: 6
+  public void thread161918(int [] tdone, int [] ends){
+        S161675=1;
+    if((readyLidLoader_in.getVal() == null ? null : ((Boolean)readyLidLoader_in.getVal())) == Boolean.TRUE){//sysj\rotary_controller.sysj line: 10, column: 12
+      rL_1.setPresent();//sysj\rotary_controller.sysj line: 10, column: 35
       currsigs.addElement(rL_1);
-      System.out.println("Emitted rL_1");
       active[20]=1;
       ends[20]=1;
       tdone[20]=1;
     }
     else {
-      active[20]=1;
-      ends[20]=1;
+      S161675=0;
+      active[20]=0;
+      ends[20]=0;
       tdone[20]=1;
     }
   }
 
-  public void thread1246(int [] tdone, int [] ends){
-        S763=1;
-    S715=0;
-    S699=0;
-    if(!readyLidLoader_in.isPartnerPresent() || readyLidLoader_in.isPartnerPreempted()){//sysj/rotary_controller.sysj line: 9, column: 5
-      readyLidLoader_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
-      S699=1;
+  public void thread161917(int [] tdone, int [] ends){
+        S161669=1;
+    S161668=0;
+    S161652=0;
+    if(!readyLidLoader_in.isPartnerPresent() || readyLidLoader_in.isPartnerPreempted()){//sysj\rotary_controller.sysj line: 8, column: 8
+      readyLidLoader_in.setACK(false);//sysj\rotary_controller.sysj line: 8, column: 8
+      S161652=1;
       active[19]=1;
       ends[19]=1;
       tdone[19]=1;
     }
     else {
-      S694=0;
-      if(!readyLidLoader_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-        readyLidLoader_in.setACK(true);//sysj/rotary_controller.sysj line: 9, column: 5
-        S694=1;
-        if(readyLidLoader_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-          readyLidLoader_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
+      S161647=0;
+      if(!readyLidLoader_in.isREQ()){//sysj\rotary_controller.sysj line: 8, column: 8
+        readyLidLoader_in.setACK(true);//sysj\rotary_controller.sysj line: 8, column: 8
+        S161647=1;
+        if(readyLidLoader_in.isREQ()){//sysj\rotary_controller.sysj line: 8, column: 8
+          readyLidLoader_in.setACK(false);//sysj\rotary_controller.sysj line: 8, column: 8
           ends[19]=2;
-          ;//sysj/rotary_controller.sysj line: 9, column: 5
-          S715=1;
+          ;//sysj\rotary_controller.sysj line: 8, column: 8
+          S161668=1;
           active[19]=1;
           ends[19]=1;
           tdone[19]=1;
@@ -451,8 +444,8 @@ public class rotary_controller extends ClockDomain{
     }
   }
 
-  public void thread1244(int [] tdone, int [] ends){
-        switch(S771){
+  public void thread161915(int [] tdone, int [] ends){
+        switch(S161675){
       case 0 : 
         active[20]=0;
         ends[20]=0;
@@ -460,26 +453,18 @@ public class rotary_controller extends ClockDomain{
         break;
       
       case 1 : 
-        if((readyLidLoader_in.getVal() == null ? null : ((Boolean)readyLidLoader_in.getVal())) == Boolean.TRUE){//sysj/rotary_controller.sysj line: 16, column: 8
-          rL_1.setPresent();//sysj/rotary_controller.sysj line: 17, column: 6
-          currsigs.addElement(rL_1);
-          System.out.println("Emitted rL_1");
-          active[20]=1;
-          ends[20]=1;
-          tdone[20]=1;
-        }
-        else {
-          active[20]=1;
-          ends[20]=1;
-          tdone[20]=1;
-        }
+        rL_1.setPresent();//sysj\rotary_controller.sysj line: 10, column: 35
+        currsigs.addElement(rL_1);
+        active[20]=1;
+        ends[20]=1;
+        tdone[20]=1;
         break;
       
     }
   }
 
-  public void thread1243(int [] tdone, int [] ends){
-        switch(S763){
+  public void thread161914(int [] tdone, int [] ends){
+        switch(S161669){
       case 0 : 
         active[19]=0;
         ends[19]=0;
@@ -487,28 +472,28 @@ public class rotary_controller extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S715){
+        switch(S161668){
           case 0 : 
-            switch(S699){
+            switch(S161652){
               case 0 : 
-                if(!readyLidLoader_in.isPartnerPresent() || readyLidLoader_in.isPartnerPreempted()){//sysj/rotary_controller.sysj line: 9, column: 5
-                  readyLidLoader_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
-                  S699=1;
+                if(!readyLidLoader_in.isPartnerPresent() || readyLidLoader_in.isPartnerPreempted()){//sysj\rotary_controller.sysj line: 8, column: 8
+                  readyLidLoader_in.setACK(false);//sysj\rotary_controller.sysj line: 8, column: 8
+                  S161652=1;
                   active[19]=1;
                   ends[19]=1;
                   tdone[19]=1;
                 }
                 else {
-                  switch(S694){
+                  switch(S161647){
                     case 0 : 
-                      if(!readyLidLoader_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-                        readyLidLoader_in.setACK(true);//sysj/rotary_controller.sysj line: 9, column: 5
-                        S694=1;
-                        if(readyLidLoader_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-                          readyLidLoader_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
+                      if(!readyLidLoader_in.isREQ()){//sysj\rotary_controller.sysj line: 8, column: 8
+                        readyLidLoader_in.setACK(true);//sysj\rotary_controller.sysj line: 8, column: 8
+                        S161647=1;
+                        if(readyLidLoader_in.isREQ()){//sysj\rotary_controller.sysj line: 8, column: 8
+                          readyLidLoader_in.setACK(false);//sysj\rotary_controller.sysj line: 8, column: 8
                           ends[19]=2;
-                          ;//sysj/rotary_controller.sysj line: 9, column: 5
-                          S715=1;
+                          ;//sysj\rotary_controller.sysj line: 8, column: 8
+                          S161668=1;
                           active[19]=1;
                           ends[19]=1;
                           tdone[19]=1;
@@ -527,11 +512,11 @@ public class rotary_controller extends ClockDomain{
                       break;
                     
                     case 1 : 
-                      if(readyLidLoader_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-                        readyLidLoader_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
+                      if(readyLidLoader_in.isREQ()){//sysj\rotary_controller.sysj line: 8, column: 8
+                        readyLidLoader_in.setACK(false);//sysj\rotary_controller.sysj line: 8, column: 8
                         ends[19]=2;
-                        ;//sysj/rotary_controller.sysj line: 9, column: 5
-                        S715=1;
+                        ;//sysj\rotary_controller.sysj line: 8, column: 8
+                        S161668=1;
                         active[19]=1;
                         ends[19]=1;
                         tdone[19]=1;
@@ -548,25 +533,25 @@ public class rotary_controller extends ClockDomain{
                 break;
               
               case 1 : 
-                S699=1;
-                S699=0;
-                if(!readyLidLoader_in.isPartnerPresent() || readyLidLoader_in.isPartnerPreempted()){//sysj/rotary_controller.sysj line: 9, column: 5
-                  readyLidLoader_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
-                  S699=1;
+                S161652=1;
+                S161652=0;
+                if(!readyLidLoader_in.isPartnerPresent() || readyLidLoader_in.isPartnerPreempted()){//sysj\rotary_controller.sysj line: 8, column: 8
+                  readyLidLoader_in.setACK(false);//sysj\rotary_controller.sysj line: 8, column: 8
+                  S161652=1;
                   active[19]=1;
                   ends[19]=1;
                   tdone[19]=1;
                 }
                 else {
-                  S694=0;
-                  if(!readyLidLoader_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-                    readyLidLoader_in.setACK(true);//sysj/rotary_controller.sysj line: 9, column: 5
-                    S694=1;
-                    if(readyLidLoader_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-                      readyLidLoader_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
+                  S161647=0;
+                  if(!readyLidLoader_in.isREQ()){//sysj\rotary_controller.sysj line: 8, column: 8
+                    readyLidLoader_in.setACK(true);//sysj\rotary_controller.sysj line: 8, column: 8
+                    S161647=1;
+                    if(readyLidLoader_in.isREQ()){//sysj\rotary_controller.sysj line: 8, column: 8
+                      readyLidLoader_in.setACK(false);//sysj\rotary_controller.sysj line: 8, column: 8
                       ends[19]=2;
-                      ;//sysj/rotary_controller.sysj line: 9, column: 5
-                      S715=1;
+                      ;//sysj\rotary_controller.sysj line: 8, column: 8
+                      S161668=1;
                       active[19]=1;
                       ends[19]=1;
                       tdone[19]=1;
@@ -589,41 +574,84 @@ public class rotary_controller extends ClockDomain{
             break;
           
           case 1 : 
-            S715=1;
-            S715=0;
-            S699=0;
-            if(!readyLidLoader_in.isPartnerPresent() || readyLidLoader_in.isPartnerPreempted()){//sysj/rotary_controller.sysj line: 9, column: 5
-              readyLidLoader_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
-              S699=1;
-              active[19]=1;
-              ends[19]=1;
-              tdone[19]=1;
+            S161668=1;
+            S161668=2;
+            active[19]=1;
+            ends[19]=1;
+            tdone[19]=1;
+            break;
+          
+          case 2 : 
+            S161668=2;
+            readyLidLoader_in.setPreempted();//sysj\rotary_controller.sysj line: 8, column: 37
+            ends[19]=2;
+            tdone[19]=1;
+            break;
+          
+        }
+        break;
+      
+    }
+  }
+
+  public void thread161913(int [] tdone, int [] ends){
+        switch(S161743){
+      case 0 : 
+        active[18]=0;
+        ends[18]=0;
+        tdone[18]=1;
+        break;
+      
+      case 1 : 
+        switch(S161677){
+          case 0 : 
+            thread161914(tdone,ends);
+            thread161915(tdone,ends);
+            int biggest161916 = 0;
+            if(ends[19]>=biggest161916){
+              biggest161916=ends[19];
             }
-            else {
-              S694=0;
-              if(!readyLidLoader_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-                readyLidLoader_in.setACK(true);//sysj/rotary_controller.sysj line: 9, column: 5
-                S694=1;
-                if(readyLidLoader_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-                  readyLidLoader_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
-                  ends[19]=2;
-                  ;//sysj/rotary_controller.sysj line: 9, column: 5
-                  S715=1;
-                  active[19]=1;
-                  ends[19]=1;
-                  tdone[19]=1;
-                }
-                else {
-                  active[19]=1;
-                  ends[19]=1;
-                  tdone[19]=1;
-                }
-              }
-              else {
-                active[19]=1;
-                ends[19]=1;
-                tdone[19]=1;
-              }
+            if(ends[20]>=biggest161916){
+              biggest161916=ends[20];
+            }
+            if(biggest161916 == 1){
+              active[18]=1;
+              ends[18]=1;
+              tdone[18]=1;
+            }
+            if(biggest161916 == 2){
+              ends[18]=2;
+              ;//sysj\rotary_controller.sysj line: 7, column: 6
+              S161677=1;
+              active[18]=1;
+              ends[18]=1;
+              tdone[18]=1;
+            }
+            //FINXME code
+            if(biggest161916 == 0){
+              S161677=1;
+              active[18]=1;
+              ends[18]=1;
+              tdone[18]=1;
+            }
+            break;
+          
+          case 1 : 
+            S161677=1;
+            S161677=0;
+            thread161917(tdone,ends);
+            thread161918(tdone,ends);
+            int biggest161919 = 0;
+            if(ends[19]>=biggest161919){
+              biggest161919=ends[19];
+            }
+            if(ends[20]>=biggest161919){
+              biggest161919=ends[20];
+            }
+            if(biggest161919 == 1){
+              active[18]=1;
+              ends[18]=1;
+              tdone[18]=1;
             }
             break;
           
@@ -633,59 +661,14 @@ public class rotary_controller extends ClockDomain{
     }
   }
 
-  public void thread1242(int [] tdone, int [] ends){
-        switch(S931){
-      case 0 : 
-        active[18]=0;
-        ends[18]=0;
-        tdone[18]=1;
-        break;
-      
-      case 1 : 
-        thread1243(tdone,ends);
-        thread1244(tdone,ends);
-        int biggest1245 = 0;
-        if(ends[19]>=biggest1245){
-          biggest1245=ends[19];
-        }
-        if(ends[20]>=biggest1245){
-          biggest1245=ends[20];
-        }
-        if(biggest1245 == 1){
-          active[18]=1;
-          ends[18]=1;
-          tdone[18]=1;
-        }
-        //FINXME code
-        if(biggest1245 == 0){
-          thread1246(tdone,ends);
-          thread1247(tdone,ends);
-          int biggest1248 = 0;
-          if(ends[19]>=biggest1248){
-            biggest1248=ends[19];
-          }
-          if(ends[20]>=biggest1248){
-            biggest1248=ends[20];
-          }
-          if(biggest1248 == 1){
-            active[18]=1;
-            ends[18]=1;
-            tdone[18]=1;
-          }
-        }
-        break;
-      
-    }
-  }
-
-  public void thread1241(int [] tdone, int [] ends){
+  public void thread161912(int [] tdone, int [] ends){
         active[17]=0;
     ends[17]=0;
     tdone[17]=1;
   }
 
-  public void thread1240(int [] tdone, int [] ends){
-        switch(S933){
+  public void thread161911(int [] tdone, int [] ends){
+        switch(S161745){
       case 0 : 
         active[16]=0;
         ends[16]=0;
@@ -693,23 +676,23 @@ public class rotary_controller extends ClockDomain{
         break;
       
       case 1 : 
-        thread1241(tdone,ends);
-        thread1242(tdone,ends);
-        int biggest1249 = 0;
-        if(ends[17]>=biggest1249){
-          biggest1249=ends[17];
+        thread161912(tdone,ends);
+        thread161913(tdone,ends);
+        int biggest161920 = 0;
+        if(ends[17]>=biggest161920){
+          biggest161920=ends[17];
         }
-        if(ends[18]>=biggest1249){
-          biggest1249=ends[18];
+        if(ends[18]>=biggest161920){
+          biggest161920=ends[18];
         }
-        if(biggest1249 == 1){
+        if(biggest161920 == 1){
           active[16]=1;
           ends[16]=1;
           tdone[16]=1;
         }
         //FINXME code
-        if(biggest1249 == 0){
-          S933=0;
+        if(biggest161920 == 0){
+          S161745=0;
           active[16]=0;
           ends[16]=0;
           tdone[16]=1;
@@ -719,44 +702,44 @@ public class rotary_controller extends ClockDomain{
     }
   }
 
-  public void thread1237(int [] tdone, int [] ends){
-        S528=1;
-    if((readyFiller_in.getVal() == null ? null : ((Boolean)readyFiller_in.getVal())) == Boolean.TRUE){//sysj/rotary_controller.sysj line: 16, column: 8
-      rF_1.setPresent();//sysj/rotary_controller.sysj line: 17, column: 6
+  public void thread161908(int [] tdone, int [] ends){
+        S161573=1;
+    if((readyFiller_in.getVal() == null ? null : ((Boolean)readyFiller_in.getVal())) == Boolean.TRUE){//sysj\rotary_controller.sysj line: 10, column: 12
+      rF_1.setPresent();//sysj\rotary_controller.sysj line: 10, column: 35
       currsigs.addElement(rF_1);
-      System.out.println("Emitted rF_1");
       active[15]=1;
       ends[15]=1;
       tdone[15]=1;
     }
     else {
-      active[15]=1;
-      ends[15]=1;
+      S161573=0;
+      active[15]=0;
+      ends[15]=0;
       tdone[15]=1;
     }
   }
 
-  public void thread1236(int [] tdone, int [] ends){
-        S520=1;
-    S472=0;
-    S456=0;
-    if(!readyFiller_in.isPartnerPresent() || readyFiller_in.isPartnerPreempted()){//sysj/rotary_controller.sysj line: 9, column: 5
-      readyFiller_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
-      S456=1;
+  public void thread161907(int [] tdone, int [] ends){
+        S161567=1;
+    S161566=0;
+    S161550=0;
+    if(!readyFiller_in.isPartnerPresent() || readyFiller_in.isPartnerPreempted()){//sysj\rotary_controller.sysj line: 8, column: 8
+      readyFiller_in.setACK(false);//sysj\rotary_controller.sysj line: 8, column: 8
+      S161550=1;
       active[14]=1;
       ends[14]=1;
       tdone[14]=1;
     }
     else {
-      S451=0;
-      if(!readyFiller_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-        readyFiller_in.setACK(true);//sysj/rotary_controller.sysj line: 9, column: 5
-        S451=1;
-        if(readyFiller_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-          readyFiller_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
+      S161545=0;
+      if(!readyFiller_in.isREQ()){//sysj\rotary_controller.sysj line: 8, column: 8
+        readyFiller_in.setACK(true);//sysj\rotary_controller.sysj line: 8, column: 8
+        S161545=1;
+        if(readyFiller_in.isREQ()){//sysj\rotary_controller.sysj line: 8, column: 8
+          readyFiller_in.setACK(false);//sysj\rotary_controller.sysj line: 8, column: 8
           ends[14]=2;
-          ;//sysj/rotary_controller.sysj line: 9, column: 5
-          S472=1;
+          ;//sysj\rotary_controller.sysj line: 8, column: 8
+          S161566=1;
           active[14]=1;
           ends[14]=1;
           tdone[14]=1;
@@ -775,8 +758,8 @@ public class rotary_controller extends ClockDomain{
     }
   }
 
-  public void thread1234(int [] tdone, int [] ends){
-        switch(S528){
+  public void thread161905(int [] tdone, int [] ends){
+        switch(S161573){
       case 0 : 
         active[15]=0;
         ends[15]=0;
@@ -784,26 +767,18 @@ public class rotary_controller extends ClockDomain{
         break;
       
       case 1 : 
-        if((readyFiller_in.getVal() == null ? null : ((Boolean)readyFiller_in.getVal())) == Boolean.TRUE){//sysj/rotary_controller.sysj line: 16, column: 8
-          rF_1.setPresent();//sysj/rotary_controller.sysj line: 17, column: 6
-          currsigs.addElement(rF_1);
-          System.out.println("Emitted rF_1");
-          active[15]=1;
-          ends[15]=1;
-          tdone[15]=1;
-        }
-        else {
-          active[15]=1;
-          ends[15]=1;
-          tdone[15]=1;
-        }
+        rF_1.setPresent();//sysj\rotary_controller.sysj line: 10, column: 35
+        currsigs.addElement(rF_1);
+        active[15]=1;
+        ends[15]=1;
+        tdone[15]=1;
         break;
       
     }
   }
 
-  public void thread1233(int [] tdone, int [] ends){
-        switch(S520){
+  public void thread161904(int [] tdone, int [] ends){
+        switch(S161567){
       case 0 : 
         active[14]=0;
         ends[14]=0;
@@ -811,28 +786,28 @@ public class rotary_controller extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S472){
+        switch(S161566){
           case 0 : 
-            switch(S456){
+            switch(S161550){
               case 0 : 
-                if(!readyFiller_in.isPartnerPresent() || readyFiller_in.isPartnerPreempted()){//sysj/rotary_controller.sysj line: 9, column: 5
-                  readyFiller_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
-                  S456=1;
+                if(!readyFiller_in.isPartnerPresent() || readyFiller_in.isPartnerPreempted()){//sysj\rotary_controller.sysj line: 8, column: 8
+                  readyFiller_in.setACK(false);//sysj\rotary_controller.sysj line: 8, column: 8
+                  S161550=1;
                   active[14]=1;
                   ends[14]=1;
                   tdone[14]=1;
                 }
                 else {
-                  switch(S451){
+                  switch(S161545){
                     case 0 : 
-                      if(!readyFiller_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-                        readyFiller_in.setACK(true);//sysj/rotary_controller.sysj line: 9, column: 5
-                        S451=1;
-                        if(readyFiller_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-                          readyFiller_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
+                      if(!readyFiller_in.isREQ()){//sysj\rotary_controller.sysj line: 8, column: 8
+                        readyFiller_in.setACK(true);//sysj\rotary_controller.sysj line: 8, column: 8
+                        S161545=1;
+                        if(readyFiller_in.isREQ()){//sysj\rotary_controller.sysj line: 8, column: 8
+                          readyFiller_in.setACK(false);//sysj\rotary_controller.sysj line: 8, column: 8
                           ends[14]=2;
-                          ;//sysj/rotary_controller.sysj line: 9, column: 5
-                          S472=1;
+                          ;//sysj\rotary_controller.sysj line: 8, column: 8
+                          S161566=1;
                           active[14]=1;
                           ends[14]=1;
                           tdone[14]=1;
@@ -851,11 +826,11 @@ public class rotary_controller extends ClockDomain{
                       break;
                     
                     case 1 : 
-                      if(readyFiller_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-                        readyFiller_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
+                      if(readyFiller_in.isREQ()){//sysj\rotary_controller.sysj line: 8, column: 8
+                        readyFiller_in.setACK(false);//sysj\rotary_controller.sysj line: 8, column: 8
                         ends[14]=2;
-                        ;//sysj/rotary_controller.sysj line: 9, column: 5
-                        S472=1;
+                        ;//sysj\rotary_controller.sysj line: 8, column: 8
+                        S161566=1;
                         active[14]=1;
                         ends[14]=1;
                         tdone[14]=1;
@@ -872,25 +847,25 @@ public class rotary_controller extends ClockDomain{
                 break;
               
               case 1 : 
-                S456=1;
-                S456=0;
-                if(!readyFiller_in.isPartnerPresent() || readyFiller_in.isPartnerPreempted()){//sysj/rotary_controller.sysj line: 9, column: 5
-                  readyFiller_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
-                  S456=1;
+                S161550=1;
+                S161550=0;
+                if(!readyFiller_in.isPartnerPresent() || readyFiller_in.isPartnerPreempted()){//sysj\rotary_controller.sysj line: 8, column: 8
+                  readyFiller_in.setACK(false);//sysj\rotary_controller.sysj line: 8, column: 8
+                  S161550=1;
                   active[14]=1;
                   ends[14]=1;
                   tdone[14]=1;
                 }
                 else {
-                  S451=0;
-                  if(!readyFiller_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-                    readyFiller_in.setACK(true);//sysj/rotary_controller.sysj line: 9, column: 5
-                    S451=1;
-                    if(readyFiller_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-                      readyFiller_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
+                  S161545=0;
+                  if(!readyFiller_in.isREQ()){//sysj\rotary_controller.sysj line: 8, column: 8
+                    readyFiller_in.setACK(true);//sysj\rotary_controller.sysj line: 8, column: 8
+                    S161545=1;
+                    if(readyFiller_in.isREQ()){//sysj\rotary_controller.sysj line: 8, column: 8
+                      readyFiller_in.setACK(false);//sysj\rotary_controller.sysj line: 8, column: 8
                       ends[14]=2;
-                      ;//sysj/rotary_controller.sysj line: 9, column: 5
-                      S472=1;
+                      ;//sysj\rotary_controller.sysj line: 8, column: 8
+                      S161566=1;
                       active[14]=1;
                       ends[14]=1;
                       tdone[14]=1;
@@ -913,41 +888,84 @@ public class rotary_controller extends ClockDomain{
             break;
           
           case 1 : 
-            S472=1;
-            S472=0;
-            S456=0;
-            if(!readyFiller_in.isPartnerPresent() || readyFiller_in.isPartnerPreempted()){//sysj/rotary_controller.sysj line: 9, column: 5
-              readyFiller_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
-              S456=1;
-              active[14]=1;
-              ends[14]=1;
-              tdone[14]=1;
+            S161566=1;
+            S161566=2;
+            active[14]=1;
+            ends[14]=1;
+            tdone[14]=1;
+            break;
+          
+          case 2 : 
+            S161566=2;
+            readyFiller_in.setPreempted();//sysj\rotary_controller.sysj line: 8, column: 37
+            ends[14]=2;
+            tdone[14]=1;
+            break;
+          
+        }
+        break;
+      
+    }
+  }
+
+  public void thread161903(int [] tdone, int [] ends){
+        switch(S161641){
+      case 0 : 
+        active[13]=0;
+        ends[13]=0;
+        tdone[13]=1;
+        break;
+      
+      case 1 : 
+        switch(S161575){
+          case 0 : 
+            thread161904(tdone,ends);
+            thread161905(tdone,ends);
+            int biggest161906 = 0;
+            if(ends[14]>=biggest161906){
+              biggest161906=ends[14];
             }
-            else {
-              S451=0;
-              if(!readyFiller_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-                readyFiller_in.setACK(true);//sysj/rotary_controller.sysj line: 9, column: 5
-                S451=1;
-                if(readyFiller_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-                  readyFiller_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
-                  ends[14]=2;
-                  ;//sysj/rotary_controller.sysj line: 9, column: 5
-                  S472=1;
-                  active[14]=1;
-                  ends[14]=1;
-                  tdone[14]=1;
-                }
-                else {
-                  active[14]=1;
-                  ends[14]=1;
-                  tdone[14]=1;
-                }
-              }
-              else {
-                active[14]=1;
-                ends[14]=1;
-                tdone[14]=1;
-              }
+            if(ends[15]>=biggest161906){
+              biggest161906=ends[15];
+            }
+            if(biggest161906 == 1){
+              active[13]=1;
+              ends[13]=1;
+              tdone[13]=1;
+            }
+            if(biggest161906 == 2){
+              ends[13]=2;
+              ;//sysj\rotary_controller.sysj line: 7, column: 6
+              S161575=1;
+              active[13]=1;
+              ends[13]=1;
+              tdone[13]=1;
+            }
+            //FINXME code
+            if(biggest161906 == 0){
+              S161575=1;
+              active[13]=1;
+              ends[13]=1;
+              tdone[13]=1;
+            }
+            break;
+          
+          case 1 : 
+            S161575=1;
+            S161575=0;
+            thread161907(tdone,ends);
+            thread161908(tdone,ends);
+            int biggest161909 = 0;
+            if(ends[14]>=biggest161909){
+              biggest161909=ends[14];
+            }
+            if(ends[15]>=biggest161909){
+              biggest161909=ends[15];
+            }
+            if(biggest161909 == 1){
+              active[13]=1;
+              ends[13]=1;
+              tdone[13]=1;
             }
             break;
           
@@ -957,59 +975,14 @@ public class rotary_controller extends ClockDomain{
     }
   }
 
-  public void thread1232(int [] tdone, int [] ends){
-        switch(S688){
-      case 0 : 
-        active[13]=0;
-        ends[13]=0;
-        tdone[13]=1;
-        break;
-      
-      case 1 : 
-        thread1233(tdone,ends);
-        thread1234(tdone,ends);
-        int biggest1235 = 0;
-        if(ends[14]>=biggest1235){
-          biggest1235=ends[14];
-        }
-        if(ends[15]>=biggest1235){
-          biggest1235=ends[15];
-        }
-        if(biggest1235 == 1){
-          active[13]=1;
-          ends[13]=1;
-          tdone[13]=1;
-        }
-        //FINXME code
-        if(biggest1235 == 0){
-          thread1236(tdone,ends);
-          thread1237(tdone,ends);
-          int biggest1238 = 0;
-          if(ends[14]>=biggest1238){
-            biggest1238=ends[14];
-          }
-          if(ends[15]>=biggest1238){
-            biggest1238=ends[15];
-          }
-          if(biggest1238 == 1){
-            active[13]=1;
-            ends[13]=1;
-            tdone[13]=1;
-          }
-        }
-        break;
-      
-    }
-  }
-
-  public void thread1231(int [] tdone, int [] ends){
+  public void thread161902(int [] tdone, int [] ends){
         active[12]=0;
     ends[12]=0;
     tdone[12]=1;
   }
 
-  public void thread1230(int [] tdone, int [] ends){
-        switch(S690){
+  public void thread161901(int [] tdone, int [] ends){
+        switch(S161643){
       case 0 : 
         active[11]=0;
         ends[11]=0;
@@ -1017,23 +990,23 @@ public class rotary_controller extends ClockDomain{
         break;
       
       case 1 : 
-        thread1231(tdone,ends);
-        thread1232(tdone,ends);
-        int biggest1239 = 0;
-        if(ends[12]>=biggest1239){
-          biggest1239=ends[12];
+        thread161902(tdone,ends);
+        thread161903(tdone,ends);
+        int biggest161910 = 0;
+        if(ends[12]>=biggest161910){
+          biggest161910=ends[12];
         }
-        if(ends[13]>=biggest1239){
-          biggest1239=ends[13];
+        if(ends[13]>=biggest161910){
+          biggest161910=ends[13];
         }
-        if(biggest1239 == 1){
+        if(biggest161910 == 1){
           active[11]=1;
           ends[11]=1;
           tdone[11]=1;
         }
         //FINXME code
-        if(biggest1239 == 0){
-          S690=0;
+        if(biggest161910 == 0){
+          S161643=0;
           active[11]=0;
           ends[11]=0;
           tdone[11]=1;
@@ -1043,47 +1016,44 @@ public class rotary_controller extends ClockDomain{
     }
   }
 
-  public void thread1227(int [] tdone, int [] ends){
-        S285=1;
-    S279=0;
-    if((readyConveyor_in.getVal() == null ? null : ((Boolean)readyConveyor_in.getVal())) == Boolean.TRUE){//sysj/rotary_controller.sysj line: 16, column: 8
-      rC_1.setPresent();//sysj/rotary_controller.sysj line: 17, column: 6
+  public void thread161898(int [] tdone, int [] ends){
+        S161471=1;
+    if((readyConveyor_in.getVal() == null ? null : ((Boolean)readyConveyor_in.getVal())) == Boolean.TRUE){//sysj\rotary_controller.sysj line: 10, column: 12
+      rC_1.setPresent();//sysj\rotary_controller.sysj line: 10, column: 35
       currsigs.addElement(rC_1);
-      System.out.println("Emitted rC_1");
-      S279=1;
       active[10]=1;
       ends[10]=1;
       tdone[10]=1;
     }
     else {
-      S279=1;
-      active[10]=1;
-      ends[10]=1;
+      S161471=0;
+      active[10]=0;
+      ends[10]=0;
       tdone[10]=1;
     }
   }
 
-  public void thread1226(int [] tdone, int [] ends){
-        S277=1;
-    S229=0;
-    S213=0;
-    if(!readyConveyor_in.isPartnerPresent() || readyConveyor_in.isPartnerPreempted()){//sysj/rotary_controller.sysj line: 9, column: 5
-      readyConveyor_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
-      S213=1;
+  public void thread161897(int [] tdone, int [] ends){
+        S161465=1;
+    S161464=0;
+    S161448=0;
+    if(!readyConveyor_in.isPartnerPresent() || readyConveyor_in.isPartnerPreempted()){//sysj\rotary_controller.sysj line: 8, column: 8
+      readyConveyor_in.setACK(false);//sysj\rotary_controller.sysj line: 8, column: 8
+      S161448=1;
       active[9]=1;
       ends[9]=1;
       tdone[9]=1;
     }
     else {
-      S208=0;
-      if(!readyConveyor_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-        readyConveyor_in.setACK(true);//sysj/rotary_controller.sysj line: 9, column: 5
-        S208=1;
-        if(readyConveyor_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-          readyConveyor_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
+      S161443=0;
+      if(!readyConveyor_in.isREQ()){//sysj\rotary_controller.sysj line: 8, column: 8
+        readyConveyor_in.setACK(true);//sysj\rotary_controller.sysj line: 8, column: 8
+        S161443=1;
+        if(readyConveyor_in.isREQ()){//sysj\rotary_controller.sysj line: 8, column: 8
+          readyConveyor_in.setACK(false);//sysj\rotary_controller.sysj line: 8, column: 8
           ends[9]=2;
-          ;//sysj/rotary_controller.sysj line: 9, column: 5
-          S229=1;
+          ;//sysj\rotary_controller.sysj line: 8, column: 8
+          S161464=1;
           active[9]=1;
           ends[9]=1;
           tdone[9]=1;
@@ -1102,8 +1072,8 @@ public class rotary_controller extends ClockDomain{
     }
   }
 
-  public void thread1224(int [] tdone, int [] ends){
-        switch(S285){
+  public void thread161895(int [] tdone, int [] ends){
+        switch(S161471){
       case 0 : 
         active[10]=0;
         ends[10]=0;
@@ -1111,54 +1081,18 @@ public class rotary_controller extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S279){
-          case 0 : 
-            S279=0;
-            if((readyConveyor_in.getVal() == null ? null : ((Boolean)readyConveyor_in.getVal())) == Boolean.TRUE){//sysj/rotary_controller.sysj line: 16, column: 8
-              rC_1.setPresent();//sysj/rotary_controller.sysj line: 17, column: 6
-              currsigs.addElement(rC_1);
-              System.out.println("Emitted rC_1");
-              S279=1;
-              active[10]=1;
-              ends[10]=1;
-              tdone[10]=1;
-            }
-            else {
-              S279=1;
-              active[10]=1;
-              ends[10]=1;
-              tdone[10]=1;
-            }
-            break;
-          
-          case 1 : 
-            S279=1;
-            S279=0;
-            if((readyConveyor_in.getVal() == null ? null : ((Boolean)readyConveyor_in.getVal())) == Boolean.TRUE){//sysj/rotary_controller.sysj line: 16, column: 8
-              rC_1.setPresent();//sysj/rotary_controller.sysj line: 17, column: 6
-              currsigs.addElement(rC_1);
-              System.out.println("Emitted rC_1");
-              S279=1;
-              active[10]=1;
-              ends[10]=1;
-              tdone[10]=1;
-            }
-            else {
-              S279=1;
-              active[10]=1;
-              ends[10]=1;
-              tdone[10]=1;
-            }
-            break;
-          
-        }
+        rC_1.setPresent();//sysj\rotary_controller.sysj line: 10, column: 35
+        currsigs.addElement(rC_1);
+        active[10]=1;
+        ends[10]=1;
+        tdone[10]=1;
         break;
       
     }
   }
 
-  public void thread1223(int [] tdone, int [] ends){
-        switch(S277){
+  public void thread161894(int [] tdone, int [] ends){
+        switch(S161465){
       case 0 : 
         active[9]=0;
         ends[9]=0;
@@ -1166,28 +1100,28 @@ public class rotary_controller extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S229){
+        switch(S161464){
           case 0 : 
-            switch(S213){
+            switch(S161448){
               case 0 : 
-                if(!readyConveyor_in.isPartnerPresent() || readyConveyor_in.isPartnerPreempted()){//sysj/rotary_controller.sysj line: 9, column: 5
-                  readyConveyor_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
-                  S213=1;
+                if(!readyConveyor_in.isPartnerPresent() || readyConveyor_in.isPartnerPreempted()){//sysj\rotary_controller.sysj line: 8, column: 8
+                  readyConveyor_in.setACK(false);//sysj\rotary_controller.sysj line: 8, column: 8
+                  S161448=1;
                   active[9]=1;
                   ends[9]=1;
                   tdone[9]=1;
                 }
                 else {
-                  switch(S208){
+                  switch(S161443){
                     case 0 : 
-                      if(!readyConveyor_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-                        readyConveyor_in.setACK(true);//sysj/rotary_controller.sysj line: 9, column: 5
-                        S208=1;
-                        if(readyConveyor_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-                          readyConveyor_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
+                      if(!readyConveyor_in.isREQ()){//sysj\rotary_controller.sysj line: 8, column: 8
+                        readyConveyor_in.setACK(true);//sysj\rotary_controller.sysj line: 8, column: 8
+                        S161443=1;
+                        if(readyConveyor_in.isREQ()){//sysj\rotary_controller.sysj line: 8, column: 8
+                          readyConveyor_in.setACK(false);//sysj\rotary_controller.sysj line: 8, column: 8
                           ends[9]=2;
-                          ;//sysj/rotary_controller.sysj line: 9, column: 5
-                          S229=1;
+                          ;//sysj\rotary_controller.sysj line: 8, column: 8
+                          S161464=1;
                           active[9]=1;
                           ends[9]=1;
                           tdone[9]=1;
@@ -1206,11 +1140,11 @@ public class rotary_controller extends ClockDomain{
                       break;
                     
                     case 1 : 
-                      if(readyConveyor_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-                        readyConveyor_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
+                      if(readyConveyor_in.isREQ()){//sysj\rotary_controller.sysj line: 8, column: 8
+                        readyConveyor_in.setACK(false);//sysj\rotary_controller.sysj line: 8, column: 8
                         ends[9]=2;
-                        ;//sysj/rotary_controller.sysj line: 9, column: 5
-                        S229=1;
+                        ;//sysj\rotary_controller.sysj line: 8, column: 8
+                        S161464=1;
                         active[9]=1;
                         ends[9]=1;
                         tdone[9]=1;
@@ -1227,25 +1161,25 @@ public class rotary_controller extends ClockDomain{
                 break;
               
               case 1 : 
-                S213=1;
-                S213=0;
-                if(!readyConveyor_in.isPartnerPresent() || readyConveyor_in.isPartnerPreempted()){//sysj/rotary_controller.sysj line: 9, column: 5
-                  readyConveyor_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
-                  S213=1;
+                S161448=1;
+                S161448=0;
+                if(!readyConveyor_in.isPartnerPresent() || readyConveyor_in.isPartnerPreempted()){//sysj\rotary_controller.sysj line: 8, column: 8
+                  readyConveyor_in.setACK(false);//sysj\rotary_controller.sysj line: 8, column: 8
+                  S161448=1;
                   active[9]=1;
                   ends[9]=1;
                   tdone[9]=1;
                 }
                 else {
-                  S208=0;
-                  if(!readyConveyor_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-                    readyConveyor_in.setACK(true);//sysj/rotary_controller.sysj line: 9, column: 5
-                    S208=1;
-                    if(readyConveyor_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-                      readyConveyor_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
+                  S161443=0;
+                  if(!readyConveyor_in.isREQ()){//sysj\rotary_controller.sysj line: 8, column: 8
+                    readyConveyor_in.setACK(true);//sysj\rotary_controller.sysj line: 8, column: 8
+                    S161443=1;
+                    if(readyConveyor_in.isREQ()){//sysj\rotary_controller.sysj line: 8, column: 8
+                      readyConveyor_in.setACK(false);//sysj\rotary_controller.sysj line: 8, column: 8
                       ends[9]=2;
-                      ;//sysj/rotary_controller.sysj line: 9, column: 5
-                      S229=1;
+                      ;//sysj\rotary_controller.sysj line: 8, column: 8
+                      S161464=1;
                       active[9]=1;
                       ends[9]=1;
                       tdone[9]=1;
@@ -1268,41 +1202,84 @@ public class rotary_controller extends ClockDomain{
             break;
           
           case 1 : 
-            S229=1;
-            S229=0;
-            S213=0;
-            if(!readyConveyor_in.isPartnerPresent() || readyConveyor_in.isPartnerPreempted()){//sysj/rotary_controller.sysj line: 9, column: 5
-              readyConveyor_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
-              S213=1;
-              active[9]=1;
-              ends[9]=1;
-              tdone[9]=1;
+            S161464=1;
+            S161464=2;
+            active[9]=1;
+            ends[9]=1;
+            tdone[9]=1;
+            break;
+          
+          case 2 : 
+            S161464=2;
+            readyConveyor_in.setPreempted();//sysj\rotary_controller.sysj line: 8, column: 37
+            ends[9]=2;
+            tdone[9]=1;
+            break;
+          
+        }
+        break;
+      
+    }
+  }
+
+  public void thread161893(int [] tdone, int [] ends){
+        switch(S161539){
+      case 0 : 
+        active[8]=0;
+        ends[8]=0;
+        tdone[8]=1;
+        break;
+      
+      case 1 : 
+        switch(S161473){
+          case 0 : 
+            thread161894(tdone,ends);
+            thread161895(tdone,ends);
+            int biggest161896 = 0;
+            if(ends[9]>=biggest161896){
+              biggest161896=ends[9];
             }
-            else {
-              S208=0;
-              if(!readyConveyor_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-                readyConveyor_in.setACK(true);//sysj/rotary_controller.sysj line: 9, column: 5
-                S208=1;
-                if(readyConveyor_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-                  readyConveyor_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
-                  ends[9]=2;
-                  ;//sysj/rotary_controller.sysj line: 9, column: 5
-                  S229=1;
-                  active[9]=1;
-                  ends[9]=1;
-                  tdone[9]=1;
-                }
-                else {
-                  active[9]=1;
-                  ends[9]=1;
-                  tdone[9]=1;
-                }
-              }
-              else {
-                active[9]=1;
-                ends[9]=1;
-                tdone[9]=1;
-              }
+            if(ends[10]>=biggest161896){
+              biggest161896=ends[10];
+            }
+            if(biggest161896 == 1){
+              active[8]=1;
+              ends[8]=1;
+              tdone[8]=1;
+            }
+            if(biggest161896 == 2){
+              ends[8]=2;
+              ;//sysj\rotary_controller.sysj line: 7, column: 6
+              S161473=1;
+              active[8]=1;
+              ends[8]=1;
+              tdone[8]=1;
+            }
+            //FINXME code
+            if(biggest161896 == 0){
+              S161473=1;
+              active[8]=1;
+              ends[8]=1;
+              tdone[8]=1;
+            }
+            break;
+          
+          case 1 : 
+            S161473=1;
+            S161473=0;
+            thread161897(tdone,ends);
+            thread161898(tdone,ends);
+            int biggest161899 = 0;
+            if(ends[9]>=biggest161899){
+              biggest161899=ends[9];
+            }
+            if(ends[10]>=biggest161899){
+              biggest161899=ends[10];
+            }
+            if(biggest161899 == 1){
+              active[8]=1;
+              ends[8]=1;
+              tdone[8]=1;
             }
             break;
           
@@ -1312,59 +1289,14 @@ public class rotary_controller extends ClockDomain{
     }
   }
 
-  public void thread1222(int [] tdone, int [] ends){
-        switch(S445){
-      case 0 : 
-        active[8]=0;
-        ends[8]=0;
-        tdone[8]=1;
-        break;
-      
-      case 1 : 
-        thread1223(tdone,ends);
-        thread1224(tdone,ends);
-        int biggest1225 = 0;
-        if(ends[9]>=biggest1225){
-          biggest1225=ends[9];
-        }
-        if(ends[10]>=biggest1225){
-          biggest1225=ends[10];
-        }
-        if(biggest1225 == 1){
-          active[8]=1;
-          ends[8]=1;
-          tdone[8]=1;
-        }
-        //FINXME code
-        if(biggest1225 == 0){
-          thread1226(tdone,ends);
-          thread1227(tdone,ends);
-          int biggest1228 = 0;
-          if(ends[9]>=biggest1228){
-            biggest1228=ends[9];
-          }
-          if(ends[10]>=biggest1228){
-            biggest1228=ends[10];
-          }
-          if(biggest1228 == 1){
-            active[8]=1;
-            ends[8]=1;
-            tdone[8]=1;
-          }
-        }
-        break;
-      
-    }
-  }
-
-  public void thread1221(int [] tdone, int [] ends){
+  public void thread161892(int [] tdone, int [] ends){
         active[7]=0;
     ends[7]=0;
     tdone[7]=1;
   }
 
-  public void thread1220(int [] tdone, int [] ends){
-        switch(S447){
+  public void thread161891(int [] tdone, int [] ends){
+        switch(S161541){
       case 0 : 
         active[6]=0;
         ends[6]=0;
@@ -1372,23 +1304,23 @@ public class rotary_controller extends ClockDomain{
         break;
       
       case 1 : 
-        thread1221(tdone,ends);
-        thread1222(tdone,ends);
-        int biggest1229 = 0;
-        if(ends[7]>=biggest1229){
-          biggest1229=ends[7];
+        thread161892(tdone,ends);
+        thread161893(tdone,ends);
+        int biggest161900 = 0;
+        if(ends[7]>=biggest161900){
+          biggest161900=ends[7];
         }
-        if(ends[8]>=biggest1229){
-          biggest1229=ends[8];
+        if(ends[8]>=biggest161900){
+          biggest161900=ends[8];
         }
-        if(biggest1229 == 1){
+        if(biggest161900 == 1){
           active[6]=1;
           ends[6]=1;
           tdone[6]=1;
         }
         //FINXME code
-        if(biggest1229 == 0){
-          S447=0;
+        if(biggest161900 == 0){
+          S161541=0;
           active[6]=0;
           ends[6]=0;
           tdone[6]=1;
@@ -1398,8 +1330,8 @@ public class rotary_controller extends ClockDomain{
     }
   }
 
-  public void thread1219(int [] tdone, int [] ends){
-        switch(S1178){
+  public void thread161890(int [] tdone, int [] ends){
+        switch(S161849){
       case 0 : 
         active[5]=0;
         ends[5]=0;
@@ -1407,31 +1339,31 @@ public class rotary_controller extends ClockDomain{
         break;
       
       case 1 : 
-        thread1220(tdone,ends);
-        thread1230(tdone,ends);
-        thread1240(tdone,ends);
-        thread1250(tdone,ends);
-        int biggest1260 = 0;
-        if(ends[6]>=biggest1260){
-          biggest1260=ends[6];
+        thread161891(tdone,ends);
+        thread161901(tdone,ends);
+        thread161911(tdone,ends);
+        thread161921(tdone,ends);
+        int biggest161931 = 0;
+        if(ends[6]>=biggest161931){
+          biggest161931=ends[6];
         }
-        if(ends[11]>=biggest1260){
-          biggest1260=ends[11];
+        if(ends[11]>=biggest161931){
+          biggest161931=ends[11];
         }
-        if(ends[16]>=biggest1260){
-          biggest1260=ends[16];
+        if(ends[16]>=biggest161931){
+          biggest161931=ends[16];
         }
-        if(ends[21]>=biggest1260){
-          biggest1260=ends[21];
+        if(ends[21]>=biggest161931){
+          biggest161931=ends[21];
         }
-        if(biggest1260 == 1){
+        if(biggest161931 == 1){
           active[5]=1;
           ends[5]=1;
           tdone[5]=1;
         }
         //FINXME code
-        if(biggest1260 == 0){
-          S1178=0;
+        if(biggest161931 == 0){
+          S161849=0;
           active[5]=0;
           ends[5]=0;
           tdone[5]=1;
@@ -1441,8 +1373,8 @@ public class rotary_controller extends ClockDomain{
     }
   }
 
-  public void thread1218(int [] tdone, int [] ends){
-        switch(S204){
+  public void thread161889(int [] tdone, int [] ends){
+        switch(S161439){
       case 0 : 
         active[4]=0;
         ends[4]=0;
@@ -1450,16 +1382,23 @@ public class rotary_controller extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S182){
+        switch(S161417){
           case 0 : 
-            if(bottleAtPos5.getprestatus() && conveyorEngaged.getprestatus()){//sysj/rotary_controller.sysj line: 63, column: 10
-              S182=1;
-              deload.setPresent();//sysj/rotary_controller.sysj line: 65, column: 5
-              currsigs.addElement(deload);
-              System.out.println("Emitted deload");
-              active[4]=1;
-              ends[4]=1;
-              tdone[4]=1;
+            if(bottleAtPos5.getprestatus() && conveyorEngaged.getprestatus()){//sysj\rotary_controller.sysj line: 73, column: 10
+              S161417=1;
+              if(!bottleAtPos5.getprestatus()){//sysj\rotary_controller.sysj line: 74, column: 20
+                S161417=2;
+                active[4]=1;
+                ends[4]=1;
+                tdone[4]=1;
+              }
+              else {
+                deload.setPresent();//sysj\rotary_controller.sysj line: 75, column: 5
+                currsigs.addElement(deload);
+                active[4]=1;
+                ends[4]=1;
+                tdone[4]=1;
+              }
             }
             else {
               active[4]=1;
@@ -1469,16 +1408,15 @@ public class rotary_controller extends ClockDomain{
             break;
           
           case 1 : 
-            if(!bottleAtPos5.getprestatus()){//sysj/rotary_controller.sysj line: 64, column: 10
-              S182=2;
+            if(!bottleAtPos5.getprestatus()){//sysj\rotary_controller.sysj line: 74, column: 20
+              S161417=2;
               active[4]=1;
               ends[4]=1;
               tdone[4]=1;
             }
             else {
-              deload.setPresent();//sysj/rotary_controller.sysj line: 65, column: 5
+              deload.setPresent();//sysj\rotary_controller.sysj line: 75, column: 5
               currsigs.addElement(deload);
-              System.out.println("Emitted deload");
               active[4]=1;
               ends[4]=1;
               tdone[4]=1;
@@ -1486,8 +1424,8 @@ public class rotary_controller extends ClockDomain{
             break;
           
           case 2 : 
-            S182=2;
-            S182=0;
+            S161417=2;
+            S161417=0;
             active[4]=1;
             ends[4]=1;
             tdone[4]=1;
@@ -1499,8 +1437,8 @@ public class rotary_controller extends ClockDomain{
     }
   }
 
-  public void thread1217(int [] tdone, int [] ends){
-        switch(S172){
+  public void thread161888(int [] tdone, int [] ends){
+        switch(S161407){
       case 0 : 
         active[3]=0;
         ends[3]=0;
@@ -1508,31 +1446,30 @@ public class rotary_controller extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S92){
+        switch(S161359){
           case 0 : 
-            switch(S60){
+            switch(S161343){
               case 0 : 
-                if(!newOrder_in.isPartnerPresent() || newOrder_in.isPartnerPreempted()){//sysj/rotary_controller.sysj line: 53, column: 4
-                  newOrder_in.setACK(false);//sysj/rotary_controller.sysj line: 53, column: 4
-                  S60=1;
+                if(!newOrder_in.isPartnerPresent() || newOrder_in.isPartnerPreempted()){//sysj\rotary_controller.sysj line: 62, column: 4
+                  newOrder_in.setACK(false);//sysj\rotary_controller.sysj line: 62, column: 4
+                  S161343=1;
                   active[3]=1;
                   ends[3]=1;
                   tdone[3]=1;
                 }
                 else {
-                  switch(S55){
+                  switch(S161338){
                     case 0 : 
-                      if(!newOrder_in.isREQ()){//sysj/rotary_controller.sysj line: 53, column: 4
-                        newOrder_in.setACK(true);//sysj/rotary_controller.sysj line: 53, column: 4
-                        S55=1;
-                        if(newOrder_in.isREQ()){//sysj/rotary_controller.sysj line: 53, column: 4
-                          newOrder_in.setACK(false);//sysj/rotary_controller.sysj line: 53, column: 4
+                      if(!newOrder_in.isREQ()){//sysj\rotary_controller.sysj line: 62, column: 4
+                        newOrder_in.setACK(true);//sysj\rotary_controller.sysj line: 62, column: 4
+                        S161338=1;
+                        if(newOrder_in.isREQ()){//sysj\rotary_controller.sysj line: 62, column: 4
+                          newOrder_in.setACK(false);//sysj\rotary_controller.sysj line: 62, column: 4
                           ends[3]=2;
-                          ;//sysj/rotary_controller.sysj line: 53, column: 4
-                          S92=1;
-                          load.setPresent();//sysj/rotary_controller.sysj line: 55, column: 5
+                          ;//sysj\rotary_controller.sysj line: 62, column: 4
+                          load.setPresent();//sysj\rotary_controller.sysj line: 63, column: 4
                           currsigs.addElement(load);
-                          System.out.println("Emitted load");
+                          S161359=1;
                           active[3]=1;
                           ends[3]=1;
                           tdone[3]=1;
@@ -1551,14 +1488,13 @@ public class rotary_controller extends ClockDomain{
                       break;
                     
                     case 1 : 
-                      if(newOrder_in.isREQ()){//sysj/rotary_controller.sysj line: 53, column: 4
-                        newOrder_in.setACK(false);//sysj/rotary_controller.sysj line: 53, column: 4
+                      if(newOrder_in.isREQ()){//sysj\rotary_controller.sysj line: 62, column: 4
+                        newOrder_in.setACK(false);//sysj\rotary_controller.sysj line: 62, column: 4
                         ends[3]=2;
-                        ;//sysj/rotary_controller.sysj line: 53, column: 4
-                        S92=1;
-                        load.setPresent();//sysj/rotary_controller.sysj line: 55, column: 5
+                        ;//sysj\rotary_controller.sysj line: 62, column: 4
+                        load.setPresent();//sysj\rotary_controller.sysj line: 63, column: 4
                         currsigs.addElement(load);
-                        System.out.println("Emitted load");
+                        S161359=1;
                         active[3]=1;
                         ends[3]=1;
                         tdone[3]=1;
@@ -1575,28 +1511,27 @@ public class rotary_controller extends ClockDomain{
                 break;
               
               case 1 : 
-                S60=1;
-                S60=0;
-                if(!newOrder_in.isPartnerPresent() || newOrder_in.isPartnerPreempted()){//sysj/rotary_controller.sysj line: 53, column: 4
-                  newOrder_in.setACK(false);//sysj/rotary_controller.sysj line: 53, column: 4
-                  S60=1;
+                S161343=1;
+                S161343=0;
+                if(!newOrder_in.isPartnerPresent() || newOrder_in.isPartnerPreempted()){//sysj\rotary_controller.sysj line: 62, column: 4
+                  newOrder_in.setACK(false);//sysj\rotary_controller.sysj line: 62, column: 4
+                  S161343=1;
                   active[3]=1;
                   ends[3]=1;
                   tdone[3]=1;
                 }
                 else {
-                  S55=0;
-                  if(!newOrder_in.isREQ()){//sysj/rotary_controller.sysj line: 53, column: 4
-                    newOrder_in.setACK(true);//sysj/rotary_controller.sysj line: 53, column: 4
-                    S55=1;
-                    if(newOrder_in.isREQ()){//sysj/rotary_controller.sysj line: 53, column: 4
-                      newOrder_in.setACK(false);//sysj/rotary_controller.sysj line: 53, column: 4
+                  S161338=0;
+                  if(!newOrder_in.isREQ()){//sysj\rotary_controller.sysj line: 62, column: 4
+                    newOrder_in.setACK(true);//sysj\rotary_controller.sysj line: 62, column: 4
+                    S161338=1;
+                    if(newOrder_in.isREQ()){//sysj\rotary_controller.sysj line: 62, column: 4
+                      newOrder_in.setACK(false);//sysj\rotary_controller.sysj line: 62, column: 4
                       ends[3]=2;
-                      ;//sysj/rotary_controller.sysj line: 53, column: 4
-                      S92=1;
-                      load.setPresent();//sysj/rotary_controller.sysj line: 55, column: 5
+                      ;//sysj\rotary_controller.sysj line: 62, column: 4
+                      load.setPresent();//sysj\rotary_controller.sysj line: 63, column: 4
                       currsigs.addElement(load);
-                      System.out.println("Emitted load");
+                      S161359=1;
                       active[3]=1;
                       ends[3]=1;
                       tdone[3]=1;
@@ -1619,46 +1554,28 @@ public class rotary_controller extends ClockDomain{
             break;
           
           case 1 : 
-            if(bottleAtPos1.getprestatus()){//sysj/rotary_controller.sysj line: 54, column: 10
-              S92=2;
+            S161359=1;
+            S161359=0;
+            S161343=0;
+            if(!newOrder_in.isPartnerPresent() || newOrder_in.isPartnerPreempted()){//sysj\rotary_controller.sysj line: 62, column: 4
+              newOrder_in.setACK(false);//sysj\rotary_controller.sysj line: 62, column: 4
+              S161343=1;
               active[3]=1;
               ends[3]=1;
               tdone[3]=1;
             }
             else {
-              load.setPresent();//sysj/rotary_controller.sysj line: 55, column: 5
-              currsigs.addElement(load);
-              System.out.println("Emitted load");
-              active[3]=1;
-              ends[3]=1;
-              tdone[3]=1;
-            }
-            break;
-          
-          case 2 : 
-            S92=2;
-            S92=0;
-            S60=0;
-            if(!newOrder_in.isPartnerPresent() || newOrder_in.isPartnerPreempted()){//sysj/rotary_controller.sysj line: 53, column: 4
-              newOrder_in.setACK(false);//sysj/rotary_controller.sysj line: 53, column: 4
-              S60=1;
-              active[3]=1;
-              ends[3]=1;
-              tdone[3]=1;
-            }
-            else {
-              S55=0;
-              if(!newOrder_in.isREQ()){//sysj/rotary_controller.sysj line: 53, column: 4
-                newOrder_in.setACK(true);//sysj/rotary_controller.sysj line: 53, column: 4
-                S55=1;
-                if(newOrder_in.isREQ()){//sysj/rotary_controller.sysj line: 53, column: 4
-                  newOrder_in.setACK(false);//sysj/rotary_controller.sysj line: 53, column: 4
+              S161338=0;
+              if(!newOrder_in.isREQ()){//sysj\rotary_controller.sysj line: 62, column: 4
+                newOrder_in.setACK(true);//sysj\rotary_controller.sysj line: 62, column: 4
+                S161338=1;
+                if(newOrder_in.isREQ()){//sysj\rotary_controller.sysj line: 62, column: 4
+                  newOrder_in.setACK(false);//sysj\rotary_controller.sysj line: 62, column: 4
                   ends[3]=2;
-                  ;//sysj/rotary_controller.sysj line: 53, column: 4
-                  S92=1;
-                  load.setPresent();//sysj/rotary_controller.sysj line: 55, column: 5
+                  ;//sysj\rotary_controller.sysj line: 62, column: 4
+                  load.setPresent();//sysj\rotary_controller.sysj line: 63, column: 4
                   currsigs.addElement(load);
-                  System.out.println("Emitted load");
+                  S161359=1;
                   active[3]=1;
                   ends[3]=1;
                   tdone[3]=1;
@@ -1683,8 +1600,8 @@ public class rotary_controller extends ClockDomain{
     }
   }
 
-  public void thread1216(int [] tdone, int [] ends){
-        switch(S53){
+  public void thread161887(int [] tdone, int [] ends){
+        switch(S161336){
       case 0 : 
         active[2]=0;
         ends[2]=0;
@@ -1692,10 +1609,10 @@ public class rotary_controller extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S7){
+        switch(S161290){
           case 0 : 
-            if(rC_1.getprestatus() && rF_1.getprestatus() && rL_1.getprestatus() && rCa_1.getprestatus()){//sysj/rotary_controller.sysj line: 43, column: 11
-              S7=1;
+            if(rC_1.getprestatus() && rF_1.getprestatus() && rL_1.getprestatus() && rCa_1.getprestatus()){//sysj\rotary_controller.sysj line: 52, column: 11
+              S161290=1;
               active[2]=1;
               ends[2]=1;
               tdone[2]=1;
@@ -1708,18 +1625,17 @@ public class rotary_controller extends ClockDomain{
             break;
           
           case 1 : 
-            if(!rotaryEmpty.getprestatus() && !bottleAtPos5.getprestatus()){//sysj/rotary_controller.sysj line: 44, column: 11
-              S7=2;
-              if(tableAlignedWithSensor.getprestatus()){//sysj/rotary_controller.sysj line: 45, column: 21
-                S7=0;
+            if(!rotaryEmpty.getprestatus() && !bottleAtPos5.getprestatus()){//sysj\rotary_controller.sysj line: 53, column: 11
+              S161290=2;
+              if(tableAlignedWithSensor.getprestatus()){//sysj\rotary_controller.sysj line: 54, column: 21
+                S161290=0;
                 active[2]=1;
                 ends[2]=1;
                 tdone[2]=1;
               }
               else {
-                rotaryTableTrigger.setPresent();//sysj/rotary_controller.sysj line: 46, column: 5
+                rotaryTableTrigger.setPresent();//sysj\rotary_controller.sysj line: 55, column: 5
                 currsigs.addElement(rotaryTableTrigger);
-                System.out.println("Emitted rotaryTableTrigger");
                 active[2]=1;
                 ends[2]=1;
                 tdone[2]=1;
@@ -1733,16 +1649,15 @@ public class rotary_controller extends ClockDomain{
             break;
           
           case 2 : 
-            if(tableAlignedWithSensor.getprestatus()){//sysj/rotary_controller.sysj line: 45, column: 21
-              S7=0;
+            if(tableAlignedWithSensor.getprestatus()){//sysj\rotary_controller.sysj line: 54, column: 21
+              S161290=0;
               active[2]=1;
               ends[2]=1;
               tdone[2]=1;
             }
             else {
-              rotaryTableTrigger.setPresent();//sysj/rotary_controller.sysj line: 46, column: 5
+              rotaryTableTrigger.setPresent();//sysj\rotary_controller.sysj line: 55, column: 5
               currsigs.addElement(rotaryTableTrigger);
-              System.out.println("Emitted rotaryTableTrigger");
               active[2]=1;
               ends[2]=1;
               tdone[2]=1;
@@ -1755,44 +1670,44 @@ public class rotary_controller extends ClockDomain{
     }
   }
 
-  public void thread1211(int [] tdone, int [] ends){
-        S1014=1;
-    if((readyCapper_in.getVal() == null ? null : ((Boolean)readyCapper_in.getVal())) == Boolean.TRUE){//sysj/rotary_controller.sysj line: 16, column: 8
-      rCa_1.setPresent();//sysj/rotary_controller.sysj line: 17, column: 6
+  public void thread161882(int [] tdone, int [] ends){
+        S161777=1;
+    if((readyCapper_in.getVal() == null ? null : ((Boolean)readyCapper_in.getVal())) == Boolean.TRUE){//sysj\rotary_controller.sysj line: 10, column: 12
+      rCa_1.setPresent();//sysj\rotary_controller.sysj line: 10, column: 35
       currsigs.addElement(rCa_1);
-      System.out.println("Emitted rCa_1");
       active[25]=1;
       ends[25]=1;
       tdone[25]=1;
     }
     else {
-      active[25]=1;
-      ends[25]=1;
+      S161777=0;
+      active[25]=0;
+      ends[25]=0;
       tdone[25]=1;
     }
   }
 
-  public void thread1210(int [] tdone, int [] ends){
-        S1006=1;
-    S958=0;
-    S942=0;
-    if(!readyCapper_in.isPartnerPresent() || readyCapper_in.isPartnerPreempted()){//sysj/rotary_controller.sysj line: 9, column: 5
-      readyCapper_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
-      S942=1;
+  public void thread161881(int [] tdone, int [] ends){
+        S161771=1;
+    S161770=0;
+    S161754=0;
+    if(!readyCapper_in.isPartnerPresent() || readyCapper_in.isPartnerPreempted()){//sysj\rotary_controller.sysj line: 8, column: 8
+      readyCapper_in.setACK(false);//sysj\rotary_controller.sysj line: 8, column: 8
+      S161754=1;
       active[24]=1;
       ends[24]=1;
       tdone[24]=1;
     }
     else {
-      S937=0;
-      if(!readyCapper_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-        readyCapper_in.setACK(true);//sysj/rotary_controller.sysj line: 9, column: 5
-        S937=1;
-        if(readyCapper_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-          readyCapper_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
+      S161749=0;
+      if(!readyCapper_in.isREQ()){//sysj\rotary_controller.sysj line: 8, column: 8
+        readyCapper_in.setACK(true);//sysj\rotary_controller.sysj line: 8, column: 8
+        S161749=1;
+        if(readyCapper_in.isREQ()){//sysj\rotary_controller.sysj line: 8, column: 8
+          readyCapper_in.setACK(false);//sysj\rotary_controller.sysj line: 8, column: 8
           ends[24]=2;
-          ;//sysj/rotary_controller.sysj line: 9, column: 5
-          S958=1;
+          ;//sysj\rotary_controller.sysj line: 8, column: 8
+          S161770=1;
           active[24]=1;
           ends[24]=1;
           tdone[24]=1;
@@ -1811,86 +1726,87 @@ public class rotary_controller extends ClockDomain{
     }
   }
 
-  public void thread1209(int [] tdone, int [] ends){
-        S1174=1;
-    thread1210(tdone,ends);
-    thread1211(tdone,ends);
-    int biggest1212 = 0;
-    if(ends[24]>=biggest1212){
-      biggest1212=ends[24];
+  public void thread161880(int [] tdone, int [] ends){
+        S161845=1;
+    S161779=0;
+    thread161881(tdone,ends);
+    thread161882(tdone,ends);
+    int biggest161883 = 0;
+    if(ends[24]>=biggest161883){
+      biggest161883=ends[24];
     }
-    if(ends[25]>=biggest1212){
-      biggest1212=ends[25];
+    if(ends[25]>=biggest161883){
+      biggest161883=ends[25];
     }
-    if(biggest1212 == 1){
+    if(biggest161883 == 1){
       active[23]=1;
       ends[23]=1;
       tdone[23]=1;
     }
   }
 
-  public void thread1208(int [] tdone, int [] ends){
+  public void thread161879(int [] tdone, int [] ends){
         active[22]=0;
     ends[22]=0;
     tdone[22]=1;
   }
 
-  public void thread1207(int [] tdone, int [] ends){
-        S1176=1;
-    thread1208(tdone,ends);
-    thread1209(tdone,ends);
-    int biggest1213 = 0;
-    if(ends[22]>=biggest1213){
-      biggest1213=ends[22];
+  public void thread161878(int [] tdone, int [] ends){
+        S161847=1;
+    thread161879(tdone,ends);
+    thread161880(tdone,ends);
+    int biggest161884 = 0;
+    if(ends[22]>=biggest161884){
+      biggest161884=ends[22];
     }
-    if(ends[23]>=biggest1213){
-      biggest1213=ends[23];
+    if(ends[23]>=biggest161884){
+      biggest161884=ends[23];
     }
-    if(biggest1213 == 1){
+    if(biggest161884 == 1){
       active[21]=1;
       ends[21]=1;
       tdone[21]=1;
     }
   }
 
-  public void thread1204(int [] tdone, int [] ends){
-        S771=1;
-    if((readyLidLoader_in.getVal() == null ? null : ((Boolean)readyLidLoader_in.getVal())) == Boolean.TRUE){//sysj/rotary_controller.sysj line: 16, column: 8
-      rL_1.setPresent();//sysj/rotary_controller.sysj line: 17, column: 6
+  public void thread161875(int [] tdone, int [] ends){
+        S161675=1;
+    if((readyLidLoader_in.getVal() == null ? null : ((Boolean)readyLidLoader_in.getVal())) == Boolean.TRUE){//sysj\rotary_controller.sysj line: 10, column: 12
+      rL_1.setPresent();//sysj\rotary_controller.sysj line: 10, column: 35
       currsigs.addElement(rL_1);
-      System.out.println("Emitted rL_1");
       active[20]=1;
       ends[20]=1;
       tdone[20]=1;
     }
     else {
-      active[20]=1;
-      ends[20]=1;
+      S161675=0;
+      active[20]=0;
+      ends[20]=0;
       tdone[20]=1;
     }
   }
 
-  public void thread1203(int [] tdone, int [] ends){
-        S763=1;
-    S715=0;
-    S699=0;
-    if(!readyLidLoader_in.isPartnerPresent() || readyLidLoader_in.isPartnerPreempted()){//sysj/rotary_controller.sysj line: 9, column: 5
-      readyLidLoader_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
-      S699=1;
+  public void thread161874(int [] tdone, int [] ends){
+        S161669=1;
+    S161668=0;
+    S161652=0;
+    if(!readyLidLoader_in.isPartnerPresent() || readyLidLoader_in.isPartnerPreempted()){//sysj\rotary_controller.sysj line: 8, column: 8
+      readyLidLoader_in.setACK(false);//sysj\rotary_controller.sysj line: 8, column: 8
+      S161652=1;
       active[19]=1;
       ends[19]=1;
       tdone[19]=1;
     }
     else {
-      S694=0;
-      if(!readyLidLoader_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-        readyLidLoader_in.setACK(true);//sysj/rotary_controller.sysj line: 9, column: 5
-        S694=1;
-        if(readyLidLoader_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-          readyLidLoader_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
+      S161647=0;
+      if(!readyLidLoader_in.isREQ()){//sysj\rotary_controller.sysj line: 8, column: 8
+        readyLidLoader_in.setACK(true);//sysj\rotary_controller.sysj line: 8, column: 8
+        S161647=1;
+        if(readyLidLoader_in.isREQ()){//sysj\rotary_controller.sysj line: 8, column: 8
+          readyLidLoader_in.setACK(false);//sysj\rotary_controller.sysj line: 8, column: 8
           ends[19]=2;
-          ;//sysj/rotary_controller.sysj line: 9, column: 5
-          S715=1;
+          ;//sysj\rotary_controller.sysj line: 8, column: 8
+          S161668=1;
           active[19]=1;
           ends[19]=1;
           tdone[19]=1;
@@ -1909,86 +1825,87 @@ public class rotary_controller extends ClockDomain{
     }
   }
 
-  public void thread1202(int [] tdone, int [] ends){
-        S931=1;
-    thread1203(tdone,ends);
-    thread1204(tdone,ends);
-    int biggest1205 = 0;
-    if(ends[19]>=biggest1205){
-      biggest1205=ends[19];
+  public void thread161873(int [] tdone, int [] ends){
+        S161743=1;
+    S161677=0;
+    thread161874(tdone,ends);
+    thread161875(tdone,ends);
+    int biggest161876 = 0;
+    if(ends[19]>=biggest161876){
+      biggest161876=ends[19];
     }
-    if(ends[20]>=biggest1205){
-      biggest1205=ends[20];
+    if(ends[20]>=biggest161876){
+      biggest161876=ends[20];
     }
-    if(biggest1205 == 1){
+    if(biggest161876 == 1){
       active[18]=1;
       ends[18]=1;
       tdone[18]=1;
     }
   }
 
-  public void thread1201(int [] tdone, int [] ends){
+  public void thread161872(int [] tdone, int [] ends){
         active[17]=0;
     ends[17]=0;
     tdone[17]=1;
   }
 
-  public void thread1200(int [] tdone, int [] ends){
-        S933=1;
-    thread1201(tdone,ends);
-    thread1202(tdone,ends);
-    int biggest1206 = 0;
-    if(ends[17]>=biggest1206){
-      biggest1206=ends[17];
+  public void thread161871(int [] tdone, int [] ends){
+        S161745=1;
+    thread161872(tdone,ends);
+    thread161873(tdone,ends);
+    int biggest161877 = 0;
+    if(ends[17]>=biggest161877){
+      biggest161877=ends[17];
     }
-    if(ends[18]>=biggest1206){
-      biggest1206=ends[18];
+    if(ends[18]>=biggest161877){
+      biggest161877=ends[18];
     }
-    if(biggest1206 == 1){
+    if(biggest161877 == 1){
       active[16]=1;
       ends[16]=1;
       tdone[16]=1;
     }
   }
 
-  public void thread1197(int [] tdone, int [] ends){
-        S528=1;
-    if((readyFiller_in.getVal() == null ? null : ((Boolean)readyFiller_in.getVal())) == Boolean.TRUE){//sysj/rotary_controller.sysj line: 16, column: 8
-      rF_1.setPresent();//sysj/rotary_controller.sysj line: 17, column: 6
+  public void thread161868(int [] tdone, int [] ends){
+        S161573=1;
+    if((readyFiller_in.getVal() == null ? null : ((Boolean)readyFiller_in.getVal())) == Boolean.TRUE){//sysj\rotary_controller.sysj line: 10, column: 12
+      rF_1.setPresent();//sysj\rotary_controller.sysj line: 10, column: 35
       currsigs.addElement(rF_1);
-      System.out.println("Emitted rF_1");
       active[15]=1;
       ends[15]=1;
       tdone[15]=1;
     }
     else {
-      active[15]=1;
-      ends[15]=1;
+      S161573=0;
+      active[15]=0;
+      ends[15]=0;
       tdone[15]=1;
     }
   }
 
-  public void thread1196(int [] tdone, int [] ends){
-        S520=1;
-    S472=0;
-    S456=0;
-    if(!readyFiller_in.isPartnerPresent() || readyFiller_in.isPartnerPreempted()){//sysj/rotary_controller.sysj line: 9, column: 5
-      readyFiller_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
-      S456=1;
+  public void thread161867(int [] tdone, int [] ends){
+        S161567=1;
+    S161566=0;
+    S161550=0;
+    if(!readyFiller_in.isPartnerPresent() || readyFiller_in.isPartnerPreempted()){//sysj\rotary_controller.sysj line: 8, column: 8
+      readyFiller_in.setACK(false);//sysj\rotary_controller.sysj line: 8, column: 8
+      S161550=1;
       active[14]=1;
       ends[14]=1;
       tdone[14]=1;
     }
     else {
-      S451=0;
-      if(!readyFiller_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-        readyFiller_in.setACK(true);//sysj/rotary_controller.sysj line: 9, column: 5
-        S451=1;
-        if(readyFiller_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-          readyFiller_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
+      S161545=0;
+      if(!readyFiller_in.isREQ()){//sysj\rotary_controller.sysj line: 8, column: 8
+        readyFiller_in.setACK(true);//sysj\rotary_controller.sysj line: 8, column: 8
+        S161545=1;
+        if(readyFiller_in.isREQ()){//sysj\rotary_controller.sysj line: 8, column: 8
+          readyFiller_in.setACK(false);//sysj\rotary_controller.sysj line: 8, column: 8
           ends[14]=2;
-          ;//sysj/rotary_controller.sysj line: 9, column: 5
-          S472=1;
+          ;//sysj\rotary_controller.sysj line: 8, column: 8
+          S161566=1;
           active[14]=1;
           ends[14]=1;
           tdone[14]=1;
@@ -2007,89 +1924,87 @@ public class rotary_controller extends ClockDomain{
     }
   }
 
-  public void thread1195(int [] tdone, int [] ends){
-        S688=1;
-    thread1196(tdone,ends);
-    thread1197(tdone,ends);
-    int biggest1198 = 0;
-    if(ends[14]>=biggest1198){
-      biggest1198=ends[14];
+  public void thread161866(int [] tdone, int [] ends){
+        S161641=1;
+    S161575=0;
+    thread161867(tdone,ends);
+    thread161868(tdone,ends);
+    int biggest161869 = 0;
+    if(ends[14]>=biggest161869){
+      biggest161869=ends[14];
     }
-    if(ends[15]>=biggest1198){
-      biggest1198=ends[15];
+    if(ends[15]>=biggest161869){
+      biggest161869=ends[15];
     }
-    if(biggest1198 == 1){
+    if(biggest161869 == 1){
       active[13]=1;
       ends[13]=1;
       tdone[13]=1;
     }
   }
 
-  public void thread1194(int [] tdone, int [] ends){
+  public void thread161865(int [] tdone, int [] ends){
         active[12]=0;
     ends[12]=0;
     tdone[12]=1;
   }
 
-  public void thread1193(int [] tdone, int [] ends){
-        S690=1;
-    thread1194(tdone,ends);
-    thread1195(tdone,ends);
-    int biggest1199 = 0;
-    if(ends[12]>=biggest1199){
-      biggest1199=ends[12];
+  public void thread161864(int [] tdone, int [] ends){
+        S161643=1;
+    thread161865(tdone,ends);
+    thread161866(tdone,ends);
+    int biggest161870 = 0;
+    if(ends[12]>=biggest161870){
+      biggest161870=ends[12];
     }
-    if(ends[13]>=biggest1199){
-      biggest1199=ends[13];
+    if(ends[13]>=biggest161870){
+      biggest161870=ends[13];
     }
-    if(biggest1199 == 1){
+    if(biggest161870 == 1){
       active[11]=1;
       ends[11]=1;
       tdone[11]=1;
     }
   }
 
-  public void thread1190(int [] tdone, int [] ends){
-        S285=1;
-    S279=0;
-    if((readyConveyor_in.getVal() == null ? null : ((Boolean)readyConveyor_in.getVal())) == Boolean.TRUE){//sysj/rotary_controller.sysj line: 16, column: 8
-      rC_1.setPresent();//sysj/rotary_controller.sysj line: 17, column: 6
+  public void thread161861(int [] tdone, int [] ends){
+        S161471=1;
+    if((readyConveyor_in.getVal() == null ? null : ((Boolean)readyConveyor_in.getVal())) == Boolean.TRUE){//sysj\rotary_controller.sysj line: 10, column: 12
+      rC_1.setPresent();//sysj\rotary_controller.sysj line: 10, column: 35
       currsigs.addElement(rC_1);
-      System.out.println("Emitted rC_1");
-      S279=1;
       active[10]=1;
       ends[10]=1;
       tdone[10]=1;
     }
     else {
-      S279=1;
-      active[10]=1;
-      ends[10]=1;
+      S161471=0;
+      active[10]=0;
+      ends[10]=0;
       tdone[10]=1;
     }
   }
 
-  public void thread1189(int [] tdone, int [] ends){
-        S277=1;
-    S229=0;
-    S213=0;
-    if(!readyConveyor_in.isPartnerPresent() || readyConveyor_in.isPartnerPreempted()){//sysj/rotary_controller.sysj line: 9, column: 5
-      readyConveyor_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
-      S213=1;
+  public void thread161860(int [] tdone, int [] ends){
+        S161465=1;
+    S161464=0;
+    S161448=0;
+    if(!readyConveyor_in.isPartnerPresent() || readyConveyor_in.isPartnerPreempted()){//sysj\rotary_controller.sysj line: 8, column: 8
+      readyConveyor_in.setACK(false);//sysj\rotary_controller.sysj line: 8, column: 8
+      S161448=1;
       active[9]=1;
       ends[9]=1;
       tdone[9]=1;
     }
     else {
-      S208=0;
-      if(!readyConveyor_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-        readyConveyor_in.setACK(true);//sysj/rotary_controller.sysj line: 9, column: 5
-        S208=1;
-        if(readyConveyor_in.isREQ()){//sysj/rotary_controller.sysj line: 9, column: 5
-          readyConveyor_in.setACK(false);//sysj/rotary_controller.sysj line: 9, column: 5
+      S161443=0;
+      if(!readyConveyor_in.isREQ()){//sysj\rotary_controller.sysj line: 8, column: 8
+        readyConveyor_in.setACK(true);//sysj\rotary_controller.sysj line: 8, column: 8
+        S161443=1;
+        if(readyConveyor_in.isREQ()){//sysj\rotary_controller.sysj line: 8, column: 8
+          readyConveyor_in.setACK(false);//sysj\rotary_controller.sysj line: 8, column: 8
           ends[9]=2;
-          ;//sysj/rotary_controller.sysj line: 9, column: 5
-          S229=1;
+          ;//sysj\rotary_controller.sysj line: 8, column: 8
+          S161464=1;
           active[9]=1;
           ends[9]=1;
           tdone[9]=1;
@@ -2108,106 +2023,106 @@ public class rotary_controller extends ClockDomain{
     }
   }
 
-  public void thread1188(int [] tdone, int [] ends){
-        S445=1;
-    thread1189(tdone,ends);
-    thread1190(tdone,ends);
-    int biggest1191 = 0;
-    if(ends[9]>=biggest1191){
-      biggest1191=ends[9];
+  public void thread161859(int [] tdone, int [] ends){
+        S161539=1;
+    S161473=0;
+    thread161860(tdone,ends);
+    thread161861(tdone,ends);
+    int biggest161862 = 0;
+    if(ends[9]>=biggest161862){
+      biggest161862=ends[9];
     }
-    if(ends[10]>=biggest1191){
-      biggest1191=ends[10];
+    if(ends[10]>=biggest161862){
+      biggest161862=ends[10];
     }
-    if(biggest1191 == 1){
+    if(biggest161862 == 1){
       active[8]=1;
       ends[8]=1;
       tdone[8]=1;
     }
   }
 
-  public void thread1187(int [] tdone, int [] ends){
+  public void thread161858(int [] tdone, int [] ends){
         active[7]=0;
     ends[7]=0;
     tdone[7]=1;
   }
 
-  public void thread1186(int [] tdone, int [] ends){
-        S447=1;
-    thread1187(tdone,ends);
-    thread1188(tdone,ends);
-    int biggest1192 = 0;
-    if(ends[7]>=biggest1192){
-      biggest1192=ends[7];
+  public void thread161857(int [] tdone, int [] ends){
+        S161541=1;
+    thread161858(tdone,ends);
+    thread161859(tdone,ends);
+    int biggest161863 = 0;
+    if(ends[7]>=biggest161863){
+      biggest161863=ends[7];
     }
-    if(ends[8]>=biggest1192){
-      biggest1192=ends[8];
+    if(ends[8]>=biggest161863){
+      biggest161863=ends[8];
     }
-    if(biggest1192 == 1){
+    if(biggest161863 == 1){
       active[6]=1;
       ends[6]=1;
       tdone[6]=1;
     }
   }
 
-  public void thread1185(int [] tdone, int [] ends){
-        S1178=1;
-    thread1186(tdone,ends);
-    thread1193(tdone,ends);
-    thread1200(tdone,ends);
-    thread1207(tdone,ends);
-    int biggest1214 = 0;
-    if(ends[6]>=biggest1214){
-      biggest1214=ends[6];
+  public void thread161856(int [] tdone, int [] ends){
+        S161849=1;
+    thread161857(tdone,ends);
+    thread161864(tdone,ends);
+    thread161871(tdone,ends);
+    thread161878(tdone,ends);
+    int biggest161885 = 0;
+    if(ends[6]>=biggest161885){
+      biggest161885=ends[6];
     }
-    if(ends[11]>=biggest1214){
-      biggest1214=ends[11];
+    if(ends[11]>=biggest161885){
+      biggest161885=ends[11];
     }
-    if(ends[16]>=biggest1214){
-      biggest1214=ends[16];
+    if(ends[16]>=biggest161885){
+      biggest161885=ends[16];
     }
-    if(ends[21]>=biggest1214){
-      biggest1214=ends[21];
+    if(ends[21]>=biggest161885){
+      biggest161885=ends[21];
     }
-    if(biggest1214 == 1){
+    if(biggest161885 == 1){
       active[5]=1;
       ends[5]=1;
       tdone[5]=1;
     }
   }
 
-  public void thread1184(int [] tdone, int [] ends){
-        S204=1;
-    S182=0;
+  public void thread161855(int [] tdone, int [] ends){
+        S161439=1;
+    S161417=0;
     active[4]=1;
     ends[4]=1;
     tdone[4]=1;
   }
 
-  public void thread1183(int [] tdone, int [] ends){
-        S172=1;
-    S92=0;
-    S60=0;
-    if(!newOrder_in.isPartnerPresent() || newOrder_in.isPartnerPreempted()){//sysj/rotary_controller.sysj line: 53, column: 4
-      newOrder_in.setACK(false);//sysj/rotary_controller.sysj line: 53, column: 4
-      S60=1;
+  public void thread161854(int [] tdone, int [] ends){
+        S161407=1;
+    S161359=0;
+    S161343=0;
+    if(!newOrder_in.isPartnerPresent() || newOrder_in.isPartnerPreempted()){//sysj\rotary_controller.sysj line: 62, column: 4
+      newOrder_in.setACK(false);//sysj\rotary_controller.sysj line: 62, column: 4
+      S161343=1;
       active[3]=1;
       ends[3]=1;
       tdone[3]=1;
     }
     else {
-      S55=0;
-      if(!newOrder_in.isREQ()){//sysj/rotary_controller.sysj line: 53, column: 4
-        newOrder_in.setACK(true);//sysj/rotary_controller.sysj line: 53, column: 4
-        S55=1;
-        if(newOrder_in.isREQ()){//sysj/rotary_controller.sysj line: 53, column: 4
-          newOrder_in.setACK(false);//sysj/rotary_controller.sysj line: 53, column: 4
+      S161338=0;
+      if(!newOrder_in.isREQ()){//sysj\rotary_controller.sysj line: 62, column: 4
+        newOrder_in.setACK(true);//sysj\rotary_controller.sysj line: 62, column: 4
+        S161338=1;
+        if(newOrder_in.isREQ()){//sysj\rotary_controller.sysj line: 62, column: 4
+          newOrder_in.setACK(false);//sysj\rotary_controller.sysj line: 62, column: 4
           ends[3]=2;
-          ;//sysj/rotary_controller.sysj line: 53, column: 4
-          S92=1;
-          load.setPresent();//sysj/rotary_controller.sysj line: 55, column: 5
+          ;//sysj\rotary_controller.sysj line: 62, column: 4
+          load.setPresent();//sysj\rotary_controller.sysj line: 63, column: 4
           currsigs.addElement(load);
-          System.out.println("Emitted load");
+          S161359=1;
           active[3]=1;
           ends[3]=1;
           tdone[3]=1;
@@ -2226,9 +2141,9 @@ public class rotary_controller extends ClockDomain{
     }
   }
 
-  public void thread1182(int [] tdone, int [] ends){
-        S53=1;
-    S7=0;
+  public void thread161853(int [] tdone, int [] ends){
+        S161336=1;
+    S161290=0;
     active[2]=1;
     ends[2]=1;
     tdone[2]=1;
@@ -2241,74 +2156,74 @@ public class rotary_controller extends ClockDomain{
     }
     
     RUN: while(true){
-      switch(S1180){
+      switch(S161851){
         case 0 : 
-          S1180=0;
+          S161851=0;
           break RUN;
         
         case 1 : 
-          S1180=2;
-          S1180=2;
-          rC_1.setClear();//sysj/rotary_controller.sysj line: 40, column: 2
-          rF_1.setClear();//sysj/rotary_controller.sysj line: 40, column: 2
-          rL_1.setClear();//sysj/rotary_controller.sysj line: 40, column: 2
-          rCa_1.setClear();//sysj/rotary_controller.sysj line: 40, column: 2
-          thread1182(tdone,ends);
-          thread1183(tdone,ends);
-          thread1184(tdone,ends);
-          thread1185(tdone,ends);
-          int biggest1215 = 0;
-          if(ends[2]>=biggest1215){
-            biggest1215=ends[2];
+          S161851=2;
+          S161851=2;
+          rC_1.setClear();//sysj\rotary_controller.sysj line: 49, column: 2
+          rF_1.setClear();//sysj\rotary_controller.sysj line: 49, column: 2
+          rL_1.setClear();//sysj\rotary_controller.sysj line: 49, column: 2
+          rCa_1.setClear();//sysj\rotary_controller.sysj line: 49, column: 2
+          thread161853(tdone,ends);
+          thread161854(tdone,ends);
+          thread161855(tdone,ends);
+          thread161856(tdone,ends);
+          int biggest161886 = 0;
+          if(ends[2]>=biggest161886){
+            biggest161886=ends[2];
           }
-          if(ends[3]>=biggest1215){
-            biggest1215=ends[3];
+          if(ends[3]>=biggest161886){
+            biggest161886=ends[3];
           }
-          if(ends[4]>=biggest1215){
-            biggest1215=ends[4];
+          if(ends[4]>=biggest161886){
+            biggest161886=ends[4];
           }
-          if(ends[5]>=biggest1215){
-            biggest1215=ends[5];
+          if(ends[5]>=biggest161886){
+            biggest161886=ends[5];
           }
-          if(biggest1215 == 1){
+          if(biggest161886 == 1){
             active[1]=1;
             ends[1]=1;
             break RUN;
           }
         
         case 2 : 
-          rC_1.setClear();//sysj/rotary_controller.sysj line: 40, column: 2
-          rF_1.setClear();//sysj/rotary_controller.sysj line: 40, column: 2
-          rL_1.setClear();//sysj/rotary_controller.sysj line: 40, column: 2
-          rCa_1.setClear();//sysj/rotary_controller.sysj line: 40, column: 2
-          thread1216(tdone,ends);
-          thread1217(tdone,ends);
-          thread1218(tdone,ends);
-          thread1219(tdone,ends);
-          int biggest1261 = 0;
-          if(ends[2]>=biggest1261){
-            biggest1261=ends[2];
+          rC_1.setClear();//sysj\rotary_controller.sysj line: 49, column: 2
+          rF_1.setClear();//sysj\rotary_controller.sysj line: 49, column: 2
+          rL_1.setClear();//sysj\rotary_controller.sysj line: 49, column: 2
+          rCa_1.setClear();//sysj\rotary_controller.sysj line: 49, column: 2
+          thread161887(tdone,ends);
+          thread161888(tdone,ends);
+          thread161889(tdone,ends);
+          thread161890(tdone,ends);
+          int biggest161932 = 0;
+          if(ends[2]>=biggest161932){
+            biggest161932=ends[2];
           }
-          if(ends[3]>=biggest1261){
-            biggest1261=ends[3];
+          if(ends[3]>=biggest161932){
+            biggest161932=ends[3];
           }
-          if(ends[4]>=biggest1261){
-            biggest1261=ends[4];
+          if(ends[4]>=biggest161932){
+            biggest161932=ends[4];
           }
-          if(ends[5]>=biggest1261){
-            biggest1261=ends[5];
+          if(ends[5]>=biggest161932){
+            biggest161932=ends[5];
           }
-          if(biggest1261 == 1){
+          if(biggest161932 == 1){
             active[1]=1;
             ends[1]=1;
             break RUN;
           }
           //FINXME code
-          if(biggest1261 == 0){
-            S1180=0;
+          if(biggest161932 == 0){
+            S161851=0;
             active[1]=0;
             ends[1]=0;
-            S1180=0;
+            S161851=0;
             break RUN;
           }
         

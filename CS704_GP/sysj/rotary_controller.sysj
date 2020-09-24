@@ -3,28 +3,26 @@
 
 reaction ch_to_sig(: input Boolean channel ch_in, output signal sig_out)	// sysimport doesn't let compilation
 {
-	while(true) {
-		{
-			while(true) {
-				receive ch_in;
-				pause;
+	{
+		while(true) {
+			receive ch_in;
+			pause;
+		}
+	}
+	||
+	{
+		while(true) {
+			if(#ch_in == Boolean.TRUE) {
+				emit sig_out;
 			}
-		}
-		||
-		{
-			while(true) {
-				if(#ch_in == Boolean.TRUE) {
-					emit sig_out;
-				}
-				pause;
-			} 
-		}
+			pause;
+		} 
 	}
 }
 
 rotary_controller(
 		input signal tableAlignedWithSensor;
-		input signal bottleAtPos1, bottleAtPos5;//, capOnBottleAtPos1;
+		input signal bottleAtPos1, bottleAtPos5;
 		input signal conveyorEngaged;
 		input signal rotaryEmpty;
 		
@@ -51,9 +49,10 @@ rotary_controller(
 	{ // loading logic
 		while(true) {
 			receive newOrder;
-			abort(bottleAtPos1) {
-				sustain load;						// sustain load until bottle is confirmed at pos 1
-			}
+			emit load;
+			//abort(immediate bottleAtPos1) {
+			//	sustain load;						// sustain load until bottle is confirmed at pos 1
+			//}
 			pause;
 		}
 	}
@@ -61,7 +60,7 @@ rotary_controller(
 	{ // deloading logic
 		while(true) {
 			await(bottleAtPos5 && conveyorEngaged);
-			abort(!bottleAtPos5){					
+			abort(immediate !bottleAtPos5){					
 				sustain deload;						// sustain deload until bottle is confirmed to have left
 			}
 			pause;

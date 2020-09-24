@@ -1,3 +1,5 @@
+// control unit for managing the capper model
+
 capper_controller(		
 	
 		input signal bottleAtPos4, gripperZAxisLowered, gripperZAxisLifted,  gripperTurnHomePos, gripperTurnFinalPos;

@@ -30,6 +30,27 @@ rotary_plant(
 	{
 		rotaryTable rt = new rotaryTable();
 		while(true) {
+			present(shift){
+				rt.print();
+				System.out.println("SHIFTING");
+				rt.shift();
+				rt.print();
+			}
+			present(load){
+				rt.print();
+				System.out.println("LOADING");
+				rt.load();
+				rt.print();
+			}
+			present(deload){
+				rt.print();
+				System.out.println("DELOADING");
+				rt.deload();
+				rt.print();
+				emit bottleLeftPos5;
+				emit bottleLeftPos5_GUI;
+			}
+			
 			if (rt.index[0] == true) {
 				emit bottleAtPos1;
 				emit bottleAtPos1c;
@@ -55,30 +76,6 @@ rotary_plant(
 				emit bottleAtPos5;
 				emit bottleAtPos5_GUI;
 			}
-			pause;
-			await(load || deload || shift);
-			present(shift){
-				rt.print();
-				System.out.println("SHIFTING");
-				rt.shift();
-				rt.print();
-			}
-			present(load){
-				rt.print();
-				System.out.println("LOADING");
-				rt.load();
-				rt.print();
-			}
-			present(deload){
-				rt.print();
-				System.out.println("DELOADING");
-				rt.deload();
-				rt.print();
-				emit bottleLeftPos5;
-				emit bottleLeftPos5_GUI;
-			}
-			
-			
 			pause;
 		}
 	}

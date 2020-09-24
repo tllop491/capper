@@ -1,0 +1,11 @@
+ <System xmlns="http://systemjtechnology.com">
+	<SubSystem Name="SS1" Local="true">
+		<ClockDomain Name="rotary_controller_CD" Class="rotary_controller">
+			<oSignal Name="load" Class="com.systemj.ipc.SimpleClient" To="rotary_plant_CD.load" IP="127.0.0.3"  Port="2000"/>
+		</ClockDomain>
+		
+		<ClockDomain Name="rotary_plant_CD" Class="rotary_plant">
+			<iSignal Name="load" Class="com.systemj.ipc.SimpleServer"  IP="127.0.0.3"  Port="2000"/>
+		</ClockDomain>
+	</SubSystem>	
+</System>

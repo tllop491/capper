@@ -15,7 +15,7 @@ filler_controller(
 		input signal dosUnitEvac, dosUnitFilled;
 		
 		// to rotary
-		output Object channel readyFiller;
+		output Boolean channel readyFiller;
 		
 		// to filler model
 		output signal valveInjectorOnOff, valveInletOnOff;
@@ -27,13 +27,15 @@ filler_controller(
 {
 	signal done;
 	int signal liquidAmount;
-	send readyFiller(true);
+	send readyFiller(Boolean.TRUE);
 	while(true) {
 		int i = 0;
 		receive liquidData;
-		System.out.println("FILLER RECEIVED LIQUID DATA");
+		System.out.println("FILLER RECEIVED LIQUID DATA: " + (int)#liquidData.get(i));
 		await(bottleAtPos2);					// wait till bottle at pos 2
-		send readyFiller(false);
+		System.out.println("FILLER RECEIVED BOTTLEATPOS2");
+		send readyFiller(Boolean.FALSE);
+		System.out.println("FILLER SEND FALSE");
 		trap(T) {								
 			while(true) {
 				emit liquidAmount((int)#liquidData.get(i));	// emitted signal value persists across ticks until it is over-written
@@ -48,7 +50,8 @@ filler_controller(
 						{
 							sustain dosUnitValveRetract;	// retract pressure canister to top
 						}
-					}										// turn off valve injector
+					}		
+					System.out.println("TURN OFF VALVE INJECTOR");// turn off valve injector
 					abort(immediate dosUnitEvac || done) {  // wait until pressure canister is extended (bottom) or liquid filling is done
 						{
 							sustain valveInletOnOff;		// open the inlet
@@ -74,7 +77,7 @@ filler_controller(
 				
 				pause;			// unbound loop otherwise
 			}
-		}
+		} send readyFiller(Boolean.TRUE);
 	}
 }
 

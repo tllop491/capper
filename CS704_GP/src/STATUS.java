@@ -34,8 +34,7 @@ public class STATUS {
 	}
 	
 	public void setStatus(JLabel dot, boolean status) {
-			System.out.println("SETTING");
-	
+		//System.out.println("SETTING");
 		if(status) {
 			dot.setForeground(Color.GREEN); 
 		} else {
@@ -395,8 +394,8 @@ public class STATUS {
 		
 		s.addConsumer("STATUS", "conveyorEngaged", (status, value) -> setStatus(indConveyorMotor, status));
 		
-		s.addConsumer("STATUS", "tableAlignedWithSensor", (status, value) -> setStatus(indConveyorMotor, status));
-		/*s.addConsumer("STATUS", "bottleAtPos1", (status, value) -> setStatus(indBottleAtPos1, status));
+		s.addConsumer("STATUS", "tableAlignedWithSensor", (status, value) -> setStatus(indTableAlignedWithSensor, status));
+		s.addConsumer("STATUS", "bottleAtPos1", (status, value) -> setStatus(indBottleAtPos1, status));
 		s.addConsumer("STATUS", "bottleAtPos2", (status, value) -> setStatus(indBottleAtPos2, status));
 		s.addConsumer("STATUS", "bottleAtPos3", (status, value) -> setStatus(indBottleAtPos3, status));
 		s.addConsumer("STATUS", "bottleAtPos4", (status, value) -> setStatus(indBottleAtPos4, status));
@@ -428,9 +427,8 @@ public class STATUS {
 		s.addConsumer("STATUS", "gripperZAxisLowered", (status, value) -> setStatus(indGripperZAxisLowered, status));
 		s.addConsumer("STATUS", "gripperZAxisLifted", (status, value) -> setStatus(indGripperZAxisLifted, status));
 		s.addConsumer("STATUS", "gripperTurnHomePos", (status, value) -> setStatus(indGripperTurnHomePos, status));
-		s.addConsumer("STATUS", "gripperTurnFinalPos", (status, value) -> setStatus(indGripperTurnFinalPos, status));*/
+		s.addConsumer("STATUS", "gripperTurnFinalPos", (status, value) -> setStatus(indGripperTurnFinalPos, status));
 
-		//s.close();
 	}
 
 }

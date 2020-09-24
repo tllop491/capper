@@ -32,8 +32,12 @@ reaction plantOperation( :	input signal valveInjectorOnOff,
 		}
 		||
 		{
-			present(dosUnitValveExtend && valveInletOnOff);
-			present(!dosUnitValveExtend && !valveInletOnOff);
+			sustain nozzleXEngaged;
+		}
+		||
+		{
+			await(dosUnitValveExtend && valveInletOnOff);
+			await(!dosUnitValveExtend && !valveInletOnOff);
 			exit(T);
 		}
 	}

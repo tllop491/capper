@@ -19,10 +19,10 @@ public class rotaryTable {
 	}
 	
 	public void print() {
-		System.out.print("\n");
 		for (int i = 0; i < 6; i++) {
 			System.out.print(this.index[i] + " ");
 		}
+		System.out.println("");
 	}
 
 }
