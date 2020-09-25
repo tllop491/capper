@@ -11,8 +11,10 @@ If the system is running to fast/slow, adjust the "arg" argument of the schedule
 Bugs:
 Currently, multiple orders cannot be made at once. We suspect this is because the "s.emit" function never goes down while emitting multiple orders.
 
-LeftBottleAtPos5 is never emitted, we are not sure why this is happening as rotary controller should not rotate if there there a bottle at pos 5. This leads us to suspect that the rotary table is somehow not seeing this signal in time.
+LeftBottleAtPos5 is never emitted as rotary table keeps turnign, we are not sure why this is happening as rotary controller should not rotate if there there a bottle at pos 5. This leads us to suspect that the rotary table is somehow not seeing this signal in time.
 
 The conveyor is always on because we were initially testing for non-pipelined scenario.
 
 The lidloader seems to activate twice, could be to do with some undefined bottleAtPos3 behaviour.
+
+dosUnitEvac & dosUnitFilled never appear on the GUI, we are not sure why this is happening but since the plant runs fine we can deduce that this is something on the GUI side.
