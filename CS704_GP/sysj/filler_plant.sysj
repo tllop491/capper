@@ -55,11 +55,14 @@ filler_plant(
 		output signal nozzle0Engaged, nozzle1Engaged, nozzle2Engaged, nozzle3Engaged;
 		output signal injector0Engaged, injector1Engaged, injector2Engaged, injector3Engaged;
 		output signal inlet0Engaged, inlet1Engaged, inlet2Engaged, inlet3Engaged;
+		
+		output signal dosUnitEvac_GUI, dosUnitFilled_GUI;
 		)
 ->
-{	// 4 - Way Nozzle selection using plantOperation named reaction
+{
+	{// 4 - Way Nozzle selection using plantOperation named reaction
 		while(true) {
-			await(nozzleSelect);
+			await(immediate nozzleSelect);
 			
 			switch((int)#nozzleSelect) {
 				case 0: plantOperation(:valveInjectorOnOff,valveInletOnOff,dosUnitValveRetract,dosUnitValveExtend,
@@ -80,5 +83,14 @@ filler_plant(
 			}
 			pause;
 		}
+	}
+	||
+	{	// valveInlet logic
+		while(true){present(dosUnitEvac){emit dosUnitEvac_GUI;} pause;}
+	}
+	||
+	{	// valveInlet logic
+		while(true){present(dosUnitFilled){emit dosUnitFilled_GUI;} pause;}
+	}
 
 }

@@ -40,46 +40,44 @@ filler_controller(
 		System.out.println("FILLER SEND FALSE");
 		trap(T) {								
 			while(true) {
-				emit liquidAmount((int)#liquidData.get(i));	// emitted signal value persists across ticks until it is over-written
-				emit nozzleSelect(i);						// 
-
-				if ((int)#liquidData.get(i) != 0) {			// in case of no liquid, don't fill bottle
-					abort(immediate dosUnitFilled) {		// wait until pressure canister is retracted (top)
+				if ((int)#liquidData.get(i) != 0) {				// in case of no liquid, don't fill bottle
+					emit liquidAmount((int)#liquidData.get(i));	// emitted signal value persists across ticks until it is over-written
+					emit nozzleSelect(i);	
+					pause;
+					abort(dosUnitFilled) {						// wait until pressure canister is retracted (top)
 						{
-							sustain valveInjectorOnOff;		// turn on valve injector
+							sustain valveInjectorOnOff;			// turn on valve injector
 						}
 						||
 						{
-							sustain dosUnitValveRetract;	// retract pressure canister to top
+							sustain dosUnitValveRetract;		// retract pressure canister to top
 						}
 					}		// turn off valve injector
-					System.out.println("TURN OFF VALVE INJECTOR");
-					abort(immediate dosUnitEvac || done) {  // wait until pressure canister is extended (bottom) or liquid filling is done
+					abort(immediate dosUnitEvac || done) {  	// wait until pressure canister is extended (bottom) or liquid filling is done
 						{
-							sustain valveInletOnOff;		// open the inlet
-							
+							sustain valveInletOnOff;			// open the inlet
 						}
 						||
 						{
-							sustain dosUnitValveExtend;		// force down pressure canister
+							sustain dosUnitValveExtend;			// force down pressure canister
 						}
 						||
 						{
-							waitl((int)#liquidAmount ms);	// fill liquid for a certain time determined by liquidAmount
+							waitl((int)#liquidAmount ms);		// fill liquid for a certain time determined by liquidAmount
 							emit done;
 							pause;
 						}
 					}
 				}
 				
-				System.out.println("NOZZLE " + i + " DONE");
+				System.out.println("NOZZLE " + i + " DONE: ");
 				if (i == 3) {
 					exit(T);	// exit if all liquids have been filled
 				} else {
 					i++;		
 				}
 				
-				pause;			
+				pause;
 			}
 		} send readyFiller(Boolean.TRUE);
 	}

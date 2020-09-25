@@ -87,7 +87,7 @@ rotary_plant(
 	||
 	{
 		while(true) {
-			present(!bottleAtPos1 && !bottleAtPos1c && !bottleAtPos2 && !bottleAtPos3 && !bottleAtPos4 && !bottleAtPos5) {
+			present(!bottleAtPos1 && !bottleAtPos2 && !bottleAtPos3 && !bottleAtPos4 && !bottleAtPos5) {
 				emit empty;
 			}
 			pause;
