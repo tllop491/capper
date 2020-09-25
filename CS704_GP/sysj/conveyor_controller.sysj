@@ -10,7 +10,7 @@ conveyor_controller(
 	send readyConveyor(Boolean.TRUE);
 	{
 		while(true) {
-			sustain motConveyorOnOff;	// assuming non-pipelined for now, conveyor stays on
+			sustain motConveyorOnOff;	// assuming non-pipelined for now, conveyor stays on for now
 		};
 	}
 }

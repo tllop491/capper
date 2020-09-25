@@ -85,11 +85,11 @@ filler_plant(
 		}
 	}
 	||
-	{	// valveInlet logic
+	{	
 		while(true){present(dosUnitEvac){emit dosUnitEvac_GUI;} pause;}
 	}
 	||
-	{	// valveInlet logic
+	{	
 		while(true){present(dosUnitFilled){emit dosUnitFilled_GUI;} pause;}
 	}
 

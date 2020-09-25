@@ -2,7 +2,7 @@
 
 lidloader_plant(
 		input signal pusherExtend,vacOn,armSource,armDest;
-		input signal refill;	// from technician gui? //enable
+		input signal refill;	// not used
 		output signal pusherRetracted,pusherExtended,WPgripped,armAtSource,armAtDest,empty;
 		output signal pusherRetracted_GUI,pusherExtended_GUI,WPgripped_GUI,armAtSource_GUI,armAtDest_GUI,empty_GUI;
 		)

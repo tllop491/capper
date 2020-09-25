@@ -81,8 +81,10 @@ liquid_buffer(
 	}
 	||
 	{	// indicate to rotary that a bottle is going to be loaded
-		await(toBuffer);
-		System.out.println("NEW ORDER");
-		send newOrder(Boolean.TRUE);
+		while(true) {
+			await(fromBuffer);
+			System.out.println("NEW ORDER");
+			send newOrder(Boolean.TRUE);
+		}
 	}
 }

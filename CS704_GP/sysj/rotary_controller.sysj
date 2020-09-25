@@ -39,7 +39,7 @@ rotary_controller(
 		// to model
 		output signal rotaryTableTrigger; 
 		output signal load, deload;
-		
+
 		)
 ->
 {
@@ -59,10 +59,9 @@ rotary_controller(
 	{ // loading logic
 		while(true) {
 			receive newOrder;
-			emit load;	
-			//abort(immediate bottleAtPos1) {
-			//	sustain load;						// sustain load until bottle is confirmed at pos 1, this approach resulted in the rotary table loading 5 times
-			//}										// although emitting is not safe for cross CD communication, this is the only thing that worked
+			abort(immediate bottleAtPos1) {
+				sustain load;						// sustain load until bottle is confirmed at pos 1, this approach results in the rotary table loading multiple times at once, which could pose a problem for a pipelined solution
+			}										
 			pause;
 		}
 	}
@@ -70,7 +69,7 @@ rotary_controller(
 	{ // deloading logic
 		while(true) {
 			await(bottleAtPos5 && conveyorEngaged);
-			abort(immediate !bottleAtPos5){					
+			abort(immediate !bottleAtPos5){			
 				sustain deload;						// sustain deload until bottle is confirmed to have left
 			}
 			pause;
