@@ -109,20 +109,20 @@ public class STATUS {
 		bottleAtPos_2_1.setFont(new Font("Dialog", Font.PLAIN, 10));
 		frame.getContentPane().add(bottleAtPos_2_1, "cell 0 5,alignx right");
 		
-		JLabel lblNewLabel = new JLabel("0");
+		JLabel lblNewLabel = new JLabel("1");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		frame.getContentPane().add(lblNewLabel, "cell 1 5,alignx center,aligny center");
 		
-		JLabel lblNewLabel_1 = new JLabel("1");
+		JLabel lblNewLabel_1 = new JLabel("2");
 		frame.getContentPane().add(lblNewLabel_1, "cell 2 5");
 		
-		JLabel lblNewLabel_2 = new JLabel("2");
+		JLabel lblNewLabel_2 = new JLabel("3");
 		frame.getContentPane().add(lblNewLabel_2, "cell 3 5");
 		
-		JLabel lblNewLabel_3 = new JLabel("3");
+		JLabel lblNewLabel_3 = new JLabel("4");
 		frame.getContentPane().add(lblNewLabel_3, "cell 4 5");
 		
-		JLabel lblNewLabel_4 = new JLabel("4");
+		JLabel lblNewLabel_4 = new JLabel("5");
 		frame.getContentPane().add(lblNewLabel_4, "cell 5 5");
 		
 		JLabel bottleAtPos = new JLabel("bottleAtPosX");

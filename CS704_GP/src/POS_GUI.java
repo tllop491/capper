@@ -61,9 +61,9 @@ public class POS_GUI {
 	private void initialize() {
 		frame = new JFrame();
 		frame.setResizable(false);
-		frame.setBounds(100, 100, 351, 285);
+		frame.setBounds(100, 100, 351, 246);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(new MigLayout("", "[][][grow]", "[14px][26px][26px][26px][26px][14px][20px][23px][]"));
+		frame.getContentPane().setLayout(new MigLayout("", "[][][grow]", "[14px][26px][26px][26px][26px][14px][20px][23px]"));
 
 		
 		JLabel lblNewLabel = new JLabel("LIQUID TYPE");
@@ -141,9 +141,6 @@ public class POS_GUI {
 		JSpinner spinner = new JSpinner();
 		spinner.setModel(new SpinnerNumberModel(1, 1, 20, 1));
 		frame.getContentPane().add(spinner, "cell 0 6,growx,aligny top");
-		
-		JButton btnNewButton_1 = new JButton("CANCEL");
-		frame.getContentPane().add(btnNewButton_1, "cell 0 8,growx,aligny top");
 		
 		JButton btnNewButton = new JButton("ORDER");
 		
