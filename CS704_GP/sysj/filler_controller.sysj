@@ -33,7 +33,7 @@ filler_controller(
 	while(true) {
 		int i = 0;
 		receive liquidData;
-		System.out.println("FILLER RECEIVED LIQUID DATA: " + (int)#liquidData.get(i));
+		System.out.println("FILLER RECEIVED LIQUID");
 		await(bottleAtPos2);					// wait till bottle at pos 2
 		System.out.println("FILLER RECEIVED BOTTLEATPOS2");
 		send readyFiller(Boolean.FALSE);
@@ -43,7 +43,7 @@ filler_controller(
 				emit liquidAmount((int)#liquidData.get(i));	// emitted signal value persists across ticks until it is over-written
 				emit nozzleSelect(i);						// 
 
-				if ((int)#liquidData.get(i) != 0) {			// in case of no liquid
+				if ((int)#liquidData.get(i) != 0) {			// in case of no liquid, don't fill bottle
 					abort(immediate dosUnitFilled) {		// wait until pressure canister is retracted (top)
 						{
 							sustain valveInjectorOnOff;		// turn on valve injector
@@ -67,6 +67,7 @@ filler_controller(
 						{
 							waitl((int)#liquidAmount ms);	// fill liquid for a certain time determined by liquidAmount
 							emit done;
+							pause;
 						}
 					}
 				}

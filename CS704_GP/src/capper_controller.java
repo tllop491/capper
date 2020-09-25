@@ -50,7 +50,7 @@ public class capper_controller extends ClockDomain{
         break;
       
       case 1 : 
-        gripperTurnExtend.setPresent();//sysj\capper_controller.sysj line: 28, column: 6
+        gripperTurnExtend.setPresent();//sysj\capper_controller.sysj line: 30, column: 6
         currsigs.addElement(gripperTurnExtend);
         active[6]=1;
         ends[6]=1;
@@ -69,7 +69,7 @@ public class capper_controller extends ClockDomain{
         break;
       
       case 1 : 
-        capGripperPos5Extend.setPresent();//sysj\capper_controller.sysj line: 26, column: 6
+        capGripperPos5Extend.setPresent();//sysj\capper_controller.sysj line: 28, column: 6
         currsigs.addElement(capGripperPos5Extend);
         active[5]=1;
         ends[5]=1;
@@ -81,7 +81,7 @@ public class capper_controller extends ClockDomain{
 
   public void thread3713(int [] tdone, int [] ends){
         S100=1;
-    gripperTurnExtend.setPresent();//sysj\capper_controller.sysj line: 28, column: 6
+    gripperTurnExtend.setPresent();//sysj\capper_controller.sysj line: 30, column: 6
     currsigs.addElement(gripperTurnExtend);
     active[6]=1;
     ends[6]=1;
@@ -90,7 +90,7 @@ public class capper_controller extends ClockDomain{
 
   public void thread3712(int [] tdone, int [] ends){
         S95=1;
-    capGripperPos5Extend.setPresent();//sysj\capper_controller.sysj line: 26, column: 6
+    capGripperPos5Extend.setPresent();//sysj\capper_controller.sysj line: 28, column: 6
     currsigs.addElement(capGripperPos5Extend);
     active[5]=1;
     ends[5]=1;
@@ -108,7 +108,7 @@ public class capper_controller extends ClockDomain{
       case 1 : 
         switch(S111){
           case 0 : 
-            if(gripperZAxisLowered.getprestatus()){//sysj\capper_controller.sysj line: 25, column: 11
+            if(gripperZAxisLowered.getprestatus()){//sysj\capper_controller.sysj line: 27, column: 11
               S111=1;
               thread3712(tdone,ends);
               thread3713(tdone,ends);
@@ -171,7 +171,7 @@ public class capper_controller extends ClockDomain{
         break;
       
       case 1 : 
-        cylPos5ZaxisExtend.setPresent();//sysj\capper_controller.sysj line: 21, column: 5
+        cylPos5ZaxisExtend.setPresent();//sysj\capper_controller.sysj line: 23, column: 5
         currsigs.addElement(cylPos5ZaxisExtend);
         active[3]=1;
         ends[3]=1;
@@ -190,7 +190,7 @@ public class capper_controller extends ClockDomain{
         break;
       
       case 1 : 
-        cylClampBottleExtend.setPresent();//sysj\capper_controller.sysj line: 17, column: 5
+        cylClampBottleExtend.setPresent();//sysj\capper_controller.sysj line: 19, column: 5
         currsigs.addElement(cylClampBottleExtend);
         active[2]=1;
         ends[2]=1;
@@ -210,7 +210,7 @@ public class capper_controller extends ClockDomain{
 
   public void thread3706(int [] tdone, int [] ends){
         S89=1;
-    cylPos5ZaxisExtend.setPresent();//sysj\capper_controller.sysj line: 21, column: 5
+    cylPos5ZaxisExtend.setPresent();//sysj\capper_controller.sysj line: 23, column: 5
     currsigs.addElement(cylPos5ZaxisExtend);
     active[3]=1;
     ends[3]=1;
@@ -219,7 +219,7 @@ public class capper_controller extends ClockDomain{
 
   public void thread3705(int [] tdone, int [] ends){
         S84=1;
-    cylClampBottleExtend.setPresent();//sysj\capper_controller.sysj line: 17, column: 5
+    cylClampBottleExtend.setPresent();//sysj\capper_controller.sysj line: 19, column: 5
     currsigs.addElement(cylClampBottleExtend);
     active[2]=1;
     ends[2]=1;
@@ -243,8 +243,8 @@ public class capper_controller extends ClockDomain{
           S3703=2;
           S3702=0;
           S6=0;
-          if(!readyCapper_o.isPartnerPresent() || readyCapper_o.isPartnerPreempted()){//sysj\capper_controller.sysj line: 9, column: 2
-            readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 9, column: 2
+          if(!readyCapper_o.isPartnerPresent() || readyCapper_o.isPartnerPreempted()){//sysj\capper_controller.sysj line: 11, column: 2
+            readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 11, column: 2
             S6=1;
             active[1]=1;
             ends[1]=1;
@@ -252,13 +252,13 @@ public class capper_controller extends ClockDomain{
           }
           else {
             S1=0;
-            if(readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 9, column: 2
-              readyCapper_o.setVal(Boolean.TRUE);//sysj\capper_controller.sysj line: 9, column: 2
+            if(readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 11, column: 2
+              readyCapper_o.setVal(Boolean.TRUE);//sysj\capper_controller.sysj line: 11, column: 2
               S1=1;
-              if(!readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 9, column: 2
-                readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 9, column: 2
+              if(!readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 11, column: 2
+                readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 11, column: 2
                 ends[1]=2;
-                ;//sysj\capper_controller.sysj line: 9, column: 2
+                ;//sysj\capper_controller.sysj line: 11, column: 2
                 S3702=1;
                 S67=0;
                 active[1]=1;
@@ -283,8 +283,8 @@ public class capper_controller extends ClockDomain{
             case 0 : 
               switch(S6){
                 case 0 : 
-                  if(!readyCapper_o.isPartnerPresent() || readyCapper_o.isPartnerPreempted()){//sysj\capper_controller.sysj line: 9, column: 2
-                    readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 9, column: 2
+                  if(!readyCapper_o.isPartnerPresent() || readyCapper_o.isPartnerPreempted()){//sysj\capper_controller.sysj line: 11, column: 2
+                    readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 11, column: 2
                     S6=1;
                     active[1]=1;
                     ends[1]=1;
@@ -293,13 +293,13 @@ public class capper_controller extends ClockDomain{
                   else {
                     switch(S1){
                       case 0 : 
-                        if(readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 9, column: 2
-                          readyCapper_o.setVal(Boolean.TRUE);//sysj\capper_controller.sysj line: 9, column: 2
+                        if(readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 11, column: 2
+                          readyCapper_o.setVal(Boolean.TRUE);//sysj\capper_controller.sysj line: 11, column: 2
                           S1=1;
-                          if(!readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 9, column: 2
-                            readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 9, column: 2
+                          if(!readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 11, column: 2
+                            readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 11, column: 2
                             ends[1]=2;
-                            ;//sysj\capper_controller.sysj line: 9, column: 2
+                            ;//sysj\capper_controller.sysj line: 11, column: 2
                             S3702=1;
                             S67=0;
                             active[1]=1;
@@ -319,10 +319,10 @@ public class capper_controller extends ClockDomain{
                         }
                       
                       case 1 : 
-                        if(!readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 9, column: 2
-                          readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 9, column: 2
+                        if(!readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 11, column: 2
+                          readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 11, column: 2
                           ends[1]=2;
-                          ;//sysj\capper_controller.sysj line: 9, column: 2
+                          ;//sysj\capper_controller.sysj line: 11, column: 2
                           S3702=1;
                           S67=0;
                           active[1]=1;
@@ -342,8 +342,8 @@ public class capper_controller extends ClockDomain{
                 case 1 : 
                   S6=1;
                   S6=0;
-                  if(!readyCapper_o.isPartnerPresent() || readyCapper_o.isPartnerPreempted()){//sysj\capper_controller.sysj line: 9, column: 2
-                    readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 9, column: 2
+                  if(!readyCapper_o.isPartnerPresent() || readyCapper_o.isPartnerPreempted()){//sysj\capper_controller.sysj line: 11, column: 2
+                    readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 11, column: 2
                     S6=1;
                     active[1]=1;
                     ends[1]=1;
@@ -351,13 +351,13 @@ public class capper_controller extends ClockDomain{
                   }
                   else {
                     S1=0;
-                    if(readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 9, column: 2
-                      readyCapper_o.setVal(Boolean.TRUE);//sysj\capper_controller.sysj line: 9, column: 2
+                    if(readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 11, column: 2
+                      readyCapper_o.setVal(Boolean.TRUE);//sysj\capper_controller.sysj line: 11, column: 2
                       S1=1;
-                      if(!readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 9, column: 2
-                        readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 9, column: 2
+                      if(!readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 11, column: 2
+                        readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 11, column: 2
                         ends[1]=2;
-                        ;//sysj\capper_controller.sysj line: 9, column: 2
+                        ;//sysj\capper_controller.sysj line: 11, column: 2
                         S3702=1;
                         S67=0;
                         active[1]=1;
@@ -383,11 +383,11 @@ public class capper_controller extends ClockDomain{
             case 1 : 
               switch(S67){
                 case 0 : 
-                  if(bottleAtPos4.getprestatus()){//sysj\capper_controller.sysj line: 11, column: 9
+                  if(bottleAtPos4.getprestatus()){//sysj\capper_controller.sysj line: 13, column: 9
                     S67=1;
                     S29=0;
-                    if(!readyCapper_o.isPartnerPresent() || readyCapper_o.isPartnerPreempted()){//sysj\capper_controller.sysj line: 12, column: 3
-                      readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 12, column: 3
+                    if(!readyCapper_o.isPartnerPresent() || readyCapper_o.isPartnerPreempted()){//sysj\capper_controller.sysj line: 14, column: 3
+                      readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 14, column: 3
                       S29=1;
                       active[1]=1;
                       ends[1]=1;
@@ -395,13 +395,13 @@ public class capper_controller extends ClockDomain{
                     }
                     else {
                       S24=0;
-                      if(readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 12, column: 3
-                        readyCapper_o.setVal(Boolean.FALSE);//sysj\capper_controller.sysj line: 12, column: 3
+                      if(readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 14, column: 3
+                        readyCapper_o.setVal(Boolean.FALSE);//sysj\capper_controller.sysj line: 14, column: 3
                         S24=1;
-                        if(!readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 12, column: 3
-                          readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 12, column: 3
+                        if(!readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 14, column: 3
+                          readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 14, column: 3
                           ends[1]=2;
-                          ;//sysj\capper_controller.sysj line: 12, column: 3
+                          ;//sysj\capper_controller.sysj line: 14, column: 3
                           S67=2;
                           active[1]=1;
                           ends[1]=1;
@@ -429,8 +429,8 @@ public class capper_controller extends ClockDomain{
                 case 1 : 
                   switch(S29){
                     case 0 : 
-                      if(!readyCapper_o.isPartnerPresent() || readyCapper_o.isPartnerPreempted()){//sysj\capper_controller.sysj line: 12, column: 3
-                        readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 12, column: 3
+                      if(!readyCapper_o.isPartnerPresent() || readyCapper_o.isPartnerPreempted()){//sysj\capper_controller.sysj line: 14, column: 3
+                        readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 14, column: 3
                         S29=1;
                         active[1]=1;
                         ends[1]=1;
@@ -439,13 +439,13 @@ public class capper_controller extends ClockDomain{
                       else {
                         switch(S24){
                           case 0 : 
-                            if(readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 12, column: 3
-                              readyCapper_o.setVal(Boolean.FALSE);//sysj\capper_controller.sysj line: 12, column: 3
+                            if(readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 14, column: 3
+                              readyCapper_o.setVal(Boolean.FALSE);//sysj\capper_controller.sysj line: 14, column: 3
                               S24=1;
-                              if(!readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 12, column: 3
-                                readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 12, column: 3
+                              if(!readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 14, column: 3
+                                readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 14, column: 3
                                 ends[1]=2;
-                                ;//sysj\capper_controller.sysj line: 12, column: 3
+                                ;//sysj\capper_controller.sysj line: 14, column: 3
                                 S67=2;
                                 active[1]=1;
                                 ends[1]=1;
@@ -464,10 +464,10 @@ public class capper_controller extends ClockDomain{
                             }
                           
                           case 1 : 
-                            if(!readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 12, column: 3
-                              readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 12, column: 3
+                            if(!readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 14, column: 3
+                              readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 14, column: 3
                               ends[1]=2;
-                              ;//sysj\capper_controller.sysj line: 12, column: 3
+                              ;//sysj\capper_controller.sysj line: 14, column: 3
                               S67=2;
                               active[1]=1;
                               ends[1]=1;
@@ -486,8 +486,8 @@ public class capper_controller extends ClockDomain{
                     case 1 : 
                       S29=1;
                       S29=0;
-                      if(!readyCapper_o.isPartnerPresent() || readyCapper_o.isPartnerPreempted()){//sysj\capper_controller.sysj line: 12, column: 3
-                        readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 12, column: 3
+                      if(!readyCapper_o.isPartnerPresent() || readyCapper_o.isPartnerPreempted()){//sysj\capper_controller.sysj line: 14, column: 3
+                        readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 14, column: 3
                         S29=1;
                         active[1]=1;
                         ends[1]=1;
@@ -495,13 +495,13 @@ public class capper_controller extends ClockDomain{
                       }
                       else {
                         S24=0;
-                        if(readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 12, column: 3
-                          readyCapper_o.setVal(Boolean.FALSE);//sysj\capper_controller.sysj line: 12, column: 3
+                        if(readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 14, column: 3
+                          readyCapper_o.setVal(Boolean.FALSE);//sysj\capper_controller.sysj line: 14, column: 3
                           S24=1;
-                          if(!readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 12, column: 3
-                            readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 12, column: 3
+                          if(!readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 14, column: 3
+                            readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 14, column: 3
                             ends[1]=2;
-                            ;//sysj\capper_controller.sysj line: 12, column: 3
+                            ;//sysj\capper_controller.sysj line: 14, column: 3
                             S67=2;
                             active[1]=1;
                             ends[1]=1;
@@ -524,9 +524,9 @@ public class capper_controller extends ClockDomain{
                   break;
                 
                 case 2 : 
-                  if(gripperZAxisLifted.getprestatus()){//sysj\capper_controller.sysj line: 13, column: 9
+                  if(gripperZAxisLifted.getprestatus()){//sysj\capper_controller.sysj line: 15, column: 9
                     S67=3;
-                    gripperTurnRetract.setPresent();//sysj\capper_controller.sysj line: 14, column: 29
+                    gripperTurnRetract.setPresent();//sysj\capper_controller.sysj line: 16, column: 29
                     currsigs.addElement(gripperTurnRetract);
                     active[1]=1;
                     ends[1]=1;
@@ -539,7 +539,7 @@ public class capper_controller extends ClockDomain{
                   }
                 
                 case 3 : 
-                  if(gripperTurnHomePos.getprestatus()){//sysj\capper_controller.sysj line: 14, column: 9
+                  if(gripperTurnHomePos.getprestatus()){//sysj\capper_controller.sysj line: 16, column: 9
                     S67=4;
                     thread3705(tdone,ends);
                     thread3706(tdone,ends);
@@ -561,7 +561,7 @@ public class capper_controller extends ClockDomain{
                     }
                   }
                   else {
-                    gripperTurnRetract.setPresent();//sysj\capper_controller.sysj line: 14, column: 29
+                    gripperTurnRetract.setPresent();//sysj\capper_controller.sysj line: 16, column: 29
                     currsigs.addElement(gripperTurnRetract);
                     active[1]=1;
                     ends[1]=1;
@@ -569,9 +569,9 @@ public class capper_controller extends ClockDomain{
                   }
                 
                 case 4 : 
-                  if(gripperTurnFinalPos.getprestatus()){//sysj\capper_controller.sysj line: 15, column: 9
+                  if(gripperTurnFinalPos.getprestatus()){//sysj\capper_controller.sysj line: 17, column: 9
                     S67=5;
-                    gripperTurnRetract.setPresent();//sysj\capper_controller.sysj line: 32, column: 29
+                    gripperTurnRetract.setPresent();//sysj\capper_controller.sysj line: 34, column: 29
                     currsigs.addElement(gripperTurnRetract);
                     active[1]=1;
                     ends[1]=1;
@@ -599,7 +599,7 @@ public class capper_controller extends ClockDomain{
                     //FINXME code
                     if(biggest3718 == 0){
                       S67=5;
-                      gripperTurnRetract.setPresent();//sysj\capper_controller.sysj line: 32, column: 29
+                      gripperTurnRetract.setPresent();//sysj\capper_controller.sysj line: 34, column: 29
                       currsigs.addElement(gripperTurnRetract);
                       active[1]=1;
                       ends[1]=1;
@@ -608,14 +608,14 @@ public class capper_controller extends ClockDomain{
                   }
                 
                 case 5 : 
-                  if(gripperTurnHomePos.getprestatus()){//sysj\capper_controller.sysj line: 32, column: 9
+                  if(gripperTurnHomePos.getprestatus()){//sysj\capper_controller.sysj line: 34, column: 9
                     S67=6;
                     active[1]=1;
                     ends[1]=1;
                     break RUN;
                   }
                   else {
-                    gripperTurnRetract.setPresent();//sysj\capper_controller.sysj line: 32, column: 29
+                    gripperTurnRetract.setPresent();//sysj\capper_controller.sysj line: 34, column: 29
                     currsigs.addElement(gripperTurnRetract);
                     active[1]=1;
                     ends[1]=1;
@@ -623,11 +623,11 @@ public class capper_controller extends ClockDomain{
                   }
                 
                 case 6 : 
-                  if(gripperZAxisLifted.getprestatus()){//sysj\capper_controller.sysj line: 33, column: 9
+                  if(gripperZAxisLifted.getprestatus()){//sysj\capper_controller.sysj line: 35, column: 9
                     S67=7;
                     S168=0;
-                    if(!readyCapper_o.isPartnerPresent() || readyCapper_o.isPartnerPreempted()){//sysj\capper_controller.sysj line: 34, column: 3
-                      readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 34, column: 3
+                    if(!readyCapper_o.isPartnerPresent() || readyCapper_o.isPartnerPreempted()){//sysj\capper_controller.sysj line: 36, column: 3
+                      readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 36, column: 3
                       S168=1;
                       active[1]=1;
                       ends[1]=1;
@@ -635,13 +635,13 @@ public class capper_controller extends ClockDomain{
                     }
                     else {
                       S163=0;
-                      if(readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 34, column: 3
-                        readyCapper_o.setVal(Boolean.TRUE);//sysj\capper_controller.sysj line: 34, column: 3
+                      if(readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 36, column: 3
+                        readyCapper_o.setVal(Boolean.TRUE);//sysj\capper_controller.sysj line: 36, column: 3
                         S163=1;
-                        if(!readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 34, column: 3
-                          readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 34, column: 3
+                        if(!readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 36, column: 3
+                          readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 36, column: 3
                           ends[1]=2;
-                          ;//sysj\capper_controller.sysj line: 34, column: 3
+                          ;//sysj\capper_controller.sysj line: 36, column: 3
                           S67=0;
                           active[1]=1;
                           ends[1]=1;
@@ -669,8 +669,8 @@ public class capper_controller extends ClockDomain{
                 case 7 : 
                   switch(S168){
                     case 0 : 
-                      if(!readyCapper_o.isPartnerPresent() || readyCapper_o.isPartnerPreempted()){//sysj\capper_controller.sysj line: 34, column: 3
-                        readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 34, column: 3
+                      if(!readyCapper_o.isPartnerPresent() || readyCapper_o.isPartnerPreempted()){//sysj\capper_controller.sysj line: 36, column: 3
+                        readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 36, column: 3
                         S168=1;
                         active[1]=1;
                         ends[1]=1;
@@ -679,13 +679,13 @@ public class capper_controller extends ClockDomain{
                       else {
                         switch(S163){
                           case 0 : 
-                            if(readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 34, column: 3
-                              readyCapper_o.setVal(Boolean.TRUE);//sysj\capper_controller.sysj line: 34, column: 3
+                            if(readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 36, column: 3
+                              readyCapper_o.setVal(Boolean.TRUE);//sysj\capper_controller.sysj line: 36, column: 3
                               S163=1;
-                              if(!readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 34, column: 3
-                                readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 34, column: 3
+                              if(!readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 36, column: 3
+                                readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 36, column: 3
                                 ends[1]=2;
-                                ;//sysj\capper_controller.sysj line: 34, column: 3
+                                ;//sysj\capper_controller.sysj line: 36, column: 3
                                 S67=0;
                                 active[1]=1;
                                 ends[1]=1;
@@ -704,10 +704,10 @@ public class capper_controller extends ClockDomain{
                             }
                           
                           case 1 : 
-                            if(!readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 34, column: 3
-                              readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 34, column: 3
+                            if(!readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 36, column: 3
+                              readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 36, column: 3
                               ends[1]=2;
-                              ;//sysj\capper_controller.sysj line: 34, column: 3
+                              ;//sysj\capper_controller.sysj line: 36, column: 3
                               S67=0;
                               active[1]=1;
                               ends[1]=1;
@@ -726,8 +726,8 @@ public class capper_controller extends ClockDomain{
                     case 1 : 
                       S168=1;
                       S168=0;
-                      if(!readyCapper_o.isPartnerPresent() || readyCapper_o.isPartnerPreempted()){//sysj\capper_controller.sysj line: 34, column: 3
-                        readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 34, column: 3
+                      if(!readyCapper_o.isPartnerPresent() || readyCapper_o.isPartnerPreempted()){//sysj\capper_controller.sysj line: 36, column: 3
+                        readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 36, column: 3
                         S168=1;
                         active[1]=1;
                         ends[1]=1;
@@ -735,13 +735,13 @@ public class capper_controller extends ClockDomain{
                       }
                       else {
                         S163=0;
-                        if(readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 34, column: 3
-                          readyCapper_o.setVal(Boolean.TRUE);//sysj\capper_controller.sysj line: 34, column: 3
+                        if(readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 36, column: 3
+                          readyCapper_o.setVal(Boolean.TRUE);//sysj\capper_controller.sysj line: 36, column: 3
                           S163=1;
-                          if(!readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 34, column: 3
-                            readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 34, column: 3
+                          if(!readyCapper_o.isACK()){//sysj\capper_controller.sysj line: 36, column: 3
+                            readyCapper_o.setREQ(false);//sysj\capper_controller.sysj line: 36, column: 3
                             ends[1]=2;
-                            ;//sysj\capper_controller.sysj line: 34, column: 3
+                            ;//sysj\capper_controller.sysj line: 36, column: 3
                             S67=0;
                             active[1]=1;
                             ends[1]=1;

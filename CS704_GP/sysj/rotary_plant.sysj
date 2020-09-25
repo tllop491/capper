@@ -18,14 +18,15 @@ rotary_plant(
 	signal shift;
 	{	// logic for shifting
 		while(true) {
-		await(rotaryTableTrigger);						// wait for turning signal
-		abort(immediate !rotaryTableTrigger) {			// while its on
-			waitl(500ms);								// wait 500ms to simulate rotation
-			{sustain tableAlignedWithSensor;}			// send confirmation that turn is complete
-			||
-			{sustain tableAlignedWithSensor_GUI;}
-		}
-		emit shift;
+			await(rotaryTableTrigger);						// wait for turning signal
+			abort(immediate !rotaryTableTrigger) {			// while its on
+				waitl(500ms);								// wait 500ms to simulate rotation
+				{sustain tableAlignedWithSensor;}			
+				||
+				{sustain tableAlignedWithSensor_GUI;}		// send confirmation that turn is complete
+			}
+			emit shift;
+			pause;
 	}
 	}
 	|| // logic for loading/deloading and displaying bottleAtPos

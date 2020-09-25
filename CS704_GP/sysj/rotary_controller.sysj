@@ -47,10 +47,12 @@ rotary_controller(
 	{
 		while(true) {
 			await (rC && rF && rL && rCa);
-			await (!rotaryEmpty && !bottleAtPos5);	// only rotate when there is at least one bottle on the table except for pos 5
+			await (!rotaryEmpty && !bottleAtPos5);			// only rotate when there is at least one bottle on the table except for pos 5
 			abort (immediate tableAlignedWithSensor) { 				
 				sustain rotaryTableTrigger;					// rotate table until aligned as indicated by tableAlignedWithSensor
 			}
+			pause;
+			pause;	// double pause to stop rotary table from rotating mid-filling operation
 		}
 	}
 	||

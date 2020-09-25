@@ -9,10 +9,10 @@ lidloader_controller(
 		)
 ->
 {
-	send readyLidLoader(Boolean.True);	
+	send readyLidLoader(Boolean.TRUE);	
 	while(true) {
 		await(bottleAtPos3 && !empty);
-		send readyLidLoader(Boolean.False);
+		send readyLidLoader(Boolean.FALSE);
 		abort(armAtDest) {			// The arm swivels to the position “extended” if a new workpiece is requested (request).
 			sustain armDest;
 		}
@@ -42,7 +42,7 @@ lidloader_controller(
 			sustain armSource;
 		}
 		
-		send readyLidLoader(Boolean.True);
+		send readyLidLoader(Boolean.TRUE);
 		
 		pause;
 	}
